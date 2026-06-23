@@ -61,7 +61,7 @@ function HomePageContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
             value={search}
             onChange={e => setSearch(e.target.value)}
             placeholder={t.searchPlaceholder}
-            className="flex-1 pl-5 pr-4 py-2.5 bg-gray-100 border border-gray-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-orange-300 focus:bg-white transition-all min-w-0"
+            className="flex-1 pl-5 pr-4 py-2.5 bg-gray-100 border border-gray-200 rounded-full text-sm shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-orange-400 focus:bg-white focus:border-orange-300 focus:shadow-md min-w-0"
           />
           <Link
             href={`/?lang=${nextLang}`}
