@@ -30,29 +30,31 @@ function HomePageContent() {
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm sticky top-0 z-10">
-        <div className="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-orange-500">
+        <div className="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
+          <h1 className="text-2xl font-bold text-orange-500 flex-shrink-0">
             {lang === 'zh' ? '🧮 实用计算器' : '🧮 Tools'}
           </h1>
           <Link
             href={`/?lang=${nextLang}`}
-            className="text-sm px-3 py-1 border border-gray-200 rounded-full hover:bg-gray-50 transition-colors"
+            title={lang === 'zh' ? 'Switch to English' : '切换到中文'}
+            className="text-sm px-3 py-1 border border-gray-200 rounded-full hover:bg-gray-50 hover:border-orange-300 transition-colors flex-shrink-0"
           >
-            {lang === 'zh' ? 'EN' : '中文'}
+            {lang === 'zh' ? '🌐 EN' : '🌐 中文'}
           </Link>
         </div>
       </header>
 
       <main className="max-w-3xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {calculators.map((calc) => (
             <Link
               key={calc.path}
               href={`${calc.path}?lang=${lang}`}
-              className={`block p-5 rounded-xl border transition-colors ${calc.color}`}
+              title={calc.name}
+              className={`block p-6 rounded-xl border transition-all ${calc.color} hover:shadow-md hover:-translate-y-0.5`}
             >
-              <div className="text-2xl mb-2">{calc.icon}</div>
-              <div className="font-semibold text-gray-800">{calc.name}</div>
+              <div className="text-3xl mb-3">{calc.icon}</div>
+              <div className="font-semibold text-gray-800 text-lg">{calc.name}</div>
               <div className="text-sm text-gray-500 mt-1">{calc.desc}</div>
             </Link>
           ))}
