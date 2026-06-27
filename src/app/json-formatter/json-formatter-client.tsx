@@ -4,6 +4,7 @@ import { Suspense, useState } from 'react'
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import Footer from '../../components/Footer'
+import RelatedTools from '../../components/RelatedTools'
 
 const t = {
   zh: {
@@ -195,6 +196,8 @@ function JsonFormatterContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
             {output || <span className="text-gray-300">{lang === 'zh' ? '结果将显示在这里' : 'Result will appear here'}</span>}
           </pre>
         </div>
+
+        <RelatedTools lang={lang} paths={['/word-counter', '/qr-code-generator', '/invoice-generator', '/heic-to-jpg']} />
 
         <div className="text-center">
           <Link href={`/?lang=${lang}`} className="text-sm text-gray-400 hover:text-orange-500 transition-colors">

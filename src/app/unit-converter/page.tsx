@@ -8,6 +8,13 @@ export const metadata: Metadata = {
     title: '单位换算器 - 实用计算器',
     description: '长度、重量、温度单位快速互转',
   },
+  alternates: {
+    languages: {
+      'zh-CN': '/unit-converter?lang=zh',
+      'en-US': '/unit-converter?lang=en',
+      'x-default': '/unit-converter',
+    },
+  },
 }
 
 const faqSchema = {

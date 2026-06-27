@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import QRCode from 'qrcode'
 import Footer from '../../components/Footer'
+import RelatedTools from '../../components/RelatedTools'
 
 const t = {
   zh: {
@@ -255,6 +256,8 @@ function QrCodeGeneratorContent({ initialLang }: { initialLang?: 'zh' | 'en' }) 
             </div>
           </div>
         )}
+
+        <RelatedTools lang={lang} paths={['/invoice-generator', '/heic-to-jpg', '/json-formatter', '/word-counter']} />
 
         <div className="text-center">
           <Link href={`/?lang=${lang}`} className="text-sm text-gray-400 hover:text-orange-500 transition-colors">

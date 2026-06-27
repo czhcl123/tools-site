@@ -4,6 +4,7 @@ import { Suspense, useState } from 'react'
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import Footer from '../../components/Footer'
+import RelatedTools from '../../components/RelatedTools'
 
 const t = {
   zh: {
@@ -169,6 +170,8 @@ function BmiCalculatorContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
         </div>
 
         <p className="text-xs text-gray-400 mb-6">{u('note')}</p>
+
+        <RelatedTools lang={lang} paths={['/discount-calculator', '/countdown', '/unit-converter', '/heic-to-jpg']} />
 
         <div className="flex gap-3 flex-wrap">
           <Link

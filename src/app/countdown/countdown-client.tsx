@@ -4,6 +4,7 @@ import { Suspense, useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import Footer from '../../components/Footer'
+import RelatedTools from '../../components/RelatedTools'
 
 const t = {
   zh: {
@@ -127,6 +128,8 @@ function CountdownContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
             </div>
           </div>
         )}
+
+        <RelatedTools lang={lang} paths={['/lunar-calendar', '/discount-calculator', '/bmi-calculator', '/unit-converter']} />
 
         <div className="flex gap-3 flex-wrap">
           <Link

@@ -4,6 +4,7 @@ import { Suspense, useState, useMemo } from 'react'
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import Footer from '../../components/Footer'
+import RelatedTools from '../../components/RelatedTools'
 
 const t = {
   zh: {
@@ -139,6 +140,8 @@ function WordCounterContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
             </div>
           </div>
         </div>
+
+        <RelatedTools lang={lang} paths={['/json-formatter', '/qr-code-generator', '/invoice-generator', '/discount-calculator']} />
 
         <div className="text-center">
           <Link href={`/?lang=${lang}`} className="text-sm text-gray-400 hover:text-orange-500 transition-colors">

@@ -27,6 +27,13 @@ export async function generateMetadata({
       title: data[lang].title,
       description: data[lang].description,
     },
+    alternates: {
+      languages: {
+        'zh-CN': '/qr-code-generator?lang=zh',
+        'en-US': '/qr-code-generator?lang=en',
+        'x-default': '/qr-code-generator',
+      },
+    },
   }
 }
 

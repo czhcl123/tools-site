@@ -27,6 +27,13 @@ export async function generateMetadata({
       title: data[lang].title,
       description: data[lang].description,
     },
+    alternates: {
+      languages: {
+        'zh-CN': '/heic-to-jpg?lang=zh',
+        'en-US': '/heic-to-jpg?lang=en',
+        'x-default': '/heic-to-jpg',
+      },
+    },
   }
 }
 

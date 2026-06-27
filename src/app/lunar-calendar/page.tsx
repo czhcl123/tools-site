@@ -8,6 +8,13 @@ export const metadata: Metadata = {
     title: '农历转换器 - 实用计算器',
     description: '快速转换公历与农历日期，支持查看任意日期的农历信息',
   },
+  alternates: {
+    languages: {
+      'zh-CN': '/lunar-calendar?lang=zh',
+      'en-US': '/lunar-calendar?lang=en',
+      'x-default': '/lunar-calendar',
+    },
+  },
 }
 
 const faqSchema = {

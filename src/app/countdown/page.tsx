@@ -8,6 +8,13 @@ export const metadata: Metadata = {
     title: '日期计算器 - 实用计算器',
     description: '计算任意日期距离今天还有多少天，或已过去多少天',
   },
+  alternates: {
+    languages: {
+      'zh-CN': '/countdown?lang=zh',
+      'en-US': '/countdown?lang=en',
+      'x-default': '/countdown',
+    },
+  },
 }
 
 const faqSchema = {

@@ -27,6 +27,13 @@ export async function generateMetadata({
       title: data[lang].title,
       description: data[lang].description,
     },
+    alternates: {
+      languages: {
+        'zh-CN': '/discount-calculator?lang=zh',
+        'en-US': '/discount-calculator?lang=en',
+        'x-default': '/discount-calculator',
+      },
+    },
   }
 }
 

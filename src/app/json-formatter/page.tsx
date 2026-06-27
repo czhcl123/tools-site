@@ -27,6 +27,13 @@ export async function generateMetadata({
       title: data[lang].title,
       description: data[lang].description,
     },
+    alternates: {
+      languages: {
+        'zh-CN': '/json-formatter?lang=zh',
+        'en-US': '/json-formatter?lang=en',
+        'x-default': '/json-formatter',
+      },
+    },
   }
 }
 

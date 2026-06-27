@@ -4,6 +4,7 @@ import { Suspense, useState } from 'react'
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import Footer from '../../components/Footer'
+import RelatedTools from '../../components/RelatedTools'
 
 const t = {
   zh: {
@@ -200,6 +201,8 @@ function UnitConverterContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
             </div>
           </div>
         )}
+
+        <RelatedTools lang={lang} paths={['/discount-calculator', '/bmi-calculator', '/heic-to-jpg', '/qr-code-generator']} />
 
         <div className="flex gap-3 flex-wrap">
           <Link

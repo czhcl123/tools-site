@@ -4,6 +4,7 @@ import { Suspense, useState } from 'react'
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import Footer from '../../components/Footer'
+import RelatedTools from '../../components/RelatedTools'
 
 const t = {
   zh: {
@@ -217,6 +218,8 @@ function HeicToJpgContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
             </div>
           </div>
         )}
+
+        <RelatedTools lang={lang} paths={['/unit-converter', '/qr-code-generator', '/json-formatter', '/invoice-generator']} />
 
         <div className="text-center">
           <Link href={`/?lang=${lang}`} className="text-sm text-gray-400 hover:text-orange-500 transition-colors">

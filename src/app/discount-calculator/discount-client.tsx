@@ -4,6 +4,7 @@ import { Suspense, useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import Footer from '../../components/Footer'
+import RelatedTools from '../../components/RelatedTools'
 
 interface HistoryEntry {
   id: number
@@ -252,6 +253,8 @@ function DiscountCalculatorContent({ initialLang }: { initialLang?: 'zh' | 'en' 
             </div>
           )}
         </div>
+
+        <RelatedTools lang={lang} paths={['/bmi-calculator', '/countdown', '/unit-converter', '/qr-code-generator']} />
 
         <div className="mt-6 text-center">
           <Link href={`/?lang=${lang}`} className="text-sm text-gray-400 hover:text-orange-500 transition-colors">

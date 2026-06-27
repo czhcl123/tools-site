@@ -27,6 +27,13 @@ export async function generateMetadata({
       title: titles[lang].default,
       description: descriptions[lang],
     },
+    alternates: {
+      languages: {
+        'zh-CN': '/?lang=zh',
+        'en-US': '/?lang=en',
+        'x-default': '/',
+      },
+    },
   }
 }
 

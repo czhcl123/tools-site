@@ -4,6 +4,7 @@ import { Suspense, useState } from 'react'
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import Footer from '../../components/Footer'
+import RelatedTools from '../../components/RelatedTools'
 
 const t = {
   zh: {
@@ -190,6 +191,8 @@ function LunarCalendarContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
             </div>
           </div>
         )}
+
+        <RelatedTools lang={lang} paths={['/countdown', '/discount-calculator', '/bmi-calculator', '/unit-converter']} />
 
         <div className="flex gap-3 flex-wrap">
           <Link

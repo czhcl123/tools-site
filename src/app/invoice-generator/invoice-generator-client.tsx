@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { jsPDF } from 'jspdf'
 import Footer from '../../components/Footer'
+import RelatedTools from '../../components/RelatedTools'
 
 type Item = { desc: string; qty: number; price: number }
 
@@ -312,6 +313,8 @@ function InvoiceGeneratorContent({ initialLang }: { initialLang?: 'zh' | 'en' })
             </div>
           </div>
         </div>
+
+        <RelatedTools lang={lang} paths={['/qr-code-generator', '/discount-calculator', '/word-counter', '/json-formatter']} />
 
         <div className="text-center">
           <Link href={`/?lang=${lang}`} className="text-sm text-gray-400 hover:text-orange-500 transition-colors">

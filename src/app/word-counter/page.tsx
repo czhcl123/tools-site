@@ -27,6 +27,13 @@ export async function generateMetadata({
       title: data[lang].title,
       description: data[lang].description,
     },
+    alternates: {
+      languages: {
+        'zh-CN': '/word-counter?lang=zh',
+        'en-US': '/word-counter?lang=en',
+        'x-default': '/word-counter',
+      },
+    },
   }
 }
 

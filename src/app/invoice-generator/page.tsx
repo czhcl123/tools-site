@@ -27,6 +27,13 @@ export async function generateMetadata({
       title: data[lang].title,
       description: data[lang].description,
     },
+    alternates: {
+      languages: {
+        'zh-CN': '/invoice-generator?lang=zh',
+        'en-US': '/invoice-generator?lang=en',
+        'x-default': '/invoice-generator',
+      },
+    },
   }
 }
 
