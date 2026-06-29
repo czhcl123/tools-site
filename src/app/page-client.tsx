@@ -70,6 +70,33 @@ function HomePageContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
       badgeBilingual: 'Bilingual',
       emptyText: 'No tools found',
       sitemapTitle: 'Sitemap',
+      sectionWhatTitle: 'What you can do with Practical Tools',
+      sectionWhatBody: 'Practical Tools is a curated set of 10 browser-based utilities for everyday calculations, conversions, and quick file tasks. The collection includes a discount calculator with stacked-discount support, a BMI calculator using the WHO formula, a date countdown with hour and minute precision, a Gregorian ↔ Chinese lunar (农历) converter, a multi-category unit converter, a QR code generator for URLs and contact cards, an invoice generator you can print to PDF, a JSON formatter that validates and minifies, a HEIC-to-JPG converter for iPhone photos, and a word counter that supports both English and Chinese text.',
+      sectionWhoTitle: 'Who Practical Tools is for',
+      sectionWhoBody: 'The tools serve shoppers comparing prices, students checking BMI, project managers tracking deadlines, bilingual users converting between Gregorian and lunar calendars, developers formatting JSON before commit, photographers converting HEIC images for sharing, freelancers writing invoices, and writers tracking word counts. Everything is built for fast, single-task use — open the page, do the work, close the tab.',
+      sectionHowTitle: 'How it works',
+      sectionHowBody: 'Every tool runs as a static Next.js page and executes entirely in your browser using client-side JavaScript. No accounts, no tracking pixels, no server-side processing of your inputs. Files such as HEIC images and JSON documents never leave your device. Once a tool page has loaded, it works offline as well, because the JavaScript is cached by your browser.',
+      sectionTrustTitle: 'Why trust these results',
+      sectionTrustBody: 'The discount, BMI, date, unit, and word-count calculators use standard published formulas. The lunar calendar converter is based on the Hong Kong Observatory ephemeris tables (see authoritative references below). The BMI calculator uses the WHO adult BMI classification thresholds established in 1995 and reaffirmed in 2004.',
+      sectionAuthoritativeTitle: 'Authoritative references',
+      sectionAuthoritativeBody: 'Our tools rely on these published standards and reference sources:',
+      refWHO: 'World Health Organization — BMI classification',
+      refHKO: 'Hong Kong Observatory — Lunar calendar ephemeris',
+      refISO: 'ISO/IEC 18004:2015 — QR code standard',
+      refNIST: 'NIST — International System of Units (SI)',
+      sectionFaqTitle: 'Frequently asked questions',
+      faq1Q: 'Is Practical Tools really free?',
+      faq1A: 'Yes. All 10 tools are completely free with no premium tier, no usage limits, and no signup required.',
+      faq2Q: 'Do you upload my files or data?',
+      faq2A: 'No. Tools such as HEIC to JPG and JSON Formatter process your files entirely in your browser. Your data never leaves your device.',
+      faq3Q: 'Can I use these tools offline?',
+      faq3A: 'Yes. Once a page has loaded, the JavaScript is cached by your browser and the tool continues to work without an internet connection.',
+      faq4Q: 'Do the tools support Chinese?',
+      faq4A: 'Yes. Every tool page is available in English (default) and Simplified Chinese. Switch language with the ?lang=en or ?lang=zh query parameter.',
+      faq5Q: 'How accurate are the calculations?',
+      faq5A: 'Calculations follow published standards: WHO BMI thresholds, SI unit definitions, ISO/IEC 18004 for QR codes, and Hong Kong Observatory ephemeris for the lunar calendar.',
+      sectionCtaTitle: 'Get started',
+      sectionCtaBody: 'Pick a tool above and start working — no signup, no install, no waiting.',
     },
   }[lang]
 
@@ -140,6 +167,96 @@ function HomePageContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
 
         {search && filtered.length === 0 && (
           <p className="text-center text-gray-400 text-sm py-12">{t.emptyText}</p>
+        )}
+
+        {/* SEO/GEO content sections - rendered only when not searching */}
+        {!search && (
+          <>
+            {/* What you can do */}
+            <section className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+              <h2 className="text-xl font-bold text-gray-800 mb-3">{t.sectionWhatTitle}</h2>
+              <p className="text-sm text-gray-600 leading-relaxed">{t.sectionWhatBody}</p>
+            </section>
+
+            {/* Who it is for */}
+            <section className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+              <h2 className="text-xl font-bold text-gray-800 mb-3">{t.sectionWhoTitle}</h2>
+              <p className="text-sm text-gray-600 leading-relaxed">{t.sectionWhoBody}</p>
+            </section>
+
+            {/* How it works */}
+            <section className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+              <h2 className="text-xl font-bold text-gray-800 mb-3">{t.sectionHowTitle}</h2>
+              <p className="text-sm text-gray-600 leading-relaxed">{t.sectionHowBody}</p>
+            </section>
+
+            {/* Why trust */}
+            <section className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+              <h2 className="text-xl font-bold text-gray-800 mb-3">{t.sectionTrustTitle}</h2>
+              <p className="text-sm text-gray-600 leading-relaxed">{t.sectionTrustBody}</p>
+            </section>
+
+            {/* Authoritative references */}
+            <section className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 border border-amber-200 shadow-sm">
+              <h2 className="text-xl font-bold text-gray-800 mb-3">{t.sectionAuthoritativeTitle}</h2>
+              <p className="text-sm text-gray-600 mb-3">{t.sectionAuthoritativeBody}</p>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 hover:underline">
+                    {t.refWHO} →
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.hko.gov.hk/en/gts/time/calendar/lunar.htm" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 hover:underline">
+                    {t.refHKO} →
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.iso.org/standard/62021.html" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 hover:underline">
+                    {t.refISO} →
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.nist.gov/pml/weights-and-measures/metric-si/si-units" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 hover:underline">
+                    {t.refNIST} →
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+            {/* FAQ */}
+            <section className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+              <h2 className="text-xl font-bold text-gray-800 mb-4">{t.sectionFaqTitle}</h2>
+              <div className="space-y-4">
+                <div>
+                  <h3 className="text-base font-semibold text-gray-800 mb-1">{t.faq1Q}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{t.faq1A}</p>
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-gray-800 mb-1">{t.faq2Q}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{t.faq2A}</p>
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-gray-800 mb-1">{t.faq3Q}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{t.faq3A}</p>
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-gray-800 mb-1">{t.faq4Q}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{t.faq4A}</p>
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-gray-800 mb-1">{t.faq5Q}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{t.faq5A}</p>
+                </div>
+              </div>
+            </section>
+
+            {/* CTA */}
+            <section className="text-center py-4">
+              <h2 className="text-lg font-bold text-gray-800 mb-2">{t.sectionCtaTitle}</h2>
+              <p className="text-sm text-gray-500">{t.sectionCtaBody}</p>
+            </section>
+          </>
         )}
 
         {/* Sitemap */}

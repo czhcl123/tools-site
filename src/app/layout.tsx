@@ -45,11 +45,14 @@ const organizationSchema = {
     'Word counting',
   ],
   sameAs: [
-    'https://tools-site-production.up.railway.app',
+    'https://github.com/czhcl123/tools-site',
+    'https://gitee.com/czhcl123/tools-site',
+    'https://tools-site-production.up.railway.app/about',
   ],
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer support',
+    email: 'contact@tools-site-production.up.railway.app',
     url: 'https://tools-site-production.up.railway.app/about',
     availableLanguage: ['English', 'Chinese'],
   },
@@ -132,6 +135,10 @@ export const metadata = {
       'x-default': 'https://tools-site-production.up.railway.app',
     },
   },
+  other: {
+    'dateModified': '2026-06-29',
+    'article:modified_time': '2026-06-29',
+  },
   robots: {
     index: true,
     follow: true,
@@ -160,6 +167,7 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/favicon.svg" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly site index" />
+        <link rel="alternate" type="application/rss+xml" title="Practical Tools RSS Feed" href="/rss.xml" />
       </head>
       <body className="min-h-full flex flex-col antialiased bg-gray-50">
         <script
