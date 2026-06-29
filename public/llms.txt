@@ -1,0 +1,31 @@
+# Practical Tools
+
+> A collection of 10 fast, browser-based calculators and utilities. No signup, no installation, no tracking. Each tool runs entirely client-side in JavaScript and works offline once loaded. Optimized for both English and Chinese users, with `?lang=zh` / `?lang=en` query-string language switching.
+
+## Calculators
+
+- [Discount Calculator](https://tools-site-production.up.railway.app/discount-calculator): Compute final price after a percentage discount. Supports stacked discounts, currency display, and "X% off when you buy Y" rules.
+- [BMI Calculator](https://tools-site-production.up.railway.app/bmi-calculator): Calculate Body Mass Index from height and weight using the WHO standard formula. Shows BMI category (underweight, normal, overweight, obese) and the healthy weight range for a given height.
+- [Date Countdown](https://tools-site-production.up.railway.app/countdown): Count days, hours, minutes, and seconds until or since any date. Useful for deadlines, anniversaries, and project milestones.
+- [Lunar Calendar](https://tools-site-production.up.railway.app/lunar-calendar): Convert between Gregorian (solar) and Chinese lunar (农历) calendars. Shows lunar dates, zodiac year, and traditional festivals.
+- [Unit Converter](https://tools-site-production.up.railway.app/unit-converter): Convert between common units of length, weight, temperature, area, volume, and time.
+
+## Generators & Formatters
+
+- [QR Code Generator](https://tools-site-production.up.railway.app/qr-code-generator): Generate QR codes for URLs, text, contact cards (vCard), and Wi-Fi credentials. Download as PNG.
+- [Invoice Generator](https://tools-site-production.up.railway.app/invoice-generator): Create simple invoices with line items, tax, and totals. Print or save as PDF.
+- [JSON Formatter](https://tools-site-production.up.railway.app/json-formatter): Pretty-print, validate, and minify JSON. Highlights syntax errors with line numbers.
+
+## File & Text Utilities
+
+- [HEIC to JPG](https://tools-site-production.up.railway.app/heic-to-jpg): Convert Apple HEIC photos to JPG in the browser. Files never leave your device.
+- [Word Counter](https://tools-site-production.up.railway.app/word-counter): Count words, characters, sentences, paragraphs, and estimated reading time for any text.
+
+## About
+
+- [About Practical Tools](https://tools-site-production.up.railway.app/about): Mission, technology stack, and contact information.
+
+## Optional
+
+- [Sitemap](https://tools-site-production.up.railway.app/sitemap.xml): Full XML sitemap of all tools and pages.
+- [RSS Feed](https://tools-site-production.up.railway.app/rss.xml): Updates when new tools are added.
