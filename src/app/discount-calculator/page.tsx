@@ -28,9 +28,10 @@ export async function generateMetadata({
       description: data[lang].description,
     },
     alternates: {
+    canonical: 'https://tools-site-production.up.railway.app/discount-calculator',
       languages: {
-        'zh-CN': '/discount-calculator?lang=zh',
-        'en-US': '/discount-calculator?lang=en',
+        'zh-CN': '/zh/discount-calculator',
+        'en-US': '/discount-calculator',
         'x-default': '/discount-calculator',
       },
     },

@@ -28,9 +28,10 @@ export async function generateMetadata({
       description: data[lang].description,
     },
     alternates: {
+    canonical: 'https://tools-site-production.up.railway.app/invoice-generator',
       languages: {
-        'zh-CN': '/invoice-generator?lang=zh',
-        'en-US': '/invoice-generator?lang=en',
+        'zh-CN': '/zh/invoice-generator',
+        'en-US': '/invoice-generator',
         'x-default': '/invoice-generator',
       },
     },

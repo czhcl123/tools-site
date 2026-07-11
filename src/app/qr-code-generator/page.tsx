@@ -28,9 +28,10 @@ export async function generateMetadata({
       description: data[lang].description,
     },
     alternates: {
+    canonical: 'https://tools-site-production.up.railway.app/qr-code-generator',
       languages: {
-        'zh-CN': '/qr-code-generator?lang=zh',
-        'en-US': '/qr-code-generator?lang=en',
+        'zh-CN': '/zh/qr-code-generator',
+        'en-US': '/qr-code-generator',
         'x-default': '/qr-code-generator',
       },
     },

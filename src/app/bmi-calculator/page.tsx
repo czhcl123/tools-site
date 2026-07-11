@@ -1,20 +1,41 @@
 import type { Metadata } from 'next'
 import BmiCalculatorClient from './bmi-client'
 
-export const metadata: Metadata = {
-  title: 'BMI计算器',
-  description: '快速计算身体质量指数（BMI），判断体重是否健康，支持中英文，免费使用。',
-  openGraph: {
-    title: 'BMI计算器 - 实用计算器',
-    description: '快速计算身体质量指数BMI，判断体重是否健康',
-  },
-  alternates: {
-    languages: {
-      'zh-CN': '/bmi-calculator?lang=zh',
-      'en-US': '/bmi-calculator?lang=en',
-      'x-default': '/bmi-calculator',
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ lang?: string }>
+}) {
+  const sp = await searchParams
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+
+  const titles = { zh: 'BMI计算器', en: 'BMI Calculator - Free Online Body Mass Index Tool' }
+  const descriptions = {
+    zh: '快速计算身体质量指数（BMI），判断体重是否健康，支持中英文，免费使用。',
+    en: "Free online BMI calculator. Compute your Body Mass Index instantly and see if you're in the healthy weight range. Supports metric and imperial units. No signup.",
+  }
+  const ogTitles = { zh: 'BMI计算器 - 实用计算器', en: 'BMI Calculator - Practical Tools' }
+  const ogDescs = {
+    zh: '快速计算身体质量指数（BMI），判断体重是否健康，支持中英文，免费使用。',
+    en: "Free online BMI calculator. Compute your Body Mass Index instantly and see if you're in the healthy weight range. Supports metric and imperial units. No signup.",
+  }
+
+  return {
+    title: titles[lang],
+    description: descriptions[lang],
+    openGraph: {
+      title: ogTitles[lang],
+      description: ogDescs[lang],
     },
-  },
+    alternates: {
+      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/bmi-calculator' : '/bmi-calculator'}`,
+      languages: {
+        'zh-CN': '/zh/bmi-calculator',
+        'en-US': '/bmi-calculator',
+        'x-default': '/bmi-calculator',
+      },
+    },
+  }
 }
 
 const faqSchema = {
@@ -45,6 +66,14 @@ const faqSchema = {
         text: 'BMI只是一个参考指标,不能完全反映健康状况。它没有考虑肌肉量、骨密度、年龄、性别等因素。建议结合腰围、体脂率等其他指标综合判断。',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'BMI计算器支持词与千克吗?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '支持。可输入身高(cm)、体重(kg)。也可以切换到英制单位(英寸、磅)。',
+      },
+    }
   ],
 }
 
@@ -54,14 +83,11 @@ export default async function BmiCalculatorPage({
   searchParams: Promise<{ lang?: string }>
 }) {
   const sp = await searchParams
-  const lang = (sp.lang === 'zh' ? 'zh' : 'en') as 'zh' | 'en'
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <BmiCalculatorClient initialLang={lang} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <BmiCalculator initialLang={lang} />
     </>
   )
 }

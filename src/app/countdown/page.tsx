@@ -1,20 +1,41 @@
 import type { Metadata } from 'next'
 import CountdownClient from './countdown-client'
 
-export const metadata: Metadata = {
-  title: '日期计算器',
-  description: '计算任意日期距离今天还有多少天，或已过去多少天。支持倒计时和日期差计算。',
-  openGraph: {
-    title: '日期计算器 - 实用计算器',
-    description: '计算任意日期距离今天还有多少天，或已过去多少天',
-  },
-  alternates: {
-    languages: {
-      'zh-CN': '/countdown?lang=zh',
-      'en-US': '/countdown?lang=en',
-      'x-default': '/countdown',
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ lang?: string }>
+}) {
+  const sp = await searchParams
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+
+  const titles = { zh: '日期计算器', en: 'Countdown Calculator - Days Until or Since Any Date' }
+  const descriptions = {
+    zh: '计算任意日期距离今天还有多少天，或已过去多少天。支持倒计时和日期差计算。',
+    en: 'Free online countdown calculator. Find how many days until or since any date. Perfect for event planning, anniversaries, and deadlines.',
+  }
+  const ogTitles = { zh: '日期计算器 - 实用计算器', en: 'Countdown Calculator - Practical Tools' }
+  const ogDescs = {
+    zh: '计算任意日期距离今天还有多少天，或已过去多少天。支持倒计时和日期差计算。',
+    en: 'Free online countdown calculator. Find how many days until or since any date. Perfect for event planning, anniversaries, and deadlines.',
+  }
+
+  return {
+    title: titles[lang],
+    description: descriptions[lang],
+    openGraph: {
+      title: ogTitles[lang],
+      description: ogDescs[lang],
     },
-  },
+    alternates: {
+      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/countdown' : '/countdown'}`,
+      languages: {
+        'zh-CN': '/zh/countdown',
+        'en-US': '/countdown',
+        'x-default': '/countdown',
+      },
+    },
+  }
 }
 
 const faqSchema = {
@@ -23,28 +44,28 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: '日期计算器能做什么？',
+      name: '如何计算两个日期之间的天数?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '日期计算器可以计算任意日期距离今天还有多少天（未来倒计时），或者已经过去多少天（历史日期），帮助您规划重要事件、纪念日、生日等。',
+        text: '选择起始日期和结束日期，点击计算后会显示两者之间的天数差、周数、小时数。',
       },
     },
     {
       '@type': 'Question',
-      name: '如何计算两个日期之间的天数差？',
+      name: '可以计算过去的日期吗?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '输入目标日期后点击计算，计算器会自动用目标日期减去今天的日期，得出精确天数。如果目标是未来日期则显示倒计时，是过去日期则显示已过去天数。',
+        text: '可以。输入任一过去的日期，会显示距今已经过去多少天。',
       },
     },
     {
       '@type': 'Question',
-      name: '计算结果包含起止日期吗？',
+      name: '能处理闰年吗?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '我们的日期计算方法是不包含起始日的。例如今天1月1日，目标日期1月2日，则显示1天（即1月2日到1月1日之间相差1天）。',
+        text: '能。我们会根据公历计算，包括闰年、乔丐年。',
       },
-    },
+    }
   ],
 }
 
@@ -54,14 +75,11 @@ export default async function CountdownPage({
   searchParams: Promise<{ lang?: string }>
 }) {
   const sp = await searchParams
-  const lang = (sp.lang === 'zh' ? 'zh' : 'en') as 'zh' | 'en'
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <CountdownClient initialLang={lang} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Countdown initialLang={lang} />
     </>
   )
 }

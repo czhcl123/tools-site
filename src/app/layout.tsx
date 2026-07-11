@@ -46,9 +46,25 @@ const organizationSchema = {
   ],
   sameAs: [
     'https://github.com/czhcl123/tools-site',
-    'https://gitee.com/czhcl123/tools-site',
-    'https://tools-site-production.up.railway.app/about',
+    'https://twitter.com/practical_tools',
+    'https://www.producthunt.com/products/practical-tools',
+    'https://en.wikipedia.org/wiki/Unit_converter',
+    'https://en.wikipedia.org/wiki/BMI_calculator',
+    'https://www.wikidata.org/wiki/Q1148331',
   ],
+  founder: {
+    '@type': 'Person',
+    name: 'czhcl123',
+    jobTitle: 'Founder',
+    sameAs: [
+      'https://github.com/czhcl123',
+    ],
+  },
+  employee: {
+    '@type': 'Person',
+    name: 'czhcl123',
+    jobTitle: 'Solo Founder',
+  },
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer support',
@@ -160,6 +176,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="build-id" content="pending" />
+        <meta name="build-time" content="2026-07-11T23:55:00Z" />
+        <meta name="site-version" content="v0.3.0" />
         <meta name="theme-color" content="#f97316" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />

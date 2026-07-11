@@ -28,9 +28,10 @@ export async function generateMetadata({
       description: data[lang].description,
     },
     alternates: {
+    canonical: 'https://tools-site-production.up.railway.app/json-formatter',
       languages: {
-        'zh-CN': '/json-formatter?lang=zh',
-        'en-US': '/json-formatter?lang=en',
+        'zh-CN': '/zh/json-formatter',
+        'en-US': '/json-formatter',
         'x-default': '/json-formatter',
       },
     },

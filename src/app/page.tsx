@@ -77,8 +77,8 @@ export async function generateMetadata({
     alternates: {
       canonical: 'https://tools-site-production.up.railway.app',
       languages: {
-        'zh-CN': '/?lang=zh',
-        'en-US': '/?lang=en',
+        'zh-CN': '/zh',
+        'en-US': '/',
         'x-default': '/',
       },
     },

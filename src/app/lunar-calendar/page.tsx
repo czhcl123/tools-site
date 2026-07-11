@@ -1,20 +1,41 @@
 import type { Metadata } from 'next'
-import LunarCalendarClient from './lunar-client'
+import LunarCalendarClient from './lunarCalendar-client'
 
-export const metadata: Metadata = {
-  title: '农历转换器',
-  description: '快速转换公历与农历日期，支持查看任意日期的农历信息，中英文免费使用。',
-  openGraph: {
-    title: '农历转换器 - 实用计算器',
-    description: '快速转换公历与农历日期，支持查看任意日期的农历信息',
-  },
-  alternates: {
-    languages: {
-      'zh-CN': '/lunar-calendar?lang=zh',
-      'en-US': '/lunar-calendar?lang=en',
-      'x-default': '/lunar-calendar',
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ lang?: string }>
+}) {
+  const sp = await searchParams
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+
+  const titles = { zh: '农历转换器', en: 'Lunar Calendar Converter - Solar to Lunar Date Tool' }
+  const descriptions = {
+    zh: '快速转换公历与农历日期，支持查看任意日期的农历信息，中英文免费使用。',
+    en: 'Free online lunar calendar converter. Convert between Gregorian (solar) and Chinese lunar dates. See zodiac years, traditional festivals, and stem-branch info for any date.',
+  }
+  const ogTitles = { zh: '农历转换器 - 实用计算器', en: 'Lunar Calendar Converter - Practical Tools' }
+  const ogDescs = {
+    zh: '快速转换公历与农历日期，支持查看任意日期的农历信息，中英文免费使用。',
+    en: 'Free online lunar calendar converter. Convert between Gregorian (solar) and Chinese lunar dates. See zodiac years, traditional festivals, and stem-branch info for any date.',
+  }
+
+  return {
+    title: titles[lang],
+    description: descriptions[lang],
+    openGraph: {
+      title: ogTitles[lang],
+      description: ogDescs[lang],
     },
-  },
+    alternates: {
+      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/lunar-calendar' : '/lunar-calendar'}`,
+      languages: {
+        'zh-CN': '/zh/lunar-calendar',
+        'en-US': '/lunar-calendar',
+        'x-default': '/lunar-calendar',
+      },
+    },
+  }
 }
 
 const faqSchema = {
@@ -23,28 +44,28 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: '农历和公历有什么区别？',
+      name: '农历和公历有什么区别?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '公历（阳历）是以地球绕太阳公转为基础的历法，一年365或366天。农历（阴阳历）兼顾月亮盈亏和太阳回归年，一年354或384天，并设有闰月来调整两者差距。',
+        text: '公历是根据地球公转计算的日期系统，农历是依据月相变化的传统日期系统。两者一年大约相差11天。',
       },
     },
     {
       '@type': 'Question',
-      name: '如何将公历转换为农历？',
+      name: '如何查看某一天的农历?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '在本工具中输入公历日期（年月日），点击"转农历"即可获得对应的农历日期，包括农历年、月（正月至腊月，闰月会标注）、以及初一到三十的日期。',
+        text: '输入公历日期，点击转换后会显示对应农历、生肖、干支等信息。',
       },
     },
     {
       '@type': 'Question',
-      name: '农历转换器支持哪些年份？',
+      name: '农历转换器准确吗?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '本工具支持2010年至2025年的公历转农历计算，覆盖了近年需要查询的主要农历日期范围。',
+        text: '依据标准农历算法，准确度高。但需注意农历月可能有闰月。',
       },
-    },
+    }
   ],
 }
 
@@ -54,14 +75,11 @@ export default async function LunarCalendarPage({
   searchParams: Promise<{ lang?: string }>
 }) {
   const sp = await searchParams
-  const lang = (sp.lang === 'zh' ? 'zh' : 'en') as 'zh' | 'en'
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <LunarCalendarClient initialLang={lang} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <LunarCalendar initialLang={lang} />
     </>
   )
 }
