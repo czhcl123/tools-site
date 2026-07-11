@@ -27,7 +27,7 @@ export async function generateMetadata({
       description: data.zh.description,
     },
     alternates: {
-    canonical: 'https://tools-site-production.up.railway.app/qr-code-generator',
+    canonical: 'https://tools-site-production.up.railway.app/zh/qr-code-generator',
       languages: {
         'zh-CN': '/zh/qr-code-generator',
         'en-US': '/qr-code-generator',

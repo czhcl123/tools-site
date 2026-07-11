@@ -27,7 +27,7 @@ export async function generateMetadata({
       description: data.zh.description,
     },
     alternates: {
-    canonical: 'https://tools-site-production.up.railway.app/heic-to-jpg',
+    canonical: 'https://tools-site-production.up.railway.app/zh/heic-to-jpg',
       languages: {
         'zh-CN': '/zh/heic-to-jpg',
         'en-US': '/heic-to-jpg',

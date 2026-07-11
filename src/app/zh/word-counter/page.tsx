@@ -27,7 +27,7 @@ export async function generateMetadata({
       description: data.zh.description,
     },
     alternates: {
-    canonical: 'https://tools-site-production.up.railway.app/word-counter',
+    canonical: 'https://tools-site-production.up.railway.app/zh/word-counter',
       languages: {
         'zh-CN': '/zh/word-counter',
         'en-US': '/word-counter',
