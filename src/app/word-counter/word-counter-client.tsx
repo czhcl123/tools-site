@@ -49,7 +49,7 @@ function u(key: keyof typeof t.en, lang: 'zh' | 'en') {
   return t[lang][key] as string
 }
 
-function WordCounterContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
+function WordCounterContent({ initialLang, seoBody }: { initialLang?: 'zh' | 'en'; seoBody?: React.ReactNode }) {
   const searchParams = useSearchParams()
   const lang: 'zh' | 'en' = initialLang ?? (searchParams.get('lang') === 'zh' ? 'zh' : 'en')
   const pathname = usePathname()
@@ -97,6 +97,7 @@ function WordCounterContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
       </header>
 
       <main className="flex-1 max-w-lg mx-auto w-full px-4 py-8 pb-24">
+        {seoBody && <div className="mb-6">{seoBody}</div>}
         <h1 className="text-2xl font-bold text-gray-800 mb-1">{u('pageTitle', lang)}</h1>
         <p className="text-sm text-gray-400 mb-6">{u('pageSubtitle', lang)}</p>
 
@@ -166,10 +167,10 @@ function Stat({ label, value, highlight }: { label: string; value: number; highl
   )
 }
 
-export default function WordCounterClient({ initialLang }: { initialLang?: 'zh' | 'en' }) {
+export default function WordCounterClient({ initialLang, seoBody }: { initialLang?: 'zh' | 'en'; seoBody?: React.ReactNode }) {
   return (
     <Suspense fallback={<div className="min-h-screen bg-gray-50" />}>
-      <WordCounterContent initialLang={initialLang} />
+      <WordCounterContent initialLang={initialLang} seoBody={seoBody} />
     </Suspense>
   )
 }
