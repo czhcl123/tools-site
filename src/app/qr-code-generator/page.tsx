@@ -15,8 +15,8 @@ export async function generateMetadata({
       description: '免费在线 QR 码生成器,本地浏览器生成不上传数据,支持 PNG/SVG 下载,自定义尺寸、颜色、纠错级别,无水印无需注册。',
     },
     en: {
-      title: 'Online QR Code Generator_Free QR Code Maker No Signup_ Practical Tools',
-      description: 'Free online QR code generator. Create downloadable PNG/SVG QR codes locally in your browser — your data never leaves the device. Custom size, color, error correction. No watermark, no signup.',
+      title: 'QR Code Generator — Free PNG & SVG, No Watermark, No Signup',
+      description: 'Generate scannable QR codes in PNG or SVG in 1 click. Custom size, foreground/background colors, and error-correction level. No watermark, no signup, no data upload — generation runs locally in your browser.',
     },
   }
 

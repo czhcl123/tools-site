@@ -116,7 +116,7 @@ const webAppSchema = {
 export const metadata = {
   metadataBase: new URL('https://tools-site-production.up.railway.app'),
   title: {
-    default: 'Practical Tools - Free Online Calculators',
+    default: 'Practical Tools — 10 Free Online Calculators & Utilities',
     template: '%s | Practical Tools',
   },
   description: 'Free online calculators: discount, BMI, date countdown, lunar calendar, unit converter, QR code generator, word counter, JSON formatter, HEIC to JPG, invoice generator. No download needed, works instantly.',
@@ -126,21 +126,21 @@ export const metadata = {
     alternateLocale: 'zh_CN',
     url: 'https://tools-site-production.up.railway.app',
     siteName: 'Practical Tools',
-    title: 'Practical Tools - Free Online Calculators',
-    description: '10 free online calculators and utilities. No signup, no installation, no tracking.',
+    title: 'Practical Tools — 10 Free Online Calculators & Utilities',
+    description: '10 free online calculators and utilities — discount, BMI, countdown, QR code, JSON, HEIC, word count, and more. No signup, no installation, no tracking.',
     images: [
       {
         url: '/og-image.svg',
         width: 1200,
         height: 630,
-        alt: 'Practical Tools - Free Online Calculators',
+        alt: 'Practical Tools — 10 Free Online Calculators & Utilities',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Practical Tools - Free Online Calculators',
-    description: '10 free online calculators and utilities.',
+    title: 'Practical Tools — 10 Free Online Calculators & Utilities',
+    description: '10 free online calculators and utilities — discount, BMI, QR code, JSON, HEIC, word count, and more. No signup, no install.',
     images: ['/og-image.svg'],
   },
   alternates: {
@@ -206,3 +206,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+
