@@ -14,6 +14,17 @@ interface HistoryEntry {
   saving: number
 }
 
+type Currency = 'CNY' | 'INR' | 'GBP' | 'HKD' | 'MYR' | 'PKR' | 'USD'
+const CURRENCIES: Record<Currency, { symbol: string; code: string; label: string; flag: string }> = {
+  CNY: { symbol: '¥', code: 'CNY', label: '人民币', flag: '🇨🇳' },
+  INR: { symbol: '₹', code: 'INR', label: 'Indian Rupee', flag: '🇮🇳' },
+  GBP: { symbol: '£', code: 'GBP', label: 'UK Pound', flag: '🇬🇧' },
+  HKD: { symbol: 'HK$', code: 'HKD', label: 'Hong Kong Dollar', flag: '🇭🇰' },
+  MYR: { symbol: 'RM', code: 'MYR', label: 'Malaysian Ringgit', flag: '🇲🇾' },
+  PKR: { symbol: 'Rs', code: 'PKR', label: 'Pakistani Rupee', flag: '🇵🇰' },
+  USD: { symbol: '$', code: 'USD', label: 'US Dollar', flag: '🇺🇸' },
+}
+
 const t = {
   zh: {
     siteTitle: '🧮 实用计算器',
@@ -36,6 +47,18 @@ const t = {
     invalidPrice: '请输入有效的原价',
     invalidDiscount: '折扣需在 1 到 99 之间',
     switchLang: 'EN',
+    currencyLabel: '货币',
+    seniorMode: '老年/特殊折扣',
+    seniorRate: '折扣率 (%)',
+    originalPriceBefore: '原价',
+    seniorHint: '美国/加拿大/英国常见 senior / pwd / 学生 / 会员折扣',
+    presetTitle: '常见场景',
+    presetSenior: '老年 10%',
+    presetPwd: '残障 15%',
+    presetStudent: '学生 20%',
+    presetMember: '会员 15%',
+    presetBlackFriday: '黑五 30%',
+    presetClear: '清空',
   },
   en: {
     siteTitle: '🧮 Tools',
@@ -58,6 +81,18 @@ const t = {
     invalidPrice: 'Please enter a valid original price',
     invalidDiscount: 'Discount must be between 1 and 99',
     switchLang: '中文',
+    currencyLabel: 'Currency',
+    seniorMode: 'Senior / Special Discount',
+    seniorRate: 'Discount Rate (%)',
+    originalPriceBefore: 'Original',
+    seniorHint: 'Common senior / pwd / student / member rates (US, CA, UK)',
+    presetTitle: 'Quick Presets',
+    presetSenior: 'Senior 10%',
+    presetPwd: 'PWD 15%',
+    presetStudent: 'Student 20%',
+    presetMember: 'Member 15%',
+    presetBlackFriday: 'Black Friday 30%',
+    presetClear: 'Clear',
   },
 }
 
@@ -73,10 +108,13 @@ function DiscountCalculatorContent({ initialLang, seoBody }: { initialLang?: 'zh
 
   const [price, setPrice] = useState('')
   const [discount, setDiscount] = useState('')
+  const [currency, setCurrency] = useState<Currency>('CNY')
   const [result, setResult] = useState<{ final: number; saving: number } | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [history, setHistory] = useState<HistoryEntry[]>([])
   const [copied, setCopied] = useState(false)
+
+  const sym = CURRENCIES[currency].symbol
 
   // Mobile keyboard fix: scroll result into view when it appears
   const resultRef = useRef<HTMLDivElement>(null)
@@ -124,8 +162,8 @@ function DiscountCalculatorContent({ initialLang, seoBody }: { initialLang?: 'zh
   function copyResult() {
     if (!result) return
     const text = lang === 'zh'
-      ? `原价 ¥${price}，${discount}折，折后价 ¥${result.final}，立省 ¥${result.saving}`
-      : `Original ¥${price}, ${discount}% off → Final ¥${result.final}, Save ¥${result.saving}`
+      ? `原价 ${sym}${price}，${discount}折，折后价 ${sym}${result.final}，立省 ${sym}${result.saving}`
+      : `Original ${sym}${price}, ${discount}% off → Final ${sym}${result.final}, Save ${sym}${result.saving}`
     navigator.clipboard.writeText(text).then(() => {
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
@@ -157,9 +195,23 @@ function DiscountCalculatorContent({ initialLang, seoBody }: { initialLang?: 'zh
         {/* Calculator card */}
         <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6">
           <div className="space-y-4">
-            {/* Price input */}
+            {/* Currency + Price */}
             <div>
-              <label className="block text-sm font-medium text-gray-600 mb-1">{u('priceLabel', lang)}</label>
+              <label className="block text-sm font-medium text-gray-600 mb-1">{u('currencyLabel', lang)}</label>
+              <select
+                value={currency}
+                onChange={e => setCurrency(e.target.value as Currency)}
+                className="w-full px-4 py-3 text-lg border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all bg-white"
+              >
+                {Object.entries(CURRENCIES).map(([code, info]) => (
+                  <option key={code} value={code}>
+                    {info.flag} {info.symbol} — {info.label} ({code})
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-600 mb-1">{u('priceLabel', lang)} ({CURRENCIES[currency].code})</label>
               <input
                 type="number"
                 inputMode="decimal"
@@ -186,6 +238,36 @@ function DiscountCalculatorContent({ initialLang, seoBody }: { initialLang?: 'zh
               <p className="text-xs text-gray-400 mt-1">{u('discountHint', lang)}</p>
             </div>
 
+            {/* Quick presets — Senior / PWD / Student / Member / Black Friday */}
+            <div>
+              <label className="block text-xs font-medium text-gray-500 mb-1.5">{u('presetTitle', lang)}</label>
+              <div className="flex flex-wrap gap-1.5">
+                {[10, 15, 20, 30].map(rate => {
+                  const labels = lang === 'zh'
+                    ? { 10: t.zh.presetSenior, 15: t.zh.presetPwd, 20: t.zh.presetStudent, 30: t.zh.presetBlackFriday }
+                    : { 10: t.en.presetSenior, 15: t.en.presetPwd, 20: t.en.presetStudent, 30: t.en.presetBlackFriday }
+                  return (
+                    <button
+                      key={rate}
+                      type="button"
+                      onClick={() => setDiscount(String(rate))}
+                      className="text-xs px-2.5 py-1 border border-gray-200 rounded-full hover:bg-orange-50 hover:border-orange-300 transition-colors"
+                    >
+                      {labels[rate]}
+                    </button>
+                  )
+                })}
+                <button
+                  type="button"
+                  onClick={() => setDiscount('')}
+                  className="text-xs px-2.5 py-1 border border-gray-100 text-gray-400 rounded-full hover:bg-gray-50 transition-colors"
+                >
+                  {u('presetClear', lang)}
+                </button>
+              </div>
+              <p className="text-[11px] text-gray-400 mt-1.5">{u('seniorHint', lang)}</p>
+            </div>
+
             {/* Error */}
             {error && (
               <div className="bg-red-50 text-red-600 px-4 py-2.5 rounded-xl text-sm">{error}</div>
@@ -195,8 +277,8 @@ function DiscountCalculatorContent({ initialLang, seoBody }: { initialLang?: 'zh
             {result && (
               <div ref={resultRef} className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-5 text-center border border-orange-200">
                 <div className="text-sm text-orange-500 mb-1">{u('result', lang)}</div>
-                <div className="text-4xl font-bold text-orange-600 mb-1">¥{result.final}</div>
-                <div className="text-sm text-gray-500">{u('saving', lang)} ¥{result.saving}</div>
+                <div className="text-4xl font-bold text-orange-600 mb-1">{sym}{result.final}</div>
+                <div className="text-sm text-gray-500">{u('saving', lang)} {sym}{result.saving}</div>
                 <button
                   onClick={copyResult}
                   className="mt-3 text-xs px-4 py-1.5 bg-white border border-orange-200 text-orange-500 rounded-full hover:bg-orange-50 transition-colors"
@@ -241,13 +323,13 @@ function DiscountCalculatorContent({ initialLang, seoBody }: { initialLang?: 'zh
               {history.map(entry => (
                 <div key={entry.id} className="flex items-center justify-between py-2 border-b border-gray-50 last:border-0">
                   <div className="text-sm text-gray-600">
-                    <span className="font-medium">¥{entry.price}</span>
+                    <span className="font-medium">{sym}{entry.price}</span>
                     <span className="text-gray-300 mx-1">·</span>
                     <span>{entry.discount}{lang === 'zh' ? '折' : '%'}</span>
                   </div>
                   <div className="text-right">
-                    <span className="text-sm font-semibold text-orange-500">¥{entry.final}</span>
-                    <span className="text-xs text-gray-400 ml-2">{u('saving', lang)} ¥{entry.saving}</span>
+                    <span className="text-sm font-semibold text-orange-500">{sym}{entry.final}</span>
+                    <span className="text-xs text-gray-400 ml-2">{u('saving', lang)} {sym}{entry.saving}</span>
                   </div>
                 </div>
               ))}

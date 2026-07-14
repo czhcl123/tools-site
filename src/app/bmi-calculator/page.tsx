@@ -9,10 +9,13 @@ export async function generateMetadata({
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
 
-  const titles = { zh: 'BMI计算器', en: 'BMI Calculator - Free Online Body Mass Index Tool' }
+  const titles = {
+    zh: 'BMI 计算器 — 男女标准，亚州人多指标、中英文、最高准确度',
+    en: 'BMI Calculator — Women, Men & Asian Ranges, Metric & Imperial, Free',
+  }
   const descriptions = {
-    zh: '快速计算身体质量指数（BMI），判断体重是否健康，支持中英文，免费使用。',
-    en: "Free online BMI calculator. Compute your Body Mass Index instantly and see if you're in the healthy weight range. Supports metric and imperial units. No signup.",
+    zh: '免费在线 BMI 计算器,男女不同标准,支持亚州人阈值(cm/kg)。含 BMI 范围表、健康状态解读、中英文双版,无需注册即可使用。',
+    en: "Free BMI calculator with separate women, men, and Asian thresholds. Metric (cm/kg) and imperial (ft/lb) units. Includes age adjustment, healthy BMI range table, and instant result. No signup.",
   }
   const ogTitles = { zh: 'BMI计算器 - 实用计算器', en: 'BMI Calculator - Practical Tools' }
   const ogDescs = {

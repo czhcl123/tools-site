@@ -15,8 +15,8 @@ export async function generateMetadata({
       description: '免费在线 HEIC 转 JPG 工具,支持批量转换 iPhone HEIC 照片。100% 浏览器本地处理,照片不上传,保护隐私。支持 Windows、 Android、小红书、电商平台分享。',
     },
     en: {
-      title: 'HEIC to JPG Converter — Convert 100 iPhone Photos in 30s, 100% Local',
-      description: 'Convert HEIC to JPG in bulk — 100 iPhone photos in about 30 seconds, no upload, runs entirely in your browser. Full privacy. Outputs standard JPG for Windows, Android, social media, and email.',
+      title: 'HEIC to JPG Converter — Free, Batch, Mac & Windows, 100% Local',
+      description: 'Convert HEIC to JPG in bulk — 100 iPhone photos in about 30 seconds, no upload, runs entirely in your browser. Full privacy. Works on Mac, Windows, Android, social media, and email. Standard JPG output with quality presets and ZIP download.',
     },
   }
 
