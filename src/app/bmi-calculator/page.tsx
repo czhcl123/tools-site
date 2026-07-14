@@ -10,12 +10,12 @@ export async function generateMetadata({
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
 
   const titles = {
-    zh: 'BMI 计算器 — 男女标准，亚州人多指标、中英文、最高准确度',
-    en: 'BMI Calculator — Women, Men & Asian Ranges, Metric & Imperial, Free',
+    zh: 'BMI计算器',
+    en: 'BMI Calculator - Women, Men & Asian Ranges, Free',
   }
   const descriptions = {
-    zh: '免费在线 BMI 计算器,男女不同标准,支持亚州人阈值(cm/kg)。含 BMI 范围表、健康状态解读、中英文双版,无需注册即可使用。',
-    en: "Free BMI calculator with separate women, men, and Asian thresholds. Metric (cm/kg) and imperial (ft/lb) units. Includes age adjustment, healthy BMI range table, and instant result. No signup.",
+    zh: '快速计算身体质量指数（BMI），男女不同标准，支持亚州人阈值。无需注册，免费使用。',
+    en: "Free BMI calculator for women, men, and Asian thresholds. Metric and imperial units. Healthy BMI range table and instant result. No signup.",
   }
   const ogTitles = { zh: 'BMI计算器 - 实用计算器', en: 'BMI Calculator - Practical Tools' }
   const ogDescs = {
