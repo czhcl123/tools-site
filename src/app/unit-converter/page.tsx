@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import UnitConverterClient from './unitConverter-client'
+import UnitConverter from './converter-client'
 
 export async function generateMetadata({
   searchParams,

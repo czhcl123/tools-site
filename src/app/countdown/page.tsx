@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import CountdownClient from './countdown-client'
+import Countdown from './countdown-client'
 
 export async function generateMetadata({
   searchParams,

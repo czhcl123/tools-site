@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import BmiCalculatorClient from './bmi-client'
+import BmiCalculator from './bmi-client'
 
 export async function generateMetadata({
   searchParams,

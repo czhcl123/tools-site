@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import LunarCalendarClient from './lunarCalendar-client'
+import LunarCalendar from './lunar-client'
 
 export async function generateMetadata({
   searchParams,
