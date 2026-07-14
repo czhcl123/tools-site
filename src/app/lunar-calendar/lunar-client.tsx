@@ -112,7 +112,7 @@ function solarToLunar(year: number, month: number, day: number) {
   return { year: cy, month: cm, day: cd, leap: false }
 }
 
-function LunarCalendarContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
+function LunarCalendarContent({ initialLang, seoBody }: { initialLang?: 'zh' | 'en'; seoBody?: React.ReactNode }) {
   const searchParams = useSearchParams()
   const lang = (searchParams.get('lang') === 'zh' ? 'zh' : 'en') as 'zh' | 'en'
   const pathname = usePathname()
@@ -159,6 +159,7 @@ function LunarCalendarContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
       </header>
 
       <main className="max-w-2xl mx-auto px-4 py-8">
+        {seoBody && <div className="mb-6">{seoBody}</div>}
         <h1 className="text-2xl font-bold text-gray-800 mb-2">{u('title')}</h1>
         <p className="text-gray-500 text-sm mb-6">{u('description')}</p>
 
@@ -221,10 +222,10 @@ function LunarCalendarContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
   )
 }
 
-export default function LunarCalendar({ initialLang }: { initialLang?: 'zh' | 'en' }) {
+export default function LunarCalendar({ initialLang, seoBody }: { initialLang?: 'zh' | 'en'; seoBody?: React.ReactNode }) {
   return (
     <Suspense fallback={<div className="min-h-screen bg-gray-50" />}>
-      <LunarCalendarContent initialLang={initialLang} />
+      <LunarCalendarContent initialLang={initialLang} seoBody={seoBody} />
     </Suspense>
   )
 }

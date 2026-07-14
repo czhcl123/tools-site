@@ -48,7 +48,7 @@ function getDaysDiff(target: Date, today: Date) {
   return Math.floor(diff / (1000 * 60 * 60 * 24))
 }
 
-function CountdownContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
+function CountdownContent({ initialLang, seoBody }: { initialLang?: 'zh' | 'en'; seoBody?: React.ReactNode }) {
   const searchParams = useSearchParams()
   const lang = (searchParams.get('lang') === 'zh' ? 'zh' : 'en') as 'zh' | 'en'
   const pathname = usePathname()
@@ -93,6 +93,7 @@ function CountdownContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
       </header>
 
       <main className="max-w-2xl mx-auto px-4 py-8">
+        {seoBody && <div className="mb-6">{seoBody}</div>}
         <h1 className="text-2xl font-bold text-gray-800 mb-2">{u('title')}</h1>
         <p className="text-gray-500 text-sm mb-6">{u('description')}</p>
 
@@ -158,10 +159,10 @@ function CountdownContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
   )
 }
 
-export default function Countdown({ initialLang }: { initialLang?: 'zh' | 'en' }) {
+export default function Countdown({ initialLang, seoBody }: { initialLang?: 'zh' | 'en'; seoBody?: React.ReactNode }) {
   return (
     <Suspense fallback={<div className="min-h-screen bg-gray-50" />}>
-      <CountdownContent initialLang={initialLang} />
+      <CountdownContent initialLang={initialLang} seoBody={seoBody} />
     </Suspense>
   )
 }

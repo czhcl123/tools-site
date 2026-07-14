@@ -132,10 +132,33 @@ const faqSchemas = {
   },
 }
 
+const seoBodyZh = (
+  <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
+    <p>
+      <strong>发票生成器</strong>5 分钟输出专业 PDF 发票,支持多币种、自动税额、Logo 上传、商品多行。所有数据本地处理(不上传服务器)、无水印、可商用,适合自由职业者、跨境电商、独立设计师。
+    </p>
+    <h2 className="text-lg font-semibold text-gray-800 pt-2">主要功能</h2>
+    <p><strong>1. 多币种支持</strong>。USD / EUR / CNY / GBP / JPY 等 7 种货币预设,以及自定义币种符号。跨境电商客户用本币显示,无需手算汇率。</p>
+    <p><strong>2. 自动税额</strong>。输入税率(0-25%),工具实时计算每行商品的税额和总计。中国大陆增值税 13%、美国销售税 8-10%、欧盟 VAT 20% 都能覆盖。</p>
+    <p><strong>3. Logo 上传</strong>。PNG / JPG 拖拽上传,自动嵌入 PDF 顶部左侧,保留您的品牌身份。</p>
+    <p><strong>4. 商品多行</strong>。支持任意行数,每行独立"描述 / 数量 / 单价"3 字段,工具实时累加小计 / 税额 / 总计。</p>
+    <p><strong>5. PDF 下载</strong>。一键下载生成的 PDF 发票,可直接邮件发送给客户或打印归档。</p>
+    <h2 className="text-lg font-semibold text-gray-800 pt-2">适合谁用</h2>
+    <ul className="list-disc pl-5 space-y-1">
+      <li>自由职业者(程序员 / 设计师 / 作家)给客户开发票</li>
+      <li>跨境电商小卖家(Shopify / Etsy / 速卖通)</li>
+      <li>独立开发者、咨询顾问、培训师</li>
+      <li>租房 / 服务提供方需要向"个人"客户提供发票</li>
+    </ul>
+    <h2 className="text-lg font-semibold text-gray-800 pt-2">为什么不用收费工具?</h2>
+    <p>本工具免费,适合月均开 1-30 张发票的中小型业务。月开 100+ 张需要自动化(Zapier + Stripe Invoice API 更合适)。本工具特点:无品牌(下载发票上不强制显示"by Practical Tools")、可商用、无追踪,数据完全本地处理。</p>
+  </div>
+)
+
 export default async function InvoiceGeneratorPage({
   searchParams,
 }: {
-  
+
 }) {
   const lang = 'zh'
   return (
@@ -144,7 +167,7 @@ export default async function InvoiceGeneratorPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemas[lang]) }}
       />
-      <InvoiceGeneratorClient initialLang={lang} />
+      <InvoiceGeneratorClient initialLang={lang} seoBody={seoBodyZh} />
     </>
   )
 }

@@ -71,7 +71,7 @@ function getCategoryColor(category: string, lang: 'zh' | 'en') {
   return 'text-red-500'
 }
 
-function BmiCalculatorContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
+function BmiCalculatorContent({ initialLang, seoBody }: { initialLang?: 'zh' | 'en'; seoBody?: React.ReactNode }) {
   const searchParams = useSearchParams()
   const lang = (searchParams.get('lang') === 'zh' ? 'zh' : 'en') as 'zh' | 'en'
   const pathname = usePathname()
@@ -109,6 +109,7 @@ function BmiCalculatorContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
       </header>
 
       <main className="max-w-2xl mx-auto px-4 py-8">
+        {seoBody && <div className="mb-6">{seoBody}</div>}
         <h1 className="text-2xl font-bold text-gray-800 mb-2">{u('title')}</h1>
         <p className="text-gray-500 text-sm mb-6">{u('description')}</p>
 
@@ -194,10 +195,10 @@ function BmiCalculatorContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
   )
 }
 
-export default function BmiCalculator({ initialLang }: { initialLang?: 'zh' | 'en' }) {
+export default function BmiCalculator({ initialLang, seoBody }: { initialLang?: 'zh' | 'en'; seoBody?: React.ReactNode }) {
   return (
     <Suspense fallback={<div className="min-h-screen bg-gray-50" />}>
-      <BmiCalculatorContent initialLang={initialLang} />
+      <BmiCalculatorContent initialLang={initialLang} seoBody={seoBody} />
     </Suspense>
   )
 }
