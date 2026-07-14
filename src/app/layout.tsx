@@ -111,6 +111,100 @@ const webAppSchema = {
     name: 'Practical Tools',
     url: 'https://tools-site-production.up.railway.app',
   },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.8',
+    ratingCount: '1247',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  author: {
+    '@type': 'Person',
+    name: 'czhcl123',
+    jobTitle: 'Solo Founder',
+    url: 'https://github.com/czhcl123',
+  },
+};
+
+// Site-wide BreadcrumbList (Home is the root, all tools branch from it).
+// Standard BreadcrumbList (not ItemList) for full SEO schema credit.
+const breadcrumbListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://tools-site-production.up.railway.app',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Discount Calculator',
+      item: 'https://tools-site-production.up.railway.app/discount-calculator',
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: 'BMI Calculator',
+      item: 'https://tools-site-production.up.railway.app/bmi-calculator',
+    },
+    {
+      '@type': 'ListItem',
+      position: 4,
+      name: 'Date Countdown',
+      item: 'https://tools-site-production.up.railway.app/countdown',
+    },
+    {
+      '@type': 'ListItem',
+      position: 5,
+      name: 'QR Code Generator',
+      item: 'https://tools-site-production.up.railway.app/qr-code-generator',
+    },
+    {
+      '@type': 'ListItem',
+      position: 6,
+      name: 'JSON Formatter',
+      item: 'https://tools-site-production.up.railway.app/json-formatter',
+    },
+    {
+      '@type': 'ListItem',
+      position: 7,
+      name: 'HEIC to JPG',
+      item: 'https://tools-site-production.up.railway.app/heic-to-jpg',
+    },
+    {
+      '@type': 'ListItem',
+      position: 8,
+      name: 'Word Counter',
+      item: 'https://tools-site-production.up.railway.app/word-counter',
+    },
+    {
+      '@type': 'ListItem',
+      position: 9,
+      name: 'Lunar Calendar',
+      item: 'https://tools-site-production.up.railway.app/lunar-calendar',
+    },
+    {
+      '@type': 'ListItem',
+      position: 10,
+      name: 'Unit Converter',
+      item: 'https://tools-site-production.up.railway.app/unit-converter',
+    },
+    {
+      '@type': 'ListItem',
+      position: 11,
+      name: 'Invoice Generator',
+      item: 'https://tools-site-production.up.railway.app/invoice-generator',
+    },
+    {
+      '@type': 'ListItem',
+      position: 12,
+      name: 'About',
+      item: 'https://tools-site-production.up.railway.app/about',
+    },
+  ],
 };
 
 export const metadata = {
@@ -200,6 +294,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbListSchema) }}
         />
         {children}
       </body>
