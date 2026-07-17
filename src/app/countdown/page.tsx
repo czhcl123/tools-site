@@ -11,16 +11,16 @@ export async function generateMetadata({
 
   const titles = {
     zh: '日期计算器 - 距目标还有多少天,双向倒计时和日期差',
-    en: 'Countdown Calculator - Days Until / Since Any Date, Free',
+    en: 'Countdown Timer - Days Until Any Date, Free Online Tool',
   }
   const descriptions = {
     zh: '免费在线日期计算器:计算任意目标日期距今多少天,或过去多少天。支持闰年、双向倒计时、周年纪念日追踪。',
-    en: 'Free online date countdown calculator: find how many days until any future date, or how many days since any past date. Anniversary tracker, deadline counter, leap-year safe.',
+    en: 'Free online countdown timer: count down to any future date or count days since any past date. Birthday reminder, deadline tracker, leap-year safe. No signup, no download.',
   }
   const ogTitles = { zh: '日期计算器 - 实用计算器', en: 'Countdown Calculator - Practical Tools' }
   const ogDescs = {
     zh: '任意日期距今天数 / 已过去天数计算',
-    en: 'Days until/since any date, free online calculator.',
+    en: 'Countdown to any date or count days since. Free online countdown timer.',
   }
 
   return {

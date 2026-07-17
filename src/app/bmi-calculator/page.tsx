@@ -11,16 +11,16 @@ export async function generateMetadata({
 
   const titles = {
     zh: 'BMI 计算器 - 男女亚州人阈值,免费体重指数计算',
-    en: 'BMI Calculator - Women, Men & Asian Ranges, Free',
+    en: 'BMI Calculator - Calculate Body Mass Index, Free Online Tool',
   }
   const descriptions = {
     zh: '免费在线 BMI 计算器,男女不同标准,支持亚州人阈值(cm/kg)。含 BMI 范围表、男/女/老年独立判断,中英文双版,无需注册。',
-    en: "Free BMI calculator for women, men, and Asian thresholds. Metric (cm/kg) and imperial (ft/lb) units. Healthy BMI range table, age adjustment, instant result. No signup.",
+    en: "Free BMI calculator: enter height (cm or ft/in) and weight (kg or lb) to get your body mass index instantly. Includes healthy BMI range chart for women, men, and adults. Metric and imperial units, no signup, 100% browser-side processing.",
   }
   const ogTitles = { zh: 'BMI 计算器 - 实用计算器', en: 'BMI Calculator - Practical Tools' }
   const ogDescs = {
     zh: '免费在线 BMI 计算器,男女不同标准,亚州人阈值。',
-    en: "Free online BMI calculator with women / men / Asian thresholds. Instant result.",
+    en: 'Calculate BMI from height and weight. Free online tool, no signup, instant result.',
   }
 
   return {

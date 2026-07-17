@@ -15,8 +15,8 @@ export async function generateMetadata({
       description: '粘贴 JSON 字符串,一键格式化、美化、压缩、验证。自定义缩进(2/4/Tab),错误精确到行列号,适合 API 响应、配置文件、webhook payload 调试。所有处理在浏览器本地完成,数据安全。',
     },
     en: {
-      title: 'JSON Formatter & Validator — Fix API Responses in 1 Click',
-      description: 'Paste JSON, get it formatted, validated, and error-checked in 1 click. Errors show exact line and column. Custom indent (2 / 4 / Tab), minify, and copy. Handles payloads up to 10 MB. Perfect for API debugging, webhooks, and config files.',
+      title: 'JSON Formatter & Validator - Free Online JSON Beautifier',
+      description: 'Free online JSON formatter and validator: paste JSON to format, beautify, minify, and validate in 1 click. Errors show exact line and column. Custom indent (2 / 4 / Tab), up to 10 MB. Perfect for API debugging, webhook payloads, and config files. 100% browser-side, no upload.',
     },
   }
 

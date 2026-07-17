@@ -15,8 +15,8 @@ export async function generateMetadata({
       description: '输入商品原价和折扣力度（1-99折），快速计算折后价和节省金额。支持微信、电商平台各种折扣场景，免费使用。',
     },
     en: {
-      title: 'Discount Calculator — INR, GBP, HKD, USD & 7 Currencies, Senior & PWD Rates',
-      description: 'Free online discount calculator with 7 currencies (CNY, INR, GBP, HKD, MYR, PKR, USD). Calculate 30%, 50%, 70% off in 1 second. Includes Senior, PWD, Student, and Member preset rates. No signup, no download.',
+      title: 'Discount Calculator - Calculate 30, 50, 70 Percent Off Instantly',
+      description: 'Free online discount calculator: enter the original price and the discount percentage to instantly get the final price and dollar amount saved. Calculate 30%, 50%, 70% off in 1 second. Works for any currency. No signup, no download.',
     },
   }
 
