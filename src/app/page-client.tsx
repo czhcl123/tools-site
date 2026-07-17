@@ -17,17 +17,17 @@ type Tool = {
 
 const TOOLS: Tool[] = [
   // 5 new tools first (demo order)
-  { path: '/qr-code-generator', zh: 'QR码生成器', en: 'QR Code Generator', descZh: '在线生成可下载二维码', descEn: 'Generate downloadable QR codes', icon: '📱', color: 'bg-rose-50 border-rose-200 hover:shadow-lg hover:shadow-rose-200/50 hover:-translate-y-0.5 hover:bg-rose-100' },
-  { path: '/word-counter', zh: '字数统计', en: 'Word Counter', descZh: '中英文字数实时统计', descEn: 'Real-time word & char count', icon: '📝', color: 'bg-indigo-50 border-indigo-200 hover:shadow-lg hover:shadow-indigo-200/50 hover:-translate-y-0.5 hover:bg-indigo-100' },
-  { path: '/json-formatter', zh: 'JSON格式化', en: 'JSON Formatter', descZh: 'JSON格式化与验证', descEn: 'Format & validate JSON', icon: '🔧', color: 'bg-emerald-50 border-emerald-200 hover:shadow-lg hover:shadow-emerald-200/50 hover:-translate-y-0.5 hover:bg-emerald-100' },
-  { path: '/heic-to-jpg', zh: 'HEIC转JPG', en: 'HEIC to JPG', descZh: 'iPhone照片转JPG', descEn: 'iPhone photos to JPG', icon: '🖼️', color: 'bg-pink-50 border-pink-200 hover:shadow-lg hover:shadow-pink-200/50 hover:-translate-y-0.5 hover:bg-pink-100' },
-  { path: '/invoice-generator', zh: '发票生成器', en: 'Invoice Generator', descZh: '免费PDF发票', descEn: 'Free PDF invoices', icon: '📄', color: 'bg-amber-50 border-amber-200 hover:shadow-lg hover:shadow-amber-200/50 hover:-translate-y-0.5 hover:bg-amber-100' },
+  { path: '/qr-code-generator', zh: 'QR码生成器', en: 'QR Code Generator', descZh: '在线生成可下载二维码', descEn: 'Free QR code generator, no signup. PNG, SVG, PDF export.', icon: '📱', color: 'bg-rose-50 border-rose-200 hover:shadow-lg hover:shadow-rose-200/50 hover:-translate-y-0.5 hover:bg-rose-100' },
+  { path: '/word-counter', zh: '字数统计', en: 'Word Counter', descZh: '中英文字数实时统计', descEn: 'Real-time word, character & reading time count.', icon: '📝', color: 'bg-indigo-50 border-indigo-200 hover:shadow-lg hover:shadow-indigo-200/50 hover:-translate-y-0.5 hover:bg-indigo-100' },
+  { path: '/json-formatter', zh: 'JSON格式化', en: 'JSON Formatter', descZh: 'JSON格式化与验证', descEn: 'Format, validate & minify JSON in 1 click.', icon: '🔧', color: 'bg-emerald-50 border-emerald-200 hover:shadow-lg hover:shadow-emerald-200/50 hover:-translate-y-0.5 hover:bg-emerald-100' },
+  { path: '/heic-to-jpg', zh: 'HEIC转JPG', en: 'HEIC to JPG', descZh: 'iPhone照片转JPG', descEn: 'Convert 100 iPhone HEIC photos to JPG in 30s, no upload.', icon: '🖼️', color: 'bg-pink-50 border-pink-200 hover:shadow-lg hover:shadow-pink-200/50 hover:-translate-y-0.5 hover:bg-pink-100' },
+  { path: '/invoice-generator', zh: '发票生成器', en: 'Invoice Generator', descZh: '免费PDF发票', descEn: 'Free PDF invoice generator for freelancers.', icon: '📄', color: 'bg-amber-50 border-amber-200 hover:shadow-lg hover:shadow-amber-200/50 hover:-translate-y-0.5 hover:bg-amber-100' },
   // 5 existing tools
-  { path: '/discount-calculator', zh: '折扣计算器', en: 'Discount Calculator', descZh: '计算折扣价、省钱金额', descEn: 'Calculate discounted price & savings', icon: '🏷️', color: 'bg-orange-50 border-orange-200 hover:shadow-lg hover:shadow-orange-200/50 hover:-translate-y-0.5 hover:bg-orange-100' },
-  { path: '/bmi-calculator', zh: 'BMI计算器', en: 'BMI Calculator', descZh: '身体质量指数计算', descEn: 'Body Mass Index calculation', icon: '⚖️', color: 'bg-blue-50 border-blue-200 hover:shadow-lg hover:shadow-blue-200/50 hover:-translate-y-0.5 hover:bg-blue-100' },
-  { path: '/countdown', zh: '日期计算器', en: 'Date Calculator', descZh: '计算日期间隔与倒计时', descEn: 'Calculate days between dates', icon: '📅', color: 'bg-green-50 border-green-200 hover:shadow-lg hover:shadow-green-200/50 hover:-translate-y-0.5 hover:bg-green-100' },
-  { path: '/lunar-calendar', zh: '农历转换', en: 'Lunar Calendar', descZh: '公历农历互转', descEn: 'Convert between lunar & solar', icon: '📆', color: 'bg-purple-50 border-purple-200 hover:shadow-lg hover:shadow-purple-200/50 hover:-translate-y-0.5 hover:bg-purple-100' },
-  { path: '/unit-converter', zh: '单位换算', en: 'Unit Converter', descZh: '长度/重量/温度换算', descEn: 'Length/weight/temperature conversion', icon: '📐', color: 'bg-teal-50 border-teal-200 hover:shadow-lg hover:shadow-teal-200/50 hover:-translate-y-0.5 hover:bg-teal-100' },
+  { path: '/discount-calculator', zh: '折扣计算器', en: 'Discount Calculator', descZh: '计算折扣价、省钱金额', descEn: 'Calculate 30, 50, 70 percent off instantly.', icon: '🏷️', color: 'bg-orange-50 border-orange-200 hover:shadow-lg hover:shadow-orange-200/50 hover:-translate-y-0.5 hover:bg-orange-100' },
+  { path: '/bmi-calculator', zh: 'BMI计算器', en: 'BMI Calculator', descZh: '身体质量指数计算', descEn: 'Calculate BMI from height & weight, metric/imperial.', icon: '⚖️', color: 'bg-blue-50 border-blue-200 hover:shadow-lg hover:shadow-blue-200/50 hover:-translate-y-0.5 hover:bg-blue-100' },
+  { path: '/countdown', zh: '日期计算器', en: 'Date Calculator', descZh: '计算日期间隔与倒计时', descEn: 'Countdown to a date or count days since.', icon: '📅', color: 'bg-green-50 border-green-200 hover:shadow-lg hover:shadow-green-200/50 hover:-translate-y-0.5 hover:bg-green-100' },
+  { path: '/lunar-calendar', zh: '农历转换', en: 'Lunar Calendar', descZh: '公历农历互转', descEn: 'Convert Gregorian to Chinese lunar, 1900-2100.', icon: '📆', color: 'bg-purple-50 border-purple-200 hover:shadow-lg hover:shadow-purple-200/50 hover:-translate-y-0.5 hover:bg-purple-100' },
+  { path: '/unit-converter', zh: '单位换算', en: 'Unit Converter', descZh: '长度/重量/温度换算', descEn: 'cm to inches, kg to lb, °C to °F. 30+ units.', icon: '📐', color: 'bg-teal-50 border-teal-200 hover:shadow-lg hover:shadow-teal-200/50 hover:-translate-y-0.5 hover:bg-teal-100' },
 ]
 
 function HomePageContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
@@ -51,8 +51,8 @@ function HomePageContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
   const t = {
     zh: {
       searchPlaceholder: '搜索工具...',
-      heroTitle: '10 个免费在线工具',
-      heroSubtitle: '免费、无需注册、数据本地处理。所有计算在你浏览器内完成,不上传任何服务器。',
+      heroTitle: '免费在线计算工具 - 折扣 / BMI / QR 码 / 倒计时等 10 个工具',
+      heroSubtitle: '10 个快速、免费的浏览器内计算与实用工具:折扣计算、BMI、倒计时、农历、单位换算、QR 码生成、字数统计、JSON 格式化、HEIC 转 JPG、发票生成。无需注册、无需下载、无跟踪,所有处理都在你的浏览器本地完成。',
       badgeFree: '完全免费',
       badgeSignup: '无需注册',
       badgePrivacy: '保护隐私',
@@ -62,8 +62,8 @@ function HomePageContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
     },
     en: {
       searchPlaceholder: 'Search calculators...',
-      heroTitle: '10 Free Online Calculators & Utilities',
-      heroSubtitle: 'Privacy-first web utilities: discount, BMI, date, lunar calendar, units, QR codes, JSON, and more. No signup, no tracking, all data processed locally.',
+      heroTitle: 'Free Online Calculators & Tools — Discount, BMI, QR Code & More',
+      heroSubtitle: '10 fast, free, browser-based calculators and utilities: discount, BMI, countdown timer, lunar calendar, unit converter, QR code generator, word counter, JSON formatter, HEIC to JPG, and invoice generator. No signup, no download, no tracking. All processing runs in your browser.',
       badgeFree: '100% Free',
       badgeSignup: 'No Signup',
       badgePrivacy: 'Privacy First',
