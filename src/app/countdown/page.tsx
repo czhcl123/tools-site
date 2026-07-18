@@ -10,12 +10,12 @@ export async function generateMetadata({
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
 
   const titles = {
-    zh: '日期计算器 - 距目标还有多少天,双向倒计时和日期差',
-    en: 'Countdown Timer - Days Until Any Date, Free Online Tool',
+    zh: '倒计时器 - 实时显示距任意日期还有几天几小时几分钟 (Live 秒级)',
+    en: 'Countdown Timer - Live Days, Hours, Minutes Until Any Date, 500K/mo Free',
   }
   const descriptions = {
-    zh: '免费在线日期计算器:计算任意目标日期距今多少天,或过去多少天。支持闰年、双向倒计时、周年纪念日追踪。',
-    en: 'Free online countdown timer: count down to any future date or count days since any past date. Birthday reminder, deadline tracker, leap-year safe. No signup, no download.',
+    zh: '在线倒计时器,实时跳秒:选择目标日期 + 时间,显示还有几天几小时几分钟几秒。每秒刷新。也支持"距今已过去 N 天"模式。免费、无需注册。',
+    en: 'Live countdown timer counting down days, hours, minutes, and seconds to any date or event. Updates every second in your browser. Counts days since past dates too. Free, no signup.',
   }
   const ogTitles = { zh: '日期计算器 - 实用计算器', en: 'Countdown Calculator - Practical Tools' }
   const ogDescs = {
@@ -77,6 +77,14 @@ const faqSchemaZh = {
         text: '本工具不算工作日,只算自然日(包含周末和法定节假日)。如果需要工作日计算,搭配 Excel NETWORKDAYS 函数或公司项目管理工具。本工具适合:高考倒计时、婚礼倒计时、孕周计算、周年纪念日——这些都按自然日。',
       },
     },
+    {
+      '@type': 'Question',
+      name: '有实时跳秒的倒计时吗?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '有。点击页面顶部"实时倒计时"切换后,选择目标日期+时间(精确到分钟),工具会每秒刷新显示"还剩 X 天 X 小时 X 分钟 X 秒"。常用于婚礼仪式、跨年倒计时、考试交卷、太空发射等需要秒级精度的场景。所有计算在浏览器本地完成,不依赖服务器。',
+      },
+    },
   ],
 }
 
@@ -114,6 +122,14 @@ const faqSchemaEn = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'No. This tool counts calendar days including weekends and holidays. For business day calculations (excluding Sat/Sun and US federal holidays), use Excel NETWORKDAYS, Google Sheets NETWORKDAYS.USA, or a project management tool. Calendar-day countdowns are for: exam prep, wedding countdowns, pregnancy weeks, anniversaries.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does the countdown tick every second in real time?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Switch to the "Live Timer" mode, pick a target date and time (to the minute), and the timer updates every second showing days, hours, minutes, and seconds remaining. Common uses: wedding ceremony, New Year countdown, exam deadline, rocket launch. All calculations happen in your browser — no server calls, no latency.',
       },
     },
   ],
@@ -157,9 +173,39 @@ export default async function CountdownPage({
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
   const faqSchema = lang === 'zh' ? faqSchemaZh : faqSchemaEn
+
+  const webAppSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: lang === 'zh' ? '在线倒计时器 — 实时跳秒' : 'Countdown Timer - Live Days Hours Minutes',
+    alternateName: lang === 'zh' ? '倒计时器' : 'Countdown Calculator',
+    url: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/countdown' : '/countdown'}`,
+    applicationCategory: 'UtilityApplication',
+    applicationSubCategory: 'CountdownTimer',
+    operatingSystem: 'Any (web browser with JavaScript)',
+    browserRequirements: 'Requires JavaScript. Requires HTML5.',
+    inLanguage: ['en-US', 'zh-CN'],
+    isAccessibleForFree: true,
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description:
+      lang === 'zh'
+        ? '实时倒计时器:选择目标日期+时间,每秒刷新显示剩余天数、小时、分钟、秒。也支持距今已过去 N 天模式。免费、无需注册。'
+        : 'Live countdown timer that ticks every second showing days, hours, minutes, seconds remaining until any date or event. Also counts days since past dates. Free, no signup, browser-only.',
+    featureList: [
+      'Live tick every second (days, hours, minutes, seconds)',
+      'Counts days until future date',
+      'Counts days since past date',
+      'Birthday / anniversary / deadline tracker',
+      'Leap year safe',
+      'Free, no signup, no ads',
+      'Bilingual English / Chinese',
+    ],
+    dateModified: '2026-07-18',
+  }
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, webAppSchema]) }} />
       <Countdown initialLang={lang} seoBody={lang === 'zh' ? seoBodyZh : seoBodyEn} />
     </>
   )
