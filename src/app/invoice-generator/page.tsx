@@ -11,12 +11,12 @@ export async function generateMetadata({
 
   const data = {
     zh: {
-      title: '免费发票生成器 - 在线PDF发票制作工具',
-      description: '免费在线发票生成器,输入商家、客户、商品信息,一键生成可下载的PDF发票。支持多币种、自定义税率、添加Logo。',
+      title: '免费发票生成器 - 一键生成PDF发票 (500K/月 cpc $181)',
+      description: '免费发票生成器:输入商家、客户、商品信息,一键生成专业 PDF 发票。500K/月需求,cpc $181 商业价值最高。支持多币种、自定义税率、添加 Logo,无需注册,数据本地处理。',
     },
     en: {
-      title: 'Free Invoice Generator - Online PDF Invoice Maker for Freelancers',
-      description: 'Free online invoice generator for freelancers and small businesses. Enter business, client, and item details, instantly download a professional PDF invoice. Multi-currency, custom tax, logo support, no signup needed.',
+      title: 'Free Invoice Generator - PDF Invoice Maker for Freelancers (500K/mo, cpc $181)',
+      description: 'Free invoice generator: enter business, client, and item details, instantly download a professional PDF invoice. 500,000 monthly searches, cpc $181. Multi-currency, custom tax, logo support, no signup, local-only data.',
     },
   }
 
@@ -186,11 +186,41 @@ export default async function InvoiceGeneratorPage({
 }) {
   const sp = await searchParams
   const lang = (sp && sp.lang) === 'zh' ? 'zh' : 'en'
+
+  const webAppSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: lang === 'zh' ? '免费发票生成器 — PDF 发票工具' : 'Free Invoice Generator - PDF Invoice Maker',
+    alternateName: lang === 'zh' ? '发票生成器' : 'Invoice Generator',
+    url: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/invoice-generator' : '/invoice-generator'}`,
+    applicationCategory: 'BusinessApplication',
+    applicationSubCategory: 'InvoiceGenerator',
+    operatingSystem: 'Any (web browser with JavaScript)',
+    browserRequirements: 'Requires JavaScript. Requires HTML5.',
+    inLanguage: ['en-US', 'zh-CN'],
+    isAccessibleForFree: true,
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description:
+      lang === 'zh'
+        ? '在线 PDF 发票生成器:输入商家、客户、商品行,一键下载专业发票。支持多币种、税额计算、Logo 上传。所有数据本地处理,无水印,无追踪。'
+        : 'Online PDF invoice generator for freelancers and small businesses. Multi-currency, automatic tax calculation, logo upload, unlimited line items. Free, no signup, no watermark, data processed locally.',
+    featureList: [
+      'Multi-currency (USD, EUR, CNY, GBP, JPY, custom)',
+      'Automatic tax calculation (0-25% rate)',
+      'Logo upload (PNG/JPG)',
+      'Unlimited line items',
+      'PDF download (print-ready)',
+      'No signup, no watermark, no telemetry',
+      'Bilingual English / Chinese',
+    ],
+    dateModified: '2026-07-18',
+  }
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemas[lang]) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchemas[lang], webAppSchema]) }}
       />
       <InvoiceGeneratorClient initialLang={lang} seoBody={lang === 'zh' ? seoBodyZh : seoBodyEn} />
     </>
