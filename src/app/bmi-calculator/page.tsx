@@ -10,17 +10,17 @@ export async function generateMetadata({
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
 
   const titles = {
-    zh: 'BMI 计算器 - 男女亚州人阈值,免费体重指数计算',
-    en: 'BMI Calculator - Calculate Body Mass Index, Free Online Tool',
+    zh: 'BMI 计算器 - 男女亚州人阈值免费体重指数计算 (5M/月 cpc $5)',
+    en: 'BMI Calculator - Calculate Body Mass Index Free (5M/mo cpc \$5)',
   }
   const descriptions = {
-    zh: '免费在线 BMI 计算器,男女不同标准,支持亚州人阈值(cm/kg)。含 BMI 范围表、男/女/老年独立判断,中英文双版,无需注册。',
-    en: "Free BMI calculator: enter height (cm or ft/in) and weight (kg or lb) to get your body mass index instantly. Includes healthy BMI range chart for women, men, and adults. Metric and imperial units, no signup, 100% browser-side processing.",
+    zh: '免费在线 BMI 计算器:男女不同标准,支持亚州人阈值(cm/kg)。5M/月主流词,cpc \$5 商业价值中。含 BMI 范围表、男/女/老年独立判断,中英文双版,无需注册,数据本地处理。',
+    en: "Free BMI calculator: enter height (cm or ft/in) and weight (kg or lb) to get your body mass index instantly. 5,000,000 monthly searches, cpc \$5. Includes healthy BMI range chart for women, men, and adults. Metric and imperial units, no signup, 100% browser-side processing.",
   }
-  const ogTitles = { zh: 'BMI 计算器 - 实用计算器', en: 'BMI Calculator - Practical Tools' }
+  const ogTitles = { zh: 'BMI 计算器 - 实用计算器 (5M/月)', en: 'BMI Calculator - Practical Tools (5M/mo)' }
   const ogDescs = {
     zh: '免费在线 BMI 计算器,男女不同标准,亚州人阈值。',
-    en: 'Calculate BMI from height and weight. Free online tool, no signup, instant result.',
+    en: 'Calculate BMI from height and weight. 5M monthly searches, free online tool.',
   }
 
   return {
@@ -175,9 +175,37 @@ export default async function BmiCalculatorPage({
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
   const faqSchema = lang === 'zh' ? faqSchemaZh : faqSchemaEn
+
+  const webAppSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: lang === 'zh' ? 'BMI 计算器 — 体重指数在线计算' : 'BMI Calculator - Body Mass Index Calculator',
+    alternateName: lang === 'zh' ? 'BMI 计算' : 'Body Mass Index Calculator',
+    url: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/bmi-calculator' : '/bmi-calculator'}`,
+    applicationCategory: 'HealthApplication',
+    applicationSubCategory: 'BMICalculator',
+    operatingSystem: 'Any (web browser with JavaScript)',
+    browserRequirements: 'Requires JavaScript. Requires HTML5.',
+    inLanguage: ['en-US', 'zh-CN'],
+    isAccessibleForFree: true,
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description:
+      lang === 'zh'
+        ? '在线 BMI 计算器:输入身高(cm/ft/in)+ 体重(kg/lb)立即得 BMI 值。男女不同标准,亚州人阈值。无需注册,数据本地处理。'
+        : 'Online BMI calculator: enter height (cm or ft/in) and weight (kg or lb) to get your body mass index instantly. Healthy range chart for women, men, adults. Metric + imperial units. No signup, 100% browser-side processing.',
+    featureList: [
+      'Metric (cm/kg) + imperial (ft/in, lb) units',
+      'Asian-specific BMI thresholds',
+      'Gender + age range reference',
+      'Healthy BMI range chart',
+      'No signup, 100% browser-side',
+    ],
+    dateModified: '2026-07-18',
+  }
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, webAppSchema]) }} />
       <BmiCalculator initialLang={lang} seoBody={lang === 'zh' ? seoBodyZh : seoBodyEn} />
     </>
   )

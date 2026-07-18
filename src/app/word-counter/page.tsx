@@ -11,12 +11,12 @@ export async function generateMetadata({
 
   const data = {
     zh: {
-      title: '在线字数统计_中英文混排实时计数_实用计算器',
-      description: '免费在线字数统计工具,中英文字数、字符、句子、段落实时统计,带阅读时间估算。自媒体作者、学生写论文、求职者卡简历 1 页、SEO 站长控 meta 155 字符,必备在线工具。',
+      title: '字数统计 - 中英文混排实时计数 (500K/月免费在线工具)',
+      description: '免费在线字数统计工具:中英文字数、字符、句子、段落实时统计,带阅读时间估算。500K/月主流词。自媒体作者、学生论文、SEO meta 155 字符卡控必备,无需注册,数据本地处理。',
     },
     en: {
-      title: 'Word Counter - Free Real-Time Word, Character & Sentence Count',
-      description: 'Free online word counter: count words, characters, sentences, and paragraphs in real time for English and mixed Chinese text. Includes reading time estimate. No upload, all processing runs locally in your browser. Perfect for essays, SEO meta descriptions (155-char limit), resumes, and social posts.',
+      title: 'Word Counter - Free Real-Time Word, Character & Sentence Count (500K/mo)',
+      description: 'Free online word counter: count words, characters, sentences, and paragraphs in real time for English and mixed Chinese text. 500,000 monthly searches. Includes reading time estimate. No upload, all processing runs locally in your browser. Perfect for essays, SEO meta descriptions (155-char limit), resumes, and social posts.',
     },
   }
 
@@ -146,6 +146,14 @@ const webAppSchema = {
     priceCurrency: 'USD',
   },
   description: 'Free online word counter with real-time Chinese and English support. Tracks words, characters, sentences, paragraphs, and reading time. No upload, all local.',
+  featureList: [
+    'Real-time Chinese + English mixed count',
+    'Words, characters, sentences, paragraphs',
+    'Reading time estimate',
+    'SEO meta 155-char limit check',
+    'No upload, all in browser',
+  ],
+  dateModified: '2026-07-18',
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.8',

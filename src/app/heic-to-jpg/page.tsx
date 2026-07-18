@@ -11,12 +11,12 @@ export async function generateMetadata({
 
   const data = {
     zh: {
-      title: '在线 HEIC 转 JPG_iPhone照片批量转换_保护隐私_实用计算器',
-      description: '免费在线 HEIC 转 JPG 工具,支持批量转换 iPhone HEIC 照片。100% 浏览器本地处理,照片不上传,保护隐私。支持 Windows、 Android、小红书、电商平台分享。',
+      title: 'HEIC 转 JPG - iPhone 照片批量转换 (500K/月, 100 张 30 秒)',
+      description: '免费在线 HEIC 转 JPG 工具:批量转换 iPhone HEIC 照片。500K/月主流词。100% 浏览器本地处理,照片不上传,保护隐私。支持 Windows、Android、小红书、电商平台分享。',
     },
     en: {
-      title: 'HEIC to JPG Converter Free No Upload - 100 Photos in 30s',
-      description: 'Free online HEIC to JPG converter for iPhone photos: convert up to 100 HEIC files in 30 seconds, no upload, runs entirely in your browser for full privacy. Works on Mac, Windows, Android, social media, and email. JPG with quality presets, batch ZIP download.',
+      title: 'HEIC to JPG Converter Free No Upload - 100 Photos in 30s (500K/mo)',
+      description: 'Free online HEIC to JPG converter for iPhone photos: convert up to 100 HEIC files in 30 seconds. 500,000 monthly searches. No upload, runs entirely in your browser for full privacy. Works on Mac, Windows, Android, social media, and email. JPG with quality presets, batch ZIP download.',
     },
   }
 
@@ -146,6 +146,14 @@ const webAppSchema = {
     priceCurrency: 'USD',
   },
   description: 'Free online HEIC to JPG converter. Batch convert iPhone HEIC photos in your browser with no upload. Works on Windows, Android, and all social platforms. Supports quality presets and ZIP download.',
+  featureList: [
+    'Batch convert up to 100 HEIC files in 30 seconds',
+    'No upload, 100% browser-side (privacy safe)',
+    'JPG quality presets',
+    'Batch ZIP download',
+    'Works on Mac, Windows, Android',
+  ],
+  dateModified: '2026-07-18',
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.8',
