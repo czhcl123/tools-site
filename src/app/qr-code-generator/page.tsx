@@ -11,12 +11,12 @@ export async function generateMetadata({
 
   const data = {
     zh: {
-      title: '在线 QR 码生成器_免费二维码无水印制作_实用计算器',
-      description: '免费在线 QR 码生成器,本地浏览器生成不上传数据,支持 PNG/SVG 下载,自定义尺寸、颜色、纠错级别,无水印无需注册。',
+      title: 'QR 码生成器 - 免费二维码无水印 (500K/月 cpc \$39)',
+      description: '免费在线 QR 码生成器:本地浏览器生成,不上传数据。500K/月需求,cpc \$39 商业价值高。支持 PNG/SVG/PDF 下载,自定义尺寸、颜色、纠错级别。无水印、无需注册。',
     },
     en: {
-      title: 'QR Code Generator Free No Signup - PNG, SVG & PDF Export',
-      description: 'Free QR code generator, no signup, no watermark. Generate scannable QR codes in PNG, SVG, or PDF in 1 click. Custom size, foreground/background colors, error correction, high-resolution export. Runs locally in your browser, your data never leaves your device.',
+      title: 'QR Code Generator Free No Signup - PNG, SVG & PDF Export (500K/mo, cpc \$39)',
+      description: 'Free QR code generator, no signup, no watermark. 500,000 monthly searches, cpc \$39. Generate scannable QR codes in PNG, SVG, or PDF in 1 click. Custom size, foreground/background colors, error correction, high-resolution export. Runs locally in your browser, your data never leaves your device.',
     },
   }
 
@@ -146,6 +146,14 @@ const webAppSchema = {
     priceCurrency: 'USD',
   },
   description: 'Free online QR code generator. Create downloadable PNG/SVG QR codes locally in your browser with custom size, foreground/background color, and error correction level. No watermark, no signup, no data upload.',
+  featureList: [
+    'PNG / SVG / PDF export',
+    'Custom size, foreground + background color',
+    'Adjustable error correction level (L / M / Q / H)',
+    'High-resolution export for print',
+    '100% browser-side, no upload',
+  ],
+  dateModified: '2026-07-18',
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.8',

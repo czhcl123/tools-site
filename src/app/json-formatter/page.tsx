@@ -11,12 +11,12 @@ export async function generateMetadata({
 
   const data = {
     zh: {
-      title: '在线 JSON 格式化_API 调试与配置校验_实用计算器',
-      description: '粘贴 JSON 字符串,一键格式化、美化、压缩、验证。自定义缩进(2/4/Tab),错误精确到行列号,适合 API 响应、配置文件、webhook payload 调试。所有处理在浏览器本地完成,数据安全。',
+      title: 'JSON 格式化 - 在线 API 调试器与验证器 (500K/月 cpc \$102)',
+      description: '免费 JSON 格式化与验证工具:粘贴 JSON 一键美化、压缩、验证。500K/月需求,cpc \$102 商业价值高。自定义缩进(2/4/Tab),错误精确到行列号,支持 10MB。所有处理在浏览器本地完成,数据安全。',
     },
     en: {
-      title: 'JSON Formatter & Validator - Free Online JSON Beautifier',
-      description: 'Free online JSON formatter and validator: paste JSON to format, beautify, minify, and validate in 1 click. Errors show exact line and column. Custom indent (2 / 4 / Tab), up to 10 MB. Perfect for API debugging, webhook payloads, and config files. 100% browser-side, no upload.',
+      title: 'JSON Formatter & Validator - Free Online JSON Beautifier (500K/mo, cpc \$102)',
+      description: 'Free online JSON formatter and validator: paste JSON to format, beautify, minify, and validate in 1 click. 500,000 monthly searches, cpc \$102. Errors show exact line and column. Custom indent (2 / 4 / Tab), up to 10 MB. Perfect for API debugging, webhook payloads, and config files. 100% browser-side, no upload.',
     },
   }
 
@@ -146,6 +146,14 @@ const webAppSchema = {
     priceCurrency: 'USD',
   },
   description: 'Free online JSON formatter, beautifier, minifier, and validator. Custom indentation (2 / 4 / Tab), precise line-and-column error reporting, one-click copy. All processing runs locally in the browser; no data is uploaded. Ideal for API debugging, webhook payloads, and config file inspection.',
+  featureList: [
+    'Format / beautify / minify in 1 click',
+    'JSON validation with precise line + column error reporting',
+    'Custom indent (2 / 4 / Tab)',
+    'Up to 10 MB file size',
+    'No signup, no upload, 100% browser-side',
+  ],
+  dateModified: '2026-07-18',
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.8',
