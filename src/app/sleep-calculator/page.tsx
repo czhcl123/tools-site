@@ -10,12 +10,12 @@ export async function generateMetadata({
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
 
   const titles = {
-    zh: '睡眠计算器 - 90 分钟睡眠周期反推最佳入睡/起床时间 (500K/月 cpc \$32)',
-    en: 'Sleep Calculator - 90-Minute Sleep Cycle, Best Bedtime / Wake Time (500K/mo cpc \$32)',
+    zh: '睡眠计算器 - 500K 月搜主词 | 90 分钟周期反推入睡/起床时间',
+    en: 'Sleep Calculator & Estimator - 90-Minute Cycle, Bedtime / Wake Time (500K/mo)',
   }
   const descriptions = {
-    zh: '免费在线睡眠计算器:输入起床时间反推最佳入睡时间(90 分钟周期),或输入入睡时间反推起床时间。500K+ 月搜,cpc \$32 商业价值高。支持深度睡眠 / REM 周期说明,中英文双版,无需注册。',
-    en: 'Free online sleep calculator (500,000 monthly searches, cpc \$32): enter your wake-up time to get the best bedtime, or enter when you fall asleep to find the optimal wake time. Based on the 90-minute sleep cycle including light sleep, deep sleep, and REM. No signup, browser-only, 100% private.',
+    zh: '免费在线睡眠计算器:输入起床时间反推最佳入睡时间(90 分钟周期),或输入入睡时间反推最佳起床时间。500K+ 月搜主词,cpc \$32。支持深度睡眠 / REM 周期说明。无需注册,所有计算在浏览器本地完成。',
+    en: 'Free online sleep calculator & estimator (500,000 monthly searches, cpc \$32): enter your wake-up time to get the best bedtime, or enter when you fall asleep to find the optimal wake time. Based on the 90-minute sleep cycle including light sleep, deep sleep, and REM. No signup, browser-only, 100% private.',
   }
   const ogTitles = { zh: '睡眠计算器 - 实用计算器 (500K/月)', en: 'Sleep Calculator - Practical Tools (500K/mo)' }
   const ogDescs = {
@@ -85,6 +85,14 @@ const faqSchemaZh = {
         text: '90 分钟是平均周期长度,实际有 70-110 分钟浮动。本工具按标准 90 分钟计算,适合常规作息;若睡眠质量差(如失眠),应以入睡后实际睡眠时长计算,而不只是 90 分钟倍数。',
       },
     },
+    {
+      '@type': 'Question',
+      name: '睡眠模式计算器是什么?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '睡眠模式计算器(sleep pattern calculator)是根据你最近的作息记录(入睡时间、起床时间、睡眠质量)反推你的睡眠周期分布。它能告诉你自己是"早起型"还是"夜猫型",适合调整作息。本工具主要推荐 4-6 个完整 90 分钟周期方案,帮助用户找到最规律的睡眠节奏。',
+      },
+    },
   ],
 }
 
@@ -130,6 +138,14 @@ const faqSchemaEn = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: '90 minutes is the average cycle length, but actual cycles range from 70-110 minutes. This tool uses the standard 90 minutes and works well for regular schedules. If you have poor sleep quality (insomnia), calculate based on actual sleep duration rather than 90-minute multiples.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is a sleep pattern calculator?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A sleep pattern calculator analyzes your recent sleep logs (bedtime, wake time, quality) to determine your sleep cycle distribution. It can tell you whether you\'re a "morning lark" or "night owl" and help you optimize your schedule. This tool focuses on the simpler question: given a wake-up or bedtime, what are the best 4-6 complete 90-minute cycles to aim for?',
       },
     },
   ],

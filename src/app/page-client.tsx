@@ -53,7 +53,7 @@ function HomePageContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
     zh: {
       searchPlaceholder: '搜索工具...',
       heroTitle: '免费在线计算工具 - 折扣 / BMI / QR 码 / 倒计时等 10 个工具',
-      heroSubtitle: '11 个快速、免费的浏览器内计算与实用工具:折扣计算、BMI、90 分钟睡眠周期、倒计时、农历、单位换算、QR 码生成、字数统计、JSON 格式化、HEIC 转 JPG、发票生成。无需注册、无需下载、无跟踪,所有处理都在你的浏览器本地完成。',
+      heroSubtitle: '11 个快速、免费的浏览器内计算与实用工具:折扣计算、BMI、睡眠计算器 / 睡眠周期 90 分钟反推、倒计时、农历、单位换算、QR 码生成、字数统计、JSON 格式化、HEIC 转 JPG、发票生成。无需注册、无需下载、无跟踪,所有处理都在你的浏览器本地完成。',
       badgeFree: '完全免费',
       badgeSignup: '无需注册',
       badgePrivacy: '保护隐私',
