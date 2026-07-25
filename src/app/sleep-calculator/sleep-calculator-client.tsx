@@ -2,7 +2,7 @@
 
 import { Suspense, useState, useMemo } from 'react'
 import Link from 'next/link'
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import Footer from '../../components/Footer'
 import RelatedTools from '../../components/RelatedTools'
 import { t } from './sleep-calculator-i18n'
@@ -31,9 +31,9 @@ function pad(n: number) {
 }
 
 function SleepCalculatorContent({ initialLang, seoBody }: { initialLang?: Lang; seoBody?: React.ReactNode }) {
-  const searchParams = useSearchParams()
-  const lang = (searchParams.get('lang') === 'zh' ? 'zh' : 'en') as Lang
   const pathname = usePathname()
+  const isZhPath = pathname?.startsWith('/zh') || false
+  const lang: Lang = initialLang ?? (isZhPath ? 'zh' : (typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('lang') === 'zh' ? 'zh' : 'en'))
   const nextLang: Lang = lang === 'zh' ? 'en' : 'zh'
 
   const [mode, setMode] = useState<'bedtime' | 'wake'>('bedtime')

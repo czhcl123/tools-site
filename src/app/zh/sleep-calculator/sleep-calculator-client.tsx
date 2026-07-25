@@ -1,12 +1,9 @@
 'use client'
 
-import { Suspense, useState, useMemo } from 'react'
+import { useState, useMemo } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import Footer from '@/components/Footer'
 import RelatedTools from '@/components/RelatedTools'
-
-// Chinese version of the sleep calculator UI - uses same i18n strings as en but renders directly in zh mode
 import { t } from '../../sleep-calculator/sleep-calculator-i18n'
 import type { Lang } from '../../sleep-calculator/sleep-calculator-i18n'
 
@@ -21,17 +18,9 @@ function formatTime(hours: number, minutes: number) {
   return `${period} ${h12}:${String(m).padStart(2, '0')}`
 }
 
-function ZhSleepCalculatorContent({ seoBody }: { seoBody?: React.ReactNode }) {
-  const lang: Lang = 'zh' // Force zh on this route
-  const nextLang: Lang = 'en'
+export default function ZhSleepCalculatorClient({ seoBody }: { seoBody?: React.ReactNode }) {
+  const lang: Lang = 'zh'
 
-  const defaultDate = (() => {
-    const d = new Date()
-    d.setDate(d.getDate() + 30)
-    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
-  })()
-
-  const [targetDate, setTargetDate] = useState(defaultDate)
   const [targetTime, setTargetTime] = useState('07:00')
 
   const u = (key: string) => t[lang][key as keyof typeof t.zh] as string
@@ -45,23 +34,19 @@ function ZhSleepCalculatorContent({ seoBody }: { seoBody?: React.ReactNode }) {
     const cycleOptions = [6, 5, 4]
     for (const c of cycleOptions) {
       const min = c * CYCLE_MIN + FALL_ASLEEP_MIN
-      let resultHours: number, resultMinutes: number
-      let label: string
-      // zh route uses bedtime mode (input is wake time, output is bedtime)
-      resultHours = inputHours - Math.floor(min / 60)
-      resultMinutes = inputMinutes - (min % 60)
+      let resultHours = inputHours - Math.floor(min / 60)
+      let resultMinutes = inputMinutes - (min % 60)
       if (resultMinutes < 0) {
         resultMinutes += 60
         resultHours -= 1
       }
-      label = u('goToBed')
       const hrs = Math.floor(min / 60)
       const mns = min % 60
       const total = mns === 0 ? `${hrs} ${u('hours')}` : `${hrs} ${u('hours')} ${mns} ${u('minutes')}`
       out.push({
         cycles: c,
         total,
-        label: `${label} ${formatTime(resultHours, resultMinutes)}`,
+        label: `${u('goToBed')} ${formatTime(resultHours, resultMinutes)}`,
       })
     }
     return out
@@ -75,7 +60,7 @@ function ZhSleepCalculatorContent({ seoBody }: { seoBody?: React.ReactNode }) {
             {u('siteTitle')}
           </Link>
           <Link
-            href={`/sleep-calculator`}
+            href="/sleep-calculator"
             className="text-sm px-3 py-1 border border-gray-200 rounded-full hover:bg-gray-50"
           >
             EN
@@ -137,13 +122,5 @@ function ZhSleepCalculatorContent({ seoBody }: { seoBody?: React.ReactNode }) {
 
       <Footer lang={lang} />
     </div>
-  )
-}
-
-export default function ZhSleepCalculatorClient({ seoBody }: { seoBody?: React.ReactNode }) {
-  return (
-    <Suspense fallback={<div className="min-h-screen bg-gray-50" />}>
-      <ZhSleepCalculatorContent seoBody={seoBody} />
-    </Suspense>
   )
 }
