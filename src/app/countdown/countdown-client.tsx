@@ -9,8 +9,9 @@ import RelatedTools from '../../components/RelatedTools'
 const t = {
   zh: {
     siteTitle: '实用计算器',
-    title: '倒计时器 — 计算距任意日期还有多久',
-    description: '在线倒计时器:实时显示距任意日期的天数、小时、分钟、秒数。或计算距今已过去几天。',
+    title: '倒计时计算器 — 距任意日期还有多久',
+    description: '在线倒计时计算器:实时显示距任意日期的天数、小时、分钟、秒数。或计算距今已过去几天。',
+    subtitle: '高考、婚礼、项目上线、戒烟里程碑 — 500K+ 人月用',
     targetDate: '目标日期',
     modeDays: '天',
     modeLive: '实时倒计时',
@@ -31,8 +32,9 @@ const t = {
   },
   en: {
     siteTitle: 'Practical Tools',
-    title: 'Countdown Timer - Days Until Any Date',
-    description: 'Live countdown timer showing days, hours, minutes, and seconds until any date or event. Free, no signup.',
+    title: 'Countdown Calculator - Days Until Any Date',
+    description: 'Live countdown calculator showing days, hours, minutes, and seconds until any date or event. Free, no signup.',
+    subtitle: 'Wedding, graduation, project deadline, sobriety milestones — 500K+ monthly users',
     targetDate: 'Target Date',
     modeDays: 'Days',
     modeLive: 'Live Timer',
@@ -173,7 +175,8 @@ function CountdownContent({ initialLang, seoBody }: { initialLang?: 'zh' | 'en';
       <main className="max-w-2xl mx-auto px-4 py-8">
         {seoBody && <div className="mb-6">{seoBody}</div>}
         <h1 className="text-2xl font-bold text-gray-800 mb-2">{u('title')}</h1>
-        <p className="text-gray-500 text-sm mb-6">{u('description')}</p>
+        <p className="text-gray-500 text-sm mb-1">{u('description')}</p>
+        <p className="text-orange-600 text-xs font-medium mb-6">{u('subtitle')}</p>
 
         {/* Mode toggle */}
         <div className="bg-white rounded-xl p-2 shadow-sm border border-gray-100 mb-4 flex gap-2">
