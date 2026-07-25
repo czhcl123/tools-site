@@ -71,10 +71,10 @@ const faqSchemaZh = {
     },
     {
       '@type': 'Question',
-      name: '什么时候该睡觉最好?',
+      name: '怎么计算 90 分钟睡眠周期?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '理想入睡时间是晚上 9-11 点,跟褪黑素分泌高峰吻合。如果必须熬夜,使用本工具反推最佳入睡时间(基于目标起床时间)。倒班 / 夜班人群建议固定作息,白天用遮光窗帘、避免蓝光。',
+        text: '使用本睡眠周期计算器:输入入睡或起床时间,工具基于 4-6 个完整 90 分钟周期 + 15 分钟入睡时间,反推或正推最佳时间。成人推荐 5-6 周期(7.5-9 小时)获得完整深度睡眠与 REM。每人周期长度在 70-110 分钟浮动,所以 90 分钟只是平均值,不是死规定。',
       },
     },
     {
@@ -130,14 +130,6 @@ const faqSchemaEn = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'REM (Rapid Eye Movement) is the 4th stage of sleep where the brain is active, eyes move rapidly under the lids, and most dreaming occurs. A 90-minute cycle includes 4 stages: N1 (light), N2 (intermediate), N3 (deep), and REM. REM accounts for 20-25% of total sleep and is critical for memory consolidation and emotional regulation.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the best time to go to sleep?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The ideal bedtime is 9-11 PM, aligned with melatonin peak secretion. If you must stay up late, use this calculator to find your best bedtime based on your target wake time. Shift workers should maintain a consistent schedule, use blackout curtains, and avoid blue light during the day.',
       },
     },
     {
