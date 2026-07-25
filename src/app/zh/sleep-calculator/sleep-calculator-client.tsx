@@ -7,7 +7,8 @@ import Footer from '../../../components/Footer'
 import RelatedTools from '../../../components/RelatedTools'
 
 // Chinese version of the sleep calculator UI - uses same i18n strings as en but renders directly in zh mode
-import { t, type Lang } from '../../sleep-calculator/sleep-calculator-i18n'
+import { t } from '../../sleep-calculator/sleep-calculator-i18n'
+import type { Lang } from '../../sleep-calculator/sleep-calculator-i18n'
 
 const FALL_ASLEEP_MIN = 15
 const CYCLE_MIN = 90
