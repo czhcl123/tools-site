@@ -14,8 +14,8 @@ export async function generateMetadata({
     en: 'Sleep Calculator & Estimator - 90-Minute Cycle, Bedtime / Wake Time (500K/mo)',
   }
   const descriptions = {
-    zh: '免费在线睡眠计算器:输入起床时间反推最佳入睡时间(90 分钟周期),或输入入睡时间反推最佳起床时间,包括几点点睡觉最好。500K+ 月搜主词,cpc \$32。支持深度睡眠 / REM 周期说明。无需注册,所有计算在浏览器本地完成。',
-    en: 'Free online sleep calculator & estimator (500,000 monthly searches, cpc \$32): enter your wake-up time to get the best bedtime, or enter when you fall asleep to find the optimal wake time — including "best time to go to sleep" recommendations. Based on the 90-minute sleep cycle including light sleep, deep sleep, and REM. No signup, browser-only, 100% private.',
+    zh: '免费在线睡眠计算器与睡眠周期计算器:输入起床时间反推最佳入睡时间(90 分钟周期),或输入入睡时间反推最佳起床时间。覆盖 500K+ 月搜主词,cpc \$32。支持深度睡眠 / REM 周期说明。无需注册,所有计算在浏览器本地完成。',
+    en: 'Free online sleep calculator & sleep estimator (500,000 monthly searches, cpc \$32) — also a sleep cycle calculator and sleep pattern calculator. Enter your wake-up time to get the best bedtime, or enter when you fall asleep to find the optimal wake time, based on the 90-minute sleep cycle including light sleep, deep sleep, and REM. No signup, browser-only, 100% private.',
   }
   const ogTitles = { zh: '睡眠计算器 - 实用计算器 (500K/月)', en: 'Sleep Calculator - Practical Tools (500K/mo)' }
   const ogDescs = {
@@ -79,10 +79,10 @@ const faqSchemaZh = {
     },
     {
       '@type': 'Question',
-      name: '根据起床时间怎么算几点该睡?',
+      name: '怎么计算 90 分钟睡眠周期?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '使用本睡眠计算器:输入你的目标起床时间(例如 7:00),工具会基于 4-6 个完整 90 分钟周期 + 15 分钟入睡时间反推最佳入睡时间。7:00 起床,推荐 21:45(6 周期)、23:15(5 周期)或 00:45(4 周期)入睡。成人推荐 5-6 周期,获得完整 REM 与深度睡眠。',
+        text: '使用本睡眠周期计算器:输入入睡或起床时间,工具基于 4-6 个完整 90 分钟周期 + 15 分钟入睡时间,反推或正推最佳时间。7:00 起床,推荐 21:45(6 周期)、23:15(5 周期)或 00:45(4 周期)入睡。成人推荐 5-6 周期,获得完整 REM 与深度睡眠。',
       },
     },
     {
@@ -142,10 +142,10 @@ const faqSchemaEn = {
     },
     {
       '@type': 'Question',
-      name: 'How do I calculate the best time to go to sleep based on my wake-up time?',
+      name: 'How does the 90-minute sleep cycle calculator work?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Use this sleep calculator: enter your desired wake-up time (for example 7:00 AM), and the tool back-calculates your best bedtime based on 4-6 complete 90-minute sleep cycles plus 15 minutes to fall asleep. For a 7:00 AM wake-up, aim for 9:45 PM (6 cycles) or 11:15 PM (5 cycles) or 12:45 AM (4 cycles). Adults do best with 5-6 cycles for full REM and deep sleep.',
+        text: 'Use this calculator sleep tool: enter any bedtime or wake time and the app cycles backwards (or forwards) through 4-6 complete 90-minute sleep cycles plus 15 minutes to fall asleep. Adults do best with 5-6 cycles (~7.5-9 hours total) for full deep sleep and REM. Cycles vary slightly per person (70-110 minutes), so treat 90 minutes as a planning average, not a strict rule.',
       },
     },
     {
