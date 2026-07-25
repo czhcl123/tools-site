@@ -10,12 +10,12 @@ export async function generateMetadata({
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
 
   const titles = {
-    zh: '农历转换器 - 公历 / 农历双向查询,生肖干支,节日',
-    en: 'Lunar Calendar Converter 2026 - Gregorian to Chinese Lunar',
+    zh: '2026 丙午马年农历转换器 - 公历农历双向查询,生肖干支节日 (2026 Horse Year)',
+    en: 'Lunar Calendar Converter 2026 - Horse Year, Gregorian to Chinese Lunar, Zodiac & Festival Lookup',
   }
   const descriptions = {
-    zh: '免费在线农历转换器:公历转农历、农历转公历,支持生肖年、干支日、传统节日查询,1900-2100 年范围。',
-    en: 'Free online lunar calendar converter: convert any Gregorian date to Chinese lunar and back. Includes zodiac year (2026 = Horse), heavenly stem-earthly branch day, traditional festival lookup. Range 1900-2100. No signup.',
+    zh: '2026 丙午马年农历转换器:公历转农历、农历转公历,生肖马年、干支日、传统节日查询,1900-2100 年范围。免费、无需注册。',
+    en: '2026 Horse Year (Bing-Wu 丙午) lunar calendar converter: convert any Gregorian date to Chinese lunar and back. Zodiac year lookup, heavenly stem-earthly branch day, traditional festival calendar. 1900-2100 range. Free, no signup.',
   }
   const ogTitles = { zh: '农历转换器 - 实用计算器', en: 'Lunar Calendar Converter - Practical Tools' }
   const ogDescs = {
