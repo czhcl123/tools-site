@@ -2,7 +2,7 @@
 
 import { Suspense, useState, useMemo } from 'react'
 import Link from 'next/link'
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import Footer from '@/components/Footer'
 import RelatedTools from '@/components/RelatedTools'
 
@@ -22,9 +22,7 @@ function formatTime(hours: number, minutes: number) {
 }
 
 function ZhSleepCalculatorContent({ seoBody }: { seoBody?: React.ReactNode }) {
-  const searchParams = useSearchParams()
   const lang: Lang = 'zh' // Force zh on this route
-  const pathname = usePathname()
   const nextLang: Lang = 'en'
 
   const defaultDate = (() => {
