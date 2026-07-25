@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import SleepCalculatorClient from './sleep-calculator-client'
 
+// 2026-07-25 force redeploy zh-fix
+
 export async function generateMetadata({
   searchParams,
 }: {
