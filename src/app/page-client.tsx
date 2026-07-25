@@ -16,7 +16,8 @@ type Tool = {
 }
 
 const TOOLS: Tool[] = [
-  // 5 new tools first (demo order)
+  // 11 tools (sleep-calculator added 7-25)
+  { path: '/sleep-calculator', zh: '睡眠计算器', en: 'Sleep Calculator', descZh: '90分钟睡眠周期反推最佳入睡时间', descEn: 'Best bedtime based on 90-min sleep cycle. 500K/mo searches.', icon: '🌙', color: 'bg-violet-50 border-violet-200 hover:shadow-lg hover:shadow-violet-200/50 hover:-translate-y-0.5 hover:bg-violet-100' },
   { path: '/qr-code-generator', zh: 'QR码生成器', en: 'QR Code Generator', descZh: '在线生成可下载二维码', descEn: 'Free QR code generator, no signup. PNG, SVG, PDF export.', icon: '📱', color: 'bg-rose-50 border-rose-200 hover:shadow-lg hover:shadow-rose-200/50 hover:-translate-y-0.5 hover:bg-rose-100' },
   { path: '/word-counter', zh: '字数统计', en: 'Word Counter', descZh: '中英文字数实时统计', descEn: 'Real-time word, character & reading time count.', icon: '📝', color: 'bg-indigo-50 border-indigo-200 hover:shadow-lg hover:shadow-indigo-200/50 hover:-translate-y-0.5 hover:bg-indigo-100' },
   { path: '/json-formatter', zh: 'JSON格式化', en: 'JSON Formatter', descZh: 'JSON格式化与验证', descEn: 'Format, validate & minify JSON in 1 click.', icon: '🔧', color: 'bg-emerald-50 border-emerald-200 hover:shadow-lg hover:shadow-emerald-200/50 hover:-translate-y-0.5 hover:bg-emerald-100' },
@@ -52,7 +53,7 @@ function HomePageContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
     zh: {
       searchPlaceholder: '搜索工具...',
       heroTitle: '免费在线计算工具 - 折扣 / BMI / QR 码 / 倒计时等 10 个工具',
-      heroSubtitle: '10 个快速、免费的浏览器内计算与实用工具:折扣计算、BMI、倒计时、农历、单位换算、QR 码生成、字数统计、JSON 格式化、HEIC 转 JPG、发票生成。无需注册、无需下载、无跟踪,所有处理都在你的浏览器本地完成。',
+      heroSubtitle: '11 个快速、免费的浏览器内计算与实用工具:折扣计算、BMI、90 分钟睡眠周期、倒计时、农历、单位换算、QR 码生成、字数统计、JSON 格式化、HEIC 转 JPG、发票生成。无需注册、无需下载、无跟踪,所有处理都在你的浏览器本地完成。',
       badgeFree: '完全免费',
       badgeSignup: '无需注册',
       badgePrivacy: '保护隐私',

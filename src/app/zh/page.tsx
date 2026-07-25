@@ -58,12 +58,12 @@ export async function generateMetadata({
   const lang = 'zh'
 
   const titles = {
-    zh: { default: '实用计算器 - 10 个免费在线工具,即开即用', template: '%s | 实用计算器' },
-    en: { default: 'Practical Tools — 10 Free Online Calculators & Utilities', template: '%s | Practical Tools' },
+    zh: { default: '实用计算器 - 11 个免费在线工具,即开即用', template: '%s | 实用计算器' },
+    en: { default: 'Practical Tools — 11 Free Online Calculators & Utilities', template: '%s | Practical Tools' },
   }
   const descriptions = {
-    zh: '10 个免费在线工具:折扣计算、BMI、倒计时、农历、单位换算、QR 码、字数统计、JSON 格式化、HEIC 转 JPG、发票生成。无需注册,无需下载,所有处理在浏览器本地完成。',
-    en: '10 free online calculators and utilities — discount, BMI, countdown, lunar calendar, unit converter, QR code, word counter, JSON formatter, HEIC to JPG, invoice generator. No signup, no download, no tracking. All processing runs in your browser.',
+    zh: '11 个免费在线工具:折扣计算、BMI、90 分钟睡眠周期、倒计时、农历、单位换算、QR 码、字数统计、JSON 格式化、HEIC 转 JPG、发票生成。无需注册,无需下载,所有处理在浏览器本地完成。',
+    en: '11 free online calculators and utilities — discount, BMI, sleep cycle, countdown, lunar calendar, unit converter, QR code, word counter, JSON formatter, HEIC to JPG, invoice generator. No signup, no download, no tracking. All processing runs in your browser.',
   }
 
   return {

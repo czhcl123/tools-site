@@ -19,5 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/json-formatter`, lastModified: today, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/heic-to-jpg`, lastModified: today, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/invoice-generator`, lastModified: today, changeFrequency: 'monthly', priority: 0.9 },
+    // 新增 2026-07-25: sleep-calculator (GKP 主词 sleep calculator 500K/mo, cpc $32)
+    { url: `${base}/sleep-calculator`, lastModified: '2026-07-25', changeFrequency: 'weekly', priority: 1.0 },
   ]
 }

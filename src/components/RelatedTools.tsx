@@ -20,6 +20,7 @@ export const TOOLS_META: Record<string, ToolMeta> = {
   '/json-formatter': { icon: '🔧', zh: 'JSON格式化', en: 'JSON Formatter' },
   '/heic-to-jpg': { icon: '🖼️', zh: 'HEIC转JPG', en: 'HEIC to JPG' },
   '/invoice-generator': { icon: '📄', zh: '发票生成器', en: 'Invoice Generator' },
+  '/sleep-calculator': { icon: '🌙', zh: '睡眠计算器', en: 'Sleep Calculator' },
 }
 
 export default function RelatedTools({ lang, paths }: { lang: Lang; paths: string[] }) {
