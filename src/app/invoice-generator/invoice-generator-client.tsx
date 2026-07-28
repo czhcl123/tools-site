@@ -216,8 +216,6 @@ function InvoiceGeneratorContent({ initialLang, seoBody }: { initialLang?: 'zh' 
       </header>
 
       <main className="flex-1 max-w-lg mx-auto w-full px-4 py-8 pb-24">
-        {seoBody && <div className="mb-6">{seoBody}</div>}
-        <h1 className="text-2xl font-bold text-gray-800 mb-1">{u('pageTitle', lang)}</h1>
         <p className="text-sm text-gray-400 mb-6">{u('pageSubtitle', lang)}</p>
 
         <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-4 space-y-4">

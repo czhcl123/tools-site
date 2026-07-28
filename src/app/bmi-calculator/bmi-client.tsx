@@ -109,8 +109,6 @@ function BmiCalculatorContent({ initialLang, seoBody }: { initialLang?: 'zh' | '
       </header>
 
       <main className="max-w-2xl mx-auto px-4 py-8">
-        {seoBody && <div className="mb-6">{seoBody}</div>}
-        <h1 className="text-2xl font-bold text-gray-800 mb-2">{u('title')}</h1>
         <p className="text-gray-500 text-sm mb-6">{u('description')}</p>
 
         <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-6">

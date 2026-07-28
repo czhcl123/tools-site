@@ -132,7 +132,9 @@ export default async function CountdownPage({
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaZh) }} />
-      <Countdown initialLang={lang} seoBody={seoBodyZh} />
+      <h1 className="text-2xl font-bold text-gray-800 mb-1">倒计时计算器 — 距任意日期还有多久</h1>
+      <div className="mb-6">{seoBodyZh}</div>
+      <Countdown initialLang={lang} />
     </>
   )
 }

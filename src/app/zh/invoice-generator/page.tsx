@@ -167,7 +167,9 @@ export default async function InvoiceGeneratorPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemas[lang]) }}
       />
-      <InvoiceGeneratorClient initialLang={lang} seoBody={seoBodyZh} />
+      <h1 className="text-2xl font-bold text-gray-800 mb-1">发票生成器</h1>
+      <div className="mb-6">{seoBodyZh}</div>
+      <InvoiceGeneratorClient initialLang={lang} />
     </>
   )
 }

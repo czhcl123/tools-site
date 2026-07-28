@@ -215,7 +215,9 @@ export default async function QrCodeGeneratorPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemas[lang]) }}
       />
-      <QrCodeGeneratorClient initialLang={lang} seoBody={seoBodyZh} />
+      <h1 className="text-2xl font-bold text-gray-800 mb-1">QR码生成器</h1>
+      <div className="mb-6">{seoBodyZh}</div>
+      <QrCodeGeneratorClient initialLang={lang} />
     </>
   )
 }

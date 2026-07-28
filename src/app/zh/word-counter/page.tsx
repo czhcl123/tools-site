@@ -215,7 +215,9 @@ export default async function WordCounterPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemas[lang]) }}
       />
-      <WordCounterClient initialLang={lang} seoBody={seoBodyZh} />
+      <h1 className="text-2xl font-bold text-gray-800 mb-1">字数统计</h1>
+      <div className="mb-6">{seoBodyZh}</div>
+      <WordCounterClient initialLang={lang} />
     </>
   )
 }

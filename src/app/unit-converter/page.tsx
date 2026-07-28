@@ -189,6 +189,8 @@ export default async function UnitConverterPage({
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, webAppSchema]) }} />
+      <h1 className="text-2xl font-bold text-gray-800 mb-1">Unit Converter</h1>
+      <div className="mb-6">{seoBodyEn}</div>
       <UnitConverter initialLang={lang} seoBody={lang === 'zh' ? seoBodyZh : seoBodyEn} />
     </>
   )

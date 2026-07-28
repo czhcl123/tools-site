@@ -231,6 +231,8 @@ export default async function QrCodeGeneratorPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
       />
+      <h1 className="text-2xl font-bold text-gray-800 mb-1">QR Code Generator</h1>
+      <div className="mb-6">{seoBodyEn}</div>
       <QrCodeGeneratorClient initialLang={lang} seoBody={lang === 'zh' ? seoBodyZh : seoBodyEn} />
     </>
   )

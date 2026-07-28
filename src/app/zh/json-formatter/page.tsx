@@ -215,7 +215,9 @@ export default async function JsonFormatterPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemas[lang]) }}
       />
-      <JsonFormatterClient initialLang={lang} seoBody={seoBodyZh} />
+      <h1 className="text-2xl font-bold text-gray-800 mb-1">JSON格式化</h1>
+      <div className="mb-6">{seoBodyZh}</div>
+      <JsonFormatterClient initialLang={lang} />
     </>
   )
 }

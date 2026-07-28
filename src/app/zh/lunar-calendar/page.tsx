@@ -132,7 +132,9 @@ export default async function LunarCalendarPage({
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaZh) }} />
-      <LunarCalendar initialLang={lang} seoBody={seoBodyZh} />
+      <h1 className="text-2xl font-bold text-gray-800 mb-1">农历阳历转换器</h1>
+      <div className="mb-6">{seoBodyZh}</div>
+      <LunarCalendar initialLang={lang} />
     </>
   )
 }

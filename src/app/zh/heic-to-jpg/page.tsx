@@ -220,7 +220,9 @@ export default async function HeicToJpgPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemas[lang]) }}
       />
-      <HeicToJpgClient initialLang={lang} seoBody={seoBodyZh} />
+      <h1 className="text-2xl font-bold text-gray-800 mb-1">HEIC转JPG</h1>
+      <div className="mb-6">{seoBodyZh}</div>
+      <HeicToJpgClient initialLang={lang} />
     </>
   )
 }

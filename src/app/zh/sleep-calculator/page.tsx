@@ -41,5 +41,11 @@ const seoBodyZh = (
 )
 
 export default async function SleepCalculatorZhPage() {
-  return <SleepCalculatorZhClient seoBody={seoBodyZh} />
+  return (
+    <>
+      <h1 className="text-2xl font-bold text-gray-800 mb-1">睡眠计算器 — 90 分钟睡眠周期</h1>
+      <div className="mb-6">{seoBodyZh}</div>
+      <SleepCalculatorZhClient />
+    </>
+  )
 }

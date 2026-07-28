@@ -206,6 +206,8 @@ export default async function CountdownPage({
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, webAppSchema]) }} />
+      <h1 className="text-2xl font-bold text-gray-800 mb-1">Countdown Calculator - Days Until Any Date</h1>
+      <div className="mb-6">{seoBodyEn}</div>
       <Countdown initialLang={lang} seoBody={lang === 'zh' ? seoBodyZh : seoBodyEn} />
     </>
   )

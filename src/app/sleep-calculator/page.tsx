@@ -234,7 +234,9 @@ export default async function SleepCalculatorPage({
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, webAppSchema]) }} />
-      <SleepCalculatorClient initialLang={lang} seoBody={lang === 'zh' ? seoBodyZh : seoBodyEn} />
+      <h1 className="text-2xl font-bold text-gray-800 mb-1">{lang === 'zh' ? '睡眠计算器 — 90 分钟睡眠周期' : 'Sleep Calculator - 90-Minute Sleep Cycle'}</h1>
+      <div className="mb-6">{lang === 'zh' ? seoBodyZh : seoBodyEn}</div>
+      <SleepCalculatorClient initialLang={lang} />
     </>
   )
 }

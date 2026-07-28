@@ -158,7 +158,9 @@ export default async function DiscountCalculatorPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <DiscountCalculatorClient initialLang={lang} seoBody={seoBodyZh} />
+      <h1 className="text-2xl font-bold text-gray-800 mb-1">折扣计算器</h1>
+      <div className="mb-6">{seoBodyZh}</div>
+      <DiscountCalculatorClient initialLang={lang} />
     </>
   )
 }

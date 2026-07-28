@@ -97,8 +97,6 @@ function WordCounterContent({ initialLang, seoBody }: { initialLang?: 'zh' | 'en
       </header>
 
       <main className="flex-1 max-w-lg mx-auto w-full px-4 py-8 pb-24">
-        {seoBody && <div className="mb-6">{seoBody}</div>}
-        <h1 className="text-2xl font-bold text-gray-800 mb-1">{u('pageTitle', lang)}</h1>
         <p className="text-sm text-gray-400 mb-6">{u('pageSubtitle', lang)}</p>
 
         {/* Input card */}

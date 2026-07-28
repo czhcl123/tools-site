@@ -69,9 +69,6 @@ export default function ZhSleepCalculatorClient({ seoBody }: { seoBody?: React.R
       </header>
 
       <main className="max-w-2xl mx-auto px-4 py-8">
-        {seoBody && <div className="mb-6">{seoBody}</div>}
-
-        <h1 className="text-2xl font-bold text-gray-800 mb-2">{u('title')}</h1>
         <p className="text-gray-500 text-sm mb-1">{u('description')}</p>
         <p className="text-orange-600 text-xs font-medium mb-6">{u('subtitle')}</p>
 

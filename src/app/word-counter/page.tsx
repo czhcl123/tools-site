@@ -259,6 +259,8 @@ export default async function WordCounterPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
       />
+      <h1 className="text-2xl font-bold text-gray-800 mb-1">Word Counter</h1>
+      <div className="mb-6">{seoBodyEn}</div>
       <WordCounterClient initialLang={lang} seoBody={lang === 'zh' ? seoBodyZh : seoBodyEn} />
     </>
   )

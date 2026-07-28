@@ -222,6 +222,8 @@ export default async function InvoiceGeneratorPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchemas[lang], webAppSchema]) }}
       />
+      <h1 className="text-2xl font-bold text-gray-800 mb-1">Invoice Generator</h1>
+      <div className="mb-6">{seoBodyEn}</div>
       <InvoiceGeneratorClient initialLang={lang} seoBody={lang === 'zh' ? seoBodyZh : seoBodyEn} />
     </>
   )
