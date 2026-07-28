@@ -3,23 +3,77 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://tools-site-production.up.railway.app'
   // Hardcoded to force re-crawl signal after 7-18 GKP title/desc updates
-  const today = '2026-07-18'
+  const today = '2026-07-28'
 
-  return [
-    { url: base, lastModified: today, changeFrequency: 'weekly', priority: 1 },
-    // 现有工具
-    { url: `${base}/discount-calculator`, lastModified: today, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/bmi-calculator`, lastModified: today, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/countdown`, lastModified: today, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/lunar-calendar`, lastModified: today, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/unit-converter`, lastModified: today, changeFrequency: 'monthly', priority: 0.8 },
-    // 新增工具(2026-06-27)
-    { url: `${base}/qr-code-generator`, lastModified: today, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${base}/word-counter`, lastModified: today, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${base}/json-formatter`, lastModified: today, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${base}/heic-to-jpg`, lastModified: today, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${base}/invoice-generator`, lastModified: today, changeFrequency: 'monthly', priority: 0.9 },
-    // 新增 2026-07-25: sleep-calculator (GKP 主词 sleep calculator 500K/mo, cpc $32)
-    { url: `${base}/sleep-calculator`, lastModified: '2026-07-25', changeFrequency: 'weekly', priority: 1.0 },
+  // 工具 slug 清单 (en + zh 双路径)
+  const tools = [
+    'discount-calculator',
+    'bmi-calculator',
+    'countdown',
+    'lunar-calendar',
+    'unit-converter',
+    'qr-code-generator',
+    'word-counter',
+    'json-formatter',
+    'heic-to-jpg',
+    'invoice-generator',
+    'sleep-calculator',
   ]
+
+  const entries: MetadataRoute.Sitemap = []
+
+  // 主页 (en + zh)
+  entries.push(
+    {
+      url: base,
+      lastModified: today,
+      changeFrequency: 'weekly',
+      priority: 1,
+      alternates: { languages: { 'en-US': base, 'zh-CN': `${base}/zh`, 'x-default': base } },
+    },
+    {
+      url: `${base}/zh`,
+      lastModified: today,
+      changeFrequency: 'weekly',
+      priority: 1,
+      alternates: { languages: { 'en-US': base, 'zh-CN': `${base}/zh`, 'x-default': base } },
+    }
+  )
+
+  // About (en + zh)
+  entries.push(
+    {
+      url: `${base}/about`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.5,
+      alternates: { languages: { 'en-US': `${base}/about`, 'zh-CN': `${base}/zh/about`, 'x-default': `${base}/about` } },
+    },
+    {
+      url: `${base}/zh/about`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.5,
+      alternates: { languages: { 'en-US': `${base}/about`, 'zh-CN': `${base}/zh/about`, 'x-default': `${base}/about` } },
+    }
+  )
+
+  // 工具页 (en + zh 双路径)
+  for (const slug of tools) {
+    entries.push({
+      url: `${base}/${slug}`,
+      lastModified: today,
+      changeFrequency: 'weekly',
+      priority: slug === 'sleep-calculator' ? 1.0 : 0.9,
+      alternates: {
+        languages: {
+          'en-US': `${base}/${slug}`,
+          'zh-CN': `${base}/zh/${slug}`,
+          'x-default': `${base}/${slug}`,
+        },
+      },
+    })
+  }
+
+  return entries
 }
