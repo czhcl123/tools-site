@@ -44,6 +44,10 @@ export default function Footer({ lang = 'zh' }: FooterProps) {
           <a href={`/rss.xml`} className="text-gray-400 hover:text-orange-500 transition-colors">
             RSS
           </a>
+          <span className="text-gray-200">·</span>
+          <a href="https://github.com/czhcl123/tools-site" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-500 transition-colors">
+            GitHub
+          </a>
         </nav>
         <p className="text-xs text-gray-400 text-center">
           {`${currentYear} ${t.copyright}`}
