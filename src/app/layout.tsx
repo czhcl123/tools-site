@@ -1,5 +1,4 @@
 import "./globals.css";
-import { headers } from "next/headers";
 
 const websiteSchema = {
   '@context': 'https://schema.org',
@@ -262,16 +261,13 @@ export const metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const hdrs = await headers();
-  const pathname = hdrs.get("x-nextjs-pathname") || hdrs.get("x-invoke-path") || "";
-  const lang = pathname.startsWith("/zh") ? "zh-CN" : "en";
   return (
-    <html lang={lang}>
+    <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="build-id" content="pending" />
