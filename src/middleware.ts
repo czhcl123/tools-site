@@ -20,7 +20,11 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(newUrl, 301)
   }
 
-  return NextResponse.next()
+  const response = NextResponse.next()
+  // Set language header for root layout to read
+  const isZh = url.pathname.startsWith('/zh')
+  response.headers.set('x-page-lang', isZh ? 'zh-CN' : 'en')
+  return response
 }
 
 export const config = {
