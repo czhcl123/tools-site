@@ -8,6 +8,12 @@ export function middleware(request: NextRequest) {
 
   if (lang === 'zh') {
     const path = url.pathname
+    // Don't double-prefix /zh paths
+    if (path.startsWith('/zh')) {
+      const newUrl = new URL(path, request.url)
+      newUrl.search = ''
+      return NextResponse.redirect(newUrl, 301)
+    }
     const newPath = path === '/' ? '/zh' : `/zh${path}`
     const newUrl = new URL(newPath, request.url)
     newUrl.search = ''
