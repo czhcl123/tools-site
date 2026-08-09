@@ -6,7 +6,7 @@ const websiteSchema = {
   name: 'Practical Tools',
   alternateName: '实用计算器',
   url: 'https://tools-site-production.up.railway.app',
-  description: 'Free online calculators and tools: discount calculator, BMI, date, lunar calendar, unit converter, QR code generator, word counter, JSON formatter, HEIC to JPG, invoice generator.',
+  description: 'Free online tools: discount calculator, BMI, countdown, lunar calendar, unit converter, QR code, word counter, JSON formatter, and more.',
   inLanguage: ['en', 'zh'],
   potentialAction: {
     '@type': 'SearchAction',

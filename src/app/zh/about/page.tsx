@@ -32,9 +32,9 @@ export async function generateMetadata({
     alternates: {
       canonical: 'https://tools-site-production.up.railway.app/zh/about',
       languages: {
-        'en-US': 'https://tools-site-production.up.railway.app/about?lang=en',
-        'zh-CN': 'https://tools-site-production.up.railway.app/about?lang=zh',
-        'x-default': 'https://tools-site-production.up.railway.app/about',
+        'en-US': '/about',
+        'zh-CN': '/zh/about',
+        'x-default': '/about',
       },
     },
   }
