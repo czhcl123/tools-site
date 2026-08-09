@@ -12,11 +12,11 @@ export async function generateMetadata({
   const data = {
     zh: {
       title: '免费发票生成器 - 一键生成PDF发票 (500K/月 cpc $181)',
-      description: '免费发票生成器:输入商家、客户、商品信息,一键生成专业 PDF 发票。500K/月需求,cpc $181 商业价值最高。支持多币种、自定义税率、添加 Logo,无需注册,数据本地处理。',
+      description: '免费发票生成器：输入商家、客户和商品信息，一键生成专业 PDF 发票。支持多币种、自定义税率，无需注册。',
     },
     en: {
       title: 'Free Invoice Generator - PDF Invoice Maker for Freelancers (500K/mo, cpc $181)',
-      description: 'Free invoice generator: enter business, client, and item details, instantly download a professional PDF invoice. 500,000 monthly searches, cpc $181. Multi-currency, custom tax, logo support, no signup, local-only data.',
+      description: 'Free invoice generator: enter business, client, and item details, instantly download a professional PDF invoice. Multi-currency, custom tax, no signup.',
     },
   }
 

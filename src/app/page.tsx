@@ -63,8 +63,8 @@ export async function generateMetadata({
     en: { default: 'Practical Tools — 10 Free Online Calculators & Utilities', template: '%s | Practical Tools' },
   }
   const descriptions = {
-    zh: '10 个免费在线工具:折扣计算、BMI、倒计时、农历、单位换算、QR 码、字数统计、JSON 格式化、HEIC 转 JPG、发票生成。无需注册,无需下载,所有处理在浏览器本地完成。',
-    en: '11 free online calculators and utilities — discount, BMI, sleep calculator / 90-min sleep cycle, countdown, lunar calendar, unit converter, QR code, word counter, JSON formatter, HEIC to JPG, invoice generator. No signup, no download, no tracking. All processing runs in your browser.',
+    zh: '10 个免费在线工具:折扣计算、BMI、睡眠计算、倒计时、农历、单位换算、QR 码、字数统计、JSON 格式化、HEIC 转 JPG、发票生成。无需注册，即开即用。',
+    en: '11 free online tools: discount calculator, BMI, sleep calculator, countdown, lunar calendar, unit converter, QR code, word counter, JSON formatter, HEIC to JPG, invoice generator. No signup, no tracking.',
   }
 
   return {

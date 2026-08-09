@@ -15,7 +15,7 @@ export async function generateMetadata({
     },
     en: {
       title: 'Free Invoice Generator - Online PDF Invoice Maker',
-      description: 'Free online invoice generator. Enter business, client, and item details, instantly download a professional PDF invoice. Multi-currency, custom tax, logo support.',
+      description: 'Free online invoice generator: enter business, client, and item details, instantly download a professional PDF invoice. Multi-currency, no signup.',
     },
   }
 

@@ -16,7 +16,7 @@ export async function generateMetadata({
     },
     en: {
       title: 'Discount Calculator - Calculate 30, 50, 70 Percent Off Instantly',
-      description: 'Free online discount calculator: enter the original price and the discount percentage to instantly get the final price and dollar amount saved. Calculate 30%, 50%, 70% off in 1 second. Works for any currency. No signup, no download.',
+      description: 'Free online discount calculator: enter original price and discount percentage to get the final price. Works for any currency. No signup required.',
     },
   }
 
