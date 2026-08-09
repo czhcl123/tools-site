@@ -105,11 +105,11 @@ function SleepCalculatorContent({ initialLang, seoBody }: { initialLang?: Lang; 
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm sticky top-0 z-10">
         <div className="max-w-2xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href={`/?lang=${lang}`} className="text-xl font-bold text-orange-500">
+          <Link href="/" className="text-xl font-bold text-orange-500">
             {u('siteTitle')}
           </Link>
           <Link
-            href={`${pathname}?lang=${nextLang}`}
+            href={pathname.startsWith('/zh') ? pathname.replace('/zh', '') || '/' : `/zh${pathname}`}
             className="text-sm px-3 py-1 border border-gray-200 rounded-full hover:bg-gray-50"
           >
             {lang === 'zh' ? 'EN' : '中文'}

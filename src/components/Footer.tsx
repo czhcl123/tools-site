@@ -29,11 +29,11 @@ export default function Footer({ lang = 'zh' }: FooterProps) {
     <footer className="bg-white border-t border-gray-100 mt-auto">
       <div className="max-w-3xl mx-auto px-4 py-6">
         <nav className="flex flex-wrap justify-center items-center gap-x-5 gap-y-2 mb-3 text-xs">
-          <Link href={`/?lang=${lang}`} className="text-gray-400 hover:text-orange-500 transition-colors">
+          <Link href="/" className="text-gray-400 hover:text-orange-500 transition-colors">
             {t.home}
           </Link>
           <span className="text-gray-200">·</span>
-          <Link href={`/about?lang=${lang}`} className="text-gray-400 hover:text-orange-500 transition-colors">
+          <Link href="/about" className="text-gray-400 hover:text-orange-500 transition-colors">
             {t.about}
           </Link>
           <span className="text-gray-200">·</span>

@@ -130,11 +130,11 @@ function JsonFormatterContent({ initialLang, seoBody }: { initialLang?: 'zh' | '
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <header className="bg-white shadow-sm sticky top-0 z-10">
         <div className="max-w-lg mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href={`/?lang=${lang}`} className="text-xl font-bold text-orange-500 hover:text-orange-600">
+          <Link href="/" className="text-xl font-bold text-orange-500 hover:text-orange-600">
             {u('siteTitle', lang)}
           </Link>
           <Link
-            href={`${pathname}?lang=${nextLang}`}
+            href={pathname.startsWith('/zh') ? pathname.replace('/zh', '') || '/' : `/zh${pathname}`}
             className="text-xs px-3 py-1.5 border border-gray-200 rounded-full hover:bg-gray-50 transition-colors"
           >
             🌐 {u('switchLang', lang)}
@@ -199,7 +199,7 @@ function JsonFormatterContent({ initialLang, seoBody }: { initialLang?: 'zh' | '
         <RelatedTools lang={lang} paths={['/word-counter', '/qr-code-generator', '/invoice-generator', '/heic-to-jpg']} />
 
         <div className="text-center">
-          <Link href={`/?lang=${lang}`} className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
+          <Link href="/" className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
             {u('backHome', lang)}
           </Link>
         </div>

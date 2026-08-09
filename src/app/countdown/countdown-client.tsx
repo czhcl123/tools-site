@@ -160,11 +160,11 @@ function CountdownContent({ initialLang, seoBody }: { initialLang?: 'zh' | 'en';
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm sticky top-0 z-10">
         <div className="max-w-2xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href={`/?lang=${lang}`} className="text-xl font-bold text-orange-500">
+          <Link href="/" className="text-xl font-bold text-orange-500">
             {u('siteTitle')}
           </Link>
           <Link
-            href={`${pathname}?lang=${nextLang}`}
+            href={pathname.startsWith('/zh') ? pathname.replace('/zh', '') || '/' : `/zh${pathname}`}
             className="text-sm px-3 py-1 border border-gray-200 rounded-full hover:bg-gray-50"
           >
             {lang === 'zh' ? 'EN' : '中文'}
@@ -287,19 +287,19 @@ function CountdownContent({ initialLang, seoBody }: { initialLang?: 'zh' | 'en';
 
         <div className="flex gap-3 flex-wrap">
           <Link
-            href={`/bmi-calculator?lang=${lang}`}
+            href="/bmi-calculator"
             className="text-sm px-4 py-2 bg-orange-100 text-orange-500 rounded-full hover:bg-orange-200"
           >
             BMI计算器
           </Link>
           <Link
-            href={`/discount-calculator?lang=${lang}`}
+            href="/discount-calculator"
             className="text-sm px-4 py-2 bg-orange-100 text-orange-500 rounded-full hover:bg-orange-200"
           >
             折扣计算器
           </Link>
           <Link
-            href={`/?lang=${lang}`}
+            href="/"
             className="text-sm px-4 py-2 bg-gray-100 text-gray-500 rounded-full hover:bg-gray-200"
           >
             {u('moreCalc')}

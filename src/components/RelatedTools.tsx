@@ -35,7 +35,7 @@ export default function RelatedTools({ lang, paths }: { lang: Lang; paths: strin
           return (
             <Link
               key={p}
-              href={`${p}?lang=${lang}`}
+              href={p}
               className="block bg-gray-50 hover:bg-orange-50 border border-gray-100 hover:border-orange-200 rounded-lg p-3 text-center text-xs text-gray-600 hover:text-orange-600 transition-all active:scale-[0.98]"
             >
               <div className="text-lg mb-0.5">{meta.icon}</div>

@@ -106,7 +106,7 @@ function HomePageContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-10">
         <div className="max-w-3xl mx-auto px-4 py-3 flex items-center gap-3">
-          <Link href={`/?lang=${lang}`} className="flex-shrink-0 flex items-center gap-1.5 text-base font-bold text-orange-500 hover:text-orange-600 transition-colors">
+          <Link href="/" className="flex-shrink-0 flex items-center gap-1.5 text-base font-bold text-orange-500 hover:text-orange-600 transition-colors">
             <span className="text-xl">🧮</span>
             <span className="hidden sm:inline text-sm">{lang === 'zh' ? '实用计算器' : 'Practical Tools'}</span>
           </Link>
@@ -121,7 +121,7 @@ function HomePageContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
             />
           </div>
           <Link
-            href={`/?lang=${nextLang}`}
+            href={lang === 'zh' ? '/' : '/zh'}
             title={lang === 'zh' ? 'Switch to English' : '切换到中文'}
             className="flex-shrink-0 flex items-center gap-1 text-xs px-3 py-1.5 border border-gray-200 rounded-full hover:bg-gray-50 hover:border-orange-300 transition-colors"
           >
@@ -154,7 +154,7 @@ function HomePageContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
           {filtered.map((tool, i) => (
             <Link
               key={tool.path}
-              href={`${tool.path}?lang=${lang}`}
+              href={lang === 'zh' ? `/zh${tool.path}` : tool.path}
               className={`block p-4 rounded-xl border transition-all ${tool.color} shadow-sm hover:shadow-lg hover:-translate-y-0.5 active:scale-[0.98] ${
                 i === filtered.length - 1 && filtered.length % 3 === 1 ? 'lg:col-start-2' : ''
               }`}
@@ -267,7 +267,7 @@ function HomePageContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
             {TOOLS.map((tool) => (
               <Link
                 key={tool.path}
-                href={`${tool.path}?lang=${lang}`}
+                href={lang === 'zh' ? `/zh${tool.path}` : tool.path}
                 className="text-sm text-gray-500 hover:text-orange-500 transition-colors py-0.5"
               >
                 {tool.icon} {lang === 'zh' ? tool.zh : tool.en}
