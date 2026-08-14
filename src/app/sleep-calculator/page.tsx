@@ -12,14 +12,14 @@ export async function generateMetadata({
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
 
   const titles = {
-    zh: '睡眠计算器 - 500K 月搜主词 | 90 分钟周期反推入睡/起床时间',
-    en: 'Sleep Calculator & Estimator - 90-Minute Cycle, Bedtime / Wake Time (500K/mo)',
+    zh: '睡眠计算器 - 90 分钟周期反推最佳入睡/起床时间',
+    en: 'Sleep Calculator - 90-Minute Cycle, Best Bedtime & Wake Time',
   }
   const descriptions = {
-    zh: '免费在线睡眠计算器与睡眠周期计算器:输入起床时间反推最佳入睡时间(90 分钟周期),或输入入睡时间反推最佳起床时间。覆盖 500K+ 月搜主词,cpc \$32。支持深度睡眠 / REM 周期说明。无需注册,所有计算在浏览器本地完成。',
-    en: 'Free online sleep calculator & sleep estimator (500,000 monthly searches, cpc \$32) — also a sleep cycle calculator and sleep pattern calculator. Enter your wake-up time to get the best bedtime, or enter when you fall asleep to find the optimal wake time, based on the 90-minute sleep cycle including light sleep, deep sleep, and REM. No signup, browser-only, 100% private.',
+    zh: '免费在线睡眠计算器:输入起床时间反推最佳入睡时间(90 分钟周期),或输入入睡时间反推最佳起床时间。支持深度睡眠/REM 周期说明,无需注册。',
+    en: 'Free sleep calculator: enter wake time to find optimal bedtime, or enter bedtime to find best wake time, based on 90-minute sleep cycles. No signup, browser-only.',
   }
-  const ogTitles = { zh: '睡眠计算器 - 实用计算器 (500K/月)', en: 'Sleep Calculator - Practical Tools (500K/mo)' }
+  const ogTitles = { zh: '睡眠计算器 - 实用计算器', en: 'Sleep Calculator - Practical Tools' }
   const ogDescs = {
     zh: '90 分钟睡眠周期反推最佳入睡时间。',
     en: 'Best bedtime based on 90-minute sleep cycle. Free online calculator.',
@@ -76,15 +76,7 @@ const faqSchemaZh = {
       name: '怎么计算 90 分钟睡眠周期?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '使用本睡眠周期计算器:输入入睡或起床时间,工具基于 4-6 个完整 90 分钟周期 + 15 分钟入睡时间,反推或正推最佳时间。成人推荐 5-6 周期(7.5-9 小时)获得完整深度睡眠与 REM。每人周期长度在 70-110 分钟浮动,所以 90 分钟只是平均值,不是死规定。',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: '怎么计算 90 分钟睡眠周期?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: '使用本睡眠周期计算器:输入入睡或起床时间,工具基于 4-6 个完整 90 分钟周期 + 15 分钟入睡时间,反推或正推最佳时间。7:00 起床,推荐 21:45(6 周期)、23:15(5 周期)或 00:45(4 周期)入睡。成人推荐 5-6 周期,获得完整 REM 与深度睡眠。',
+        text: '使用本睡眠周期计算器:输入入睡或起床时间,工具基于 4-6 个完整 90 分钟周期 + 15 分钟入睡时间,反推或正推最佳时间。7:00 起床,推荐 21:45(6 周期)、23:15(5 周期)或 00:45(4 周期)入睡。每人周期长度在 70-110 分钟浮动,90 分钟是平均值。',
       },
     },
     {
