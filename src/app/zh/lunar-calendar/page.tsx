@@ -8,10 +8,10 @@ export async function generateMetadata({
 }) {
   const lang = 'zh'
 
-  const titles = { zh: '农历转换器', en: 'Lunar Calendar Converter - Solar to Lunar Date Tool' }
+  const titles = { zh: '农历转换器 - 公历转农历日期查询|实用计算器', en: 'Gregorian to Lunar Calendar Converter - Free Online Tool' }
   const descriptions = {
-    zh: '快速转换公历与农历日期，支持查看任意日期的农历信息，中英文免费使用。',
-    en: 'Free online lunar calendar converter. Convert between Gregorian (solar) and Chinese lunar dates. See zodiac years, traditional festivals, and stem-branch info for any date.',
+    zh: '免费公历农历双向转换工具:输入日期即可查询农历、生肖、干支、传统节日,覆盖 1900-2100 年,无需注册。',
+    en: 'Free Gregorian to lunar calendar converter. Convert any date to Chinese lunar with zodiac, stem-branch, and festival info. 1900-2100 range, no signup needed.',
   }
   const ogTitles = { zh: '农历转换器 - 实用计算器', en: 'Lunar Calendar Converter - Practical Tools' }
   const ogDescs = {

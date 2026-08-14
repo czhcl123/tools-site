@@ -10,12 +10,12 @@ export async function generateMetadata({
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
 
   const titles = {
-    zh: '2026 丙午马年农历转换器 - 公历农历双向查询,生肖干支节日 (2026 Horse Year)',
-    en: 'Lunar Calendar Converter 2026 - Horse Year, Gregorian to Chinese Lunar, Zodiac & Festival Lookup',
+    zh: '农历转换器 - 公历转农历日期查询|实用计算器',
+    en: 'Gregorian to Lunar Calendar Converter 2026 - Free Online Tool',
   }
   const descriptions = {
-    zh: '2026 丙午马年农历转换器:公历转农历、农历转公历,生肖马年、干支日、传统节日查询,1900-2100 年范围。免费、无需注册。',
-    en: '2026 Horse Year (Bing-Wu 丙午) lunar calendar converter: convert any Gregorian date to Chinese lunar and back. Zodiac year lookup, heavenly stem-earthly branch day, traditional festival calendar. 1900-2100 range. Free, no signup.',
+    zh: '免费公历农历双向转换工具:输入日期即可查询农历、生肖、干支、传统节日,覆盖 1900-2100 年,无需注册。',
+    en: 'Free Gregorian to lunar calendar converter. Convert any date to Chinese lunar with zodiac, stem-branch, and festival info. 1900-2100 range, no signup needed.',
   }
   const ogTitles = { zh: '农历转换器 - 实用计算器', en: 'Lunar Calendar Converter - Practical Tools' }
   const ogDescs = {
@@ -160,7 +160,7 @@ export default async function LunarCalendarPage({
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <h1 className="text-2xl font-bold text-gray-800 mb-1">Lunar-Solar Calendar Converter</h1>
+      <h1 className="text-2xl font-bold text-gray-800 mb-1">Gregorian to Lunar Calendar Converter</h1>
       <div className="mb-6">{seoBodyEn}</div>
       <LunarCalendar initialLang={lang} seoBody={lang === 'zh' ? seoBodyZh : seoBodyEn} />
     </>
