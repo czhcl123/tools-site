@@ -10,17 +10,17 @@ export async function generateMetadata({
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
 
   const titles = {
-    zh: '单位换算器 - 长度/重量/温度即时互转 (500K/月, 30+ 单位)',
-    en: 'Unit Converter - cm to inches, kg to lb, °C to °F (500K/mo, 30+ Units Free)',
+    zh: '单位换算器 - 长度/重量/温度即时互转',
+    en: 'Unit Converter - cm to inches, kg to lb, °C to °F',
   }
   const descriptions = {
-    zh: '免费在线单位换算器:长度(米/英尺/英寸)、重量(千克/磅/盎司)、温度(摄氏度/华氏度/开尔文)等 30+ 单位即时互转。500K/月主流词。无需注册,无广告。',
-    en: 'Free online unit converter: convert cm to inches, kg to lb, Celsius to Fahrenheit, liters to gallons instantly. 500,000 monthly searches. 30+ units across length, weight, temperature, area, volume. No signup, no ads, all in browser.',
+    zh: '免费在线单位换算器:长度、重量、温度等 30+ 单位即时互转,无需注册,无广告。',
+    en: 'Free online unit converter: cm to inches, kg to lb, °C to °F and 30+ more units. No signup, no ads, all in browser.',
   }
-  const ogTitles = { zh: '单位换算器 - 实用计算器 (500K/月)', en: 'Unit Converter - Practical Tools (500K/mo)' }
+  const ogTitles = { zh: '单位换算器 - 实用计算器', en: 'Unit Converter - Practical Tools' }
   const ogDescs = {
     zh: '免费在线单位换算器:长度/重量/温度即时互转',
-    en: 'Convert cm to inches, kg to lb, Celsius to Fahrenheit. 500K/mo, 30+ units free online.',
+    en: 'Convert cm to inches, kg to lb, Celsius to Fahrenheit. 30+ units free online.'
   }
 
   return {

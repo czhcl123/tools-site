@@ -10,17 +10,17 @@ export async function generateMetadata({
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
 
   const titles = {
-    zh: 'BMI 计算器 - 男女亚州人阈值免费体重指数计算 (5M/月 cpc $5)',
-    en: 'BMI Calculator - Calculate Body Mass Index Free (5M/mo cpc \$5)',
+    zh: 'BMI 计算器 - 免费在线体重指数计算',
+    en: 'BMI Calculator - Free Online Body Mass Index Calculator',
   }
   const descriptions = {
-    zh: '免费在线 BMI 计算器:男女不同标准,支持亚州人阈值(cm/kg)。5M/月主流词,cpc \$5 商业价值中。含 BMI 范围表、男/女/老年独立判断,中英文双版,无需注册,数据本地处理。',
-    en: "Free BMI calculator: enter height (cm or ft/in) and weight (kg or lb) to get your body mass index instantly. 5,000,000 monthly searches, cpc \$5. Includes healthy BMI range chart for women, men, and adults. Metric and imperial units, no signup, 100% browser-side processing.",
+    zh: '免费在线 BMI 计算器:输入身高体重即出体重指数,支持亚洲人阈值,男女分类判断,无需注册。',
+    en: 'Free BMI calculator: enter height and weight to get your body mass index instantly. Asian/WHO thresholds, metric and imperial units, no signup.',
   }
-  const ogTitles = { zh: 'BMI 计算器 - 实用计算器 (5M/月)', en: 'BMI Calculator - Practical Tools (5M/mo)' }
+  const ogTitles = { zh: 'BMI 计算器 - 实用计算器', en: 'BMI Calculator - Practical Tools' }
   const ogDescs = {
     zh: '免费在线 BMI 计算器,男女不同标准,亚州人阈值。',
-    en: 'Calculate BMI from height and weight. 5M monthly searches, free online tool.',
+    en: 'Calculate BMI from height and weight. Free online tool.'
   }
 
   return {

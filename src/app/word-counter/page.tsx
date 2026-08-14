@@ -11,11 +11,11 @@ export async function generateMetadata({
 
   const data = {
     zh: {
-      title: '字数统计 - 中英文混排实时计数 (500K/月免费在线工具)',
+      title: '字数统计 - 中英文混排实时计数',
       description: '免费在线字数统计：中英文实时统计字数、字符、句子和段落，含阅读时间估算。无需注册，数据本地处理。',
     },
     en: {
-      title: 'Word Counter - Free Real-Time Word, Character & Sentence Count (500K/mo)',
+      title: 'Word Counter - Free Real-Time Word, Character & Sentence Count'
       description: 'Free online word counter: count words, characters, sentences, and paragraphs in real time for English and Chinese. Includes reading time estimate. No signup.',
     },
   }

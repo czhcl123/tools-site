@@ -10,12 +10,12 @@ export async function generateMetadata({
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
 
   const titles = {
-    zh: '倒计时计算器 - 距任意日期还有几天几小时几分钟几秒 (实时跳秒, Live)',
-    en: 'Countdown Calculator - Days Until Any Date, Live Timer (500K/mo Searches)',
+    zh: '倒计时计算器 - 距任意日期还有几天几小时几分钟几秒',
+    en: 'Countdown Calculator - Days Until Any Date, Live Timer',
   }
   const descriptions = {
-    zh: '在线倒计时计算器 (500K+ 月搜):实时跳秒,选择目标日期 + 时间,显示还有几天几小时几分钟几秒。每秒刷新。也支持"距今已过去 N 天"模式。高考、婚礼、项目上线、戒烟里程碑 — 全部免费,无需注册。',
-    en: 'Free countdown calculator (500K+ monthly searches): count down days, hours, minutes, seconds to any date or event. Updates every second in your browser. Also counts days since past dates. Wedding, graduation, project deadline, sobriety milestones — free, no signup.',
+    zh: '在线倒计时计算器:实时跳秒,选择目标日期+时间,显示还有几天几小时几分钟几秒。也支持距今已过去天数模式,免费无需注册。',
+    en: 'Free countdown calculator: count down days, hours, minutes, seconds to any date. Live timer updates every second. Also counts days since past dates. Free, no signup.',
   }
   const ogTitles = { zh: '日期计算器 - 实用计算器', en: 'Countdown Calculator - Practical Tools' }
   const ogDescs = {

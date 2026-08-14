@@ -11,11 +11,11 @@ export async function generateMetadata({
 
   const data = {
     zh: {
-      title: 'QR 码生成器 - 免费二维码无水印 (500K/月 cpc \$39)',
+      title: 'QR 码生成器 - 免费二维码无水印',
       description: '免费二维码生成器，无水印，无需注册。支持 PNG/SVG 下载，自定义尺寸和颜色。本地浏览器生成，数据安全。',
     },
     en: {
-      title: 'QR Code Generator Free No Signup - PNG, SVG & PDF Export (500K/mo, cpc \$39)',
+      title: 'QR Code Generator Free No Signup - PNG, SVG & PDF Export'
       description: 'Free QR code generator: no signup, no watermark. Generate downloadable PNG/SVG QR codes in your browser with custom size and colors.',
     },
   }

@@ -11,11 +11,11 @@ export async function generateMetadata({
 
   const data = {
     zh: {
-      title: 'JSON 格式化 - 在线 API 调试器与验证器 (500K/月 cpc \$102)',
+      title: 'JSON 格式化 - 在线 API 调试器与验证器',
       description: '免费 JSON 格式化与验证工具：粘贴 JSON 一键美化、压缩、验证。自定义缩进，错误精确到行列号。本地处理，数据安全。',
     },
     en: {
-      title: 'JSON Formatter & Validator - Free Online JSON Beautifier (500K/mo, cpc \$102)',
+      title: 'JSON Formatter & Validator - Free Online JSON Beautifier'
       description: 'Free online JSON formatter and validator: paste JSON to format, beautify, minify, and validate. Custom indent, exact error location, 100% browser-side.',
     },
   }
