@@ -259,7 +259,7 @@ export default async function JsonFormatterPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
       />
-      <h1 className="text-2xl font-bold text-gray-800 mb-1">JSON Formatter</h1>
+      <h1 className="text-2xl font-bold text-gray-800 mb-1">JSON Formatter & Validator - Free Online Tool</h1>
       <div className="mb-6">{seoBodyEn}</div>
       <JsonFormatterClient initialLang={lang} seoBody={lang === 'zh' ? seoBodyZh : seoBodyEn} />
     </>
