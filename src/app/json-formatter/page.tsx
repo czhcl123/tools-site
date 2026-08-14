@@ -15,7 +15,7 @@ export async function generateMetadata({
       description: '免费 JSON 格式化与验证工具：粘贴 JSON 一键美化、压缩、验证。自定义缩进，错误精确到行列号。本地处理，数据安全。',
     },
     en: {
-      title: 'JSON Formatter & Validator - Free Online JSON Beautifier'
+      title: 'JSON Formatter & Validator - Free Online JSON Beautifier',
       description: 'Free online JSON formatter and validator: paste JSON to format, beautify, minify, and validate. Custom indent, exact error location, 100% browser-side.',
     },
   }

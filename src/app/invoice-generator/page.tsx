@@ -15,7 +15,7 @@ export async function generateMetadata({
       description: '免费发票生成器：输入商家、客户和商品信息，一键生成专业 PDF 发票。支持多币种、自定义税率，无需注册。',
     },
     en: {
-      title: 'Free Invoice Generator - PDF Invoice Maker for Freelancers'
+      title: 'Free Invoice Generator - PDF Invoice Maker for Freelancers',
       description: 'Free invoice generator: enter business, client, and item details, instantly download a professional PDF invoice. Multi-currency, custom tax, no signup.',
     },
   }
