@@ -1,10 +1,6 @@
 'use client'
 
 import { Suspense, useState, useMemo } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import Footer from '../../components/Footer'
-import RelatedTools from '../../components/RelatedTools'
 import { t } from './sleep-calculator-i18n'
 import type { Lang } from './sleep-calculator-i18n'
 
@@ -30,8 +26,7 @@ function pad(n: number) {
   return String(Math.max(0, n)).padStart(2, '0')
 }
 
-function SleepCalculatorContent({ initialLang, seoBody }: { initialLang?: Lang; seoBody?: React.ReactNode }) {
-  const pathname = usePathname()
+function SleepCalculatorContent({ lang: initialLang }: { lang?: Lang }) {
   const isZhPath = pathname?.startsWith('/zh') || false
   const lang: Lang = initialLang ?? (isZhPath ? 'zh' : (typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('lang') === 'zh' ? 'zh' : 'en'))
   const nextLang: Lang = lang === 'zh' ? 'en' : 'zh'
@@ -102,22 +97,7 @@ function SleepCalculatorContent({ initialLang, seoBody }: { initialLang?: Lang; 
   })()
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow-sm sticky top-0 z-10">
-        <div className="max-w-2xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold text-orange-500">
-            {u('siteTitle')}
-          </Link>
-          <Link
-            href={pathname.startsWith('/zh') ? pathname.replace('/zh', '') || '/' : `/zh${pathname}`}
-            className="text-sm px-3 py-1 border border-gray-200 rounded-full hover:bg-gray-50"
-          >
-            {lang === 'zh' ? 'EN' : '中文'}
-          </Link>
-        </div>
-      </header>
-
-      <main className="max-w-2xl mx-auto px-4 py-8">
+    <>
         <p className="text-gray-500 text-sm mb-1">{u('description')}</p>
         <p className="text-orange-600 text-xs font-medium mb-6">{u('subtitle')}</p>
 
@@ -194,24 +174,14 @@ function SleepCalculatorContent({ initialLang, seoBody }: { initialLang?: Lang; 
             </div>
           ))}
         </div>
-
-        <p className="text-xs text-gray-400 mt-6 text-center">{u('sleepQuality')}</p>
-
-        <RelatedTools
-          lang={lang}
-          paths={['/countdown', '/bmi-calculator', '/discount-calculator', '/lunar-calendar']}
-        />
-      </main>
-
-      <Footer lang={lang} />
-    </div>
+    </>
   )
 }
 
-export default function SleepCalculator({ initialLang, seoBody }: { initialLang?: Lang; seoBody?: React.ReactNode }) {
+export default function SleepCalculator({ lang }: { lang?: Lang }) {
   return (
     <Suspense fallback={<div className="min-h-screen bg-gray-50" />}>
-      <SleepCalculatorContent initialLang={initialLang} seoBody={seoBody} />
+      <SleepCalculatorContent lang={lang} />
     </Suspense>
   )
 }
