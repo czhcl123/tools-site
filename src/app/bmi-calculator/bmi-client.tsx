@@ -1,86 +1,44 @@
 'use client'
 
 import { Suspense, useState } from 'react'
-import Link from 'next/link'
-import { usePathname, useSearchParams } from 'next/navigation'
-import Footer from '../../components/Footer'
-import RelatedTools from '../../components/RelatedTools'
+import { useSearchParams } from 'next/navigation'
 
-const t = {
-  zh: {
-    siteTitle: '🧮 实用计算器',
-    title: 'BMI 体重指数计算器',
-    description: '快速计算您的身体质量指数，判断体重是否健康',
-    height: '身高 (cm)',
-    weight: '体重 (kg)',
-    calc: '计算 BMI',
-    result: '您的 BMI',
-    category: '体重状态',
-    categoryList: {
-      underweight: '偏瘦',
-      normal: '正常',
-      overweight: '偏胖',
-      obese: '肥胖',
-    },
-    range: 'BMI 范围参考',
-    underweightRange: '偏瘦：< 18.5',
-    normalRange: '正常：18.5 - 23.9',
-    overweightRange: '偏胖：24.0 - 27.9',
-    obeseRange: '肥胖：≥ 28.0',
-    note: '数据仅供参考，BMI 不能完全反映健康状况，请结合其他指标。',
-    home: '← 返回首页',
-    moreCalc: '更多计算器',
-  },
-  en: {
-    siteTitle: '🧮 Tools',
-    title: 'BMI Calculator',
-    description: 'Calculate your Body Mass Index quickly',
-    height: 'Height (cm)',
-    weight: 'Weight (kg)',
-    calc: 'Calculate BMI',
-    result: 'Your BMI',
-    category: 'Status',
-    categoryList: {
-      underweight: 'Underweight',
-      normal: 'Normal',
-      overweight: 'Overweight',
-      obese: 'Obese',
-    },
-    range: 'BMI Reference',
-    underweightRange: 'Underweight: < 18.5',
-    normalRange: 'Normal: 18.5 - 23.9',
-    overweightRange: 'Overweight: 24.0 - 27.9',
-    obeseRange: 'Obese: ≥ 28.0',
-    note: 'For reference only. BMI does not fully reflect health status.',
-    home: '← Back to Home',
-    moreCalc: 'More Calculators',
-  },
-}
-
-function getCategory(bmi: number, lang: 'zh' | 'en') {
-  if (bmi < 18.5) return t[lang].categoryList.underweight
-  if (bmi < 24) return t[lang].categoryList.normal
-  if (bmi < 28) return t[lang].categoryList.overweight
-  return t[lang].categoryList.obese
-}
-
-function getCategoryColor(category: string, lang: 'zh' | 'en') {
-  if (category === t[lang].categoryList.underweight) return 'text-blue-500'
-  if (category === t[lang].categoryList.normal) return 'text-green-500'
-  if (category === t[lang].categoryList.overweight) return 'text-orange-500'
-  return 'text-red-500'
-}
-
-function BmiCalculatorContent({ initialLang, seoBody }: { initialLang?: 'zh' | 'en'; seoBody?: React.ReactNode }) {
+function BmiCalculatorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
   const searchParams = useSearchParams()
   const lang = (searchParams.get('lang') === 'zh' ? 'zh' : 'en') as 'zh' | 'en'
-  const pathname = usePathname()
-  const nextLang: 'zh' | 'en' = lang === 'zh' ? 'en' : 'zh'
   const [height, setHeight] = useState('')
   const [weight, setWeight] = useState('')
   const [bmi, setBmi] = useState<number | null>(null)
 
-  const u = (key: string) => t[lang][key as keyof typeof t.zh] as string
+  const u = (key: string) => {
+    const map: Record<string, string> = {
+      height: lang === 'zh' ? '身高 (cm)' : 'Height (cm)',
+      weight: lang === 'zh' ? '体重 (kg)' : 'Weight (kg)',
+      calc: lang === 'zh' ? '计算 BMI' : 'Calculate BMI',
+      result: lang === 'zh' ? '您的 BMI' : 'Your BMI',
+      category: lang === 'zh' ? '体重状态' : 'Weight Status',
+      range: lang === 'zh' ? 'BMI 范围参考' : 'BMI Reference',
+      underweightRange: lang === 'zh' ? '偏瘦：< 18.5' : 'Underweight: < 18.5',
+      normalRange: lang === 'zh' ? '正常：18.5 - 23.9' : 'Normal: 18.5 - 23.9',
+      overweightRange: lang === 'zh' ? '偏胖：24.0 - 27.9' : 'Overweight: 24.0 - 27.9',
+      obeseRange: lang === 'zh' ? '肥胖：≥ 28.0' : 'Obese: ≥ 28.0',
+    }
+    return map[key] || key
+  }
+
+  function getCategory(bmi: number, lang: string): string {
+    if (bmi < 18.5) return lang === 'zh' ? '偏瘦' : 'Underweight'
+    if (bmi < 24) return lang === 'zh' ? '正常' : 'Normal'
+    if (bmi < 28) return lang === 'zh' ? '偏胖' : 'Overweight'
+    return lang === 'zh' ? '肥胖' : 'Obese'
+  }
+
+  function getCategoryColor(category: string, lang: string): string {
+    if (category === (lang === 'zh' ? '偏瘦' : 'Underweight')) return 'text-blue-500'
+    if (category === (lang === 'zh' ? '正常' : 'Normal')) return 'text-green-500'
+    if (category === (lang === 'zh' ? '偏胖' : 'Overweight')) return 'text-orange-500'
+    return 'text-red-500'
+  }
 
   function calc() {
     const h = parseFloat(height)
@@ -93,110 +51,61 @@ function BmiCalculatorContent({ initialLang, seoBody }: { initialLang?: 'zh' | '
   const category = bmi !== null ? getCategory(bmi, lang) : ''
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow-sm sticky top-0 z-10">
-        <div className="max-w-2xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold text-orange-500">
-            {u('siteTitle')}
-          </Link>
-          <Link
-            href={pathname.startsWith('/zh') ? pathname.replace('/zh', '') || '/' : `/zh${pathname}`}
-            className="text-sm px-3 py-1 border border-gray-200 rounded-full hover:bg-gray-50"
-          >
-            {lang === 'zh' ? 'EN' : '中文'}
-          </Link>
-        </div>
-      </header>
+    <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+      <div className="mb-4">
+        <label className="block text-sm font-medium text-gray-600 mb-1">{u('height')}</label>
+        <input
+          type="number"
+          value={height}
+          onChange={(e) => setHeight(e.target.value)}
+          placeholder="170"
+          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
+        />
+      </div>
+      <div className="mb-4">
+        <label className="block text-sm font-medium text-gray-600 mb-1">{u('weight')}</label>
+        <input
+          type="number"
+          value={weight}
+          onChange={(e) => setWeight(e.target.value)}
+          placeholder="65"
+          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
+        />
+      </div>
+      <button
+        onClick={calc}
+        className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-lg transition-colors"
+      >
+        {u('calc')}
+      </button>
 
-      <main className="max-w-2xl mx-auto px-4 py-8">
-        <p className="text-gray-500 text-sm mb-6">{u('description')}</p>
-
-        <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-6">
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-600 mb-1">{u('height')}</label>
-            <input
-              type="number"
-              value={height}
-              onChange={(e) => setHeight(e.target.value)}
-              placeholder="170"
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-600 mb-1">{u('weight')}</label>
-            <input
-              type="number"
-              value={weight}
-              onChange={(e) => setWeight(e.target.value)}
-              placeholder="65"
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
-            />
-          </div>
-          <button
-            onClick={calc}
-            className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-lg transition-colors"
-          >
-            {u('calc')}
-          </button>
-        </div>
-
-        {bmi !== null && (
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-6 text-center">
-            <div className="text-sm text-gray-500 mb-1">{u('result')}</div>
-            <div className="text-5xl font-bold text-orange-500 mb-2">{bmi}</div>
-            <div className={`text-lg font-semibold ${getCategoryColor(category, lang)}`}>
-              {category}
-            </div>
-          </div>
-        )}
-
-        <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-6">
-          <h2 className="font-semibold text-gray-700 mb-3">{u('range')}</h2>
-          <div className="space-y-2 text-sm">
-            <div className="flex justify-between">
-              <span className="text-blue-500">{u('underweightRange')}</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-green-500">{u('normalRange')}</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-orange-500">{u('overweightRange')}</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-red-500">{u('obeseRange')}</span>
-            </div>
+      {bmi !== null && (
+        <div className="mt-6 text-center">
+          <div className="text-sm text-gray-500 mb-1">{u('result')}</div>
+          <div className="text-5xl font-bold text-orange-500 mb-2">{bmi}</div>
+          <div className={`text-lg font-semibold ${getCategoryColor(category, lang)}`}>
+            {category}
           </div>
         </div>
+      )}
 
-        <p className="text-xs text-gray-400 mb-6">{u('note')}</p>
-
-        <RelatedTools lang={lang} paths={['/discount-calculator', '/countdown', '/unit-converter', '/heic-to-jpg']} />
-
-        <div className="flex gap-3 flex-wrap">
-          <Link
-            href="/discount-calculator"
-            className="text-sm px-4 py-2 bg-orange-100 text-orange-500 rounded-full hover:bg-orange-200"
-          >
-            🏷️ 折扣计算器
-          </Link>
-          <Link
-            href="/"
-            className="text-sm px-4 py-2 bg-gray-100 text-gray-500 rounded-full hover:bg-gray-200"
-          >
-            {u('moreCalc')}
-          </Link>
+      <div className="mt-6 pt-4 border-t border-gray-100">
+        <h3 className="text-sm font-medium text-gray-600 mb-2">{u('range')}</h3>
+        <div className="space-y-1 text-sm">
+          <div className="text-blue-500">{u('underweightRange')}</div>
+          <div className="text-green-500">{u('normalRange')}</div>
+          <div className="text-orange-500">{u('overweightRange')}</div>
+          <div className="text-red-500">{u('obeseRange')}</div>
         </div>
-      </main>
-
-      <Footer lang={lang} />
+      </div>
     </div>
   )
 }
 
-export default function BmiCalculator({ initialLang, seoBody }: { initialLang?: 'zh' | 'en'; seoBody?: React.ReactNode }) {
+export default function BmiCalculator({ lang }: { lang?: 'zh' | 'en' }) {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-gray-50" />}>
-      <BmiCalculatorContent initialLang={initialLang} seoBody={seoBody} />
+    <Suspense fallback={<div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">Loading...</div>}>
+      <BmiCalculatorContent lang={lang} />
     </Suspense>
   )
 }
