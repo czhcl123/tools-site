@@ -1,10 +1,7 @@
 'use client'
 
 import { Suspense, useState, useEffect } from 'react'
-import Link from 'next/link'
-import { usePathname, useSearchParams } from 'next/navigation'
-import Footer from '../../components/Footer'
-import RelatedTools from '../../components/RelatedTools'
+import { useSearchParams } from 'next/navigation'
 
 const t = {
   zh: {
@@ -72,11 +69,9 @@ function getMsDiff(target: Date, now: Date) {
   return target.getTime() - now.getTime()
 }
 
-function CountdownContent({ initialLang, seoBody }: { initialLang?: 'zh' | 'en'; seoBody?: React.ReactNode }) {
+function CountdownContent({ lang: initialLang }: { lang?: "zh" | "en" }) {
   const searchParams = useSearchParams()
   const lang = (searchParams.get('lang') === 'zh' ? 'zh' : 'en') as 'zh' | 'en'
-  const pathname = usePathname()
-  const nextLang: 'zh' | 'en' = lang === 'zh' ? 'en' : 'zh'
 
   // Default: 30 days from now
   const defaultDate = (() => {
@@ -157,22 +152,8 @@ function CountdownContent({ initialLang, seoBody }: { initialLang?: 'zh' | 'en';
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow-sm sticky top-0 z-10">
-        <div className="max-w-2xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold text-orange-500">
-            {u('siteTitle')}
-          </Link>
-          <Link
-            href={pathname.startsWith('/zh') ? pathname.replace('/zh', '') || '/' : `/zh${pathname}`}
-            className="text-sm px-3 py-1 border border-gray-200 rounded-full hover:bg-gray-50"
-          >
-            {lang === 'zh' ? 'EN' : '中文'}
-          </Link>
-        </div>
-      </header>
-
-      <main className="max-w-2xl mx-auto px-4 py-8">
+    <>
+    
         <p className="text-gray-500 text-sm mb-1">{u('description')}</p>
         <p className="text-orange-600 text-xs font-medium mb-6">{u('subtitle')}</p>
 
@@ -280,42 +261,6 @@ function CountdownContent({ initialLang, seoBody }: { initialLang?: 'zh' | 'en';
           </div>
         )}
 
-        <RelatedTools
-          lang={lang}
-          paths={['/lunar-calendar', '/discount-calculator', '/bmi-calculator', '/unit-converter']}
-        />
-
-        <div className="flex gap-3 flex-wrap">
-          <Link
-            href="/bmi-calculator"
-            className="text-sm px-4 py-2 bg-orange-100 text-orange-500 rounded-full hover:bg-orange-200"
-          >
-            BMI计算器
-          </Link>
-          <Link
-            href="/discount-calculator"
-            className="text-sm px-4 py-2 bg-orange-100 text-orange-500 rounded-full hover:bg-orange-200"
-          >
-            折扣计算器
-          </Link>
-          <Link
-            href="/"
-            className="text-sm px-4 py-2 bg-gray-100 text-gray-500 rounded-full hover:bg-gray-200"
-          >
-            {u('moreCalc')}
-          </Link>
-        </div>
-      </main>
-
-      <Footer lang={lang} />
-    </div>
-  )
-}
-
-export default function Countdown({ initialLang, seoBody }: { initialLang?: 'zh' | 'en'; seoBody?: React.ReactNode }) {
-  return (
-    <Suspense fallback={<div className="min-h-screen bg-gray-50" />}>
-      <CountdownContent initialLang={initialLang} seoBody={seoBody} />
-    </Suspense>
+    </>
   )
 }

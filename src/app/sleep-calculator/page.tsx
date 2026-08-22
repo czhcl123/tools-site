@@ -206,9 +206,41 @@ export default async function SleepCalculatorPage({
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, webAppSchema]) }} />
-      <h1 className="text-2xl font-bold text-gray-800 mb-1">{lang === 'zh' ? '睡眠计算器 - 90 分钟睡眠周期' : 'Sleep Calculator - 90-Minute Sleep Cycle'}</h1>
-      <div className="mb-6">{lang === 'zh' ? seoBodyZh : seoBodyEn}</div>
-      <SleepCalculatorClient initialLang={lang} />
+      <div className="min-h-screen bg-gray-50">
+        <header className="bg-white shadow-sm sticky top-0 z-10">
+          <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="/" className="text-lg font-bold text-orange-500">🧮 {lang === 'zh' ? '实用计算器' : 'Practical Tools'}</a>
+            <a href={lang === 'zh' ? '/sleep-calculator' : '/zh/sleep-calculator'} className="text-xs px-3 py-1 border border-gray-200 rounded-full hover:bg-gray-50">
+              {lang === 'zh' ? 'EN' : '中文'}
+            </a>
+          </div>
+        </header>
+        <main className="max-w-6xl mx-auto px-4 py-6">
+          <h1 className="text-xl font-bold text-gray-800 mb-4">{lang === 'zh' ? '睡眠计算器' : 'Sleep Calculator'}</h1>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <aside className="lg:col-span-3">
+              <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 sticky top-20">
+                {lang === 'zh' ? seoBodyZh : seoBodyEn}
+              </div>
+            </aside>
+            <section className="lg:col-span-6">
+              <SleepCalculatorClient lang={lang} />
+            </section>
+            <aside className="lg:col-span-3">
+              <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 sticky top-20">
+                <h3 className="font-semibold text-gray-700 mb-3 text-sm">{lang === 'zh' ? '更多工具' : 'More Tools'}</h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="/bmi-calculator" className="text-orange-500 hover:underline">⚖️ BMI 计算器</a></li>
+                  <li><a href="/countdown" className="text-orange-500 hover:underline">📅 倒计时</a></li>
+                  <li><a href="/discount-calculator" className="text-orange-500 hover:underline">🏷️ 折扣计算器</a></li>
+                  <li><a href="/unit-converter" className="text-orange-500 hover:underline">📐 单位换算</a></li>
+                  <li><a href="/lunar-calendar" className="text-orange-500 hover:underline">📆 农历转换</a></li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </main>
+      </div>
     </>
   )
 }
