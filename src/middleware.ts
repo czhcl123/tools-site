@@ -22,6 +22,12 @@ export function middleware(request: NextRequest) {
       newUrl.search = ''
       return NextResponse.redirect(newUrl, 301)
     }
+    // Blog routes handle lang via searchParams internally, skip redirect
+    if (path.startsWith('/blog')) {
+      const response = NextResponse.next()
+      response.headers.set('x-page-lang', 'zh-CN')
+      return response
+    }
     const newPath = path === '/' ? '/zh' : `/zh${path}`
     const newUrl = new URL(newPath, request.url)
     newUrl.search = ''
