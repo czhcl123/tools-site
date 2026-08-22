@@ -185,17 +185,43 @@ export default async function QrCodeGeneratorPage({
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
-      />
-      <h1 className="text-2xl font-bold text-gray-800 mb-1">QR Code Generator</h1>
-      <div className="mb-6">{seoBodyEn}</div>
-      <QrCodeGeneratorClient initialLang={lang} seoBody={lang === 'zh' ? seoBodyZh : seoBodyEn} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
+      <div className="min-h-screen bg-gray-50">
+        <header className="bg-white shadow-sm sticky top-0 z-10">
+          <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="/" className="text-lg font-bold text-orange-500">🧮 {lang === 'zh' ? '实用计算器' : 'Practical Tools'}</a>
+            <a href={lang === 'zh' ? '/qr-code-generator' : '/zh/qr-code-generator'} className="text-xs px-3 py-1 border border-gray-200 rounded-full hover:bg-gray-50">
+              {lang === 'zh' ? 'EN' : '中文'}
+            </a>
+          </div>
+        </header>
+        <main className="max-w-6xl mx-auto px-4 py-6">
+          <h1 className="text-xl font-bold text-gray-800 mb-4">{lang === 'zh' ? 'QR 码生成器' : 'QR Code Generator'}</h1>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <aside className="lg:col-span-3">
+              <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 sticky top-20">
+                {lang === 'zh' ? seoBodyZh : seoBodyEn}
+              </div>
+            </aside>
+            <section className="lg:col-span-6">
+              <QrCodeGeneratorClient lang={lang} />
+            </section>
+            <aside className="lg:col-span-3">
+              <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 sticky top-20">
+                <h3 className="font-semibold text-gray-700 mb-3 text-sm">{lang === 'zh' ? '更多工具' : 'More Tools'}</h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="/bmi-calculator" className="text-orange-500 hover:underline">⚖️ BMI 计算器</a></li>
+                  <li><a href="/discount-calculator" className="text-orange-500 hover:underline">🏷️ 折扣计算器</a></li>
+                  <li><a href="/json-formatter" className="text-orange-500 hover:underline">🔧 JSON 格式化</a></li>
+                  <li><a href="/heic-to-jpg" className="text-orange-500 hover:underline">🖼️ HEIC 转 JPG</a></li>
+                  <li><a href="/invoice-generator" className="text-orange-500 hover:underline">📄 发票生成器</a></li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </main>
+      </div>
     </>
   )
 }
