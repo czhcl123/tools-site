@@ -1,10 +1,7 @@
 'use client'
 
 import { Suspense, useState } from 'react'
-import Link from 'next/link'
-import { usePathname, useSearchParams } from 'next/navigation'
-import Footer from '../../components/Footer'
-import RelatedTools from '../../components/RelatedTools'
+import { useSearchParams } from 'next/navigation'
 
 const t = {
   zh: {
@@ -112,10 +109,9 @@ function solarToLunar(year: number, month: number, day: number) {
   return { year: cy, month: cm, day: cd, leap: false }
 }
 
-function LunarCalendarContent({ initialLang, seoBody }: { initialLang?: 'zh' | 'en'; seoBody?: React.ReactNode }) {
+function LunarCalendarContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
   const searchParams = useSearchParams()
   const lang = (searchParams.get('lang') === 'zh' ? 'zh' : 'en') as 'zh' | 'en'
-  const pathname = usePathname()
   const nextLang: 'zh' | 'en' = lang === 'zh' ? 'en' : 'zh'
   const [solarDate, setSolarDate] = useState('')
   const [result, setResult] = useState<{ year: number; month: number; day: number } | null>(null)
@@ -143,22 +139,7 @@ function LunarCalendarContent({ initialLang, seoBody }: { initialLang?: 'zh' | '
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow-sm sticky top-0 z-10">
-        <div className="max-w-2xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold text-orange-500">
-            🧮 实用计算器
-          </Link>
-          <Link
-            href={pathname.startsWith('/zh') ? pathname.replace('/zh', '') || '/' : `/zh${pathname}`}
-            className="text-sm px-3 py-1 border border-gray-200 rounded-full hover:bg-gray-50"
-          >
-            {lang === 'zh' ? 'EN' : '中文'}
-          </Link>
-        </div>
-      </header>
-
-      <main className="max-w-2xl mx-auto px-4 py-8">
+    <>
         <p className="text-gray-500 text-sm mb-6">{u('description')}</p>
 
         <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-6">
@@ -213,17 +194,14 @@ function LunarCalendarContent({ initialLang, seoBody }: { initialLang?: 'zh' | '
             {u('moreCalc')}
           </Link>
         </div>
-      </main>
-
-      <Footer lang={lang} />
-    </div>
+    </>
   )
 }
 
-export default function LunarCalendar({ initialLang, seoBody }: { initialLang?: 'zh' | 'en'; seoBody?: React.ReactNode }) {
+export default function LunarCalendar({ lang }: { lang?: 'zh' | 'en' }) {
   return (
     <Suspense fallback={<div className="min-h-screen bg-gray-50" />}>
-      <LunarCalendarContent initialLang={initialLang} seoBody={seoBody} />
+      <LunarCalendarContent lang={lang} />
     </Suspense>
   )
 }
