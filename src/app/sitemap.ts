@@ -75,5 +75,45 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   }
 
+  // Blog index + blog posts (en + zh)
+  const blogSlugs = [
+    'discount-calculator',
+    'bmi-calculator',
+    'countdown',
+    'lunar-calendar',
+    'unit-converter',
+    'qr-code-generator',
+    'word-counter',
+    'json-formatter',
+    'heic-to-jpg',
+    'invoice-generator',
+  ]
+
+  entries.push(
+    {
+      url: `${base}/blog`,
+      lastModified: today,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+      alternates: { languages: { 'en-US': `${base}/blog`, 'zh-CN': `${base}/zh/blog`, 'x-default': `${base}/blog` } },
+    }
+  )
+
+  for (const slug of blogSlugs) {
+    entries.push({
+      url: `${base}/blog/${slug}`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+      alternates: {
+        languages: {
+          'en-US': `${base}/blog/${slug}`,
+          'zh-CN': `${base}/zh/blog/${slug}`,
+          'x-default': `${base}/blog/${slug}`,
+        },
+      },
+    })
+  }
+
   return entries
 }

@@ -33,6 +33,10 @@ export default function Footer({ lang = 'zh' }: FooterProps) {
             {t.home}
           </Link>
           <span className="text-gray-200">·</span>
+          <Link href="/blog" className="text-gray-400 hover:text-orange-500 transition-colors">
+            {lang === 'zh' ? '博客' : 'Blog'}
+          </Link>
+          <span className="text-gray-200">·</span>
           <Link href="/about" className="text-gray-400 hover:text-orange-500 transition-colors">
             {t.about}
           </Link>
