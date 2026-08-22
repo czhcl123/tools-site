@@ -137,31 +137,13 @@ const faqSchemaEn = {
 
 const seoBodyZh = (
   <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
-    <p>
-      <strong>日期计算器</strong>三个数字就解决"距目标还有多少天"或"距某事件已过去多少天"。本工具按自然日精确计算,自动处理闰年 / 大小月,无需手算。所有计算在你浏览器本地完成,适合婚假规划、孕周计算、纪念日追踪、考前倒计时等。
-    </p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">最常用的日期计算场景</h2>
-    <p><strong>1. 高考 / 中考倒计时</strong>。距离高考 200 天 / 100 天 / 30 天节点,本工具一键显示。家长群每周自动播报孩子备考天数,适合做心理建设。</p>
-    <p><strong>2. 周年纪念日</strong>。宝宝出生 100 天、结婚 1000 天、戒烟 365 天——这类里程碑(100 / 200 / 365 / 1000 天)用本工具查过往日期非常方便,比翻日历快。</p>
-    <p><strong>3. 项目 deadline</strong>。"距离上线还有 21 天","距离 PR 截止还有 14 天"。跨时区团队(亚洲 / 欧洲)用截止日期 + 本工具,比 Excel 公式更直观。</p>
-    <p><strong>4. 旅游 / 假期</strong>。"还有 X 天就放假"或"还有 X 天生日",节假日开始 / 结束倒计时,直接看结果。</p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">跟日历 App 区别在哪?</h2>
-    <p>系统日历 App 需要手动建提醒事件,操作 3 步以上;本工具输入日期 + 1 次点击即可。适合:临时算"还有 X 天退休"、"宝宝出生 200 天"。长期重复事件用日历 App 更合适。本工具页面无 cookie、无登录、无追踪,适合简单查询场景。</p>
+    <p>输入目标日期,立刻算出距离今天还有多少天。支持生日倒计时、节假日倒计时、考试/截止日期倒计时,也能统计排除周末和节假日后的工作日数。</p>
   </div>
 )
 
 const seoBodyEn = (
   <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
-    <p>
-      A <strong>countdown calculator</strong> answers three questions in one click: how many days until a future date, how many days since a past date, and how long between two arbitrary dates. This tool uses calendar days (not business days), handles leap years and month length automatically, and runs entirely in your browser so no data leaves your device.
-    </p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">Most common date counting scenarios</h2>
-    <p><strong>1. Exam / graduation countdowns.</strong> "100 days until the bar exam", "30 days until finals week". Students and parents use this as a motivational milestone marker. The 50 / 100 / 200 day points are the most psychologically powerful.</p>
-    <p><strong>2. Anniversary tracking.</strong> 100 days since launch, 365 days sober, 1000 days married. Milestone anniversaries at 100 / 200 / 365 / 1000 days are widely celebrated across cultures. This tool handles past dates as easily as future ones.</p>
-    <p><strong>3. Project deadlines.</strong> "14 days until launch", "21 days until freeze". Cross-timezone teams pick a target calendar date, then use this calculator for consistent day counts across regions, regardless of working hours.</p>
-    <p><strong>4. Vacation / birthday countdowns.</strong> "47 days until summer break", "9 days until the wedding". Simple visual countdown for any future event.</p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">How is this different from my calendar app?</h2>
-    <p>System calendar apps require you to create an event (3+ taps), then check countdown from the event detail. This tool is 1 input + 1 click, optimized for ad-hoc queries. For recurring events (weekly standups, monthly meetings) use your calendar app. For one-off "how many days until X" — use this.</p>
+    <p>Enter any target date and instantly see how many days remain. Perfect for birthdays, holidays, exam deadlines, and project timelines. Also counts working days excluding weekends and public holidays.</p>
   </div>
 )
 

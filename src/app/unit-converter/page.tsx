@@ -121,31 +121,13 @@ const faqSchemaEn = {
 
 const seoBodyZh = (
   <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
-    <p>
-      <strong>单位换算器</strong>覆盖长度 / 重量 / 温度 / 面积 / 体积 5 大类 30+ 单位即时互转。从厘米到英寸、从摄氏度到华氏度、从磅到千克,一键完成。所有换算按 NIST 国际标准系数,精确小数点 4-6 位,适合日常、烹饪、工程、跨境贸易。
-    </p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">最常用的换算场景</h2>
-    <p><strong>1. 跨境网购</strong>。"这件衣服是美码 M,相当于中国什么尺码?"——本工具把英寸转厘米、磅转千克,1 秒给答案,比把尺子放屏幕比划更准。</p>
-    <p><strong>2. 烹饪 / 烘焙</strong>。海外食谱 350°F = 176°C,1 cup = 240ml,1 oz = 28g。本工具让"美式食谱"直接照做。</p>
-    <p><strong>3. 留学 / 移民</strong>。美国身高体重(英尺/磅)、汽车里程(英里/加仑)、天气预报(华氏度)转成大陆习惯(米/千克、公里/升、摄氏度)。</p>
-    <p><strong>4. 工程 / 学术</strong>。物理 / 化学 / 建筑作业需要 SI 单位 ↔ imperial 单位精确换算,本工具精度满足工程需求。</p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">5 类单位涵盖范围</h2>
-    <p>长度:米 / 厘米 / 公里 / 英里 / 英寸 / 英尺 / 码 / 海里。重量:千克 / 克 / 磅 / 盎司 / 公吨。温度:°C / °F / K(带偏移公式)。面积:m² / 英亩 / 公顷。体积:升 / 加仑 / 毫升 / 立方米。后续可能加:速度(mph / km/h / m/s)、数据量(B / KB / MB / GB / TB)。</p>
+    <p>长度、重量、温度、面积、体积一键换算,支持公制和英制互转。出国旅行、做饭烘焙、看国外房源都能用。</p>
   </div>
 )
 
 const seoBodyEn = (
   <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
-    <p>
-      A <strong>unit converter</strong> handles 30+ units across 5 categories — length, weight, temperature, area, volume — with instant results. Conversions follow NIST international standards at 4-6 decimal precision, accurate enough for everyday use, cooking, engineering, and cross-border trade.
-    </p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">Most common conversion scenarios</h2>
-    <p><strong>1. International online shopping.</strong> "This shirt is US size M, what does that mean in metric?" Centimeters from inches, kilograms from pounds — instant results without measuring tape improvisation.</p>
-    <p><strong>2. Cooking and baking.</strong> American recipes: 350°F = 176°C, 1 cup = 240 ml, 1 oz = 28 g. Convert on the fly and follow the recipe as written instead of rounding randomly.</p>
-    <p><strong>3. Travel / relocation prep.</strong> Reading US weather (Fahrenheit), US car MPG (miles per gallon), or European road signs (km/h)? Convert to metric mentally or in this tool before you go.</p>
-    <p><strong>4. Engineering and academic work.</strong> Physics, chemistry, and construction tasks often require precise unit conversions. This tool's 4-6 decimal precision is enough for class work and most professional contexts.</p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">Five categories at a glance</h2>
-    <p>Length: meter / centimeter / kilometer / mile / inch / foot / yard / nautical mile. Weight: kilogram / gram / pound / ounce / metric ton. Temperature: Celsius / Fahrenheit / Kelvin (with offset formulas). Area: square meter / acre / hectare. Volume: liter / US gallon / milliliter / cubic meter. Future additions: speed, data storage, pressure.</p>
+    <p>Convert length, weight, temperature, area, and volume between metric and imperial units instantly. Useful for travel, cooking with international recipes, and browsing foreign real estate listings.</p>
   </div>
 )
 

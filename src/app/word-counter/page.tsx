@@ -172,82 +172,16 @@ export default async function WordCounterPage({
 
   // SEO 正文段落（rendered for crawlers + readers, before the calculator widget）
   const seoBodyZh = (
-    <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
-      <p>
-        <strong>字数统计工具</strong>解决六个跨平台字数痛点:论文字符数限制、英文简历必须 1 页、SEO meta description 限制 155 字符、小红书标题 20 字内、微信公众号标题 64 字、微博正文 2000 字——这些平台规则散落各处,每次发帖、写文、申请学校都要重新查。本工具一键给出中文字符、英文单词、句子、段落和阅读时间,实时更新,不需要复制到 Word 也不需要打开网页版 Google Docs。
-      </p>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">六种最常见的字数限制场景</h2>
-      <p>
-        <strong>场景 1:美国本科申请文书</strong>。Common App 主文书 650 词上限,UC Personal Insight 350 词,本工具的"英文单词数"直接对应,实时显示 650 词红线。
-      </p>
-      <p>
-        <strong>场景 2:LinkedIn 英文简历</strong>。必须 1 页 A4 = 约 400-600 词,超过会被 HR 直接略过。本工具的"段落数"和"句子数"帮助你维持 5-7 段结构。
-      </p>
-      <p>
-        <strong>场景 3:SEO meta description</strong>。Google 搜索结果截断 155-160 字符,超过显示 "..."。本工具的"字符数(含空格)"实时显示 155 红线。
-      </p>
-      <p>
-        <strong>场景 4:小红书标题</strong>。20 字以内(部分话题放宽到 30 字),超出会被折叠成 "..."。本工具的"中文字数"直接对应。
-      </p>
-      <p>
-        <strong>场景 5:微信公众号标题</strong>。64 字以内,超过在订阅号信息流里被截断。
-      </p>
-      <p>
-        <strong>场景 6:微博正文</strong>。2000 字上限,带图微博额外有图片 alt 文字限制(约 300 字)。
-      </p>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">这个工具适合谁?</h2>
-      <ul className="list-disc pl-5 space-y-1">
-        <li>申请美国本科和研究生、需要卡 Common App 字数的学生</li>
-        <li>投简历需要 1 页英文版的求职者</li>
-        <li>做小红书、公众号、微博的自媒体作者</li>
-        <li>写 SEO meta description 需要精确控制字符数的站长</li>
-        <li>任何需要"打开浏览器、粘文字、看字数"的人</li>
-      </ul>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">为什么不用 Word 或 Google Docs?</h2>
-      <p>
-        Word 和 Google Docs 默认不开"中文字数"统计,需要手动设置;英文按 .length 算,中文字符混入时直接错乱。本工具在浏览器用 JavaScript 实时区分中英文,中文字符按 Unicode block 计数、英文按正则分词,粘贴即看,刷新页面也不丢。所有处理在本地完成,文本不传任何服务器,适合处理未发表稿件、敏感内容、付费文稿等场景。
-      </p>
-    </div>
-  )
+  <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
+    <p>粘贴文本立刻统计中英文字符数、单词数、段落数和句子数。论文限字、SEO 写作目标字数、社交媒体字符限制都能精准把控。</p>
+  </div>
+)
 
-  const seoBodyEn = (
-    <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
-      <p>
-        A <strong>word counter</strong> solves six common cross-platform pain points at once: college essays have strict word limits (Common App 650, UC personal insight 350), cover letters must fit one page (~400-600 words), Twitter caps tweets at 280 characters, SEO meta descriptions truncate at 155-160 characters, and Amazon product titles allow only 200 characters. This tool gives you real-time counts for words, characters (with and without spaces), sentences, paragraphs, and reading time — no copy-pasting into Word, no opening Google Docs.
-      </p>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">Six common word limit scenarios</h2>
-      <p>
-        <strong>1. US college application essays</strong>. Common App personal essay 650 words max, UC Personal Insight Questions 350 words each, graduate school personal statements typically 500-1000 words. The "Words" counter maps directly, with live red-line alerts as you approach the 650 cap.
-      </p>
-      <p>
-        <strong>2. Cover letters and one-page resumes</strong>. One page A4 = ~400-600 words. Anything longer gets cut by the recruiter. The "Sentences" and "Paragraphs" counters help you stay within the 5-7 paragraph structure recruiters expect.
-      </p>
-      <p>
-        <strong>3. Twitter / X posts</strong>. 280 characters for standard accounts, 4000 for Twitter Blue. The "Characters" counter shows the red line in real time as you draft.
-      </p>
-      <p>
-        <strong>4. SEO meta descriptions</strong>. Google truncates at 155-160 characters; anything beyond shows as "...". Hit exactly 150-155 for the best SERP display and highest click-through rate.
-      </p>
-      <p>
-        <strong>5. Amazon product titles</strong>. 200 characters max, but the visible part on mobile is only ~80 characters. Front-load the brand and key feature; the counter confirms you stay under the cap.
-      </p>
-      <p>
-        <strong>6. Instagram captions</strong>. 2200 characters, but the first 125 are shown above the "more" fold — what shows in the feed matters most for engagement.
-      </p>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">Who this is for</h2>
-      <ul className="list-disc pl-5 space-y-1">
-        <li>US college applicants tracking Common App and UC essay word limits</li>
-        <li>Job seekers polishing one-page cover letters and resumes</li>
-        <li>Social media managers posting to Twitter, Instagram, LinkedIn</li>
-        <li>SEO specialists writing meta descriptions that hit 155 chars exactly</li>
-        <li>Amazon sellers testing product titles against the 200-char limit</li>
-      </ul>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">Why this instead of Word or Google Docs?</h2>
-      <p>
-        Word and Google Docs count English words by splitting on whitespace, which means Chinese characters and accented characters get miscounted or ignored. This tool uses regex to separate CJK characters from English words, giving you accurate dual counts for mixed content — the very thing Word gets wrong. All math runs locally in your browser; no draft is uploaded. The "reading time" estimate (200 English words per minute, 300 Chinese characters per minute) helps content marketers target specific read lengths for engagement benchmarks.
-      </p>
-    </div>
-  )
+const seoBodyEn = (
+  <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
+    <p>Paste any text to instantly count characters, words, paragraphs, and sentences. Essential for hitting essay word limits, SEO content targets, and social media character restrictions.</p>
+  </div>
+)
 
   return (
     <>

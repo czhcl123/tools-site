@@ -162,63 +162,15 @@ export default async function DiscountCalculatorPage({
   const lang = (sp && sp.lang) === 'zh' ? 'zh' : 'en'
   const faqSchema = lang === 'zh' ? faqSchemaZh : faqSchemaEn
 
-  // SEO 正文段落（rendered for crawlers + readers, before the calculator widget）
   const seoBodyZh = (
     <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
-      <p>
-        <strong>折扣计算器</strong>解决购物时最常见的纠结:这件东西打完折到底多少钱?满减能不能叠加?海外网站写的
-        "30% off" 到底是几折?你只需要输入原价和折扣力度,计算器立刻给出<strong>折后价</strong>和<strong>立省金额</strong>,不需要心算也不需要掏出手机打开计算器 App。
-      </p>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">三种最常见的折扣场景</h2>
-      <p>
-        <strong>场景 1:大陆电商打折</strong>。淘宝、天猫、京东、拼多多通常用"打几折"表达,例如 8 折 = 80% = 折后价 × 0.8。在本计算器输入数字 <code className="bg-gray-100 px-1.5 py-0.5 rounded text-orange-600">8</code> 表示 8 折,输入 <code className="bg-gray-100 px-1.5 py-0.5 rounded text-orange-600">7.5</code> 表示 7.5 折。
-      </p>
-      <p>
-        <strong>场景 2:海外电商 "X% off"</strong>。Amazon、eBay、Shopify 独立站用 "25% off"、"40% off"。换算方法:30% off 对应中国大陆"7 折"。本计算器输入 <code className="bg-gray-100 px-1.5 py-0.5 rounded text-orange-600">70</code> 表示"原价的 70%"即"打 7 折"。
-      </p>
-      <p>
-        <strong>场景 3:跨店满减 + 店铺折扣叠加</strong>。双 11 / 618 / 黑五期间最常见。本计算器只算基础折扣,满减叠加请参考下方 FAQ。
-      </p>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">这个工具适合谁?</h2>
-      <ul className="list-disc pl-5 space-y-1">
-        <li>双 11 / 618 / 黑五购物季需要快速比价的普通消费者</li>
-        <li>做淘宝、拼多多小店需要核算促销价的卖家</li>
-        <li>跨境电商从业者需要"X% off"和"X 折"换算</li>
-        <li>海淘一族需要把海外折扣实时换算成人民币感知</li>
-      </ul>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">为什么不用 Excel 或计算器 App?</h2>
-      <p>
-        本工具专门针对"打几折"的中文场景设计,输入 7.5 直接得到 7.5 折结果,不需要记公式。历史记录功能可以保存最近 10 次计算结果,凑单时来回对比不用反复输入。所有计算在你浏览器本地完成,不上传任何价格数据,适合敏感场景(如算年终奖、采购预算)。
-      </p>
+      <p>输入原价和折扣百分比,秒算折后价和省了多少钱。支持连续折扣(先打折再减固定金额)和反算原价,网购比价、促销计算必备。</p>
     </div>
   )
 
   const seoBodyEn = (
     <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
-      <p>
-        A <strong>discount calculator</strong> answers the one question every shopper has: how much do I actually pay after this sale? Enter the original price and the discount percentage, get the <strong>final price</strong> and <strong>dollar amount saved</strong> instantly. No mental math, no spreadsheet, no second-guessing at checkout.
-      </p>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">Three common discount scenarios</h2>
-      <p>
-        <strong>1. US retail "X% off"</strong>. A $80 jacket at 25% off is $80 × 0.75 = $60. Type <code className="bg-gray-100 px-1.5 py-0.5 rounded text-orange-600">25</code> for 25% off.
-      </p>
-      <p>
-        <strong>2. UK/EU "X% off" with VAT</strong>. UK prices are usually VAT-inclusive, so a 20% discount applies to the price you already see. Type <code className="bg-gray-100 px-1.5 py-0.5 rounded text-orange-600">20</code> and you get the pre-tax savings; add local tax mentally.
-      </p>
-      <p>
-        <strong>3. Stacking coupons + cashback</strong>. On Black Friday, you often stack a 30% store discount + 10% coupon code + 5% cashback portal = real 45% savings. This calculator handles the first step; layer the rest yourself.
-      </p>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">Who this is for</h2>
-      <ul className="list-disc pl-5 space-y-1">
-        <li>Black Friday / Cyber Monday shoppers comparing doorbusters in real time</li>
-        <li>Shopify / Etsy sellers pricing flash sales without opening a spreadsheet</li>
-        <li>Resellers calculating margin after supplier discount</li>
-        <li>Anyone tired of "is this actually a good deal?" mental math at checkout</li>
-      </ul>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">Why this instead of a calculator app?</h2>
-      <p>
-        This tool is built for one specific job: turning discount percentages into final prices, with a 10-entry history so you can compare options without retyping. All math runs locally in your browser; nothing is uploaded. If you are pricing sensitive items (luxury, resale, B2B purchase orders), the privacy guarantee matters.
-      </p>
+      <p>Enter the original price and discount percentage to instantly get the sale price and savings. Supports stacked discounts and reverse calculation — essential for online shopping and deal comparison.</p>
     </div>
   )
 

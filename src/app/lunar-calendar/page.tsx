@@ -121,31 +121,13 @@ const faqSchemaEn = {
 
 const seoBodyZh = (
   <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
-    <p>
-      <strong>农历转换器</strong>输入公历日期,直接得到对应农历、生肖、干支、传统节日信息。本工具覆盖 1900-2100 年(标准农历表范围),所有计算在浏览器本地完成。本工具也可反向:输入农历日期查对应公历。
-    </p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">最常见的农历查询场景</h2>
-    <p><strong>1. 生日 / 纪念日的农历对应</strong>。"爷爷是农历 1948 年三月初八出生,公历是几号?"——本工具一键查过去 + 未来 100 年的农历转公历。每年春节、端午、中秋的家庭聚会日期查起来特别方便。</p>
-    <p><strong>2. 传统节日倒数</strong>。"距离今年中秋节还有 95 天"、"春节 2027 是公历 2 月 6 日"。本工具支持节日反向查询,对于规划婚礼、团聚、放假日期非常实用。</p>
-    <p><strong>3. 命理 / 八字 / 黄历查询</strong>。"我是公历 1988 年 10 月 15 日出生,农历是几月几日?生肖?"——八字测算需要按农历生日,本工具帮你换算。</p>
-    <p><strong>4. 海外华裔寻根</strong>。海外华人用本工具查家族背景、查祖辈农历生日、查清明节祖坟扫祭日期。</p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">为什么不用手机日历?</h2>
-    <p>iPhone / Android 日历默认显示公历,农历通常作为"备选日历"显示一年。本工具适合<strong>任意日期</strong>查询,不依赖系统设置。Microsoft Outlook / Apple Calendar 也支持农历,但需要手动开启"中文农历日历"订阅。</p>
+    <p>输入公历日期,立刻查到对应的农历、生肖、干支和传统节日。覆盖 1900-2100 年,支持反向查询(农历转公历),命理八字、节日规划必备。</p>
   </div>
 )
 
 const seoBodyEn = (
   <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
-    <p>
-      A <strong>lunar-solar calendar converter</strong> takes any Gregorian date (or any lunar date) and returns the matching Chinese lunar calendar day, including zodiac year, heavenly stem / earthly branch, and traditional festival status. The database covers 1900-2100. All conversion runs in your browser — no data sent anywhere.
-    </p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">Most common lunar calendar queries</h2>
-    <p><strong>1. Birthdays and anniversaries in lunar terms.</strong> "My grandmother was born on lunar 3-8-1948 — when is that on the Gregorian calendar?" This tool handles both directions, covering the past and the next 100 years. Especially useful for Chinese New Year, Dragon Boat, Mid-Autumn family reunions.</p>
-    <p><strong>2. Traditional festival countdowns.</strong> "95 days until Mid-Autumn 2026", "Chinese New Year 2027 falls on Feb 6". This tool supports festival reverse-lookup, useful for planning weddings, gatherings, and travel.</p>
-    <p><strong>3. BaZi / Chinese astrology / almanac.</strong> "Born October 15, 1988 — what's the lunar date and zodiac?" Chinese birth-chart astrology uses lunar birthdays. This converter gives you the exact lunar day for any solar input.</p>
-    <p><strong>4. Overseas Chinese heritage research.</strong> Diaspora families use this tool to convert ancestor birthdays, tomb-sweeping dates (清明节), and family history events.</p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">Why not just use my phone's calendar?</h2>
-    <p>iPhone and Android calendars default to Gregorian, with the Chinese lunar calendar as an optional overlay. This tool works for any date without needing to toggle system settings. Apple Calendar and Outlook also support lunar dates, but require manually enabling a "Chinese Lunar Calendar" subscription first.</p>
+    <p>Enter any Gregorian date to instantly see the Chinese lunar date, zodiac year, heavenly stem, and traditional festivals. Covers 1900-2100 with reverse lookup — perfect for astrology, family events, and cultural planning.</p>
   </div>
 )
 

@@ -173,79 +173,13 @@ export default async function JsonFormatterPage({
   // SEO 正文段落（rendered for crawlers + readers, before the calculator widget）
   const seoBodyZh = (
     <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
-      <p>
-        <strong>JSON 格式化工具</strong>解决后端开发、前端调试、接口联调时最头疼的 6 个问题:API 响应一坨压平根本看不清结构、配置文件嵌套太深找 bug 找不到、多余的逗号让 parser 报莫名错误、2 空格和 4 空格缩进在团队 PR 里反复争论、压缩版还是美化版适合当前场景、还有线上调试时不敢把生产数据贴到在线 validator。粘贴 JSON,选择缩进(2/4/Tab),秒出可读结果。
-      </p>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">6 个最常见的 JSON 痛点</h2>
-      <p>
-        <strong>痛点 1:API 响应一坨压平</strong>。后端返回的 JSON 没换行没缩进,几千字符挤成一行,找字段像读天书。本工具默认 2 空格缩进,一秒钟还原结构,贴进去直接折叠到关键层。
-      </p>
-      <p>
-        <strong>痛点 2:嵌套层级太深找不到 bug</strong>。Webhook payload、Stripe 回调、GitHub event 经常有 8-10 层嵌套,肉眼很难定位。本工具格式化后用浏览器的 Find + JSONPath 模板找到你要的字段。
-      </p>
-      <p>
-        <strong>痛点 3:多余逗号 / 单引号 / 注释让 parser 报错</strong>。JavaScript 对象字面量不是合法 JSON,Python 的 None / True / False 也不是。本工具报错信息精确到行列号,告诉你哪个 token 出错,而不是只说 "parse error"。
-      </p>
-      <p>
-        <strong>痛点 4:2 空格 vs 4 空格缩进之争</strong>。JavaScript / Node 生态默认 2 空格,Python 生态默认 4 空格,Go 默认 Tab。PR review 里为了缩进吵起来没意义,本工具三者都支持,选完直接 commit。
-      </p>
-      <p>
-        <strong>痛点 5:压缩还是美化?</strong>。上线环境用压缩版省带宽(服务器一般再 gzip 一层);开发环境 / 调试时用美化版便于肉眼阅读。本工具一键切换,粘贴一次,两种结果都给你。
-      </p>
-      <p>
-        <strong>痛点 6:线上 validator 会不会泄露生产数据?</strong>。本工具纯前端实现,JSON 不离开浏览器,你可以放心粘贴用户 token、订单数据、内部配置文件。同类公共 validator 大多会把你贴的内容上传到自家服务器解析。
-      </p>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">这个工具适合谁?</h2>
-      <ul className="list-disc pl-5 space-y-1">
-        <li>后端开发调试 API 响应、查看 webhook payload</li>
-        <li>前端开发解析后端 mock 数据、查看 .json 配置文件</li>
-        <li>运维 / DevOps 查看 Kubernetes manifest、Terraform state、package.json</li>
-        <li>数据分析师清洗 API 返回的 JSON、做 ETL 前的格式校验</li>
-        <li>QA 测试人员对比接口响应在 staging 和 production 的差异</li>
-      </ul>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">比 jq / python -m json.tool 好在哪?</h2>
-      <p>
-        jq 强大但学习曲线陡,管道语法记不住。python -m json.tool 需要本地装 Python,新电脑临时调试很烦。本工具浏览器即开即用,无需安装,一键复制到剪贴板,适合临时调试。所有解析在浏览器本地完成(JSON.parse 是 ES2015 标准),不上传服务器,适合生产环境敏感数据(token、PII、订单)。
-      </p>
+      <p>把混乱的 JSON 数据一键美化成可读格式,也能压缩成一行。自动检测语法错误(多余逗号、缺少引号),开发者调试 API 的必备工具。</p>
     </div>
   )
 
   const seoBodyEn = (
     <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
-      <p>
-        A <strong>JSON formatter</strong> solves the six daily frustrations that hit every backend engineer, frontend dev, or DevOps engineer wrestling with raw API responses: a minified JSON blob with no line breaks, webhook payloads nested 10 levels deep where the field you need hides somewhere in there, a trailing comma that crashes production, an indentation style war in every code review, and the nagging worry that pasting customer data into a random online JSON validator is a compliance risk. Paste your JSON, pick 2 or 4 space indent, get readable output instantly.
-      </p>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">Six recurring JSON headaches</h2>
-      <p>
-        <strong>1. Minified API responses.</strong> Production APIs return single-line JSON to save bandwidth. Useful for the wire, useless for humans. This tool reformats with sensible defaults (2 space indent) in under a second, and you can collapse everything past a chosen depth.
-      </p>
-      <p>
-        <strong>2. Deep nesting in webhook payloads.</strong> Stripe webhooks, GitHub events, and Shopify order payloads routinely land at 8-12 levels. Format once, then use Find-in-page or a JSONPath query to pull out the exact field you care about instead of squinting at the tree.
-      </p>
-      <p>
-        <strong>3. Parse errors from trailing commas, single quotes, unquoted keys.</strong> JavaScript object literals are not valid JSON — neither is Python repr-style output. JSON.parse throws "Unexpected token" with no hint. This tool surfaces the precise column and line where the parse fails so you fix the right character, not the wrong one.
-      </p>
-      <p>
-        <strong>4. 2-space vs 4-space indent wars.</strong> JavaScript and Go default to 2 spaces or tab; Python defaults to 4. Team repos end up with mixed indentation that triggers PR review noise. Pick a style, format the file, commit, move on.
-      </p>
-      <p>
-        <strong>5. Minify or beautify?</strong> Ship minified JSON to production (gzip takes it further). Read beautified JSON in dev. Toggle between the two with one click — same paste, two outputs.
-      </p>
-      <p>
-        <strong>6. Privacy of "free online JSON validator".</strong> Most web validators send your payload to their server for parsing. If the payload contains PII, tokens, or payment data, that is a data leak waiting to happen. This tool runs JSON.parse locally; the page never makes a network request with your data.
-      </p>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">Who this is for</h2>
-      <ul className="list-disc pl-5 space-y-1">
-        <li>Backend engineers inspecting API responses and debugging webhook integrations</li>
-        <li>Frontend devs checking mock responses and validating config files (tsconfig, package-lock)</li>
-        <li>DevOps / SRE reading Kubernetes manifests, Terraform state files, GitHub Actions logs</li>
-        <li>Data engineers cleaning JSON before ETL or loading into BigQuery / Snowflake</li>
-        <li>QA engineers diffing API responses across staging vs production environments</li>
-      </ul>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">Why not just use jq or python -m json.tool?</h2>
-      <p>
-        jq is unbeatable for one-liners on the command line, but the syntax (<code className="bg-gray-100 px-1.5 py-0.5 rounded text-orange-600">.users[] | select(.active) | .email</code>) is overkill when you just want to read a payload. Python requires a local install and is annoying on a fresh laptop. This tool is browser-only, no install, no login, no network call. For sensitive payloads — auth tokens, customer PII, payment data — the local-only guarantee is the actual reason to use it over a public validator.
-      </p>
+      <p>Beautify messy JSON data into readable format with proper indentation, or minify it to a single line. Automatically detects syntax errors like trailing commas and missing quotes — essential for API debugging.</p>
     </div>
   )
 

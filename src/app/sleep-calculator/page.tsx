@@ -155,33 +155,13 @@ const faqSchemaEn = {
 
 const seoBodyZh = (
   <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
-    <p>
-      <strong>睡眠计算器</strong>基于 90 分钟一个完整睡眠周期的科学原理(浅睡 → 深睡 → REM),帮你找到最佳的入睡时间或起床时间。本工具按自然日计算,无需注册,所有计算在你浏览器本地完成。
-    </p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">最常用的睡眠计算场景</h2>
-    <p><strong>1. 早起备考 / 上学</strong>。高考、考研、雅思托福口语考试需要 7 点起,本工具反推最佳入睡时间(21:45)。长期熬夜早起会累积睡眠债,影响记忆力。</p>
-    <p><strong>2. 倒班 / 夜班</strong>。护士、保安、程序员等夜班人群,本工具帮你算"白天几点起最科学",配合 90 分钟周期减少醒后疲劳感。</p>
-    <p><strong>3. 跨时区出差</strong>。从美国飞回北京,本工具反推"北京时间 X 点该睡",避免 jet lag 拖 7 天。</p>
-    <p><strong>4. 婴儿 / 儿童作息</strong>。小孩需要 10-13 小时睡眠,本工具按年龄段反推最佳入睡时间,父母不再半夜纠结。</p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">睡眠周期是什么?</h2>
-    <p>90 分钟 = 1 个完整周期:N1(浅睡 5%)→ N2(中度睡眠 45%)→ N3(深睡 25%)→ REM(快速眼动 25%)。每晚 4-6 个周期。起床时间最好在 REM 末期或浅睡阶段(感觉自然清醒,没有困意),不在深睡中被闹钟叫醒。</p>
-    <p>本工具页面无 cookie、无登录、无追踪,适合临时查询"今晚几点该睡"。</p>
+    <p>基于 90 分钟睡眠周期,输入你几点睡觉或几点起床,算出最佳入睡/起床时间,让你醒来时不犯困。</p>
   </div>
 )
 
 const seoBodyEn = (
   <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
-    <p>
-      A <strong>sleep calculator</strong> uses the science of the 90-minute sleep cycle (light sleep → deep sleep → REM) to find your optimal bedtime or wake time. This tool runs entirely in your browser, no signup, no data sharing.
-    </p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">Most common sleep calculator scenarios</h2>
-    <p><strong>1. Early-morning exams or work.</strong> Need to wake at 7 AM? The tool back-calculates bedtime (9:45 PM for 6 cycles). Avoid chronic sleep debt — it impairs memory and decision-making.</p>
-    <p><strong>2. Shift workers.</strong> Nurses, security guards, programmers on night shift can use this to plan daytime sleep aligned with 90-minute cycles, reducing post-wake grogginess.</p>
-    <p><strong>3. Jet lag recovery.</strong> Flying from the US to Beijing? Use the calculator to plan your destination-time bedtime, shortening jet lag from 7 days to 2-3.</p>
-    <p><strong>4. Baby / child sleep schedule.</strong> Children need 10-13 hours of sleep. The calculator helps parents plan age-appropriate bedtimes without late-night guesswork.</p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">What is a sleep cycle?</h2>
-    <p>90 minutes = 1 complete cycle: N1 (light, 5%) → N2 (intermediate, 45%) → N3 (deep, 25%) → REM (rapid eye movement, 25%). 4-6 cycles per night. The best wake-up moment is at the END of REM or during light sleep — you wake feeling refreshed, not groggy. Waking during deep sleep (N3) is what causes sleep inertia.</p>
-    <p>This tool has no cookies, no login, no tracking — perfect for ad-hoc "when should I go to bed" queries.</p>
+    <p>Based on 90-minute sleep cycles, enter your bedtime or wake-up time to find the optimal schedule. Wake up feeling refreshed instead of groggy — no more alarm clock fatigue.</p>
   </div>
 )
 
@@ -197,7 +177,7 @@ export default async function SleepCalculatorPage({
   const webAppSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
-    name: lang === 'zh' ? '睡眠计算器 — 90 分钟周期反推' : 'Sleep Calculator - 90-Minute Cycle, Bedtime & Wake Time',
+    name: lang === 'zh' ? '睡眠计算器 - 90 分钟周期反推' : 'Sleep Calculator - 90-Minute Cycle, Bedtime & Wake Time',
     alternateName: lang === 'zh' ? '睡眠周期计算器' : 'Sleep Cycle Calculator',
     url: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/sleep-calculator' : '/sleep-calculator'}`,
     applicationCategory: 'UtilityApplication',
@@ -226,7 +206,7 @@ export default async function SleepCalculatorPage({
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, webAppSchema]) }} />
-      <h1 className="text-2xl font-bold text-gray-800 mb-1">{lang === 'zh' ? '睡眠计算器 — 90 分钟睡眠周期' : 'Sleep Calculator - 90-Minute Sleep Cycle'}</h1>
+      <h1 className="text-2xl font-bold text-gray-800 mb-1">{lang === 'zh' ? '睡眠计算器 - 90 分钟睡眠周期' : 'Sleep Calculator - 90-Minute Sleep Cycle'}</h1>
       <div className="mb-6">{lang === 'zh' ? seoBodyZh : seoBodyEn}</div>
       <SleepCalculatorClient initialLang={lang} />
     </>

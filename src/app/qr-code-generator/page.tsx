@@ -173,51 +173,13 @@ export default async function QrCodeGeneratorPage({
   // SEO 正文段落（rendered for crawlers + readers, before the QR generator widget）
   const seoBodyZh = (
     <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
-      <p>
-        <strong>在线 QR 码生成器</strong>解决 4 个最高频的扫码场景:① 名片上印一个 QR,客户扫一下把姓名、邮箱、电话直接存进通讯录,不用手输你的手机号;② 微信加好友时把自己微信二维码存成图片发给对方,长按识别就能加,避开手动搜索输错账号的尴尬;③ 餐厅、咖啡店、奶茶店桌上贴一个 QR,顾客<strong>扫码点餐</strong>取代纸质菜单,后厨直接收到订单;④ 家里 WiFi 密码太长记不住,做成 QR 码贴在冰箱或玄关,客人扫一下<strong>一键连 WiFi</strong>,再也不用念"大写 W、小写 p、@1234..."。
-      </p>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">大多数人最担心的:隐私问题</h2>
-      <p>
-        第三方 QR 生成网站绝大多数把生成请求发到他们的云端处理。这意味着:你做的<strong>WiFi 密码</strong>、内部系统登录 URL、客户的 vCard 通讯录,都会被记录在对方的服务器日志里。严重的时候,这些数据会被用于商业分析或被卖给广告商。本工具的特别之处在于——所有 QR 码<strong>在你浏览器本地生成</strong>,不经过任何后端,你可以打开浏览器开发者工具的 Network 标签验证:点击"生成"按钮时没有任何对外请求。
-      </p>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">文件格式怎么选?PNG 还是 SVG?</h2>
-      <p>
-        <strong>PNG</strong>(位图)适合屏幕显示、微信发图、PPT 嵌入,屏幕上看够用;但放大到印刷尺寸会糊。<strong>SVG</strong>(矢量)无论印名片、A4 海报还是户外广告牌都不会模糊,推荐用于所有印刷场景。本工具两个格式都能下载,选你需要的。
-      </p>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">这个工具适合谁?</h2>
-      <ul className="list-disc pl-5 space-y-1">
-        <li>需要把微信号 / 网址 / vCard 名片做成 QR 印在名片上的职场人士</li>
-        <li>开餐厅 / 咖啡店 / 小店需要扫码点餐或收款码的店主</li>
-        <li>做活动海报、产品包装、宣传单需要 QR 链接的小商家</li>
-        <li>任何不想把 URL / 密码上传到第三方服务器的人</li>
-      </ul>
+      <p>输入网址、文本或 WiFi 信息,立刻生成 QR 码。支持自定义尺寸,生成 PNG 格式可直接打印。名片、海报、WiFi 分享一键搞定。</p>
     </div>
   )
 
   const seoBodyEn = (
     <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
-      <p>
-        A <strong>QR code generator</strong> solves one of the most common small frustrations of modern life: meeting someone at a conference and wanting them to save your contact in one tap instead of typing your email letter by letter. You put the QR on your <strong>business card</strong> as a vCard, on a restaurant table as a menu link, on a fridge as a WiFi credential, or on a poster as a payment URL. The use case is universal — but the <strong>privacy story</strong> is where most tools differ.
-      </p>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">Why privacy matters when generating QR codes</h2>
-      <p>
-        Most online QR generators send your encoded content (your URL, your home WiFi password, your customer\'s contact info) to a remote server for processing. That data ends up in access logs, sometimes sold to data brokers, sometimes leaked in breaches. This tool generates the QR pattern <strong>100% locally in your browser</strong> using the open-source <code className="bg-gray-100 px-1.5 py-0.5 rounded text-orange-600">qrcode</code> library — the text you type never leaves your device. You can verify by opening DevTools and watching the Network tab: zero outbound requests when you click Generate.
-      </p>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">PNG vs SVG: which file format should I download?</h2>
-      <p>
-        <strong>PNG</strong> is a raster image — perfect for screens, slides, and chat apps, but it pixelates when scaled up for print. <strong>SVG</strong> is a vector file — it scales to any physical size with zero quality loss, so it is the right choice for business cards, posters, packaging, and billboards. When in doubt, download SVG. This tool supports both.
-      </p>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">Error correction level: pick H if you plan to add a logo</h2>
-      <p>
-        QR codes have four error correction levels (L=7%, M=15%, Q=25%, H=30%). Higher levels mean the code stays scannable even if a chunk is obscured. If you want to overlay your brand logo in the center of the QR (a very common design pattern), select <strong>H (30%)</strong> so the code still works. Otherwise, M is a sensible default.
-      </p>
-      <h2 className="text-lg font-semibold text-gray-800 pt-2">Who this tool is for</h2>
-      <ul className="list-disc pl-5 space-y-1">
-        <li>Professionals printing a vCard QR on business cards or conference badges</li>
-        <li>Small business owners (cafés, restaurants, salons) needing menu or payment QRs</li>
-        <li>Event organizers, marketers, and product packagers bridging offline to a URL</li>
-        <li>Anyone who does not want their WiFi password or private URL uploaded to a cloud service</li>
-      </ul>
+      <p>Enter a URL, text, or WiFi credentials to instantly generate a QR code. Customize size, download as PNG for printing — perfect for business cards, posters, and WiFi sharing.</p>
     </div>
   )
 
