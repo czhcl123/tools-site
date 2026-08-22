@@ -1,11 +1,8 @@
 'use client'
 
 import { Suspense, useState, useMemo } from 'react'
-import Link from 'next/link'
-import { usePathname, useSearchParams } from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
 import { jsPDF } from 'jspdf'
-import Footer from '../../components/Footer'
-import RelatedTools from '../../components/RelatedTools'
 
 type Item = { desc: string; qty: number; price: number }
 
@@ -78,10 +75,9 @@ function u(key: keyof typeof t.en, lang: 'zh' | 'en') {
   return t[lang][key] as string
 }
 
-function InvoiceGeneratorContent({ initialLang, seoBody }: { initialLang?: 'zh' | 'en'; seoBody?: React.ReactNode }) {
+function InvoiceGeneratorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
   const searchParams = useSearchParams()
   const lang: 'zh' | 'en' = initialLang ?? (searchParams.get('lang') === 'zh' ? 'zh' : 'en')
-  const pathname = usePathname()
   const nextLang: 'zh' | 'en' = lang === 'zh' ? 'en' : 'zh'
 
   const [number, setNumber] = useState(`INV-${Date.now().toString().slice(-6)}`)
@@ -200,22 +196,7 @@ function InvoiceGeneratorContent({ initialLang, seoBody }: { initialLang?: 'zh' 
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
-      <header className="bg-white shadow-sm sticky top-0 z-10">
-        <div className="max-w-lg mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold text-orange-500 hover:text-orange-600">
-            {u('siteTitle', lang)}
-          </Link>
-          <Link
-            href={pathname.startsWith('/zh') ? pathname.replace('/zh', '') || '/' : `/zh${pathname}`}
-            className="text-xs px-3 py-1.5 border border-gray-200 rounded-full hover:bg-gray-50 transition-colors"
-          >
-            🌐 {u('switchLang', lang)}
-          </Link>
-        </div>
-      </header>
-
-      <main className="flex-1 max-w-lg mx-auto w-full px-4 py-8 pb-24">
+    <>
         <p className="text-sm text-gray-400 mb-6">{u('pageSubtitle', lang)}</p>
 
         <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-4 space-y-4">
@@ -320,17 +301,14 @@ function InvoiceGeneratorContent({ initialLang, seoBody }: { initialLang?: 'zh' 
             {u('backHome', lang)}
           </Link>
         </div>
-      </main>
-
-      <Footer lang={lang} />
-    </div>
+    </>
   )
 }
 
-export default function InvoiceGeneratorClient({ initialLang, seoBody }: { initialLang?: 'zh' | 'en'; seoBody?: React.ReactNode }) {
+export default function InvoiceGeneratorClient({ lang }: { lang?: 'zh' | 'en' }) {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-gray-50" />}>
-      <InvoiceGeneratorContent initialLang={initialLang} seoBody={seoBody} />
+    <Suspense fallback={<div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">Loading...</div>}>
+      <InvoiceGeneratorContent lang={lang} />
     </Suspense>
   )
 }
