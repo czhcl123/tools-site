@@ -29,6 +29,7 @@ const TOOLS: Tool[] = [
   { path: '/countdown', zh: '日期计算器', en: 'Date Calculator', descZh: '计算日期间隔与倒计时', descEn: 'Countdown to a date or count days since.', icon: '📅', color: 'bg-green-50 border-green-200 hover:shadow-lg hover:shadow-green-200/50 hover:-translate-y-0.5 hover:bg-green-100' },
   { path: '/lunar-calendar', zh: '农历转换', en: 'Lunar Calendar', descZh: '公历农历互转', descEn: 'Convert Gregorian to Chinese lunar, 1900-2100.', icon: '📆', color: 'bg-purple-50 border-purple-200 hover:shadow-lg hover:shadow-purple-200/50 hover:-translate-y-0.5 hover:bg-purple-100' },
   { path: '/unit-converter', zh: '单位换算', en: 'Unit Converter', descZh: '长度/重量/温度换算', descEn: 'cm to inches, kg to lb, °C to °F. 30+ units.', icon: '📐', color: 'bg-teal-50 border-teal-200 hover:shadow-lg hover:shadow-teal-200/50 hover:-translate-y-0.5 hover:bg-teal-100' },
+  { path: '/password-generator', zh: '密码生成器', en: 'Password Generator', descZh: '生成安全随机密码', descEn: 'Generate strong random passwords with custom length and characters.', icon: '🔐', color: 'bg-red-50 border-red-200 hover:shadow-lg hover:shadow-red-200/50 hover:-translate-y-0.5 hover:bg-red-100' },
 ]
 
 function HomePageContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {

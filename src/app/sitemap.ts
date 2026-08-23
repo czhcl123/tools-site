@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'heic-to-jpg',
     'invoice-generator',
     'sleep-calculator',
+    'password-generator',
   ]
 
   const entries: MetadataRoute.Sitemap = []

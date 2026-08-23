@@ -216,6 +216,7 @@ export default async function JsonFormatterPage({
                   <li><a href="/qr-code-generator" className="text-orange-500 hover:underline">{lang === 'zh' ? '📱 QR 码生成' : '📱 QR Code Generator'}</a></li>
                   <li><a href="/heic-to-jpg" className="text-orange-500 hover:underline">{lang === 'zh' ? '🖼️ HEIC 转 JPG' : '🖼️ HEIC to JPG'}</a></li>
                   <li><a href="/word-counter" className="text-orange-500 hover:underline">{lang === 'zh' ? '📝 字数统计' : '📝 Word Counter'}</a></li>
+                  <li><a href="/password-generator" className="text-orange-500 hover:underline">{lang === 'zh' ? '🔐 密码生成器' : '🔐 Password Generator'}</a></li>
                 </ul>
               </div>
             </aside>

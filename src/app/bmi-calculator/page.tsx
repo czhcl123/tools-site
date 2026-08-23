@@ -183,6 +183,7 @@ export default async function BmiCalculatorPage({
                   <li><a href="/discount-calculator" className="text-orange-500 hover:underline">🏷️ {lang === 'zh' ? '折扣计算器' : 'Discount Calculator'}</a></li>
                   <li><a href="/countdown" className="text-orange-500 hover:underline">📅 {lang === 'zh' ? '日期倒计时' : 'Date Countdown'}</a></li>
                   <li><a href="/unit-converter" className="text-orange-500 hover:underline">📐 {lang === 'zh' ? '单位换算' : 'Unit Converter'}</a></li>
+                  <li><a href="/password-generator" className="text-orange-500 hover:underline">{lang === 'zh' ? '🔐 密码生成器' : '🔐 Password Generator'}</a></li>
                   <li><a href="/heic-to-jpg" className="text-orange-500 hover:underline">🖼️ {lang === 'zh' ? 'HEIC 转 JPG' : 'HEIC to JPG'}</a></li>
                   <li><a href="/json-formatter" className="text-orange-500 hover:underline">🔧 {lang === 'zh' ? 'JSON 格式化' : 'JSON Formatter'}</a></li>
                   <li><a href="/qr-code-generator" className="text-orange-500 hover:underline">📱 {lang === 'zh' ? 'QR 码生成' : 'QR Code Generator'}</a></li>

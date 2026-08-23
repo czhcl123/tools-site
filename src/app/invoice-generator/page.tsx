@@ -214,6 +214,7 @@ export default async function InvoiceGeneratorPage({
                   <li><a href="/json-formatter" className="text-orange-500 hover:underline">{lang === 'zh' ? '🔧 JSON 格式化' : '🔧 JSON Formatter'}</a></li>
                   <li><a href="/qr-code-generator" className="text-orange-500 hover:underline">{lang === 'zh' ? '📱 QR 码生成' : '📱 QR Code Generator'}</a></li>
                   <li><a href="/word-counter" className="text-orange-500 hover:underline">{lang === 'zh' ? '📝 字数统计' : '📝 Word Counter'}</a></li>
+                  <li><a href="/password-generator" className="text-orange-500 hover:underline">{lang === 'zh' ? '🔐 密码生成器' : '🔐 Password Generator'}</a></li>
                 </ul>
               </div>
             </aside>
