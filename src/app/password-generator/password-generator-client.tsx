@@ -71,10 +71,10 @@ function getStrength(password: string): { level: number; label: string; color: s
   return { level: 4, label: 'veryStrong', color: 'bg-emerald-600' }
 }
 
-function PasswordGeneratorContent() {
+function PasswordGeneratorContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
   const searchParams = useSearchParams()
   const pathname = usePathname()
-  const isZh = pathname?.startsWith('/zh') || searchParams.get('lang') === 'zh'
+  const isZh = initialLang === 'zh' || pathname?.startsWith('/zh') || searchParams.get('lang') === 'zh'
   const lang = (isZh ? 'zh' : 'en') as 'zh' | 'en'
   const u = (key: string) => t[lang][key as keyof typeof t.zh]
 
@@ -198,10 +198,10 @@ function PasswordGeneratorContent() {
   )
 }
 
-export default function PasswordGenerator() {
+export default function PasswordGenerator({ lang }: { lang?: 'zh' | 'en' }) {
   return (
     <Suspense fallback={<div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">Loading...</div>}>
-      <PasswordGeneratorContent />
+      <PasswordGeneratorContent initialLang={lang} />
     </Suspense>
   )
 }
