@@ -264,3 +264,11 @@ function CountdownContent({ lang: initialLang }: { lang?: "zh" | "en" }) {
     </>
   )
 }
+
+export default function Countdown(props: { lang?: "zh" | "en" }) {
+  return (
+    <Suspense>
+      <CountdownContent {...props} />
+    </Suspense>
+  )
+}
