@@ -1,6 +1,8 @@
 'use client'
 
 import { Suspense, useState } from 'react'
+import Link from 'next/link'
+import RelatedTools from '@/components/RelatedTools'
 import { useSearchParams } from 'next/navigation'
 
 const t = {

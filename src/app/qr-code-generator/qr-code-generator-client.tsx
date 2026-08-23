@@ -2,7 +2,9 @@
 
 import { Suspense, useState, useRef } from 'react'
 import { useSearchParams } from 'next/navigation'
+import Link from 'next/link'
 import QRCode from 'qrcode'
+import RelatedTools from '@/components/RelatedTools'
 
 const t = {
   zh: {
