@@ -53,7 +53,7 @@ function HomePageContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
   const t = {
     zh: {
       searchPlaceholder: '搜索工具...',
-      heroTitle: '免费在线计算工具 - 折扣 / BMI / QR 码 / 倒计时等 10 个工具',
+      heroTitle: '免费在线计算工具 - 折扣 / BMI / QR 码 / 倒计时等 12 个工具',
       heroSubtitle: '11 个快速、免费的浏览器内计算与实用工具:折扣计算、BMI、睡眠计算器 / 睡眠周期 90 分钟反推、倒计时、农历、单位换算、QR 码生成、字数统计、JSON 格式化、HEIC 转 JPG、发票生成。无需注册、无需下载、无跟踪,所有处理都在你的浏览器本地完成。',
       badgeFree: '完全免费',
       badgeSignup: '无需注册',
@@ -77,7 +77,7 @@ function HomePageContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
       refNIST: 'NIST — 国际单位制 (SI)',
       sectionFaqTitle: '常见问题',
       faq1Q: '实用工具真的免费吗？',
-      faq1A: '是的。所有 10 个工具完全免费,无付费版、无使用限制、无需注册。',
+      faq1A: '是的。所有 12 个工具完全免费,无付费版、无使用限制、无需注册。',
       faq2Q: '会上传我的文件或数据吗？',
       faq2A: '不会。HEIC 转 JPG 和 JSON 格式化等工具完全在浏览器中处理文件,数据不会离开你的设备。',
       faq3Q: '可以离线使用吗？',

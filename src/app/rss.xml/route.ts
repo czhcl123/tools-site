@@ -6,7 +6,7 @@ export async function GET(): Promise<Response> {
 
   const items = [
     {
-      title: 'Practical Tools - 10 Free Online Calculators',
+      title: 'Practical Tools - 12 Free Online Calculators',
       url: base,
       description: 'A collection of 10 fast, browser-based calculators and utilities. No signup, no installation, no tracking.',
       date: now,
