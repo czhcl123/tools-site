@@ -31,7 +31,8 @@ const posts = [
 export default function BlogIndex() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
-      <h1 className="text-2xl font-bold text-gray-800 mb-2">Blog</h1>
+      <Link href="/" className="text-orange-500 text-sm hover:underline">← Back to Home</Link>
+      <h1 className="text-2xl font-bold text-gray-800 mt-4 mb-2">Blog</h1>
       <p className="text-gray-500 text-sm mb-8">Step-by-step guides for every free tool on this site.</p>
       <div className="grid gap-4">
         {posts.map((p) => (
