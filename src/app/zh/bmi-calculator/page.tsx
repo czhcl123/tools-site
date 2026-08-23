@@ -4,28 +4,22 @@ import BmiCalculator from '../../bmi-calculator/bmi-client'
 export async function generateMetadata({
   searchParams,
 }: {
-  
+  searchParams: Promise<{ lang?: string }>
 }) {
   const lang = 'zh'
 
-  const titles = { zh: 'BMI计算器', en: 'BMI Calculator - Free Online Body Mass Index Tool' }
-  const descriptions = {
-    zh: '快速计算身体质量指数（BMI），判断体重是否健康，支持中英文，免费使用。',
-    en: "Free online BMI calculator. Compute your Body Mass Index instantly and see if you're in the healthy weight range. Supports metric and imperial units. No signup.",
+  const titles = {
+    zh: 'BMI 计算器 - 免费在线体重指数计算',
+    en: 'BMI Calculator - Free Online Body Mass Index Calculator',
   }
-  const ogTitles = { zh: 'BMI计算器 - 实用计算器', en: 'BMI Calculator - Practical Tools' }
-  const ogDescs = {
-    zh: '快速计算身体质量指数（BMI），判断体重是否健康，支持中英文，免费使用。',
-    en: "Free online BMI calculator. Compute your Body Mass Index instantly and see if you're in the healthy weight range. Supports metric and imperial units. No signup.",
+  const descriptions = {
+    zh: '免费在线 BMI 计算器:输入身高体重即出体重指数,支持亚洲人阈值,男女分类判断,无需注册。',
+    en: 'Free BMI calculator: enter height and weight to get your body mass index instantly. Asian/WHO thresholds, metric and imperial units, no signup.',
   }
 
   return {
     title: titles[lang],
     description: descriptions[lang],
-    openGraph: {
-      title: ogTitles[lang],
-      description: ogDescs[lang],
-    },
     alternates: {
       canonical: 'https://tools-site-production.up.railway.app/zh/bmi-calculator',
       languages: {
@@ -36,6 +30,23 @@ export async function generateMetadata({
     },
   }
 }
+
+const seoBodyZh = (
+  <div className="space-y-4 text-[15px] text-gray-600 leading-relaxed">
+    <p>
+      BMI（身体质量指数）是国际通用的体重评估标准。本计算器支持<strong>亚洲/WHO 双标准</strong>，输入身高体重即出结果。
+    </p>
+    <h3 className="font-semibold text-gray-700 text-base mt-4">计算公式</h3>
+    <p className="bg-gray-50 rounded-lg px-4 py-3 font-mono text-sm">BMI = 体重(kg) ÷ 身高(m)²</p>
+    <h3 className="font-semibold text-gray-700 text-base mt-4">亚洲人标准</h3>
+    <ul className="space-y-1 text-sm">
+      <li>🟢 正常：18.5 – 23.9</li>
+      <li>🟡 偏胖：24.0 – 27.9</li>
+      <li>🔴 肥胖：≥ 28.0</li>
+    </ul>
+    <p className="text-xs text-gray-400 mt-4">数据仅供参考，不能替代医学诊断。</p>
+  </div>
+)
 
 const faqSchemaZh = {
   '@context': 'https://schema.org',
@@ -84,74 +95,74 @@ const faqSchemaZh = {
   ],
 }
 
-const seoBodyZh = (
-  <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
-    <p>
-      <strong>BMI 计算器</strong>一秒钟给出你的身体质量指数,并判断属于"偏瘦 / 正常 / 偏胖 / 肥胖"哪个区间。本工具采用<strong>亚洲人群阈值</strong>(WHO 推荐,中国大陆国家标准)而非欧美标准,因为同 BMI 下亚州人心血管疾病风险更高。本工具默认支持男女差异解读,所有计算在你的浏览器本地完成。
-    </p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">怎么用本 BMI 计算器</h2>
-    <p>输入身高(厘米)和体重(千克),点击<strong>计算 BMI</strong>。结果会显示数字 + 区间分类 + 颜色提示(蓝 / 绿 / 橙 / 红)。身高范围支持 100-250 cm,体重 20-200 kg,小数都接受。</p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">三种常见应用场景</h2>
-    <p><strong>1. 健身效果对比</strong>。一个月减肥 5 斤,BMI 数字从 24.2 降到 22.5,直观看到从"偏胖"进入"正常"区间。本工具帮你跨月份对比。</p>
-    <p><strong>2. 老人 / 儿童 BMI</strong>。18 岁以下用 BMI-for-age 百分位(本工具不覆盖),65 岁以上 BMI 阈值建议略高(22-27),因为略重对老人骨骼好。这两种人群建议咨询医生,不要单纯看 BMI。</p>
-    <p><strong>3. 备孕 / 孕期</strong>。备孕最佳 BMI 区间是 18.5-23.9(亚洲)。孕期体重增长参考 WHO 标准,不建议只看 BMI 数字。本工具适合备孕期 BMI 基线测算。</p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">为什么不用医院的 BMI 秤?</h2>
-    <p>本工具快速无门槛,适合日常跟踪。医院秤通常带体脂率 / 内脏脂肪 / 基础代谢,但需要专门去一次。日常自查用本工具 + 早起体重秤,3 个月一次医院体检,数据组合比单点更准。</p>
-  </div>
-)
-
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'BMI是什么?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'BMI(Body Mass Index,身体质量指数)是国际上常用的衡量人体胖瘦程度的标准,计算公式为:体重(kg) ÷ 身高(m)的平方。',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'BMI正常范围是多少?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: '对于亚洲成年人,BMI 18.5-23.9 为正常范围,低于18.5为偏瘦,24.0-27.9为偏胖,28.0及以上为肥胖。不同人种标准略有差异。',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'BMI能完全反映健康状况吗?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'BMI只是一个参考指标,不能完全反映健康状况。它没有考虑肌肉量、骨密度、年龄、性别等因素。建议结合腰围、体脂率等其他指标综合判断。',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'BMI计算器支持词与千克吗?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: '支持。可输入身高(cm)、体重(kg)。也可以切换到英制单位(英寸、磅)。',
-      },
-    }
-  ],
-}
-
 export default async function BmiCalculatorPage({
   searchParams,
 }: {
-  
+  searchParams: Promise<{ lang?: string }>
 }) {
   const lang = 'zh'
+  const webAppSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'BMI 计算器',
+    url: 'https://tools-site-production.up.railway.app/zh/bmi-calculator',
+    applicationCategory: 'HealthApplication',
+    operatingSystem: 'Any',
+    isAccessibleForFree: true,
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: '免费在线 BMI 计算器:输入身高体重即出体重指数,支持亚洲人阈值,男女分类判断,无需注册。',
+  }
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaZh) }} />
-      <h1 className="text-2xl font-bold text-gray-800 mb-1">BMI 体重指数计算器</h1>
-      <div className="mb-6">{seoBodyZh}</div>
-      <BmiCalculator initialLang={lang} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchemaZh, webAppSchema]) }} />
+      <div className="min-h-screen bg-gray-50">
+        <header className="bg-white shadow-sm sticky top-0 z-10">
+          <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="/zh" className="text-lg font-bold text-orange-500">
+              🧮 实用计算器
+            </a>
+            <a
+              href="/bmi-calculator"
+              className="text-xs px-3 py-1 border border-gray-200 rounded-full hover:bg-gray-50"
+            >
+              EN
+            </a>
+          </div>
+        </header>
+
+        <main className="max-w-6xl mx-auto px-4 py-6">
+          <h1 className="text-xl font-bold text-gray-800 mb-4">BMI 计算器</h1>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            {/* 左侧：SEO 说明 */}
+            <aside className="lg:col-span-3">
+              <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 sticky top-20">
+                {seoBodyZh}
+              </div>
+            </aside>
+
+            {/* 中间：计算器 */}
+            <section className="lg:col-span-6">
+              <BmiCalculator lang={lang} />
+            </section>
+
+            {/* 右侧：相关工具 */}
+            <aside className="lg:col-span-3">
+              <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 sticky top-20">
+                <h3 className="font-semibold text-gray-700 mb-3 text-sm">更多工具</h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="/zh/discount-calculator" className="text-orange-500 hover:underline">🏷️ 折扣计算器</a></li>
+                  <li><a href="/zh/countdown" className="text-orange-500 hover:underline">📅 日期倒计时</a></li>
+                  <li><a href="/zh/unit-converter" className="text-orange-500 hover:underline">📐 单位换算</a></li>
+                  <li><a href="/zh/heic-to-jpg" className="text-orange-500 hover:underline">🖼️ HEIC 转 JPG</a></li>
+                  <li><a href="/zh/json-formatter" className="text-orange-500 hover:underline">🔧 JSON 格式化</a></li>
+                  <li><a href="/zh/qr-code-generator" className="text-orange-500 hover:underline">📱 QR 码生成</a></li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </main>
+      </div>
     </>
   )
 }
