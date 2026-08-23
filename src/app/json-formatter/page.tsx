@@ -211,11 +211,11 @@ export default async function JsonFormatterPage({
               <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 sticky top-20">
                 <h3 className="font-semibold text-gray-700 mb-3 text-sm">{lang === 'zh' ? '更多工具' : 'More Tools'}</h3>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="/bmi-calculator" className="text-orange-500 hover:underline">⚖️ BMI 计算器</a></li>
-                  <li><a href="/discount-calculator" className="text-orange-500 hover:underline">🏷️ 折扣计算器</a></li>
-                  <li><a href="/qr-code-generator" className="text-orange-500 hover:underline">📱 QR 码生成</a></li>
-                  <li><a href="/heic-to-jpg" className="text-orange-500 hover:underline">🖼️ HEIC 转 JPG</a></li>
-                  <li><a href="/word-counter" className="text-orange-500 hover:underline">📝 字数统计</a></li>
+                  <li><a href="/bmi-calculator" className="text-orange-500 hover:underline">{lang === 'zh' ? '⚖️ BMI 计算器' : '⚖️ BMI Calculator'}</a></li>
+                  <li><a href="/discount-calculator" className="text-orange-500 hover:underline">{lang === 'zh' ? '🏷️ 折扣计算器' : '🏷️ Discount Calculator'}</a></li>
+                  <li><a href="/qr-code-generator" className="text-orange-500 hover:underline">{lang === 'zh' ? '📱 QR 码生成' : '📱 QR Code Generator'}</a></li>
+                  <li><a href="/heic-to-jpg" className="text-orange-500 hover:underline">{lang === 'zh' ? '🖼️ HEIC 转 JPG' : '🖼️ HEIC to JPG'}</a></li>
+                  <li><a href="/word-counter" className="text-orange-500 hover:underline">{lang === 'zh' ? '📝 字数统计' : '📝 Word Counter'}</a></li>
                 </ul>
               </div>
             </aside>

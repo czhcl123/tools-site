@@ -211,11 +211,11 @@ export default async function QrCodeGeneratorPage({
               <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 sticky top-20">
                 <h3 className="font-semibold text-gray-700 mb-3 text-sm">{lang === 'zh' ? '更多工具' : 'More Tools'}</h3>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="/bmi-calculator" className="text-orange-500 hover:underline">⚖️ BMI 计算器</a></li>
-                  <li><a href="/discount-calculator" className="text-orange-500 hover:underline">🏷️ 折扣计算器</a></li>
-                  <li><a href="/json-formatter" className="text-orange-500 hover:underline">🔧 JSON 格式化</a></li>
-                  <li><a href="/heic-to-jpg" className="text-orange-500 hover:underline">🖼️ HEIC 转 JPG</a></li>
-                  <li><a href="/invoice-generator" className="text-orange-500 hover:underline">📄 发票生成器</a></li>
+                  <li><a href="/bmi-calculator" className="text-orange-500 hover:underline">{lang === 'zh' ? '⚖️ BMI 计算器' : '⚖️ BMI Calculator'}</a></li>
+                  <li><a href="/discount-calculator" className="text-orange-500 hover:underline">{lang === 'zh' ? '🏷️ 折扣计算器' : '🏷️ Discount Calculator'}</a></li>
+                  <li><a href="/json-formatter" className="text-orange-500 hover:underline">{lang === 'zh' ? '🔧 JSON 格式化' : '🔧 JSON Formatter'}</a></li>
+                  <li><a href="/heic-to-jpg" className="text-orange-500 hover:underline">{lang === 'zh' ? '🖼️ HEIC 转 JPG' : '🖼️ HEIC to JPG'}</a></li>
+                  <li><a href="/invoice-generator" className="text-orange-500 hover:underline">{lang === 'zh' ? '📄 发票生成器' : '📄 Invoice Generator'}</a></li>
                 </ul>
               </div>
             </aside>
