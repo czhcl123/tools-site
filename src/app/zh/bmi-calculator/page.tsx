@@ -6,7 +6,8 @@ export async function generateMetadata({
 }: {
   searchParams: Promise<{ lang?: string }>
 }) {
-  const lang = 'zh'
+  const sp = await searchParams
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
 
   const titles = {
     zh: 'BMI 计算器 - 免费在线体重指数计算',
@@ -100,7 +101,8 @@ export default async function BmiCalculatorPage({
 }: {
   searchParams: Promise<{ lang?: string }>
 }) {
-  const lang = 'zh'
+  const sp = await searchParams
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
   const webAppSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
@@ -149,14 +151,14 @@ export default async function BmiCalculatorPage({
             {/* 右侧：相关工具 */}
             <aside className="lg:col-span-3">
               <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 sticky top-20">
-                <h3 className="font-semibold text-gray-700 mb-3 text-sm">更多工具</h3>
+                <h3 className="font-semibold text-gray-700 mb-3 text-sm">{lang === 'zh' ? '更多工具' : 'More Tools'}</h3>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="/zh/discount-calculator" className="text-orange-500 hover:underline">🏷️ 折扣计算器</a></li>
+                  <li><a href="/zh/discount-calculator" className="text-orange-500 hover:underline">{lang === 'zh' ? '🏷️ 折扣计算器' : '🏷️ Discount Calculator'}</a></li>
                   <li><a href="/zh/countdown" className="text-orange-500 hover:underline">📅 日期倒计时</a></li>
-                  <li><a href="/zh/unit-converter" className="text-orange-500 hover:underline">📐 单位换算</a></li>
-                  <li><a href="/zh/heic-to-jpg" className="text-orange-500 hover:underline">🖼️ HEIC 转 JPG</a></li>
-                  <li><a href="/zh/json-formatter" className="text-orange-500 hover:underline">🔧 JSON 格式化</a></li>
-                  <li><a href="/zh/qr-code-generator" className="text-orange-500 hover:underline">📱 QR 码生成</a></li>
+                  <li><a href="/zh/unit-converter" className="text-orange-500 hover:underline">{lang === 'zh' ? '📐 单位换算' : '📐 Unit Converter'}</a></li>
+                  <li><a href="/zh/heic-to-jpg" className="text-orange-500 hover:underline">{lang === 'zh' ? '🖼️ HEIC 转 JPG' : '🖼️ HEIC to JPG'}</a></li>
+                  <li><a href="/zh/json-formatter" className="text-orange-500 hover:underline">{lang === 'zh' ? '🔧 JSON 格式化' : '🔧 JSON Formatter'}</a></li>
+                  <li><a href="/zh/qr-code-generator" className="text-orange-500 hover:underline">{lang === 'zh' ? '📱 QR 码生成' : '📱 QR Code Generator'}</a></li>
                 </ul>
               </div>
             </aside>

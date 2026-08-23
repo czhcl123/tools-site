@@ -83,7 +83,8 @@ export default async function UnitConverterPage({
 }: {
   searchParams: Promise<{ lang?: string }>
 }) {
-  const lang = 'zh'
+  const sp = await searchParams
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
 
   const webAppSchema = {
     '@context': 'https://schema.org',
@@ -133,13 +134,13 @@ export default async function UnitConverterPage({
             </section>
             <aside className="lg:col-span-3">
               <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 sticky top-20">
-                <h3 className="font-semibold text-gray-700 mb-3 text-sm">更多工具</h3>
+                <h3 className="font-semibold text-gray-700 mb-3 text-sm">{lang === 'zh' ? '更多工具' : 'More Tools'}</h3>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="/zh/bmi-calculator" className="text-orange-500 hover:underline">⚖️ BMI 计算器</a></li>
-                  <li><a href="/zh/countdown" className="text-orange-500 hover:underline">📅 倒计时</a></li>
-                  <li><a href="/zh/discount-calculator" className="text-orange-500 hover:underline">🏷️ 折扣计算器</a></li>
-                  <li><a href="/zh/lunar-calendar" className="text-orange-500 hover:underline">📆 农历转换</a></li>
-                  <li><a href="/zh/sleep-calculator" className="text-orange-500 hover:underline">😴 睡眠计算器</a></li>
+                  <li><a href="/zh/bmi-calculator" className="text-orange-500 hover:underline">{lang === 'zh' ? '⚖️ BMI 计算器' : '⚖️ BMI Calculator'}</a></li>
+                  <li><a href="/zh/countdown" className="text-orange-500 hover:underline">{lang === 'zh' ? '📅 倒计时' : '📅 Countdown'}</a></li>
+                  <li><a href="/zh/discount-calculator" className="text-orange-500 hover:underline">{lang === 'zh' ? '🏷️ 折扣计算器' : '🏷️ Discount Calculator'}</a></li>
+                  <li><a href="/zh/lunar-calendar" className="text-orange-500 hover:underline">{lang === 'zh' ? '📆 农历转换' : '📆 Lunar Calendar'}</a></li>
+                  <li><a href="/zh/sleep-calculator" className="text-orange-500 hover:underline">{lang === 'zh' ? '😴 睡眠计算器' : '😴 Sleep Calculator'}</a></li>
                 </ul>
               </div>
             </aside>
