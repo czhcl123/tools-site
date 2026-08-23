@@ -49,7 +49,7 @@ export default function BlogIndex() {
       <Link href="/" className="text-orange-500 text-sm hover:underline">← Back to Home</Link>
       <h1 className="text-2xl font-bold text-gray-800 mt-4 mb-2">Blog</h1>
       <p className="text-gray-500 text-sm mb-8">Step-by-step guides for every free tool on this site.</p>
-      <div className="grid gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {posts.map((p) => (
           <Link
             key={p.slug}
