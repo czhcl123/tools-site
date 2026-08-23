@@ -150,7 +150,7 @@ export default async function BmiCalculatorPage({
               🧮 {lang === 'zh' ? '实用计算器' : 'Practical Tools'}
             </a>
             <a
-              href={lang === 'zh' ? '/bmi-calculator' : '/zh/bmi-calculator'}
+              href={lang === 'zh' ? '/bmi-calculator?lang=en' : '/zh/bmi-calculator?lang=zh'}
               className="text-xs px-3 py-1 border border-gray-200 rounded-full hover:bg-gray-50"
             >
               {lang === 'zh' ? 'EN' : '中文'}

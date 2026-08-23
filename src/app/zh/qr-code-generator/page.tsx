@@ -91,7 +91,7 @@ export default async function QrCodeGeneratorPage({
   searchParams: Promise<{ lang?: string }>
 }) {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'en' ? 'en' : 'zh'
 
   const webAppSchema = {
     '@context': 'https://schema.org',
@@ -119,7 +119,7 @@ export default async function QrCodeGeneratorPage({
         <header className="bg-white shadow-sm sticky top-0 z-10">
           <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
             <a href="/zh" className="text-lg font-bold text-orange-500">🧮 实用计算器</a>
-            <a href="/qr-code-generator" className="text-xs px-3 py-1 border border-gray-200 rounded-full hover:bg-gray-50">EN</a>
+            <a href="/qr-code-generator?lang=en" className="text-xs px-3 py-1 border border-gray-200 rounded-full hover:bg-gray-50">EN</a>
           </div>
         </header>
         <main className="max-w-6xl mx-auto px-4 py-6">

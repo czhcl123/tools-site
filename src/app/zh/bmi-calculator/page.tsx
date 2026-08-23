@@ -7,7 +7,7 @@ export async function generateMetadata({
   searchParams: Promise<{ lang?: string }>
 }) {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'en' ? 'en' : 'zh'
 
   const titles = {
     zh: 'BMI 计算器 - 免费在线体重指数计算',
@@ -102,7 +102,7 @@ export default async function BmiCalculatorPage({
   searchParams: Promise<{ lang?: string }>
 }) {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'en' ? 'en' : 'zh'
   const webAppSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
@@ -125,7 +125,7 @@ export default async function BmiCalculatorPage({
               🧮 实用计算器
             </a>
             <a
-              href="/bmi-calculator"
+              href="/bmi-calculator?lang=en"
               className="text-xs px-3 py-1 border border-gray-200 rounded-full hover:bg-gray-50"
             >
               EN
