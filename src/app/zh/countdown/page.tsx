@@ -4,27 +4,14 @@ import Countdown from '../../countdown/countdown-client'
 export async function generateMetadata({
   searchParams,
 }: {
-  
+  searchParams: Promise<{ lang?: string }>
 }) {
-  const lang = 'zh'
-
-  const titles = { zh: '日期计算器', en: 'Countdown Calculator - Days Until or Since Any Date' }
-  const descriptions = {
-    zh: '计算任意日期距离今天还有多少天，或已过去多少天。支持倒计时和日期差计算。',
-    en: 'Free online countdown calculator. Find how many days until or since any date. Perfect for event planning, anniversaries, and deadlines.',
-  }
-  const ogTitles = { zh: '日期计算器 - 实用计算器', en: 'Countdown Calculator - Practical Tools' }
-  const ogDescs = {
-    zh: '计算任意日期距离今天还有多少天，或已过去多少天。支持倒计时和日期差计算。',
-    en: 'Free online countdown calculator. Find how many days until or since any date. Perfect for event planning, anniversaries, and deadlines.',
-  }
-
   return {
-    title: titles[lang],
-    description: descriptions[lang],
+    title: '倒计时计算器 - 距任意日期还有几天几小时几分钟几秒',
+    description: '在线倒计时计算器:实时跳秒,选择目标日期+时间,显示还有几天几小时几分钟几秒。也支持距今已过去天数模式,免费无需注册。',
     openGraph: {
-      title: ogTitles[lang],
-      description: ogDescs[lang],
+      title: '日期计算器 - 实用计算器',
+      description: '任意日期距今天数 / 已过去天数计算',
     },
     alternates: {
       canonical: 'https://tools-site-production.up.railway.app/zh/countdown',
@@ -73,68 +60,98 @@ const faqSchemaZh = {
         text: '本工具不算工作日,只算自然日(包含周末和法定节假日)。如果需要工作日计算,搭配 Excel NETWORKDAYS 函数或公司项目管理工具。本工具适合:高考倒计时、婚礼倒计时、孕周计算、周年纪念日——这些都按自然日。',
       },
     },
+    {
+      '@type': 'Question',
+      name: '有实时跳秒的倒计时吗?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '有。点击页面顶部"实时倒计时"切换后,选择目标日期+时间(精确到分钟),工具会每秒刷新显示"还剩 X 天 X 小时 X 分钟 X 秒"。常用于婚礼仪式、跨年倒计时、考试交卷、太空发射等需要秒级精度的场景。所有计算在浏览器本地完成,不依赖服务器。',
+      },
+    },
   ],
 }
 
 const seoBodyZh = (
-  <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
-    <p>
-      <strong>日期计算器</strong>三个数字就解决"距目标还有多少天"或"距某事件已过去多少天"。本工具按自然日精确计算,自动处理闰年 / 大小月,无需手算。所有计算在你浏览器本地完成,适合婚假规划、孕周计算、纪念日追踪、考前倒计时等。
-    </p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">最常用的日期计算场景</h2>
-    <p><strong>1. 高考 / 中考倒计时</strong>。距离高考 200 天 / 100 天 / 30 天节点,本工具一键显示。家长群每周自动播报孩子备考天数,适合做心理建设。</p>
-    <p><strong>2. 周年纪念日</strong>。宝宝出生 100 天、结婚 1000 天、戒烟 365 天——这类里程碑(100 / 200 / 365 / 1000 天)用本工具查过往日期非常方便,比翻日历快。</p>
-    <p><strong>3. 项目 deadline</strong>。"距离上线还有 21 天","距离 PR 截止还有 14 天"。跨时区团队(亚洲 / 欧洲)用截止日期 + 本工具,比 Excel 公式更直观。</p>
-    <p><strong>4. 旅游 / 假期</strong>。"还有 X 天就放假"或"还有 X 天生日",节假日开始 / 结束倒计时,直接看结果。</p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">跟日历 App 区别在哪?</h2>
-    <p>系统日历 App 需要手动建提醒事件,操作 3 步以上;本工具输入日期 + 1 次点击即可。适合:临时算"还有 X 天退休"、"宝宝出生 200 天"。长期重复事件用日历 App 更合适。本工具页面无 cookie、无登录、无追踪,适合简单查询场景。</p>
+  <div className="space-y-4 text-[15px] text-gray-600 leading-relaxed">
+    <p>输入目标日期,立刻算出距离今天还有多少天。支持生日倒计时、节假日倒计时、考试/截止日期倒计时,也能统计排除周末和节假日后的工作日数。</p>
+    <h3 className="font-semibold text-gray-700 text-base mt-4">支持模式</h3>
+    <ul className="space-y-1 text-sm">
+      <li>📅 <strong>天数模式</strong> — 距目标还有多少天</li>
+      <li>⏱️ <strong>实时倒计时</strong> — 天+小时+分钟+秒</li>
+    </ul>
+    <p className="text-xs text-gray-400 mt-4">所有计算在浏览器本地完成，数据不上传。</p>
   </div>
 )
-
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: '如何计算两个日期之间的天数?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: '选择起始日期和结束日期，点击计算后会显示两者之间的天数差、周数、小时数。',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: '可以计算过去的日期吗?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: '可以。输入任一过去的日期，会显示距今已经过去多少天。',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: '能处理闰年吗?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: '能。我们会根据公历计算，包括闰年、乔丐年。',
-      },
-    }
-  ],
-}
 
 export default async function CountdownPage({
   searchParams,
 }: {
-  
+  searchParams: Promise<{ lang?: string }>
 }) {
   const lang = 'zh'
+
+  const webAppSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: '在线倒计时器 — 实时跳秒',
+    alternateName: '倒计时器',
+    url: 'https://tools-site-production.up.railway.app/zh/countdown',
+    applicationCategory: 'UtilityApplication',
+    applicationSubCategory: 'CountdownTimer',
+    operatingSystem: 'Any (web browser with JavaScript)',
+    browserRequirements: 'Requires JavaScript. Requires HTML5.',
+    inLanguage: ['en-US', 'zh-CN'],
+    isAccessibleForFree: true,
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: '实时倒计时器:选择目标日期+时间,每秒刷新显示剩余天数、小时、分钟、秒。也支持距今已过去 N 天模式。免费、无需注册。',
+    featureList: [
+      'Live tick every second (days, hours, minutes, seconds)',
+      'Counts days until future date',
+      'Counts days since past date',
+      'Birthday / anniversary / deadline tracker',
+      'Leap year safe',
+      'Free, no signup, no ads',
+      'Bilingual English / Chinese',
+    ],
+    dateModified: '2026-07-18',
+  }
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaZh) }} />
-      <h1 className="text-2xl font-bold text-gray-800 mb-1">倒计时计算器 — 距任意日期还有多久</h1>
-      <div className="mb-6">{seoBodyZh}</div>
-      <Countdown initialLang={lang} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchemaZh, webAppSchema]) }} />
+      <div className="min-h-screen bg-gray-50">
+        <header className="bg-white shadow-sm sticky top-0 z-10">
+          <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="/zh" className="text-lg font-bold text-orange-500">🧮 实用计算器</a>
+            <a href="/countdown" className="text-xs px-3 py-1 border border-gray-200 rounded-full hover:bg-gray-50">EN</a>
+          </div>
+        </header>
+        <main className="max-w-6xl mx-auto px-4 py-6">
+          <h1 className="text-xl font-bold text-gray-800 mb-4">倒计时计算器</h1>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <aside className="lg:col-span-3">
+              <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 sticky top-20">
+                {seoBodyZh}
+              </div>
+            </aside>
+            <section className="lg:col-span-6">
+              <Countdown lang={lang} />
+            </section>
+            <aside className="lg:col-span-3">
+              <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 sticky top-20">
+                <h3 className="font-semibold text-gray-700 mb-3 text-sm">更多工具</h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="/zh/bmi-calculator" className="text-orange-500 hover:underline">⚖️ BMI 计算器</a></li>
+                  <li><a href="/zh/discount-calculator" className="text-orange-500 hover:underline">🏷️ 折扣计算器</a></li>
+                  <li><a href="/zh/lunar-calendar" className="text-orange-500 hover:underline">📆 农历转换</a></li>
+                  <li><a href="/zh/unit-converter" className="text-orange-500 hover:underline">📐 单位换算</a></li>
+                  <li><a href="/zh/sleep-calculator" className="text-orange-500 hover:underline">😴 睡眠计算器</a></li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </main>
+      </div>
     </>
   )
 }

@@ -4,27 +4,14 @@ import LunarCalendar from '../../lunar-calendar/lunar-client'
 export async function generateMetadata({
   searchParams,
 }: {
-  
+  searchParams: Promise<{ lang?: string }>
 }) {
-  const lang = 'zh'
-
-  const titles = { zh: '农历转换器 - 公历转农历日期查询|实用计算器', en: 'Gregorian to Lunar Calendar Converter - Free Online Tool' }
-  const descriptions = {
-    zh: '免费公历农历双向转换工具:输入日期即可查询农历、生肖、干支、传统节日,覆盖 1900-2100 年,无需注册。',
-    en: 'Free Gregorian to lunar calendar converter. Convert any date to Chinese lunar with zodiac, stem-branch, and festival info. 1900-2100 range, no signup needed.',
-  }
-  const ogTitles = { zh: '农历转换器 - 实用计算器', en: 'Lunar Calendar Converter - Practical Tools' }
-  const ogDescs = {
-    zh: '快速转换公历与农历日期，支持查看任意日期的农历信息，中英文免费使用。',
-    en: 'Free online lunar calendar converter. Convert between Gregorian (solar) and Chinese lunar dates. See zodiac years, traditional festivals, and stem-branch info for any date.',
-  }
-
   return {
-    title: titles[lang],
-    description: descriptions[lang],
+    title: '农历转换器 - 公历转农历日期查询|实用计算器',
+    description: '免费公历农历双向转换工具:输入日期即可查询农历、生肖、干支、传统节日,覆盖 1900-2100 年,无需注册。',
     openGraph: {
-      title: ogTitles[lang],
-      description: ogDescs[lang],
+      title: '农历转换器 - 实用计算器',
+      description: '免费公历农历双向转换,生肖干支节日查询',
     },
     alternates: {
       canonical: 'https://tools-site-production.up.railway.app/zh/lunar-calendar',
@@ -46,7 +33,7 @@ const faqSchemaZh = {
       name: '农历和公历有什么区别?为什么一年差好几天?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '公历是太阳历,依据地球绕太阳一圈(365.2425 天)分 12 个月。农历是阴阳合历,月份按月相(月亮绕地球一圈 29.5 天),年按太阳回归,所以一年约 354 天,比公历短 11 天。农历通过"每 2-3 年加一个闰月"调和这个差,所以农历年有时 12 个月(353-355 天),有时 13 个月(383-385 天)。',
+        text: '公历是太阳历,依据地球绕太阳一圈(365.2425 天)分 12 个月。农历是阴阳合历,月份按月相(月亮绕地球一圈 29.5 天),年按太阳回归,所以一年约 354 天,比公历短 11 天。农历通过"每 2-3 年加一个闰月"调和这个差。',
       },
     },
     {
@@ -54,7 +41,7 @@ const faqSchemaZh = {
       name: '生肖和干支是怎么算的?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '生肖对应农历"年",每 12 年一轮(子鼠、丑牛、寅虎...).干支是 60 年一轮(甲子、乙丑、丙寅...),10 天干 × 12 地支配对。本工具按农历新年(正月初一)计算生肖,而非公历 1 月 1 日,所以 2026 年 1 月出生属蛇(乙巳年尾),2 月起属马(丙午年)。生日 / 命运查询常按此口径。',
+        text: '生肖对应农历"年",每 12 年一轮。干支是 60 年一轮,10 天干 × 12 地支配对。本工具按农历新年(正月初一)计算生肖,而非公历 1 月 1 日。',
       },
     },
     {
@@ -62,7 +49,7 @@ const faqSchemaZh = {
       name: '传统节日(春节、中秋)按农历怎么查?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '本工具输入任一公历日期,会显示当天的农历 + 是否为传统节日 + 该节日的农历日期。常见节日自动识别:春节(正月初一)、元宵(正月十五)、端午(五月初五)、七夕(七月初七)、中秋(八月十五)、重阳(九月初九)。也可反向:输入"农历八月十五"查对应公历。',
+        text: '输入任一公历日期,会显示当天的农历 + 是否为传统节日。常见节日自动识别:春节、元宵、端午、七夕、中秋、重阳。也可反向查询。',
       },
     },
     {
@@ -70,71 +57,69 @@ const faqSchemaZh = {
       name: '农历闰月是什么?为什么有的月份会重复?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '农历通过 19 年 7 闰的规则让总天数跟公历年相近。出现闰月时,当年有 13 个月,例如 2020 年闰四月。闰月不算独立月份,只是把前一个月的天数拉长。本工具会标明"闰月"标识(如"闰四月初一"),方便买日历、挑日子、合八字等场景。',
+        text: '农历通过 19 年 7 闰的规则让总天数跟公历年相近。出现闰月时,当年有 13 个月。本工具会标明"闰月"标识。',
       },
     },
   ],
 }
 
 const seoBodyZh = (
-  <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
-    <p>
-      <strong>农历转换器</strong>输入公历日期,直接得到对应农历、生肖、干支、传统节日信息。本工具覆盖 1900-2100 年(标准农历表范围),所有计算在浏览器本地完成。本工具也可反向:输入农历日期查对应公历。
-    </p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">最常见的农历查询场景</h2>
-    <p><strong>1. 生日 / 纪念日的农历对应</strong>。"爷爷是农历 1948 年三月初八出生,公历是几号?"——本工具一键查过去 + 未来 100 年的农历转公历。每年春节、端午、中秋的家庭聚会日期查起来特别方便。</p>
-    <p><strong>2. 传统节日倒数</strong>。"距离今年中秋节还有 95 天"、"春节 2027 是公历 2 月 6 日"。本工具支持节日反向查询,对于规划婚礼、团聚、放假日期非常实用。</p>
-    <p><strong>3. 命理 / 八字 / 黄历查询</strong>。"我是公历 1988 年 10 月 15 日出生,农历是几月几日?生肖?"——八字测算需要按农历生日,本工具帮你换算。</p>
-    <p><strong>4. 海外华裔寻根</strong>。海外华人用本工具查家族背景、查祖辈农历生日、查清明节祖坟扫祭日期。</p>
-    <h2 className="text-lg font-semibold text-gray-800 pt-2">为什么不用手机日历?</h2>
-    <p>iPhone / Android 日历默认显示公历,农历通常作为"备选日历"显示一年。本工具适合<strong>任意日期</strong>查询,不依赖系统设置。Microsoft Outlook / Apple Calendar 也支持农历,但需要手动开启"中文农历日历"订阅。</p>
+  <div className="space-y-4 text-[15px] text-gray-600 leading-relaxed">
+    <p>输入公历日期，立刻查到对应的农历、生肖、干支和传统节日。覆盖 1900-2100 年，支持反向查询（农历转公历），命理八字、节日规划必备。</p>
+    <h3 className="font-semibold text-gray-700 text-base mt-4">支持信息</h3>
+    <ul className="space-y-1 text-sm">
+      <li>📆 农历日期 + 闰月标识</li>
+      <li>🐲 生肖 + 干支纪年</li>
+      <li>🏮 传统节日自动识别</li>
+      <li>🔄 公历 ↔ 农历双向转换</li>
+    </ul>
+    <p className="text-xs text-gray-400 mt-4">所有数据在浏览器本地处理，不上传服务器。</p>
   </div>
 )
-
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: '农历和公历有什么区别?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: '公历是根据地球公转计算的日期系统，农历是依据月相变化的传统日期系统。两者一年大约相差11天。',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: '如何查看某一天的农历?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: '输入公历日期，点击转换后会显示对应农历、生肖、干支等信息。',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: '农历转换器准确吗?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: '依据标准农历算法，准确度高。但需注意农历月可能有闰月。',
-      },
-    }
-  ],
-}
 
 export default async function LunarCalendarPage({
   searchParams,
 }: {
-  
+  searchParams: Promise<{ lang?: string }>
 }) {
   const lang = 'zh'
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaZh) }} />
-      <h1 className="text-2xl font-bold text-gray-800 mb-1">农历阳历转换器</h1>
-      <div className="mb-6">{seoBodyZh}</div>
-      <LunarCalendar initialLang={lang} />
+      <div className="min-h-screen bg-gray-50">
+        <header className="bg-white shadow-sm sticky top-0 z-10">
+          <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="/zh" className="text-lg font-bold text-orange-500">🧮 实用计算器</a>
+            <a href="/lunar-calendar" className="text-xs px-3 py-1 border border-gray-200 rounded-full hover:bg-gray-50">EN</a>
+          </div>
+        </header>
+        <main className="max-w-6xl mx-auto px-4 py-6">
+          <h1 className="text-xl font-bold text-gray-800 mb-4">农历转换器</h1>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <aside className="lg:col-span-3">
+              <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 sticky top-20">
+                {seoBodyZh}
+              </div>
+            </aside>
+            <section className="lg:col-span-6">
+              <LunarCalendar lang={lang} />
+            </section>
+            <aside className="lg:col-span-3">
+              <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 sticky top-20">
+                <h3 className="font-semibold text-gray-700 mb-3 text-sm">更多工具</h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="/zh/bmi-calculator" className="text-orange-500 hover:underline">⚖️ BMI 计算器</a></li>
+                  <li><a href="/zh/countdown" className="text-orange-500 hover:underline">📅 倒计时</a></li>
+                  <li><a href="/zh/discount-calculator" className="text-orange-500 hover:underline">🏷️ 折扣计算器</a></li>
+                  <li><a href="/zh/unit-converter" className="text-orange-500 hover:underline">📐 单位换算</a></li>
+                  <li><a href="/zh/sleep-calculator" className="text-orange-500 hover:underline">😴 睡眠计算器</a></li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </main>
+      </div>
     </>
   )
 }
