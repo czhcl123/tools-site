@@ -25,6 +25,7 @@ const posts = [
   { slug: 'json-formatter', icon: '🔧', title: 'JSON Formatter Guide', zhTitle: 'JSON 格式化工具指南' },
   { slug: 'heic-to-jpg', icon: '🖼️', title: 'HEIC to JPG Converter Guide', zhTitle: 'HEIC 转 JPG 完全指南' },
   { slug: 'invoice-generator', icon: '📄', title: 'Invoice Generator Guide', zhTitle: '发票生成器使用指南' },
+  { slug: 'password-generator', icon: '🔐', title: 'Password Generator Guide', zhTitle: '密码生成器使用指南' },
 ]
 
 export default function BlogIndex() {
