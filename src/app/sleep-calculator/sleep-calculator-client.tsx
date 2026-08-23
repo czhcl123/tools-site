@@ -1,6 +1,7 @@
 'use client'
 
 import { Suspense, useState, useMemo } from 'react'
+import { usePathname } from 'next/navigation'
 import { t } from './sleep-calculator-i18n'
 import type { Lang } from './sleep-calculator-i18n'
 
@@ -27,6 +28,7 @@ function pad(n: number) {
 }
 
 function SleepCalculatorContent({ lang: initialLang }: { lang?: Lang }) {
+  const pathname = usePathname()
   const isZhPath = pathname?.startsWith('/zh') || false
   const lang: Lang = initialLang ?? (isZhPath ? 'zh' : (typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('lang') === 'zh' ? 'zh' : 'en'))
   const nextLang: Lang = lang === 'zh' ? 'en' : 'zh'
