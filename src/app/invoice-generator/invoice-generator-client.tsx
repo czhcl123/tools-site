@@ -275,7 +275,10 @@ function InvoiceGeneratorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) 
           </div>
           <div>
             <label className="block text-xs font-medium text-gray-600 mb-1">{u('logo', lang)}</label>
-            <input type="file" accept="image/*" onChange={(e) => handleLogo(e.target.files?.[0] || null)} className="w-full text-xs" />
+            <label className="flex items-center justify-center w-full px-3 py-2 border border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-orange-400 hover:bg-orange-50 transition-colors">
+              <span className="text-xs text-gray-500">{logoData ? (lang === 'zh' ? '✅ 已选择' : '✅ Selected') : (lang === 'zh' ? '点击上传 Logo' : 'Click to upload Logo')}</span>
+              <input type="file" accept="image/*" onChange={(e) => handleLogo(e.target.files?.[0] || null)} className="hidden" />
+            </label>
           </div>
           <div>
             <label className="block text-xs font-medium text-gray-600 mb-1">{u('notes', lang)}</label>
