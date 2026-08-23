@@ -4,6 +4,7 @@ import { Suspense, useState } from 'react'
 import Link from 'next/link'
 import RelatedTools from '@/components/RelatedTools'
 import { useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 const t = {
   zh: {
@@ -78,7 +79,9 @@ function convert(value: number, from: string, to: string, category: string): num
 
 function UnitConverterContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
   const searchParams = useSearchParams()
-  const lang = (searchParams.get('lang') === 'zh' ? 'zh' : 'en') as 'zh' | 'en'
+  const pathname = usePathname()
+  const isZh = pathname?.startsWith('/zh') || searchParams.get('lang') === 'zh'
+  const lang = (isZh ? 'zh' : 'en') as 'zh' | 'en'
   const nextLang: 'zh' | 'en' = lang === 'zh' ? 'en' : 'zh'
   const [category, setCategory] = useState<'length' | 'weight' | 'temperature'>('length')
   const [fromUnit, setFromUnit] = useState('m')

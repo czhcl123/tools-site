@@ -2,6 +2,7 @@
 
 import { Suspense, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import RelatedTools from '../../components/RelatedTools'
 
 const t = {

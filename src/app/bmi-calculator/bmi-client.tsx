@@ -2,10 +2,13 @@
 
 import { Suspense, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 function BmiCalculatorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
   const searchParams = useSearchParams()
-  const lang = (searchParams.get('lang') === 'zh' ? 'zh' : 'en') as 'zh' | 'en'
+  const pathname = usePathname()
+  const isZh = pathname?.startsWith('/zh') || searchParams.get('lang') === 'zh'
+  const lang = (isZh ? 'zh' : 'en') as 'zh' | 'en'
   const [height, setHeight] = useState('')
   const [weight, setWeight] = useState('')
   const [bmi, setBmi] = useState<number | null>(null)

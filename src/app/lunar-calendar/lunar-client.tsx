@@ -4,6 +4,7 @@ import { Suspense, useState } from 'react'
 import Link from 'next/link'
 import RelatedTools from '@/components/RelatedTools'
 import { useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 const t = {
   zh: {
@@ -113,7 +114,9 @@ function solarToLunar(year: number, month: number, day: number) {
 
 function LunarCalendarContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
   const searchParams = useSearchParams()
-  const lang = (searchParams.get('lang') === 'zh' ? 'zh' : 'en') as 'zh' | 'en'
+  const pathname = usePathname()
+  const isZh = pathname?.startsWith('/zh') || searchParams.get('lang') === 'zh'
+  const lang = (isZh ? 'zh' : 'en') as 'zh' | 'en'
   const nextLang: 'zh' | 'en' = lang === 'zh' ? 'en' : 'zh'
   const [solarDate, setSolarDate] = useState('')
   const [result, setResult] = useState<{ year: number; month: number; day: number } | null>(null)

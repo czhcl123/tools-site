@@ -3,6 +3,7 @@
 import { Suspense } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import Footer from '../../components/Footer'
 
 function AboutContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {

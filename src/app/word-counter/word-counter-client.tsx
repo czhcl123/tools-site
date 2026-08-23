@@ -4,6 +4,7 @@ import { Suspense, useState, useMemo } from 'react'
 import Link from 'next/link'
 import RelatedTools from '@/components/RelatedTools'
 import { useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 const t = {
   zh: {

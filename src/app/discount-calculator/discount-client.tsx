@@ -2,6 +2,7 @@
 
 import { Suspense, useState, useRef, useEffect, useMemo } from 'react'
 import { useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 interface HistoryEntry {
   id: number

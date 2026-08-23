@@ -1,7 +1,7 @@
 'use client'
 
 import { Suspense, useState, useEffect } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams, usePathname } from 'next/navigation'
 
 const t = {
   zh: {
@@ -71,7 +71,9 @@ function getMsDiff(target: Date, now: Date) {
 
 function CountdownContent({ lang: initialLang }: { lang?: "zh" | "en" }) {
   const searchParams = useSearchParams()
-  const lang = (searchParams.get('lang') === 'zh' ? 'zh' : 'en') as 'zh' | 'en'
+  const pathname = usePathname()
+  const isZh = pathname?.startsWith('/zh') || searchParams.get('lang') === 'zh'
+  const lang = (isZh ? 'zh' : 'en') as 'zh' | 'en'
 
   // Default: 30 days from now
   const defaultDate = (() => {
