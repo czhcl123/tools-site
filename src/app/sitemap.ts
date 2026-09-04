@@ -88,6 +88,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'json-formatter',
     'heic-to-jpg',
     'invoice-generator',
+    'nap-calculator',
   ]
 
   entries.push(

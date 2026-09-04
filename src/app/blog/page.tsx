@@ -41,6 +41,7 @@ const posts = [
   { slug: 'unit-converter-travel', icon: '✈️', title: 'Travel Unit Conversion Guide', zhTitle: '旅行单位换算指南' },
   { slug: 'word-counter-writing-tips', icon: '✍️', title: 'Writing Word Count Tips', zhTitle: '写作字数统计技巧' },
   { slug: 'password-cybersecurity-guide', icon: '🛡️', title: 'Cybersecurity 101', zhTitle: '网络安全入门' },
+  { slug: 'nap-calculator', icon: '💤', title: 'Nap Calculator: How Long Should You Nap?', zhTitle: '午睡计算器：你应该午睡多久？' },
 ]
 
 export default function BlogIndex() {
