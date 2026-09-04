@@ -89,6 +89,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'heic-to-jpg',
     'invoice-generator',
     'nap-calculator',
+    'bmi-categories',
+    'countdown-timer-psychology',
+    'discount-vs-coupon',
+    'heic-vs-jpeg-png',
+    'freelancer-tax-deductions',
+    'json-vs-xml-yaml',
+    'lunar-gardening',
+    'qr-code-creative-uses',
+    'metric-vs-imperial',
+    'word-count-seo',
+    'password-manager-guide',
   ]
 
   entries.push(

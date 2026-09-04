@@ -42,6 +42,17 @@ const posts = [
   { slug: 'word-counter-writing-tips', icon: '✍️', title: 'Writing Word Count Tips', zhTitle: '写作字数统计技巧' },
   { slug: 'password-cybersecurity-guide', icon: '🛡️', title: 'Cybersecurity 101', zhTitle: '网络安全入门' },
   { slug: 'nap-calculator', icon: '💤', title: 'Nap Calculator: How Long Should You Nap?', zhTitle: '午睡计算器：你应该午睡多久？' },
+  { slug: 'bmi-categories', icon: '📊', title: 'BMI Categories Explained', zhTitle: 'BMI 分类解读' },
+  { slug: 'countdown-timer-psychology', icon: '⏱️', title: 'Psychology of Countdown Timers', zhTitle: '倒计时心理学' },
+  { slug: 'discount-vs-coupon', icon: '💰', title: 'Discount vs Coupon vs Promo Code', zhTitle: '折扣 vs 优惠券 vs 促销码' },
+  { slug: 'heic-vs-jpeg-png', icon: '🖼️', title: 'HEIC vs JPEG vs PNG', zhTitle: 'HEIC vs JPEG vs PNG 格式对比' },
+  { slug: 'freelancer-tax-deductions', icon: '🧾', title: 'Freelancer Tax Deductions', zhTitle: '自由职业者税务减免' },
+  { slug: 'json-vs-xml-yaml', icon: '📋', title: 'JSON vs XML vs YAML', zhTitle: 'JSON vs XML vs YAML 对比' },
+  { slug: 'lunar-gardening', icon: '🌱', title: 'Lunar Gardening Guide', zhTitle: '月相园艺指南' },
+  { slug: 'qr-code-creative-uses', icon: '📱', title: '20 Creative QR Code Uses', zhTitle: 'QR 码20种创意用法' },
+  { slug: 'metric-vs-imperial', icon: '📐', title: 'Metric vs Imperial', zhTitle: '公制 vs 英制对比' },
+  { slug: 'word-count-seo', icon: '📝', title: 'Word Count and SEO', zhTitle: '字数与 SEO' },
+  { slug: 'password-manager-guide', icon: '🔑', title: 'Password Manager Guide', zhTitle: '密码管理器指南' },
 ]
 
 export default function BlogIndex() {
