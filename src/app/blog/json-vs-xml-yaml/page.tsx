@@ -34,8 +34,8 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
         <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">对比</h2>
         <div className="bg-gray-50 rounded-lg p-4 mb-4 text-sm text-gray-700 space-y-1">
-          <p>📊 <strong>可读性</strong>：YAML > JSON > XML</p>
-          <p>📦 <strong>文件大小</strong>：JSON < YAML < XML（XML 最大）</p>
+          <p>📊 <strong>可读性</strong>：YAML {'>'} JSON {'>'} XML</p>
+          <p>📦 <strong>文件大小</strong>：JSON {'<'} YAML {'<'} XML（XML 最大）</p>
           <p>🔧 <strong>解析难度</strong>：JSON 最简单，YAML 需注意缩进，XML 最复杂</p>
           <p>🌐 <strong>浏览器支持</strong>：JSON 原生支持，XML 支持好，YAML 需要库</p>
         </div>
@@ -92,8 +92,8 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
         <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">Comparison</h2>
         <div className="bg-gray-50 rounded-lg p-4 mb-4 text-sm text-gray-700 space-y-1">
-          <p>📊 <strong>Readability</strong>: YAML > JSON > XML</p>
-          <p>📦 <strong>File size</strong>: JSON < YAML < XML (XML is largest)</p>
+          <p>📊 <strong>Readability</strong>: YAML {'>'} JSON {'>'} XML</p>
+          <p>📦 <strong>File size</strong>: JSON {'<'} YAML {'<'} XML (XML is largest)</p>
           <p>🔧 <strong>Parsing</strong>: JSON easiest, YAML needs indentation care, XML most complex</p>
           <p>🌐 <strong>Browser support</strong>: JSON native, XML good, YAML needs a library</p>
         </div>
