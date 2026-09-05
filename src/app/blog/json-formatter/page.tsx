@@ -12,8 +12,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? 'JSON 格式化工具使用教程:美化、压缩、验证 JSON 数据,含常见错误修复和开发者技巧。'
       : 'How to use a JSON formatter to beautify, minify, and validate JSON data. Includes common error fixes and developer tips.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/json-formatter' : '/blog/json-formatter'}`,
-      languages: { 'zh-CN': '/zh/blog/json-formatter', 'en-US': '/blog/json-formatter', 'x-default': '/blog/json-formatter' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/json-formatter',
+      languages: { 'en-US': '/blog/json-formatter', 'x-default': '/blog/json-formatter' },
     },
   }
 }

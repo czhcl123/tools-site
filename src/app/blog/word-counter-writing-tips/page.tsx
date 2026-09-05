@@ -8,8 +8,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
     title: lang === 'zh' ? '写作技巧：如何用字数统计提高写作效率' : 'Writing Tips: How to Use Word Counters to Boost Writing Efficiency',
     description: lang === 'zh' ? '字数统计工具的使用技巧、不同场景的字数要求,以及如何规划写作目标。' : 'Word counter tool tips, word count requirements for different scenarios, and how to plan writing goals.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/word-counter-writing-tips' : '/blog/word-counter-writing-tips'}`,
-      languages: { 'zh-CN': '/zh/blog/word-counter-writing-tips', 'en-US': '/blog/word-counter-writing-tips', 'x-default': '/blog/word-counter-writing-tips' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/word-counter-writing-tips',
+      languages: { 'en-US': '/blog/word-counter-writing-tips', 'x-default': '/blog/word-counter-writing-tips' },
     },
   }
 }

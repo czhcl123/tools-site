@@ -12,8 +12,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '公历转农历、农历转公历的完整教程,含天干地支、生肖、节气解读和使用场景。'
       : 'How to convert solar dates to Chinese lunar dates and back. Includes Heavenly Stems, Chinese zodiac, solar terms, and real use cases.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/lunar-calendar' : '/blog/lunar-calendar'}`,
-      languages: { 'zh-CN': '/zh/blog/lunar-calendar', 'en-US': '/blog/lunar-calendar', 'x-default': '/blog/lunar-calendar' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/lunar-calendar',
+      languages: { 'en-US': '/blog/lunar-calendar', 'x-default': '/blog/lunar-calendar' },
     },
   }
 }

@@ -12,8 +12,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '为什么需要密码管理器，它们如何工作，选择要点，主密码技巧，以及生成密码 vs 记忆密码。'
       : 'Why you need a password manager, how they work, key features, master password tips, and generated vs remembered passwords.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/password-manager-guide' : '/blog/password-manager-guide'}`,
-      languages: { 'zh-CN': '/zh/blog/password-manager-guide', 'en-US': '/blog/password-manager-guide', 'x-default': '/blog/password-manager-guide' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/password-manager-guide',
+      languages: { 'en-US': '/blog/password-manager-guide', 'x-default': '/blog/password-manager-guide' },
     },
   }
 }

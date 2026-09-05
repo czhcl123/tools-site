@@ -8,8 +8,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
     title: lang === 'zh' ? '购物省钱技巧：如何用折扣计算器' : 'Shopping Savings Tips: How to Use a Discount Calculator',
     description: lang === 'zh' ? '教你用折扣计算器比较优惠、计算真实折扣、避免购物陷阱。' : 'Learn to compare deals, calculate real discounts, and avoid shopping traps with a discount calculator.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/discount-shopping-tips' : '/blog/discount-shopping-tips'}`,
-      languages: { 'zh-CN': '/zh/blog/discount-shopping-tips', 'en-US': '/blog/discount-shopping-tips', 'x-default': '/blog/discount-shopping-tips' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/discount-shopping-tips',
+      languages: { 'en-US': '/blog/discount-shopping-tips', 'x-default': '/blog/discount-shopping-tips' },
     },
   }
 }

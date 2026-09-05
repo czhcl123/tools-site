@@ -12,8 +12,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '长度、重量、温度、面积、体积单位换算教程,含公制英制对照和常见换算公式。'
       : 'How to convert units: length, weight, temperature, area, volume. Metric-imperial conversion tables and formulas included.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/unit-converter' : '/blog/unit-converter'}`,
-      languages: { 'zh-CN': '/zh/blog/unit-converter', 'en-US': '/blog/unit-converter', 'x-default': '/blog/unit-converter' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/unit-converter',
+      languages: { 'en-US': '/blog/unit-converter', 'x-default': '/blog/unit-converter' },
     },
   }
 }

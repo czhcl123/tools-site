@@ -108,7 +108,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: today,
       changeFrequency: 'weekly',
       priority: 0.7,
-      alternates: { languages: { 'en-US': `${base}/blog`, 'zh-CN': `${base}/zh/blog`, 'x-default': `${base}/blog` } },
+      alternates: { languages: { 'en-US': `${base}/blog`, 'x-default': `${base}/blog` } },
     }
   )
 
@@ -121,7 +121,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: {
         languages: {
           'en-US': `${base}/blog/${slug}`,
-          'zh-CN': `${base}/zh/blog/${slug}`,
+
           'x-default': `${base}/blog/${slug}`,
         },
       },

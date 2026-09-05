@@ -12,8 +12,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? 'JSON、XML、YAML 三种数据格式的对比：可读性、文件大小、使用场景和代码示例。'
       : 'JSON vs XML vs YAML comparison: readability, file size, use cases, and code examples for each format.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/json-vs-xml-yaml' : '/blog/json-vs-xml-yaml'}`,
-      languages: { 'zh-CN': '/zh/blog/json-vs-xml-yaml', 'en-US': '/blog/json-vs-xml-yaml', 'x-default': '/blog/json-vs-xml-yaml' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/json-vs-xml-yaml',
+      languages: { 'en-US': '/blog/json-vs-xml-yaml', 'x-default': '/blog/json-vs-xml-yaml' },
     },
   }
 }

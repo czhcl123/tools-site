@@ -12,8 +12,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? 'BMI和体脂率的区别,各自的优缺点,以及如何结合使用判断健康状况。'
       : 'The difference between BMI and body fat percentage, their pros and cons, and how to use both for accurate health assessment.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/bmi-calculator-vs-body-fat' : '/blog/bmi-calculator-vs-body-fat'}`,
-      languages: { 'zh-CN': '/zh/blog/bmi-calculator-vs-body-fat', 'en-US': '/blog/bmi-calculator-vs-body-fat', 'x-default': '/blog/bmi-calculator-vs-body-fat' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/bmi-calculator-vs-body-fat',
+      languages: { 'en-US': '/blog/bmi-calculator-vs-body-fat', 'x-default': '/blog/bmi-calculator-vs-body-fat' },
     },
   }
 }

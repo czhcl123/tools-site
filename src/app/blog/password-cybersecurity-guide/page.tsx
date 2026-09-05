@@ -8,8 +8,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
     title: lang === 'zh' ? '网络安全入门：如何保护你的在线账户' : 'Cybersecurity 101: How to Protect Your Online Accounts',
     description: lang === 'zh' ? '密码安全、双因素认证、钓鱼防范,以及如何用密码生成器创建强密码。' : 'Password security, two-factor authentication, phishing prevention, and creating strong passwords.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/password-cybersecurity-guide' : '/blog/password-cybersecurity-guide'}`,
-      languages: { 'zh-CN': '/zh/blog/password-cybersecurity-guide', 'en-US': '/blog/password-cybersecurity-guide', 'x-default': '/blog/password-cybersecurity-guide' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/password-cybersecurity-guide',
+      languages: { 'en-US': '/blog/password-cybersecurity-guide', 'x-default': '/blog/password-cybersecurity-guide' },
     },
   }
 }

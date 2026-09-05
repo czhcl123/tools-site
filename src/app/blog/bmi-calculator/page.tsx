@@ -12,8 +12,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? 'BMI 计算公式、亚洲人标准、男女差异,以及如何用 BMI 计算器判断体重是否健康。'
       : 'BMI formula, WHO Asian thresholds, gender differences, and how to use an online BMI calculator to check if your weight is healthy.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/bmi-calculator' : '/blog/bmi-calculator'}`,
-      languages: { 'zh-CN': '/zh/blog/bmi-calculator', 'en-US': '/blog/bmi-calculator', 'x-default': '/blog/bmi-calculator' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/bmi-calculator',
+      languages: { 'en-US': '/blog/bmi-calculator', 'x-default': '/blog/bmi-calculator' },
     },
   }
 }

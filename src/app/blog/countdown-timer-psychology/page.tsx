@@ -12,8 +12,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '倒计时器如何利用紧迫感和稀缺性提升转化率？了解倒计时心理学原理和实际应用场景。'
       : 'How countdown timers use urgency and scarcity to boost conversions? Learn the psychology behind countdown timers and practical use cases.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/countdown-timer-psychology' : '/blog/countdown-timer-psychology'}`,
-      languages: { 'zh-CN': '/zh/blog/countdown-timer-psychology', 'en-US': '/blog/countdown-timer-psychology', 'x-default': '/blog/countdown-timer-psychology' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/countdown-timer-psychology',
+      languages: { 'en-US': '/blog/countdown-timer-psychology', 'x-default': '/blog/countdown-timer-psychology' },
     },
   }
 }

@@ -12,8 +12,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '自由职业者常见税务减免项目：家庭办公室、设备、软件、差旅费，以及如何正确记录发票和开支。'
       : 'Common freelancer tax deductions: home office, equipment, software, travel expenses, and how to properly track invoices.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/freelancer-tax-deductions' : '/blog/freelancer-tax-deductions'}`,
-      languages: { 'zh-CN': '/zh/blog/freelancer-tax-deductions', 'en-US': '/blog/freelancer-tax-deductions', 'x-default': '/blog/freelancer-tax-deductions' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/freelancer-tax-deductions',
+      languages: { 'en-US': '/blog/freelancer-tax-deductions', 'x-default': '/blog/freelancer-tax-deductions' },
     },
   }
 }

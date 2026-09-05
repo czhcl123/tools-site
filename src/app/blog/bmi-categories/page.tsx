@@ -12,8 +12,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? 'BMI 分类标准详解：偏瘦、正常、超重、肥胖的界限在哪里？了解 BMI 的局限性和更准确的身体评估方法。'
       : 'BMI categories explained: underweight, normal, overweight, obese ranges. Learn BMI limitations and more accurate body assessment methods.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/bmi-categories' : '/blog/bmi-categories'}`,
-      languages: { 'zh-CN': '/zh/blog/bmi-categories', 'en-US': '/blog/bmi-categories', 'x-default': '/blog/bmi-categories' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/bmi-categories',
+      languages: { 'en-US': '/blog/bmi-categories', 'x-default': '/blog/bmi-categories' },
     },
   }
 }

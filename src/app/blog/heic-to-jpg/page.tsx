@@ -12,8 +12,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? 'HEIC 转 JPG 完整教程:什么是 HEIC 格式、为什么需要转换、在线免费转换方法和注意事项。'
       : 'What is HEIC? Why convert HEIC to JPG? Free online conversion method, quality settings, and everything you need to know.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/heic-to-jpg' : '/blog/heic-to-jpg'}`,
-      languages: { 'zh-CN': '/zh/blog/heic-to-jpg', 'en-US': '/blog/heic-to-jpg', 'x-default': '/blog/heic-to-jpg' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/heic-to-jpg',
+      languages: { 'en-US': '/blog/heic-to-jpg', 'x-default': '/blog/heic-to-jpg' },
     },
   }
 }

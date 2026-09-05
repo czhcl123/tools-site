@@ -12,8 +12,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '教你用折扣计算器快速算出打折后的价格和省钱金额,含公式、实例和常见场景。'
       : 'Learn how to use a discount calculator to find sale prices, savings, and multi-step discounts. Includes formulas and real examples.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/discount-calculator' : '/blog/discount-calculator'}`,
-      languages: { 'zh-CN': '/zh/blog/discount-calculator', 'en-US': '/blog/discount-calculator', 'x-default': '/blog/discount-calculator' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/discount-calculator',
+      languages: { 'en-US': '/blog/discount-calculator', 'x-default': '/blog/discount-calculator' },
     },
   }
 }

@@ -12,8 +12,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '折扣、优惠券、促销码三者的定义和区别，如何叠加使用，以及计算折扣时的常见错误。'
       : 'Discount vs coupon vs promo code: definitions, differences, how to stack them, and common calculation mistakes.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/discount-vs-coupon' : '/blog/discount-vs-coupon'}`,
-      languages: { 'zh-CN': '/zh/blog/discount-vs-coupon', 'en-US': '/blog/discount-vs-coupon', 'x-default': '/blog/discount-vs-coupon' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/discount-vs-coupon',
+      languages: { 'en-US': '/blog/discount-vs-coupon', 'x-default': '/blog/discount-vs-coupon' },
     },
   }
 }

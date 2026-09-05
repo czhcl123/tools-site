@@ -12,8 +12,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '不同内容类型的理想字数：博客、产品页、元描述。Google 对内容长度的看法，质量 vs 数量。'
       : 'Ideal word counts by content type: blog posts, product pages, meta descriptions. Google\'s stance on content length, quality vs quantity.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/word-count-seo' : '/blog/word-count-seo'}`,
-      languages: { 'zh-CN': '/zh/blog/word-count-seo', 'en-US': '/blog/word-count-seo', 'x-default': '/blog/word-count-seo' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/word-count-seo',
+      languages: { 'en-US': '/blog/word-count-seo', 'x-default': '/blog/word-count-seo' },
     },
   }
 }

@@ -12,8 +12,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '教你用日期倒计时计算器算出距离生日、节假日、考试还有多少天,含跨年计算和工作日统计。'
       : 'Learn how to count days until a date — birthdays, holidays, exams. Includes cross-year calculations and working-day counting.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/countdown' : '/blog/countdown'}`,
-      languages: { 'zh-CN': '/zh/blog/countdown', 'en-US': '/blog/countdown', 'x-default': '/blog/countdown' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/countdown',
+      languages: { 'en-US': '/blog/countdown', 'x-default': '/blog/countdown' },
     },
   }
 }

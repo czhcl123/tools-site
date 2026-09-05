@@ -12,8 +12,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? 'QR 码创意应用大全：餐厅菜单、名片、活动门票、Wi-Fi 分享、产品包装、社交媒体、教育场景。'
       : 'Creative QR code uses: restaurant menus, business cards, event tickets, Wi-Fi sharing, product packaging, social media, education.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/qr-code-creative-uses' : '/blog/qr-code-creative-uses'}`,
-      languages: { 'zh-CN': '/zh/blog/qr-code-creative-uses', 'en-US': '/blog/qr-code-creative-uses', 'x-default': '/blog/qr-code-creative-uses' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/qr-code-creative-uses',
+      languages: { 'en-US': '/blog/qr-code-creative-uses', 'x-default': '/blog/qr-code-creative-uses' },
     },
   }
 }

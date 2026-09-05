@@ -12,8 +12,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '教你用 QR 码生成器创建二维码,支持网址、文本、WiFi、联系方式,含使用技巧和场景。'
       : 'Learn how to generate QR codes for URLs, text, WiFi, and contacts. Includes tips, best practices, and real-world use cases.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/qr-code-generator' : '/blog/qr-code-generator'}`,
-      languages: { 'zh-CN': '/zh/blog/qr-code-generator', 'en-US': '/blog/qr-code-generator', 'x-default': '/blog/qr-code-generator' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/qr-code-generator',
+      languages: { 'en-US': '/blog/qr-code-generator', 'x-default': '/blog/qr-code-generator' },
     },
   }
 }

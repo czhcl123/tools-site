@@ -8,8 +8,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
     title: lang === 'zh' ? '农历与节日：中国传统历法详解' : 'Lunar Calendar and Festivals: Chinese Traditional Calendar Guide',
     description: lang === 'zh' ? '农历原理、闰月规则、传统节日日期,以及如何用农历转换器查询。' : 'Lunar calendar principles, leap month rules, traditional festival dates, and how to use a lunar converter.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/lunar-calendar-traditions' : '/blog/lunar-calendar-traditions'}`,
-      languages: { 'zh-CN': '/zh/blog/lunar-calendar-traditions', 'en-US': '/blog/lunar-calendar-traditions', 'x-default': '/blog/lunar-calendar-traditions' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/lunar-calendar-traditions',
+      languages: { 'en-US': '/blog/lunar-calendar-traditions', 'x-default': '/blog/lunar-calendar-traditions' },
     },
   }
 }

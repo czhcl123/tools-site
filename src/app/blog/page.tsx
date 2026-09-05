@@ -8,7 +8,6 @@ export const metadata: Metadata = {
     canonical: 'https://tools-site-production.up.railway.app/blog',
     languages: {
       'en-US': '/blog',
-      'zh-CN': '/zh/blog',
       'x-default': '/blog',
     },
   },

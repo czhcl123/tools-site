@@ -8,8 +8,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
     title: lang === 'zh' ? '自由职业者开票指南：如何创建专业发票' : 'Freelancer Invoicing Guide: How to Create Professional Invoices',
     description: lang === 'zh' ? '自由职业者发票模板、必填字段、税务要点,以及如何用发票生成器快速创建。' : 'Freelancer invoice templates, required fields, tax considerations, and how to quickly create invoices.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/invoice-freelancer-guide' : '/blog/invoice-freelancer-guide'}`,
-      languages: { 'zh-CN': '/zh/blog/invoice-freelancer-guide', 'en-US': '/blog/invoice-freelancer-guide', 'x-default': '/blog/invoice-freelancer-guide' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/invoice-freelancer-guide',
+      languages: { 'en-US': '/blog/invoice-freelancer-guide', 'x-default': '/blog/invoice-freelancer-guide' },
     },
   }
 }

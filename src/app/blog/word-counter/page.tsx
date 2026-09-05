@@ -12,8 +12,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '字数统计工具使用教程:统计中英文字符数、单词数、段落数,适用于论文、文案、SEO 写作。'
       : 'How to use a word counter to count Chinese characters, English words, paragraphs, and more. Essential for essays, copywriting, and SEO.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/word-counter' : '/blog/word-counter'}`,
-      languages: { 'zh-CN': '/zh/blog/word-counter', 'en-US': '/blog/word-counter', 'x-default': '/blog/word-counter' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/word-counter',
+      languages: { 'en-US': '/blog/word-counter', 'x-default': '/blog/word-counter' },
     },
   }
 }

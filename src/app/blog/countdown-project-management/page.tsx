@@ -12,8 +12,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '如何用倒计时工具管理项目截止日期、提高团队效率、避免拖延症。'
       : 'How to use countdown timers for project deadline management, team efficiency, and overcoming procrastination.',
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/blog/countdown-project-management' : '/blog/countdown-project-management'}`,
-      languages: { 'zh-CN': '/zh/blog/countdown-project-management', 'en-US': '/blog/countdown-project-management', 'x-default': '/blog/countdown-project-management' },
+      canonical: 'https://tools-site-production.up.railway.app/blog/countdown-project-management',
+      languages: { 'en-US': '/blog/countdown-project-management', 'x-default': '/blog/countdown-project-management' },
     },
   }
 }
