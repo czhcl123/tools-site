@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/unit-converter',
       languages: { 'en-US': '/blog/unit-converter', 'x-default': '/blog/unit-converter' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/unit-converter' },
   }
 }
 

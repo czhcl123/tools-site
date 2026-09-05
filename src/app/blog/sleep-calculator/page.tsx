@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/sleep-calculator',
       languages: { 'en-US': '/blog/sleep-calculator', 'x-default': '/blog/sleep-calculator' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/sleep-calculator' },
   }
 }
 

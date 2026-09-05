@@ -219,7 +219,6 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     alternateLocale: 'zh_CN',
-    url: 'https://tools-site-production.up.railway.app',
     siteName: 'Practical Tools',
     title: 'Practical Tools — 12 free online calculators & Utilities',
     description: '12 free online calculators and utilities — discount, BMI, countdown, QR code, JSON, HEIC, word count, and more. No signup, no installation, no tracking.',

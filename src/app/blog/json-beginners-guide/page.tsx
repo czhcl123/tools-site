@@ -11,6 +11,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/json-beginners-guide',
       languages: { 'en-US': '/blog/json-beginners-guide', 'x-default': '/blog/json-beginners-guide' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/json-beginners-guide' },
   }
 }
 

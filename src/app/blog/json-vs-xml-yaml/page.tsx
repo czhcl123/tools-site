@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/json-vs-xml-yaml',
       languages: { 'en-US': '/blog/json-vs-xml-yaml', 'x-default': '/blog/json-vs-xml-yaml' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/json-vs-xml-yaml' },
   }
 }
 

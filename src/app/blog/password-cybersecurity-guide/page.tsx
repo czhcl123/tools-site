@@ -11,6 +11,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/password-cybersecurity-guide',
       languages: { 'en-US': '/blog/password-cybersecurity-guide', 'x-default': '/blog/password-cybersecurity-guide' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/password-cybersecurity-guide' },
   }
 }
 

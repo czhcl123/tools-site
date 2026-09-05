@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/qr-code-creative-uses',
       languages: { 'en-US': '/blog/qr-code-creative-uses', 'x-default': '/blog/qr-code-creative-uses' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/qr-code-creative-uses' },
   }
 }
 

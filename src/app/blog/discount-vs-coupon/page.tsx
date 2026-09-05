@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/discount-vs-coupon',
       languages: { 'en-US': '/blog/discount-vs-coupon', 'x-default': '/blog/discount-vs-coupon' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/discount-vs-coupon' },
   }
 }
 

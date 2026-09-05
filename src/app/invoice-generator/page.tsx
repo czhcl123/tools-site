@@ -24,6 +24,7 @@ export async function generateMetadata({
     title: data[lang].title,
     description: data[lang].description,
     openGraph: {
+        url: `${lang === 'zh' ? 'https://tools-site-production.up.railway.app/zh/invoice-generator' : 'https://tools-site-production.up.railway.app/invoice-generator'}`,
       title: data[lang].title,
       description: data[lang].description,
     },

@@ -11,6 +11,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/unit-converter-travel',
       languages: { 'en-US': '/blog/unit-converter-travel', 'x-default': '/blog/unit-converter-travel' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/unit-converter-travel' },
   }
 }
 

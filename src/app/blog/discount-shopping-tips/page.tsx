@@ -11,6 +11,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/discount-shopping-tips',
       languages: { 'en-US': '/blog/discount-shopping-tips', 'x-default': '/blog/discount-shopping-tips' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/discount-shopping-tips' },
   }
 }
 

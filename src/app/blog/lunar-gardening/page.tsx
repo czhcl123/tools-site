@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/lunar-gardening',
       languages: { 'en-US': '/blog/lunar-gardening', 'x-default': '/blog/lunar-gardening' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/lunar-gardening' },
   }
 }
 

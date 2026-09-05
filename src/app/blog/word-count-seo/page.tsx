@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/word-count-seo',
       languages: { 'en-US': '/blog/word-count-seo', 'x-default': '/blog/word-count-seo' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/word-count-seo' },
   }
 }
 

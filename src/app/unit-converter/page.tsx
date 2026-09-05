@@ -27,6 +27,7 @@ export async function generateMetadata({
     title: titles[lang],
     description: descriptions[lang],
     openGraph: {
+        url: `${lang === 'zh' ? 'https://tools-site-production.up.railway.app/zh/unit-converter' : 'https://tools-site-production.up.railway.app/unit-converter'}`,
       title: ogTitles[lang],
       description: ogDescs[lang],
     },

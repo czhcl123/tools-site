@@ -11,6 +11,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/invoice-freelancer-guide',
       languages: { 'en-US': '/blog/invoice-freelancer-guide', 'x-default': '/blog/invoice-freelancer-guide' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/invoice-freelancer-guide' },
   }
 }
 

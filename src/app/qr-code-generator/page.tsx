@@ -24,6 +24,7 @@ export async function generateMetadata({
     title: data[lang].title,
     description: data[lang].description,
     openGraph: {
+        url: `${lang === 'zh' ? 'https://tools-site-production.up.railway.app/zh/qr-code-generator' : 'https://tools-site-production.up.railway.app/qr-code-generator'}`,
       title: data[lang].title,
       description: data[lang].description,
     },

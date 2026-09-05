@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/heic-vs-jpeg-png',
       languages: { 'en-US': '/blog/heic-vs-jpeg-png', 'x-default': '/blog/heic-vs-jpeg-png' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/heic-vs-jpeg-png' },
   }
 }
 

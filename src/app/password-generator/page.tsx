@@ -29,6 +29,7 @@ export async function generateMetadata({
         'x-default': '/password-generator',
       },
     },
+      openGraph: { url: `${lang === 'zh' ? 'https://tools-site-production.up.railway.app/zh/password-generator' : 'https://tools-site-production.up.railway.app/password-generator'}` },
   }
 }
 

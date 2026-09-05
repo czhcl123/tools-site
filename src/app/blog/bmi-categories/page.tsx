@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/bmi-categories',
       languages: { 'en-US': '/blog/bmi-categories', 'x-default': '/blog/bmi-categories' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/bmi-categories' },
   }
 }
 

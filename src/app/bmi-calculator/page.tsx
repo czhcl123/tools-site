@@ -29,6 +29,7 @@ export async function generateMetadata({
         'x-default': '/bmi-calculator',
       },
     },
+      openGraph: { url: `${lang === 'zh' ? 'https://tools-site-production.up.railway.app/zh/bmi-calculator' : 'https://tools-site-production.up.railway.app/bmi-calculator'}` },
   }
 }
 

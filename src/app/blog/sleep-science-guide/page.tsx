@@ -11,6 +11,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/sleep-science-guide',
       languages: { 'en-US': '/blog/sleep-science-guide', 'x-default': '/blog/sleep-science-guide' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/sleep-science-guide' },
   }
 }
 

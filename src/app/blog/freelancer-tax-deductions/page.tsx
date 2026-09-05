@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/freelancer-tax-deductions',
       languages: { 'en-US': '/blog/freelancer-tax-deductions', 'x-default': '/blog/freelancer-tax-deductions' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/freelancer-tax-deductions' },
   }
 }
 

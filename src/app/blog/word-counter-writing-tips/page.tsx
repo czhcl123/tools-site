@@ -11,6 +11,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/word-counter-writing-tips',
       languages: { 'en-US': '/blog/word-counter-writing-tips', 'x-default': '/blog/word-counter-writing-tips' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/word-counter-writing-tips' },
   }
 }
 

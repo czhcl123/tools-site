@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/password-generator',
       languages: { 'en-US': '/blog/password-generator', 'x-default': '/blog/password-generator' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/password-generator' },
   }
 }
 

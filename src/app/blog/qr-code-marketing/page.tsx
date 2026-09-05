@@ -11,6 +11,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/qr-code-marketing',
       languages: { 'en-US': '/blog/qr-code-marketing', 'x-default': '/blog/qr-code-marketing' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/qr-code-marketing' },
   }
 }
 

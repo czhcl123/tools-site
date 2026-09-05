@@ -29,6 +29,7 @@ export async function generateMetadata({
     title: titles[lang],
     description: descriptions[lang],
     openGraph: {
+        url: `${lang === 'zh' ? 'https://tools-site-production.up.railway.app/zh/sleep-calculator' : 'https://tools-site-production.up.railway.app/sleep-calculator'}`,
       title: ogTitles[lang],
       description: ogDescs[lang],
     },

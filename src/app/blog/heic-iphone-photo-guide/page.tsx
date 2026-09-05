@@ -11,6 +11,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/heic-iphone-photo-guide',
       languages: { 'en-US': '/blog/heic-iphone-photo-guide', 'x-default': '/blog/heic-iphone-photo-guide' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/heic-iphone-photo-guide' },
   }
 }
 

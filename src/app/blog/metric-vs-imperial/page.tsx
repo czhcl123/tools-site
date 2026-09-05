@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/metric-vs-imperial',
       languages: { 'en-US': '/blog/metric-vs-imperial', 'x-default': '/blog/metric-vs-imperial' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/metric-vs-imperial' },
   }
 }
 

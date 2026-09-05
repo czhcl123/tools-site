@@ -11,6 +11,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/lunar-calendar-traditions',
       languages: { 'en-US': '/blog/lunar-calendar-traditions', 'x-default': '/blog/lunar-calendar-traditions' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/lunar-calendar-traditions' },
   }
 }
 

@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/discount-calculator',
       languages: { 'en-US': '/blog/discount-calculator', 'x-default': '/blog/discount-calculator' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/discount-calculator' },
   }
 }
 

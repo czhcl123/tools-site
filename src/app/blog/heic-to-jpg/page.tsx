@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/heic-to-jpg',
       languages: { 'en-US': '/blog/heic-to-jpg', 'x-default': '/blog/heic-to-jpg' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/heic-to-jpg' },
   }
 }
 

@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/nap-calculator',
       languages: { 'en-US': '/blog/nap-calculator', 'x-default': '/blog/nap-calculator' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/nap-calculator' },
   }
 }
 

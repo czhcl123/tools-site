@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/lunar-calendar',
       languages: { 'en-US': '/blog/lunar-calendar', 'x-default': '/blog/lunar-calendar' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/lunar-calendar' },
   }
 }
 

@@ -24,6 +24,7 @@ export async function generateMetadata({
     title: data[lang].title,
     description: data[lang].description,
     openGraph: {
+        url: `${lang === 'zh' ? 'https://tools-site-production.up.railway.app/zh/discount-calculator' : 'https://tools-site-production.up.railway.app/discount-calculator'}`,
       title: data[lang].title,
       description: data[lang].description,
     },

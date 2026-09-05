@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/bmi-calculator-vs-body-fat',
       languages: { 'en-US': '/blog/bmi-calculator-vs-body-fat', 'x-default': '/blog/bmi-calculator-vs-body-fat' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/bmi-calculator-vs-body-fat' },
   }
 }
 

@@ -27,6 +27,7 @@ export async function generateMetadata({
     title: titles[lang],
     description: descriptions[lang],
     openGraph: {
+        url: `${lang === 'zh' ? 'https://tools-site-production.up.railway.app/zh/lunar-calendar' : 'https://tools-site-production.up.railway.app/lunar-calendar'}`,
       title: ogTitles[lang],
       description: ogDescs[lang],
     },

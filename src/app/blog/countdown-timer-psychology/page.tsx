@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/countdown-timer-psychology',
       languages: { 'en-US': '/blog/countdown-timer-psychology', 'x-default': '/blog/countdown-timer-psychology' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/countdown-timer-psychology' },
   }
 }
 

@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/json-formatter',
       languages: { 'en-US': '/blog/json-formatter', 'x-default': '/blog/json-formatter' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/json-formatter' },
   }
 }
 

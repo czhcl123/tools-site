@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/password-manager-guide',
       languages: { 'en-US': '/blog/password-manager-guide', 'x-default': '/blog/password-manager-guide' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/password-manager-guide' },
   }
 }
 

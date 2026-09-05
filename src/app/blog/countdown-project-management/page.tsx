@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/countdown-project-management',
       languages: { 'en-US': '/blog/countdown-project-management', 'x-default': '/blog/countdown-project-management' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/countdown-project-management' },
   }
 }
 

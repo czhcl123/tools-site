@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/bmi-calculator',
       languages: { 'en-US': '/blog/bmi-calculator', 'x-default': '/blog/bmi-calculator' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/bmi-calculator' },
   }
 }
 

@@ -15,6 +15,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://tools-site-production.up.railway.app/blog/invoice-generator',
       languages: { 'en-US': '/blog/invoice-generator', 'x-default': '/blog/invoice-generator' },
     },
+      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/invoice-generator' },
   }
 }
 
