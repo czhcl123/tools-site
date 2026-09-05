@@ -15,7 +15,7 @@ export async function generateMetadata({
   }
   const descriptions = {
     zh: '在线倒计时计算器:实时跳秒,选择目标日期+时间,显示还有几天几小时几分钟几秒。也支持距今已过去天数模式,免费无需注册。',
-    en: 'Free countdown calculator: count down days, hours, minutes, seconds to any date. Live timer updates every second. Also counts days since past dates. Free, no signup.',
+    en: 'Free countdown calculator: count down days, hours, minutes, seconds to any date. Live timer updates every second. Free, no signup.',
   }
   const ogTitles = { zh: '日期计算器 - 实用计算器', en: 'Countdown Calculator - Practical Tools' }
   const ogDescs = {

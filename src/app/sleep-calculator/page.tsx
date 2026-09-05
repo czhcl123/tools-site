@@ -17,7 +17,7 @@ export async function generateMetadata({
   }
   const descriptions = {
     zh: '免费在线睡眠计算器:输入起床时间反推最佳入睡时间(90 分钟周期),或输入入睡时间反推最佳起床时间。支持深度睡眠/REM 周期说明,无需注册。',
-    en: 'Free sleep calculator: enter wake time to find optimal bedtime, or enter bedtime to find best wake time, based on 90-minute sleep cycles. No signup, browser-only.',
+    en: 'Free sleep calculator: enter wake time to find optimal bedtime, or enter bedtime to find best wake time, based on 90-minute sleep cycles. Browser-only.',
   }
   const ogTitles = { zh: '睡眠计算器 - 实用计算器', en: 'Sleep Calculator - Practical Tools' }
   const ogDescs = {

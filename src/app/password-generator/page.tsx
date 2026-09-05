@@ -15,7 +15,7 @@ export async function generateMetadata({
   }
   const descriptions = {
     zh: '免费在线密码生成器:自定义长度、大小写、数字和符号,一键生成高强度随机密码。支持密码强度检测和一键复制,无需注册。',
-    en: 'Free online password generator: customize length, uppercase, lowercase, numbers, and symbols. One-click strong random password with strength meter. No signup.',
+    en: 'Free online password generator: customize length, uppercase, lowercase, numbers, and symbols. Strong random password with strength meter. No signup.',
   }
 
   return {

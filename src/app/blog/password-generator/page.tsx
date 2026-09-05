@@ -10,7 +10,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       : 'Password Generator Guide',
     description: lang === 'zh'
       ? '教你用密码生成器创建安全强密码,了解密码强度、长度和字符组合的最佳实践,保护你的在线账户安全。'
-      : 'Learn how to create strong passwords with a password generator. Best practices for password length, character mixing, and security tips to protect your online accounts.',
+      : 'Learn how to create strong passwords with a password generator. Best practices for length, character mixing, and security tips to protect your accounts.',
     alternates: {
       canonical: 'https://tools-site-production.up.railway.app/blog/password-generator',
       languages: { 'en-US': '/blog/password-generator', 'x-default': '/blog/password-generator' },

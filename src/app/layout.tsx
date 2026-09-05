@@ -214,7 +214,7 @@ export const metadata = {
     default: 'Practical Tools — 12 free online calculators & Utilities',
     template: '%s | Practical Tools',
   },
-  description: 'Free online calculators: discount, BMI, date countdown, lunar calendar, unit converter, QR code generator, word counter, JSON formatter, HEIC to JPG, invoice generator. No download needed, works instantly.',
+  description: 'Free online calculators: discount, BMI, countdown, lunar calendar, unit converter, QR code, word counter, JSON, HEIC to JPG, invoice. No signup.',
   openGraph: {
     type: 'website',
     locale: 'en_US',

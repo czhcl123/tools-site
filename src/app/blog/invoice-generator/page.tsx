@@ -10,7 +10,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       : 'Invoice Generator Guide',
     description: lang === 'zh'
       ? '发票生成器使用教程:填写客户信息、项目明细、税率,导出 PDF 发票,适用于自由职业和小企业。'
-      : 'How to use a free invoice generator: fill in client details, line items, tax rates, and export professional PDF invoices for freelancers and small businesses.',
+      : 'How to use a free invoice generator: fill in client details, line items, tax rates, and export professional PDF invoices for freelancers.',
     alternates: {
       canonical: 'https://tools-site-production.up.railway.app/blog/invoice-generator',
       languages: { 'en-US': '/blog/invoice-generator', 'x-default': '/blog/invoice-generator' },
