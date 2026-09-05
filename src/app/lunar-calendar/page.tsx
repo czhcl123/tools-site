@@ -147,7 +147,7 @@ export default async function LunarCalendarPage({
         <header className="bg-white shadow-sm sticky top-0 z-10">
           <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
             <a href="/" className="text-lg font-bold text-orange-500">🧮 {lang === 'zh' ? '实用计算器' : 'Practical Tools'}</a>
-            <a href={lang === 'zh' ? '/lunar-calendar?lang=en' : '/zh/lunar-calendar?lang=zh'} className="text-xs px-3 py-1 border border-gray-200 rounded-full hover:bg-gray-50">
+            <a href={lang === 'zh' ? '/lunar-calendar' : '/zh/lunar-calendar'} className="text-xs px-3 py-1 border border-gray-200 rounded-full hover:bg-gray-50">
               {lang === 'zh' ? 'EN' : '中文'}
             </a>
           </div>
