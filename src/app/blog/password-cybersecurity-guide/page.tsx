@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? '网络安全入门指南：从密码安全、双因素认证到钓鱼邮件防范，教你保护在线账户安全的基本技能，附带常见安全风险和应对方法清单。' : 'en'
   return {
     title: lang === 'zh' ? '网络安全入门：如何保护你的在线账户' : 'Cybersecurity 101 Guide',
     description: lang === 'zh' ? '密码安全、双因素认证、钓鱼防范,以及如何用密码生成器创建强密码。' : 'Password security, two-factor authentication, phishing prevention, and creating strong passwords.',

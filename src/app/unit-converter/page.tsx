@@ -10,7 +10,7 @@ export async function generateMetadata({
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
 
   const titles = {
-    zh: '单位换算器 - 长度/重量/温度即时互转',
+    zh: '免费在线单位换算器：支持长度、重量、温度、面积、体积等 30+ 种单位即时互转。涵盖米/英尺、公斤/磅、摄氏/华氏等常用换算，输入数值即出结果，无需注册，适合学生和职场人士。',
     en: 'Unit Converter — Length, Weight, Temp',
   }
   const descriptions = {

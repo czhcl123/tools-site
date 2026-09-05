@@ -10,7 +10,7 @@ export async function generateMetadata({
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
 
   const titles = {
-    zh: '农历转换器 - 公历转农历日期查询|实用计算器',
+    zh: '免费公历农历双向转换工具：输入任意日期即可查询对应的农历日期、天干地支、生肖属相和传统节日。覆盖 1900-2100 年共 200 年数据，支持中英双语，无需注册直接使用。',
     en: 'Lunar Calendar Converter — 2026 Free',
   }
   const descriptions = {

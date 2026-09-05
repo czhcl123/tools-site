@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? '自由职业者开票完全指南：从发票格式、必填信息、税率计算到电子发票生成，手把手教你制作专业发票，附带中英文模板和常见开票注意事项。' : 'en'
   return {
     title: lang === 'zh' ? '自由职业者开票指南：如何创建专业发票' : 'Freelancer Invoicing Guide',
     description: lang === 'zh' ? '自由职业者发票模板、必填字段、税务要点,以及如何用发票生成器快速创建。' : 'Freelancer invoice templates, required fields, tax considerations, and how to quickly create invoices.',

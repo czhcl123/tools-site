@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? 'BMI 和体脂率哪个更能反映健康？深入对比两种指标的优缺点，解读为什么健美运动员 BMI 偏高却很健康，以及如何结合腰围和体脂率做综合健康评估。' : 'en'
   return {
     title: lang === 'zh'
       ? 'BMI vs 体脂率：哪个更重要？'

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? 'BMI 分类完整解读：从偏瘦到肥胖的 5 个等级划分标准，WHO 全球标准和亚洲标准的具体数值对比，儿童/孕妇/老人等特殊人群的 BMI 评判差异。' : 'en'
   return {
     title: lang === 'zh'
       ? 'BMI 分类解读：你的数字到底意味着什么'

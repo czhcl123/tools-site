@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? 'HEIC 转 JPG 完全指南：详解 HEIC 和 JPG 格式的区别，教你用在线工具批量转换 iPhone 照片，对比不同转换工具的画质损失和速度，以及 HEIC 格式的最佳使用场景。' : 'en'
   return {
     title: lang === 'zh'
       ? 'HEIC 转 JPG 完全指南 — 苹果照片格式转换'

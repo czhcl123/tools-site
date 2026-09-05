@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? '折扣、优惠券和促销码到底有什么区别？全面对比三种常见促销方式的运作机制、使用场景和省钱技巧，帮你搞清楚什么时候该用哪种方式最划算。' : 'en'
   return {
     title: lang === 'zh'
       ? '折扣 vs 优惠券 vs 促销码：有什么区别？'

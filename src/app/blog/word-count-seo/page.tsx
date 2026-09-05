@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? '字数与 SEO 的关系完全解读：多少字的文章排名最好？深度内容和短内容各有什么 SEO 优势？如何根据关键词竞争度决定文章长度？' : 'en'
   return {
     title: lang === 'zh'
       ? '字数与 SEO：你的内容应该写多长？'

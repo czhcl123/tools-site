@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? 'JSON 格式化工具使用教程：如何一键美化压缩的 JSON 代码、验证语法错误、自定义缩进格式，配合实际 API 调试场景展示 JSON 工具的高效用法。' : 'en'
   return {
     title: lang === 'zh'
       ? 'JSON 格式化工具指南 — 在线美化和验证 JSON'

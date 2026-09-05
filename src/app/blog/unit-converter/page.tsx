@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? '单位换算完全指南：教你快速进行长度、重量、温度等常用单位的精确换算，附带实用换算表和出国旅行、学术研究等场景的换算技巧。' : 'en'
   return {
     title: lang === 'zh'
       ? '单位换算完全指南 — 长度重量温度一键转换'

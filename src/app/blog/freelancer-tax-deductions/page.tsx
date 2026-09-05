@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? '自由职业者税务减免完全指南：详解可申报的业务开支类别、家庭办公扣除、设备折旧、医疗保险扣除等常见减税项目，帮你合法减少税负。' : 'en'
   return {
     title: lang === 'zh'
       ? '自由职业者税务减免：哪些费用可以抵扣？'

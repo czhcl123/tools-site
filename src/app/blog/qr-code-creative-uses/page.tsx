@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? 'QR 码 20 种创意用法：从名片、菜单、WiFi 分享到艺术创作，探索二维码在日常生活和商业场景中的创新应用，激发你的 QR 码使用灵感。' : 'en'
   return {
     title: lang === 'zh'
       ? 'QR 码的20种创意用法'

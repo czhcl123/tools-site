@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? 'BMI 计算完全指南：教你用 BMI 计算器判断体重是否健康，详解 WHO 全球标准和亚洲人专属阈值的差异，男女 BMI 解读区别，以及 BMI 的局限性和更科学的体脂评估方法。' : 'en'
   return {
     title: lang === 'zh'
       ? 'BMI 计算器完全指南 — 体重指数怎么算'

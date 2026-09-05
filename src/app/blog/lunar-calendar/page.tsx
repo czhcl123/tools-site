@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? '农历转换完全指南：教你用在线工具快速查询任意日期的农历信息，包括天干地支、生肖属相、传统节日，覆盖 1900-2100 年共 200 年数据。' : 'en'
   return {
     title: lang === 'zh'
       ? '农历转换完全指南 — 公历农历互转'

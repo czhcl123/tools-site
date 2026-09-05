@@ -12,7 +12,7 @@ export async function generateMetadata({
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
 
   const titles = {
-    zh: '睡眠计算器 - 90 分钟周期反推最佳入睡/起床时间',
+    zh: '免费在线睡眠计算器：基于 90 分钟睡眠周期科学原理，输入起床时间自动反推最佳入睡时间，或输入计划入睡时间计算最佳起床时刻。支持深度睡眠和REM周期说明，帮你告别闹钟起床。',
     en: 'Sleep Calculator — Bedtime & Wake Up',
   }
   const descriptions = {

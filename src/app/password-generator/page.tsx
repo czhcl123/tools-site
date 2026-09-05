@@ -10,7 +10,7 @@ export async function generateMetadata({
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
 
   const titles = {
-    zh: '密码生成器 - 在线生成安全随机密码',
+    zh: '免费在线密码生成器：自定义密码长度(8-64位)、包含大写字母、小写字母、数字和特殊符号。一键生成高强度随机密码，内置密码强度检测器，支持一键复制，本地生成不上传。',
     en: 'Password Generator — Strong & Random',
   }
   const descriptions = {

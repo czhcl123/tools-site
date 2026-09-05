@@ -10,7 +10,7 @@ export async function generateMetadata({
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
 
   const titles = {
-    zh: 'BMI 计算器 - 免费在线体重指数计算',
+    zh: '免费在线 BMI 计算器：输入身高体重即刻得出身体质量指数(BMI)。支持 WHO 全球标准和亚洲人专属阈值，男女分类判断，公制/英制双单位，无需注册，数据本地处理保护隐私。',
     en: 'BMI Calculator — Free Online Tool',
   }
   const descriptions = {

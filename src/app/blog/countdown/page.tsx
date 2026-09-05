@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? '倒计时计算器使用完全指南：手把手教你设置生日倒计时、考试倒计时、项目截止日倒计时，实时跳秒显示剩余天数小时分钟秒数，还支持正计时模式记录已过去的时间。' : 'en'
   return {
     title: lang === 'zh'
       ? '日期倒计时计算指南 — 距离某天还有多少天'

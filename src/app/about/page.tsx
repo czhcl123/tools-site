@@ -13,7 +13,7 @@ export async function generateMetadata({
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
 
   const titles = {
-    zh: '关于我们 - 实用计算器',
+    zh: '了解实用计算器的使命和理念：10 个完全本地处理的免费在线工具，涵盖折扣计算、BMI、倒计时、农历转换等实用功能。无需注册、无广告、数据不上传，保护你的隐私安全。',
     en: 'About Practical Tools',
   }
   const descriptions = {

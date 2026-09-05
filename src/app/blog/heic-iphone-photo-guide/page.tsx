@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? 'iPhone 照片格式完全解读：HEIC 格式的由来和优势、为什么苹果选择 HEIC、如何在不同设备上查看 HEIC �照片，以及 HEIC 转 JPG 的最佳工具和方法。' : 'en'
   return {
     title: lang === 'zh' ? 'iPhone照片格式指南：HEIC vs JPG vs PNG' : 'iPhone HEIC Photo Format Guide',
     description: lang === 'zh' ? '详解iPhone照片格式区别,如何选择最佳格式,以及如何转换HEIC到JPG。' : 'Detailed comparison of iPhone photo formats, how to choose the best format, and converting HEIC to JPG.',

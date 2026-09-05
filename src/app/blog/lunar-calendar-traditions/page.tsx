@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? '中国农历与传统节日深度解读：从春节、元宵到中秋、除夕，详解每个传统节日的农历日期、起源故事和庆祝习俗，以及农历在现代生活中的应用。' : 'en'
   return {
     title: lang === 'zh' ? '农历与节日：中国传统历法详解' : 'Chinese Lunar Calendar Traditions',
     description: lang === 'zh' ? '农历原理、闰月规则、传统节日日期,以及如何用农历转换器查询。' : 'Lunar calendar principles, leap month rules, traditional festival dates, and how to use a lunar converter.',

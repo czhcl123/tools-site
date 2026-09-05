@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? '公制 vs 英制单位全面对比：从米/英尺、公斤/磅到摄氏/华氏，详解两套计量体系的换算关系、使用国家和地区，以及出国旅行时的实用换算技巧。' : 'en'
   return {
     title: lang === 'zh'
       ? '公制 vs 英制：完整对比指南'

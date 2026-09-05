@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? '倒计时如何影响我们的心理和行为？从稀缺效应到紧迫感驱动，解析倒计时背后的心理学原理，以及商家如何利用倒计时促销影响消费者决策。' : 'en'
   return {
     title: lang === 'zh'
       ? '倒计时心理学：为什么倒计时器如此有效'

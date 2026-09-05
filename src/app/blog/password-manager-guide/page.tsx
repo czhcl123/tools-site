@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? '密码管理器完全指南：对比主流密码管理器的功能和安全性，教你如何安全地存储和管理所有账户密码，以及从记忆密码到密码管理器的迁移步骤。' : 'en'
   return {
     title: lang === 'zh'
       ? '密码管理器指南：保护你的所有密码'

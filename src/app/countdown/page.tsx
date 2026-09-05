@@ -10,7 +10,7 @@ export async function generateMetadata({
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
 
   const titles = {
-    zh: '倒计时计算器 - 距任意日期还有几天几小时几分钟几秒',
+    zh: '在线倒计时计算器：选择任意目标日期和时间，实时跳秒显示距离目标还有几天几小时几分钟几秒。支持正计时和倒计时两种模式，可用于考试倒计时、生日倒计时、项目截止日等场景，免费无需注册。',
     en: 'Countdown Calculator — Days Until Date',
   }
   const descriptions = {

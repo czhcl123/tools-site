@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? 'QR 码营销完全指南：如何用二维码提升门店流量、产品追踪和客户互动，附带各行业成功案例和最佳实践，帮你制定有效的 QR 码营销策略。' : 'en'
   return {
     title: lang === 'zh' ? 'QR码营销：商业应用完全指南' : 'QR Code Marketing Guide',
     description: lang === 'zh' ? '如何用QR码提升营销效果、门店引流、产品追溯,以及QR码最佳实践。' : 'How to use QR codes for marketing, store traffic, product tracking, and QR code best practices.',

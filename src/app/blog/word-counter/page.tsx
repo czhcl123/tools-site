@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? '字数统计工具使用完全教程：如何用在线工具实时统计中英文字符数、单词数和阅读时间，配合写作和 SEO 优化场景的实用技巧。' : 'en'
   return {
     title: lang === 'zh'
       ? '字数统计工具指南 — 精确统计中英文字符数'

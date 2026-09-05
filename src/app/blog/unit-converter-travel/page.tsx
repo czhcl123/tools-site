@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? '旅行单位换算完全攻略：出国旅行必备的温度、距离、重量、货币换算技巧，覆盖美国、欧洲、日本等热门目的地的常用单位对照表。' : 'en'
   return {
     title: lang === 'zh' ? '旅行指南：国际单位换算完全手册' : 'Travel Unit Conversion Guide',
     description: lang === 'zh' ? '出国旅行必备单位换算：长度、温度、重量、速度,以及常用换算速查表。' : 'Essential unit conversions for international travel: length, temperature, weight, speed, with quick reference tables.',

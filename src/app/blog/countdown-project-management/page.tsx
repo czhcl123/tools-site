@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? '如何用倒计时工具提升项目管理效率？介绍 sprint 倒计时、里程碑追踪、deadline 可视化等实用技巧，配合真实案例展示倒计时如何帮助团队保持紧迫感和专注度。' : 'en'
   return {
     title: lang === 'zh'
       ? '项目管理：用倒计时提高工作效率'

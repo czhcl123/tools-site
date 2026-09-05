@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? 'HEIC vs JPEG vs PNG 三大图片格式全面对比：从文件大小、画质、兼容性、透明度支持等维度详细分析，帮你根据不同场景选择最合适的图片格式。' : 'en'
   return {
     title: lang === 'zh'
       ? 'HEIC vs JPEG vs PNG：应该用哪种图片格式？'

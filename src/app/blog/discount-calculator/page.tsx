@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? '折扣计算器完全使用教程：如何快速计算各种折扣力度下的实际支付金额，对比「打折」和「满减」的真实优惠力度，避免双十一、618 等大促期间的数学陷阱。' : 'en'
   return {
     title: lang === 'zh'
       ? '折扣计算器使用指南 — 如何快速计算折扣价格'

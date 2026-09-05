@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? '写作字数统计技巧：如何利用字数统计工具提升写作效率，设定字数目标、控制文章长度，以及不同类型内容(博客、学术论文、社交媒体)的最佳字数建议。' : 'en'
   return {
     title: lang === 'zh' ? '写作技巧：如何用字数统计提高写作效率' : 'Writing Tips for Word Count',
     description: lang === 'zh' ? '字数统计工具的使用技巧、不同场景的字数要求,以及如何规划写作目标。' : 'Word counter tool tips, word count requirements for different scenarios, and how to plan writing goals.',

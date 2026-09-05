@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? 'JSON vs XML vs YAML 三种数据格式全面对比：从可读性、文件大小、解析速度、使用场景等维度分析，帮你选择最适合项目需求的数据格式。' : 'en'
   return {
     title: lang === 'zh'
       ? 'JSON vs XML vs YAML：什么时候用哪种格式？'

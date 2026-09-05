@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'zh' : 'en'
+  const lang = sp.lang === 'zh' ? '月相园艺指南：根据月亮周期安排播种、移栽和收获时间，了解月相 gardening 的科学原理和实践方法，让你的花园和菜园产量更高。' : 'en'
   return {
     title: lang === 'zh'
       ? ' lunar 园艺指南：按月亮种植'
