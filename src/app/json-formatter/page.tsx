@@ -11,7 +11,7 @@ export async function generateMetadata({
 
   const data = {
     zh: {
-      title: 'JSON 格式化 - 在线 API 调试器与验证器',
+      title: 'JSON Formatter — Validate & Beautify',
       description: '免费 JSON 格式化与验证工具：粘贴 JSON 一键美化、压缩、验证。自定义缩进，错误精确到行列号。本地处理，数据安全。',
     },
     en: {

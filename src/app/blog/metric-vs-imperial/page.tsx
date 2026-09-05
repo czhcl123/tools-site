@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '公制 vs 英制：完整对比指南'
-      : 'Metric vs Imperial: A Complete Comparison',
+      : 'Metric vs Imperial Units',
     description: lang === 'zh'
       ? '公制和英制单位的完整对比：历史、使用国家、换算表（长度、重量、温度），为什么公制更简单。'
       : 'Complete metric vs imperial comparison: history, countries, conversion tables (length, weight, temperature), and why metric is easier.',

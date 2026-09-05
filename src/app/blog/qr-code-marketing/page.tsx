@@ -5,7 +5,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
-    title: lang === 'zh' ? 'QR码营销：商业应用完全指南' : 'QR Code Marketing: Complete Business Application Guide',
+    title: lang === 'zh' ? 'QR码营销：商业应用完全指南' : 'QR Code Marketing Guide',
     description: lang === 'zh' ? '如何用QR码提升营销效果、门店引流、产品追溯,以及QR码最佳实践。' : 'How to use QR codes for marketing, store traffic, product tracking, and QR code best practices.',
     alternates: {
       canonical: 'https://tools-site-production.up.railway.app/blog/qr-code-marketing',

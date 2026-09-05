@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '密码管理器指南：保护你的所有密码'
-      : 'Password Manager Guide: Keep All Your Passwords Safe',
+      : 'Password Manager Guide',
     description: lang === 'zh'
       ? '为什么需要密码管理器，它们如何工作，选择要点，主密码技巧，以及生成密码 vs 记忆密码。'
       : 'Why you need a password manager, how they work, key features, master password tips, and generated vs remembered passwords.',

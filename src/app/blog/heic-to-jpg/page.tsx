@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? 'HEIC 转 JPG 完全指南 — 苹果照片格式转换'
-      : 'HEIC to JPG Converter Guide — Convert Apple Photos',
+      : 'HEIC to JPG Conversion Guide',
     description: lang === 'zh'
       ? 'HEIC 转 JPG 完整教程:什么是 HEIC 格式、为什么需要转换、在线免费转换方法和注意事项。'
       : 'What is HEIC? Why convert HEIC to JPG? Free online conversion method, quality settings, and everything you need to know.',

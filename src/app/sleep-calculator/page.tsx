@@ -13,7 +13,7 @@ export async function generateMetadata({
 
   const titles = {
     zh: '睡眠计算器 - 90 分钟周期反推最佳入睡/起床时间',
-    en: 'Sleep Calculator - 90-Minute Cycle, Best Bedtime & Wake Time',
+    en: 'Sleep Calculator — Bedtime & Wake Up',
   }
   const descriptions = {
     zh: '免费在线睡眠计算器:输入起床时间反推最佳入睡时间(90 分钟周期),或输入入睡时间反推最佳起床时间。支持深度睡眠/REM 周期说明,无需注册。',

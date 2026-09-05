@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? 'QR 码的20种创意用法'
-      : '20 Creative Ways to Use QR Codes',
+      : '20 Creative QR Code Uses',
     description: lang === 'zh'
       ? 'QR 码创意应用大全：餐厅菜单、名片、活动门票、Wi-Fi 分享、产品包装、社交媒体、教育场景。'
       : 'Creative QR code uses: restaurant menus, business cards, event tickets, Wi-Fi sharing, product packaging, social media, education.',

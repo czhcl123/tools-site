@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '密码生成器使用指南 — 如何创建安全强密码'
-      : 'Password Generator Guide — How to Create Strong, Secure Passwords',
+      : 'Password Generator Guide',
     description: lang === 'zh'
       ? '教你用密码生成器创建安全强密码,了解密码强度、长度和字符组合的最佳实践,保护你的在线账户安全。'
       : 'Learn how to create strong passwords with a password generator. Best practices for password length, character mixing, and security tips to protect your online accounts.',

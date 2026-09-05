@@ -11,7 +11,7 @@ export async function generateMetadata({
 
   const titles = {
     zh: 'BMI 计算器 - 免费在线体重指数计算',
-    en: 'BMI Calculator - Free Online Body Mass Index Calculator',
+    en: 'BMI Calculator — Free Online Tool',
   }
   const descriptions = {
     zh: '免费在线 BMI 计算器:输入身高体重即出体重指数,支持亚洲人阈值,男女分类判断,无需注册。',

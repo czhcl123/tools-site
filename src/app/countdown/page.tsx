@@ -11,7 +11,7 @@ export async function generateMetadata({
 
   const titles = {
     zh: '倒计时计算器 - 距任意日期还有几天几小时几分钟几秒',
-    en: 'Countdown Calculator - Days Until Any Date, Live Timer',
+    en: 'Countdown Calculator — Days Until Date',
   }
   const descriptions = {
     zh: '在线倒计时计算器:实时跳秒,选择目标日期+时间,显示还有几天几小时几分钟几秒。也支持距今已过去天数模式,免费无需注册。',

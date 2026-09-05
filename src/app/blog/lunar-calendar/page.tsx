@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '农历转换完全指南 — 公历农历互转'
-      : 'Chinese Lunar Calendar Converter Guide — Solar to Lunar Date',
+      : 'Lunar Calendar Converter Guide',
     description: lang === 'zh'
       ? '公历转农历、农历转公历的完整教程,含天干地支、生肖、节气解读和使用场景。'
       : 'How to convert solar dates to Chinese lunar dates and back. Includes Heavenly Stems, Chinese zodiac, solar terms, and real use cases.',

@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? 'BMI 分类解读：你的数字到底意味着什么'
-      : 'BMI Categories Explained: What Your Number Really Means',
+      : 'BMI Categories Explained',
     description: lang === 'zh'
       ? 'BMI 分类标准详解：偏瘦、正常、超重、肥胖的界限在哪里？了解 BMI 的局限性和更准确的身体评估方法。'
       : 'BMI categories explained: underweight, normal, overweight, obese ranges. Learn BMI limitations and more accurate body assessment methods.',

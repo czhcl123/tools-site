@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? 'BMI 计算器完全指南 — 体重指数怎么算'
-      : 'BMI Calculator Guide — How to Calculate Body Mass Index',
+      : 'BMI Calculator Guide',
     description: lang === 'zh'
       ? 'BMI 计算公式、亚洲人标准、男女差异,以及如何用 BMI 计算器判断体重是否健康。'
       : 'BMI formula, WHO Asian thresholds, gender differences, and how to use an online BMI calculator to check if your weight is healthy.',

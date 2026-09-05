@@ -11,7 +11,7 @@ export async function generateMetadata({
 
   const titles = {
     zh: '密码生成器 - 在线生成安全随机密码',
-    en: 'Password Generator - Create Strong Random Passwords Online',
+    en: 'Password Generator — Strong & Random',
   }
   const descriptions = {
     zh: '免费在线密码生成器:自定义长度、大小写、数字和符号,一键生成高强度随机密码。支持密码强度检测和一键复制,无需注册。',

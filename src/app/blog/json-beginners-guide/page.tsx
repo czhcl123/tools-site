@@ -5,7 +5,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
-    title: lang === 'zh' ? 'JSON入门：数据格式详解与格式化技巧' : 'JSON for Beginners: Data Format Guide and Formatting Tips',
+    title: lang === 'zh' ? 'JSON入门：数据格式详解与格式化技巧' : 'JSON for Beginners Guide',
     description: lang === 'zh' ? '什么是JSON、语法规则、常见错误,以及如何用JSON格式化工具快速美化代码。' : 'What is JSON, syntax rules, common errors, and how to format code with JSON formatter tools.',
     alternates: {
       canonical: 'https://tools-site-production.up.railway.app/blog/json-beginners-guide',

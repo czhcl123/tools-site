@@ -11,7 +11,7 @@ export async function generateMetadata({
 
   const data = {
     zh: {
-      title: 'HEIC 转 JPG - iPhone 照片批量转换',
+      title: 'HEIC to JPG — Batch Convert Photos',
       description: '免费在线 HEIC 转 JPG 工具:批量转换 iPhone 照片,30 秒处理 100 张。无需上传,本地处理保护隐私。',
     },
     en: {

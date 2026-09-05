@@ -11,7 +11,7 @@ export async function generateMetadata({
 
   const titles = {
     zh: '单位换算器 - 长度/重量/温度即时互转',
-    en: 'Unit Converter - cm to inches, kg to lb, °C to °F',
+    en: 'Unit Converter — Length, Weight, Temp',
   }
   const descriptions = {
     zh: '免费在线单位换算器:长度、重量、温度等 30+ 单位即时互转,无需注册,无广告。',

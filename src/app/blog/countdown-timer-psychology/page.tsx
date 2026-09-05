@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '倒计时心理学：为什么倒计时器如此有效'
-      : 'The Psychology of Countdown Timers: Why They Work',
+      : 'Psychology of Countdown Timers',
     description: lang === 'zh'
       ? '倒计时器如何利用紧迫感和稀缺性提升转化率？了解倒计时心理学原理和实际应用场景。'
       : 'How countdown timers use urgency and scarcity to boost conversions? Learn the psychology behind countdown timers and practical use cases.',

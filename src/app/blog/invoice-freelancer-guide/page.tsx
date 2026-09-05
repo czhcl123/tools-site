@@ -5,7 +5,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
-    title: lang === 'zh' ? '自由职业者开票指南：如何创建专业发票' : 'Freelancer Invoicing Guide: How to Create Professional Invoices',
+    title: lang === 'zh' ? '自由职业者开票指南：如何创建专业发票' : 'Freelancer Invoicing Guide',
     description: lang === 'zh' ? '自由职业者发票模板、必填字段、税务要点,以及如何用发票生成器快速创建。' : 'Freelancer invoice templates, required fields, tax considerations, and how to quickly create invoices.',
     alternates: {
       canonical: 'https://tools-site-production.up.railway.app/blog/invoice-freelancer-guide',

@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? 'BMI vs 体脂率：哪个更重要？'
-      : 'BMI vs Body Fat: Which Matters More for Health?',
+      : 'BMI vs Body Fat — Which Matters?',
     description: lang === 'zh'
       ? 'BMI和体脂率的区别,各自的优缺点,以及如何结合使用判断健康状况。'
       : 'The difference between BMI and body fat percentage, their pros and cons, and how to use both for accurate health assessment.',

@@ -11,7 +11,7 @@ export async function generateMetadata({
 
   const data = {
     zh: {
-      title: '字数统计 - 中英文混排实时计数',
+      title: 'Word Counter — Characters & Sentences',
       description: '免费在线字数统计：中英文实时统计字数、字符、句子和段落，含阅读时间估算。无需注册，数据本地处理。',
     },
     en: {

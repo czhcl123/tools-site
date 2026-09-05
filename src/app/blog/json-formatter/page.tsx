@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? 'JSON 格式化工具指南 — 在线美化和验证 JSON'
-      : 'JSON Formatter Guide — Format, Validate & Beautify JSON',
+      : 'JSON Formatter Guide',
     description: lang === 'zh'
       ? 'JSON 格式化工具使用教程:美化、压缩、验证 JSON 数据,含常见错误修复和开发者技巧。'
       : 'How to use a JSON formatter to beautify, minify, and validate JSON data. Includes common error fixes and developer tips.',

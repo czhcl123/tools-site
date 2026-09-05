@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '自由职业者税务减免：哪些费用可以抵扣？'
-      : 'Freelancer Tax Deductions: What You Can Write Off',
+      : 'Freelancer Tax Deductions Guide',
     description: lang === 'zh'
       ? '自由职业者常见税务减免项目：家庭办公室、设备、软件、差旅费，以及如何正确记录发票和开支。'
       : 'Common freelancer tax deductions: home office, equipment, software, travel expenses, and how to properly track invoices.',

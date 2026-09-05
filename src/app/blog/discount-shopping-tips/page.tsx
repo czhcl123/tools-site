@@ -5,7 +5,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
-    title: lang === 'zh' ? '购物省钱技巧：如何用折扣计算器' : 'Shopping Savings Tips: How to Use a Discount Calculator',
+    title: lang === 'zh' ? '购物省钱技巧：如何用折扣计算器' : 'Shopping Savings Tips',
     description: lang === 'zh' ? '教你用折扣计算器比较优惠、计算真实折扣、避免购物陷阱。' : 'Learn to compare deals, calculate real discounts, and avoid shopping traps with a discount calculator.',
     alternates: {
       canonical: 'https://tools-site-production.up.railway.app/blog/discount-shopping-tips',

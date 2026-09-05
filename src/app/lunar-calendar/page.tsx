@@ -11,7 +11,7 @@ export async function generateMetadata({
 
   const titles = {
     zh: '农历转换器 - 公历转农历日期查询|实用计算器',
-    en: 'Gregorian to Lunar Calendar Converter 2026 - Free Online Tool',
+    en: 'Lunar Calendar Converter — 2026 Free',
   }
   const descriptions = {
     zh: '免费公历农历双向转换工具:输入日期即可查询农历、生肖、干支、传统节日,覆盖 1900-2100 年,无需注册。',

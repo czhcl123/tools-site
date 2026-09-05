@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '睡眠计算器使用指南 — 90分钟睡眠周期计算'
-      : 'Sleep Calculator Guide — 90-Minute Sleep Cycle Calculation',
+      : 'Sleep Calculator Guide',
     description: lang === 'zh'
       ? '教你用睡眠计算器根据90分钟睡眠周期计算最佳入睡和起床时间,提升睡眠质量。'
       : 'Learn how to use a sleep calculator based on 90-minute sleep cycles to find the best bedtime and wake time for better sleep quality.',

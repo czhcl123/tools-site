@@ -5,7 +5,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
-    title: lang === 'zh' ? '睡眠科学：为什么8小时睡眠不一定够' : 'Sleep Science: Why 8 Hours May Not Be Enough',
+    title: lang === 'zh' ? '睡眠科学：为什么8小时睡眠不一定够' : 'Sleep Science Guide',
     description: lang === 'zh' ? '睡眠科学原理、个体差异、睡眠质量评估,以及如何优化你的睡眠。' : 'Sleep science principles, individual differences, sleep quality assessment, and how to optimize your sleep.',
     alternates: {
       canonical: 'https://tools-site-production.up.railway.app/blog/sleep-science-guide',

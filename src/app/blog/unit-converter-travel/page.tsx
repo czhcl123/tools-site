@@ -5,7 +5,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
-    title: lang === 'zh' ? '旅行指南：国际单位换算完全手册' : 'Travel Guide: Complete International Unit Conversion Handbook',
+    title: lang === 'zh' ? '旅行指南：国际单位换算完全手册' : 'Travel Unit Conversion Guide',
     description: lang === 'zh' ? '出国旅行必备单位换算：长度、温度、重量、速度,以及常用换算速查表。' : 'Essential unit conversions for international travel: length, temperature, weight, speed, with quick reference tables.',
     alternates: {
       canonical: 'https://tools-site-production.up.railway.app/blog/unit-converter-travel',

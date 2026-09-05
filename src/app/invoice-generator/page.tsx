@@ -11,7 +11,7 @@ export async function generateMetadata({
 
   const data = {
     zh: {
-      title: '免费发票生成器 - 一键生成PDF发票',
+      title: 'Invoice Generator — Free PDF Maker',
       description: '免费发票生成器:输入商家、客户和商品信息,一键生成专业 PDF 发票。支持多币种、自定义税率,无需注册。',
     },
     en: {

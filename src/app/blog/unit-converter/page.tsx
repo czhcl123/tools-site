@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '单位换算完全指南 — 长度重量温度一键转换'
-      : 'Unit Converter Guide — Length, Weight, Temperature Conversion',
+      : 'Unit Converter Guide',
     description: lang === 'zh'
       ? '长度、重量、温度、面积、体积单位换算教程,含公制英制对照和常见换算公式。'
       : 'How to convert units: length, weight, temperature, area, volume. Metric-imperial conversion tables and formulas included.',

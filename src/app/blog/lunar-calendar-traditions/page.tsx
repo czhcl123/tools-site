@@ -5,7 +5,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
-    title: lang === 'zh' ? '农历与节日：中国传统历法详解' : 'Lunar Calendar and Festivals: Chinese Traditional Calendar Guide',
+    title: lang === 'zh' ? '农历与节日：中国传统历法详解' : 'Chinese Lunar Calendar Traditions',
     description: lang === 'zh' ? '农历原理、闰月规则、传统节日日期,以及如何用农历转换器查询。' : 'Lunar calendar principles, leap month rules, traditional festival dates, and how to use a lunar converter.',
     alternates: {
       canonical: 'https://tools-site-production.up.railway.app/blog/lunar-calendar-traditions',

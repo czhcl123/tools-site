@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '午睡计算器：你应该午睡多久？科学午睡指南'
-      : 'Nap Calculator: How Long Should You Nap? Science-Based Guide',
+      : 'Nap Calculator Guide',
     description: lang === 'zh'
       ? '用午睡计算器找到最佳午睡时长。20分钟小睡 vs 90分钟全周期,哪种适合你？科学午睡提升精力。'
       : 'Use a nap calculator to find your ideal nap length. 20-minute power nap vs 90-minute full cycle — which is right for you? Boost energy with science-based napping.',

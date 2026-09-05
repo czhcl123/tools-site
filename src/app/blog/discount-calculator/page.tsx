@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '折扣计算器使用指南 — 如何快速计算折扣价格'
-      : 'How to Use a Discount Calculator — Quick Guide',
+      : 'Discount Calculator Guide',
     description: lang === 'zh'
       ? '教你用折扣计算器快速算出打折后的价格和省钱金额,含公式、实例和常见场景。'
       : 'Learn how to use a discount calculator to find sale prices, savings, and multi-step discounts. Includes formulas and real examples.',

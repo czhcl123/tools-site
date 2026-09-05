@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '项目管理：用倒计时提高工作效率'
-      : 'Project Management: Using Countdown Timers to Boost Productivity',
+      : 'Countdown Timers for Productivity',
     description: lang === 'zh'
       ? '如何用倒计时工具管理项目截止日期、提高团队效率、避免拖延症。'
       : 'How to use countdown timers for project deadline management, team efficiency, and overcoming procrastination.',

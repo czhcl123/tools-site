@@ -5,7 +5,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
-    title: lang === 'zh' ? 'iPhone照片格式指南：HEIC vs JPG vs PNG' : 'iPhone Photo Format Guide: HEIC vs JPG vs PNG',
+    title: lang === 'zh' ? 'iPhone照片格式指南：HEIC vs JPG vs PNG' : 'iPhone HEIC Photo Format Guide',
     description: lang === 'zh' ? '详解iPhone照片格式区别,如何选择最佳格式,以及如何转换HEIC到JPG。' : 'Detailed comparison of iPhone photo formats, how to choose the best format, and converting HEIC to JPG.',
     alternates: {
       canonical: 'https://tools-site-production.up.railway.app/blog/heic-iphone-photo-guide',

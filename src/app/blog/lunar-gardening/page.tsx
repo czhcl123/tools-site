@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? ' lunar 园艺指南：按月亮种植'
-      : 'Lunar Gardening Guide: Plant by the Moon',
+      : 'Lunar Gardening Guide',
     description: lang === 'zh'
       ? ' lunar 园艺法：月相与种植的关系，上弦月和下弦月的活动建议，以及科学证据。'
       : 'Lunar gardening: how moon phases affect planting, waxing vs waning moon activities, scientific evidence, and practical tips.',

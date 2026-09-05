@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '字数与 SEO：你的内容应该写多长？'
-      : 'Word Count and SEO: How Long Should Your Content Be?',
+      : 'Word Count and SEO',
     description: lang === 'zh'
       ? '不同内容类型的理想字数：博客、产品页、元描述。Google 对内容长度的看法，质量 vs 数量。'
       : 'Ideal word counts by content type: blog posts, product pages, meta descriptions. Google\'s stance on content length, quality vs quantity.',

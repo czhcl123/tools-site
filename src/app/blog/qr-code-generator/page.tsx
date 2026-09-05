@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? 'QR 码生成器使用指南 — 如何生成二维码'
-      : 'QR Code Generator Guide — How to Create a QR Code',
+      : 'QR Code Generator Guide',
     description: lang === 'zh'
       ? '教你用 QR 码生成器创建二维码,支持网址、文本、WiFi、联系方式,含使用技巧和场景。'
       : 'Learn how to generate QR codes for URLs, text, WiFi, and contacts. Includes tips, best practices, and real-world use cases.',

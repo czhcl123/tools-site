@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '发票生成器使用指南 — 免费创建专业发票'
-      : 'Invoice Generator Guide — Create Professional Invoices Free',
+      : 'Invoice Generator Guide',
     description: lang === 'zh'
       ? '发票生成器使用教程:填写客户信息、项目明细、税率,导出 PDF 发票,适用于自由职业和小企业。'
       : 'How to use a free invoice generator: fill in client details, line items, tax rates, and export professional PDF invoices for freelancers and small businesses.',

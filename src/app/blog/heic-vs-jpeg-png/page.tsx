@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? 'HEIC vs JPEG vs PNG：应该用哪种图片格式？'
-      : 'HEIC vs JPEG vs PNG: Which Image Format Should You Use?',
+      : 'HEIC vs JPEG vs PNG Compared',
     description: lang === 'zh'
       ? 'HEIC、JPEG、PNG 三种图片格式的详细对比：文件大小、画质、适用场景，以及社交媒体平台的格式要求。'
       : 'Detailed comparison of HEIC, JPEG, and PNG: file size, quality, use cases, and social media platform format requirements.',
