@@ -155,12 +155,46 @@ const faqSchemaEn = {
 const seoBodyZh = (
   <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
     <p>输入公历日期,立刻查到对应的农历、生肖、干支和传统节日。覆盖 1900-2100 年,支持反向查询(农历转公历),命理八字、节日规划必备。</p>
+    <h3 className="font-semibold text-gray-700 mt-4">什么是公历转农历?</h3>
+    <p>公历(格里高利历)是全球通用的太阳历,以地球绕太阳一圈(约 365.24 天)为一年。农历是中国传统的阴阳合历,月份按月相变化(朔望月约 29.5 天),年份通过闰月与太阳年同步。两套历法的日期不对应,所以需要转换工具。</p>
+    <h3 className="font-semibold text-gray-700 mt-4">2026 年重要农历日期</h3>
+    <ul className="list-disc list-inside space-y-1">
+      <li>春节(正月初一) — 2 月 17 日</li>
+      <li>元宵节(正月十五) — 3 月 3 日</li>
+      <li>端午节(五月初五) — 5 月 31 日</li>
+      <li>中秋节(八月十五) — 10 月 6 日</li>
+      <li>除夕(腊月三十) — 2027 年 2 月 5 日</li>
+    </ul>
+    <h3 className="font-semibold text-gray-700 mt-4">适用场景</h3>
+    <ul className="list-disc list-inside space-y-1">
+      <li><strong>命理八字</strong> — 根据农历出生日期推算五行、生肖</li>
+      <li><strong>节日规划</strong> — 提前查春节、中秋等农历节日的公历日期</li>
+      <li><strong>传统择日</strong> — 结婚、搬家、开业参考黄历宜忌</li>
+      <li><strong>文化研究</strong> — 了解干支纪年、天干地支对应关系</li>
+    </ul>
   </div>
 )
 
 const seoBodyEn = (
   <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
     <p>Enter any Gregorian date to instantly see the Chinese lunar date, zodiac year, heavenly stem, and traditional festivals. Covers 1900-2100 with reverse lookup — perfect for astrology, family events, and cultural planning.</p>
+    <h3 className="font-semibold text-gray-700 mt-4">What Is a Gregorian to Lunar Converter?</h3>
+    <p>The Gregorian calendar (solar calendar) is used worldwide, with 365.24 days per year. The Chinese lunar calendar is lunisolar: months follow the Moon's 29.5-day cycle, while the year is aligned with the Sun through leap months. Since the two systems don't match, a converter translates dates between them.</p>
+    <h3 className="font-semibold text-gray-700 mt-4">Key Lunar Dates in 2026</h3>
+    <ul className="list-disc list-inside space-y-1">
+      <li>Chinese New Year (Jan 1) — February 17</li>
+      <li>Lantern Festival (Jan 15) — March 3</li>
+      <li>Dragon Boat Festival (May 5) — May 31</li>
+      <li>Mid-Autumn Festival (Aug 15) — October 6</li>
+      <li>Chinese New Year's Eve 2027 — February 5</li>
+    </ul>
+    <h3 className="font-semibold text-gray-700 mt-4">Common Use Cases</h3>
+    <ul className="list-disc list-inside space-y-1">
+      <li><strong>Bazi (Four Pillars)</strong> — calculate zodiac and five elements from birth date</li>
+      <li><strong>Festival planning</strong> — find Gregorian dates for lunar holidays</li>
+      <li><strong>Auspicious date selection</strong> — weddings, moves, business openings</li>
+      <li><strong>Cultural research</strong> — explore the stem-branch cycle and zodiac system</li>
+    </ul>
   </div>
 )
 
