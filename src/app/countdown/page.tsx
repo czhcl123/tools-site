@@ -139,12 +139,14 @@ const faqSchemaEn = {
 const seoBodyZh = (
   <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
     <p>输入目标日期,立刻算出距离今天还有多少天。支持生日倒计时、节假日倒计时、考试/截止日期倒计时,也能统计排除周末和节假日后的工作日数。</p>
+    <p>想倒计时春节、中秋等农历节日？先用<a href="/lunar-calendar" className="text-orange-500 hover:underline">农历转换器</a>查出对应的公历日期,再来倒计时。</p>
   </div>
 )
 
 const seoBodyEn = (
   <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
     <p>Enter any target date and instantly see how many days remain. Perfect for birthdays, holidays, exam deadlines, and project timelines. Also counts working days excluding weekends and public holidays.</p>
+    <p>Counting down to Chinese New Year or Mid-Autumn Festival? Use our <a href="/lunar-calendar" className="text-orange-500 hover:underline">lunar calendar converter</a> first to find the exact Gregorian date.</p>
   </div>
 )
 

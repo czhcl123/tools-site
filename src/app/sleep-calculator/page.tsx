@@ -157,12 +157,14 @@ const faqSchemaEn = {
 const seoBodyZh = (
   <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
     <p>基于 90 分钟睡眠周期,输入你几点睡觉或几点起床,算出最佳入睡/起床时间,让你醒来时不犯困。</p>
+    <p>传统说法认为农历初一和十五的月相会影响睡眠质量,可以用<a href="/lunar-calendar" className="text-orange-500 hover:underline">农历转换器</a>查看月相日期。</p>
   </div>
 )
 
 const seoBodyEn = (
   <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
     <p>Based on 90-minute sleep cycles, enter your bedtime or wake-up time to find the optimal schedule. Wake up feeling refreshed instead of groggy — no more alarm clock fatigue.</p>
+    <p>Some believe moon phases affect sleep quality. Check full moon dates with our <a href="/lunar-calendar" className="text-orange-500 hover:underline">lunar calendar converter</a>.</p>
   </div>
 )
 

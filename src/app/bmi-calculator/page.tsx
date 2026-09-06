@@ -47,6 +47,7 @@ const seoBodyZh = (
       <li>🔴 肥胖：≥ 28.0</li>
     </ul>
     <p className="text-xs text-gray-400 mt-4">数据仅供参考，不能替代医学诊断。</p>
+    <p>想了解出生日期对应的生肖和五行体质？试试<a href="/lunar-calendar" className="text-orange-500 hover:underline">农历转换器</a>。</p>
   </div>
 )
 
@@ -64,6 +65,7 @@ const seoBodyEn = (
       <li>🔴 Obese: ≥ 28.0</li>
     </ul>
     <p className="text-xs text-gray-400 mt-4">For reference only. Not a substitute for medical advice.</p>
+    <p>Curious about your Chinese zodiac and Five Elements based on birth date? Try our <a href="/lunar-calendar" className="text-orange-500 hover:underline">lunar calendar converter</a>.</p>
   </div>
 )
 
