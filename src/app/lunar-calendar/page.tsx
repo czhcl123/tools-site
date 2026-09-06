@@ -11,7 +11,7 @@ export async function generateMetadata({
 
   const titles = {
     zh: '免费公历农历双向转换工具：输入任意日期即可查询对应的农历日期、天干地支、生肖属相和传统节日。覆盖 1900-2100 年共 200 年数据，支持中英双语，无需注册直接使用。',
-    en: 'Gregorian to Lunar Calendar Converter — Free 2026 Tool',
+    en: 'Gregorian to Lunar Calendar Converter',
   }
   const descriptions = {
     zh: '免费公历农历双向转换工具:输入日期即可查询农历、生肖、干支、传统节日,覆盖 1900-2100 年,无需注册。',
