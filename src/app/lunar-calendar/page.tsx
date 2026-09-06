@@ -78,6 +78,22 @@ const faqSchemaZh = {
         text: '农历通过 19 年 7 闰的规则让总天数跟公历年相近。出现闰月时,当年有 13 个月,例如 2020 年闰四月。闰月不算独立月份,只是把前一个月的天数拉长。本工具会标明"闰月"标识(如"闰四月初一"),方便买日历、挑日子、合八字等场景。',
       },
     },
+    {
+      '@type': 'Question',
+      name: '如何将公历日期转换为农历?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '在本页面上方的输入框中选择或输入公历日期(年/月/日),点击"查询"即可 instantly 显示对应的农历日期、生肖年、天干地支和传统节日。支持 1900-2100 年范围内的任意日期转换。',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '任何公历日期都能转换成农历吗?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '本工具覆盖 1900 年 1 月 1 日至 2100 年 12 月 31 日之间的所有公历日期。超出此范围的日期暂不支持。对于范围内的日期,无论是否为闰月,都能准确转换。',
+      },
+    },
   ],
 }
 
@@ -115,6 +131,22 @@ const faqSchemaEn = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'The Chinese calendar uses the Metonic 19-year cycle with 7 leap months to keep lunar and solar years aligned. In a leap year, there are 13 lunar months; the leap month takes the same number as the previous month (e.g. "leap 4th month"). The total of days is ~384 in a leap year vs ~354 in a regular one. The tool labels leap-month days explicitly (like 闰四月初一), useful for planning weddings, moves, or consulting the almanac (黄历).',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I convert a Gregorian date to lunar calendar?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Simply enter or select any Gregorian date (year/month/day) in the input fields above and click "Convert". The tool instantly displays the corresponding Chinese lunar date, zodiac year, heavenly stem-branch, and traditional festivals. It covers all dates from 1900 to 2100.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I convert any Gregorian date to Chinese lunar?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. The converter supports every Gregorian date between January 1, 1900 and December 31, 2100. Whether the date falls in a regular month or a leap month, the conversion is accurate. Dates outside this range are not yet supported.',
       },
     },
   ],
