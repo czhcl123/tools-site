@@ -53,6 +53,19 @@ const posts = [
   { slug: 'metric-vs-imperial', icon: '📐', title: 'Metric vs Imperial', zhTitle: '公制 vs 英制对比' },
   { slug: 'word-count-seo', icon: '📝', title: 'Word Count and SEO', zhTitle: '字数与 SEO' },
   { slug: 'password-manager-guide', icon: '🔑', title: 'Password Manager Guide', zhTitle: '密码管理器指南' },
+  // New tool-specific articles (4th post per tool)
+  { slug: 'bmi-fitness-planning', icon: '💪', title: 'BMI and Fitness: Creating a Weight Loss Plan', zhTitle: 'BMI 与健身：如何制定减重计划' },
+  { slug: 'countdown-wedding-planner', icon: '💒', title: 'Wedding Countdown: Planning Your Perfect Day', zhTitle: '婚礼倒计时：完美婚礼规划指南' },
+  { slug: 'discount-business-pricing', icon: '💰', title: 'Smart Pricing: Using Discount Calculators for Business', zhTitle: '智能定价：用折扣计算器优化商业策略' },
+  { slug: 'heic-batch-conversion', icon: '📸', title: 'Batch Convert HEIC: Workflow for Photographers', zhTitle: '批量转换 HEIC：摄影师工作流指南' },
+  { slug: 'invoice-payment-terms', icon: '📋', title: 'Invoice Payment Terms: Getting Paid Faster', zhTitle: '发票付款条款：如何更快收到款项' },
+  { slug: 'json-api-debugging', icon: '🔧', title: 'Debug APIs with JSON Formatter', zhTitle: '用 JSON 格式化工具调试 API' },
+  { slug: 'lunar-calendar-business', icon: '🏮', title: 'Lunar Calendar for Business: Planning Around Holidays', zhTitle: '农历与商业：节日营销规划指南' },
+  { slug: 'password-team-security', icon: '🛡️', title: 'Team Password Security: Best Practices', zhTitle: '团队密码安全：最佳实践指南' },
+  { slug: 'qr-code-event-management', icon: '🎫', title: 'QR Codes for Events: Registration and Check-in', zhTitle: 'QR 码活动管理：签到与注册' },
+  { slug: 'sleep-jet-lag-recovery', icon: '✈️', title: 'Beat Jet Lag: Sleep Calculator for Travelers', zhTitle: '时差调整：旅行者睡眠计算器' },
+  { slug: 'unit-converter-cooking', icon: '🍳', title: 'Kitchen Unit Converter: Cooking Measurements Guide', zhTitle: '厨房单位换算：烹饪测量完全指南' },
+  { slug: 'word-counter-academic', icon: '📝', title: 'Academic Writing: Meeting Word Count Requirements', zhTitle: '学术写作：满足字数要求' },
 ]
 
 export default function BlogIndex() {

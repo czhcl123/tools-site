@@ -100,6 +100,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'metric-vs-imperial',
     'word-count-seo',
     'password-manager-guide',
+    // New tool-specific articles (4th post per tool)
+    'bmi-fitness-planning',
+    'countdown-wedding-planner',
+    'discount-business-pricing',
+    'heic-batch-conversion',
+    'invoice-payment-terms',
+    'json-api-debugging',
+    'lunar-calendar-business',
+    'password-team-security',
+    'qr-code-event-management',
+    'sleep-jet-lag-recovery',
+    'unit-converter-cooking',
+    'word-counter-academic',
   ]
 
   entries.push(
