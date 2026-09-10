@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/discount-vs-coupon', 'x-default': '/blog/discount-vs-coupon' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/discount-vs-coupon' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Discounts vs coupons?", "acceptedAnswer": {"@type": "Answer", "text": "Discounts reduce directly; coupons are conditional. They can stack."}}]}),
+    },
   }
 }
 

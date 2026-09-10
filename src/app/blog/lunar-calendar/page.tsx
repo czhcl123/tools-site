@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/lunar-calendar', 'x-default': '/blog/lunar-calendar' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/lunar-calendar' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is lunar calendar?", "acceptedAnswer": {"@type": "Answer", "text": "Chinese calendar combining sun and moon cycles."}}, {"@type": "Question", "name": "Same dates every year?", "acceptedAnswer": {"@type": "Answer", "text": "No. Chinese New Year floats between late Jan and mid-Feb."}}]}),
+    },
   }
 }
 

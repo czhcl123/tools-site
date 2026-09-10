@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/password-generator', 'x-default': '/blog/password-generator' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/password-generator' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long should passwords be?", "acceptedAnswer": {"@type": "Answer", "text": "At least 12 chars with mixed character types."}}, {"@type": "Question", "name": "Generated vs self-made?", "acceptedAnswer": {"@type": "Answer", "text": "Generated is truly random; humans pick predictable patterns."}}, {"@type": "Question", "name": "How to store?", "acceptedAnswer": {"@type": "Answer", "text": "Use a password manager. Never plain text."}}]}),
+    },
   }
 }
 

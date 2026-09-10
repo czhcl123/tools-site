@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/nap-calculator', 'x-default': '/blog/nap-calculator' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/nap-calculator' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Best nap length?", "acceptedAnswer": {"@type": "Answer", "text": "20–30 minutes. Over 30 causes grogginess."}}, {"@type": "Question", "name": "Best nap time?", "acceptedAnswer": {"@type": "Answer", "text": "1–3 PM during natural energy dip."}}]}),
+    },
   }
 }
 

@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/discount-business-pricing', 'x-default': '/blog/discount-business-pricing' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/discount-business-pricing' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How to price with calculator?", "acceptedAnswer": {"@type": "Answer", "text": "Enter cost and target margin to find max discount."}}, {"@type": "Question", "name": "Bulk discounts without losing money?", "acceptedAnswer": {"@type": "Answer", "text": "Verify each tier's margin."}}]}),
+    },
   }
 }
 

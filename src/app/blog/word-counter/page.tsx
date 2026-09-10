@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/word-counter', 'x-default': '/blog/word-counter' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/word-counter' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How to use?", "acceptedAnswer": {"@type": "Answer", "text": "Paste text, see word/character/paragraph/sentence count."}}, {"@type": "Question", "name": "Chinese counting?", "acceptedAnswer": {"@type": "Answer", "text": "Characters for Chinese, words for English. Auto-detected."}}]}),
+    },
   }
 }
 

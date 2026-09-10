@@ -12,6 +12,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/heic-iphone-photo-guide', 'x-default': '/blog/heic-iphone-photo-guide' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/heic-iphone-photo-guide' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why iPhone defaults to HEIC?", "acceptedAnswer": {"@type": "Answer", "text": "Half the size of JPEG, comparable quality."}}]}),
+    },
   }
 }
 

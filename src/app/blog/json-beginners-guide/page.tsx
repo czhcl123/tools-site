@@ -12,6 +12,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/json-beginners-guide', 'x-default': '/blog/json-beginners-guide' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/json-beginners-guide' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "JSON basics?", "acceptedAnswer": {"@type": "Answer", "text": "Braces for objects, brackets for arrays, colons separate keys from values."}}]}),
+    },
   }
 }
 

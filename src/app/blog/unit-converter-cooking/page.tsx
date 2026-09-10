@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/unit-converter-cooking', 'x-default': '/blog/unit-converter-cooking' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/unit-converter-cooking' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Grams in a cup of flour?", "acceptedAnswer": {"@type": "Answer", "text": "About 120g. Sugar ~200g. Butter ~227g."}}, {"@type": "Question", "name": "Altitude effects?", "acceptedAnswer": {"@type": "Answer", "text": "Above 1500m: raise temp, add liquid, reduce yeast."}}]}),
+    },
   }
 }
 

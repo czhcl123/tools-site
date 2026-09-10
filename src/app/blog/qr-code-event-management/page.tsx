@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/qr-code-event-management', 'x-default': '/blog/qr-code-event-management' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/qr-code-event-management' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "QR code check-in?", "acceptedAnswer": {"@type": "Answer", "text": "Unique code per attendee, scan on arrival."}}, {"@type": "Question", "name": "Equipment needed?", "acceptedAnswer": {"@type": "Answer", "text": "Phone or tablet. Attendees save/print QR code."}}]}),
+    },
   }
 }
 

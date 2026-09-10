@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/countdown-project-management', 'x-default': '/blog/countdown-project-management' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/countdown-project-management' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do countdowns improve efficiency?", "acceptedAnswer": {"@type": "Answer", "text": "Visual urgency combats Parkinson's Law."}}]}),
+    },
   }
 }
 

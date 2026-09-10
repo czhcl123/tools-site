@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/word-counter-academic', 'x-default': '/blog/word-counter-academic' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/word-counter-academic' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Word count too low?", "acceptedAnswer": {"@type": "Answer", "text": "Expand arguments, add literature review, case studies."}}, {"@type": "Question", "name": "References count?", "acceptedAnswer": {"@type": "Answer", "text": "Most formats exclude references."}}]}),
+    },
   }
 }
 

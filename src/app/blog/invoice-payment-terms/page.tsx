@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/invoice-payment-terms', 'x-default': '/blog/invoice-payment-terms' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/invoice-payment-terms' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is Net 30?", "acceptedAnswer": {"@type": "Answer", "text": "Full payment due within 30 days."}}, {"@type": "Question", "name": "2/10 Net 30?", "acceptedAnswer": {"@type": "Answer", "text": "2% discount if paid in 10 days, otherwise 30 days."}}]}),
+    },
   }
 }
 

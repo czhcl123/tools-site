@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/heic-to-jpg', 'x-default': '/blog/heic-to-jpg' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/heic-to-jpg' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is HEIC?", "acceptedAnswer": {"@type": "Answer", "text": "iPhone default since iOS 11, half the size of JPEG."}}, {"@type": "Question", "name": "Why convert to JPG?", "acceptedAnswer": {"@type": "Answer", "text": "Compatibility with websites and apps."}}, {"@type": "Question", "name": "Quality loss?", "acceptedAnswer": {"@type": "Answer", "text": "At 95%+ quality, imperceptible."}}]}),
+    },
   }
 }
 

@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/sleep-jet-lag-recovery', 'x-default': '/blog/sleep-jet-lag-recovery' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/sleep-jet-lag-recovery' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Jet lag recovery time?", "acceptedAnswer": {"@type": "Answer", "text": "About 1 day per time zone crossed."}}, {"@type": "Question", "name": "Pre-flight adjustment?", "acceptedAnswer": {"@type": "Answer", "text": "Shift sleep 1–2 hours 2–3 days before."}}, {"@type": "Question", "name": "Post-arrival tips?", "acceptedAnswer": {"@type": "Answer", "text": "Sunlight by day, no blue light at night, local time."}}]}),
+    },
   }
 }
 

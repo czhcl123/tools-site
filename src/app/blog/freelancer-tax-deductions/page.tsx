@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/freelancer-tax-deductions', 'x-default': '/blog/freelancer-tax-deductions' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/freelancer-tax-deductions' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Deductible expenses?", "acceptedAnswer": {"@type": "Answer", "text": "Office equipment, software, home office, travel, training."}}]}),
+    },
   }
 }
 

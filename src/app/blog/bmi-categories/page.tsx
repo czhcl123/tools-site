@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/bmi-categories', 'x-default': '/blog/bmi-categories' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/bmi-categories' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "BMI categories?", "acceptedAnswer": {"@type": "Answer", "text": "Underweight, normal, overweight, obese."}}, {"@type": "Question", "name": "Why stricter Asian thresholds?", "acceptedAnswer": {"@type": "Answer", "text": "Higher diabetes risk at same BMI."}}]}),
+    },
   }
 }
 

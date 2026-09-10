@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/json-formatter', 'x-default': '/blog/json-formatter' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/json-formatter' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is JSON?", "acceptedAnswer": {"@type": "Answer", "text": "Lightweight data format used in APIs."}}, {"@type": "Question", "name": "Formatted vs minified?", "acceptedAnswer": {"@type": "Answer", "text": "Formatted for readability; minified for size."}}, {"@type": "Question", "name": "Format failure meaning?", "acceptedAnswer": {"@type": "Answer", "text": "Syntax error in the JSON."}}]}),
+    },
   }
 }
 

@@ -12,6 +12,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/discount-shopping-tips', 'x-default': '/blog/discount-shopping-tips' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/discount-shopping-tips' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How to tell if discount is real?", "acceptedAnswer": {"@type": "Answer", "text": "Calculate actual rate and compare with historical prices."}}]}),
+    },
   }
 }
 

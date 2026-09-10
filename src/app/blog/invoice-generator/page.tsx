@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/invoice-generator', 'x-default': '/blog/invoice-generator' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/invoice-generator' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Invoice essentials?", "acceptedAnswer": {"@type": "Answer", "text": "Number, date, parties, items, quantities, prices, terms."}}, {"@type": "Question", "name": "Freelancers need invoices?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Formal payment request and tax record."}}, {"@type": "Question", "name": "Invoice vs receipt?", "acceptedAnswer": {"@type": "Answer", "text": "Invoice requests payment; receipt confirms it."}}]}),
+    },
   }
 }
 

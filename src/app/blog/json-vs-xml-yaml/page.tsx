@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/json-vs-xml-yaml', 'x-default': '/blog/json-vs-xml-yaml' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/json-vs-xml-yaml' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "JSON or XML?", "acceptedAnswer": {"@type": "Answer", "text": "JSON lighter for APIs; XML for complex enterprise structures."}}]}),
+    },
   }
 }
 

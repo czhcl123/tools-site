@@ -12,6 +12,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/sleep-science-guide', 'x-default': '/blog/sleep-science-guide' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/sleep-science-guide' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Deep sleep vs REM?", "acceptedAnswer": {"@type": "Answer", "text": "Deep: physical recovery. REM: memory and emotion."}}]}),
+    },
   }
 }
 

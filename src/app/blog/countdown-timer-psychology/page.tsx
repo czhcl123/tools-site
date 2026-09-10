@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/countdown-timer-psychology', 'x-default': '/blog/countdown-timer-psychology' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/countdown-timer-psychology' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why do countdowns boost productivity?", "acceptedAnswer": {"@type": "Answer", "text": "Trigger urgency and loss aversion."}}]}),
+    },
   }
 }
 

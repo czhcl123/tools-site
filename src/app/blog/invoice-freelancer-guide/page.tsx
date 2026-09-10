@@ -12,6 +12,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/invoice-freelancer-guide', 'x-default': '/blog/invoice-freelancer-guide' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/invoice-freelancer-guide' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Invoice format requirements?", "acceptedAnswer": {"@type": "Answer", "text": "No standard, but include number, date, client, items, amount, payment method."}}]}),
+    },
   }
 }
 

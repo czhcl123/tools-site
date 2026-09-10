@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/unit-converter', 'x-default': '/blog/unit-converter' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/unit-converter' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Supported units?", "acceptedAnswer": {"@type": "Answer", "text": "Length, weight, temperature, volume, area, data."}}, {"@type": "Question", "name": "Cups to ml?", "acceptedAnswer": {"@type": "Answer", "text": "1 cup = 240 ml. 1 tbsp = 15 ml."}}, {"@type": "Question", "name": "Fahrenheit to Celsius?", "acceptedAnswer": {"@type": "Answer", "text": "°C = (°F - 32) × 5/9."}}]}),
+    },
   }
 }
 

@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/qr-code-creative-uses', 'x-default': '/blog/qr-code-creative-uses' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/qr-code-creative-uses' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Other QR code uses?", "acceptedAnswer": {"@type": "Answer", "text": "WiFi sharing, digital cards, product tracking, AR experiences."}}]}),
+    },
   }
 }
 

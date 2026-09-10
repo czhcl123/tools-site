@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/json-api-debugging', 'x-default': '/blog/json-api-debugging' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/json-api-debugging' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why is API JSON hard to read?", "acceptedAnswer": {"@type": "Answer", "text": "APIs return minified JSON. Use a formatter."}}, {"@type": "Question", "name": "What issues can it spot?", "acceptedAnswer": {"@type": "Answer", "text": "Syntax errors, type mismatches, deep nesting."}}]}),
+    },
   }
 }
 

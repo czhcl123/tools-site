@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/lunar-calendar-business', 'x-default': '/blog/lunar-calendar-business' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/lunar-calendar-business' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why businesses care?", "acceptedAnswer": {"@type": "Answer", "text": "1.5 billion people celebrate. Huge commercial opportunities."}}, {"@type": "Question", "name": "Chinese New Year marketing timing?", "acceptedAnswer": {"@type": "Answer", "text": "Start 2–3 months before; promotions 1 month out."}}]}),
+    },
   }
 }
 

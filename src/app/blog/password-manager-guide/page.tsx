@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/password-manager-guide', 'x-default': '/blog/password-manager-guide' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/password-manager-guide' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Are password managers secure?", "acceptedAnswer": {"@type": "Answer", "text": "End-to-end encryption. Safe even if service is breached."}}, {"@type": "Question", "name": "Free vs paid?", "acceptedAnswer": {"@type": "Answer", "text": "Free for individuals; paid adds team features."}}]}),
+    },
   }
 }
 

@@ -12,6 +12,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/lunar-calendar-traditions', 'x-default': '/blog/lunar-calendar-traditions' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/lunar-calendar-traditions' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Chinese New Year traditions?", "acceptedAnswer": {"@type": "Answer", "text": "Spring couplets, firecrackers, reunion dinner, red envelopes."}}]}),
+    },
   }
 }
 

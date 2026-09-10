@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/countdown-wedding-planner', 'x-default': '/blog/countdown-wedding-planner' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/countdown-wedding-planner' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How early to plan wedding?", "acceptedAnswer": {"@type": "Answer", "text": "6–12 months minimum. Popular venues need 12+."}}, {"@type": "Question", "name": "Countdown on wedding day?", "acceptedAnswer": {"@type": "Answer", "text": "Set timers for each segment: makeup, ceremony, photos, reception."}}]}),
+    },
   }
 }
 

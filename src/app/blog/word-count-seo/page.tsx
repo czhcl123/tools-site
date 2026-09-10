@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/word-count-seo', 'x-default': '/blog/word-count-seo' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/word-count-seo' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Ideal SEO word count?", "acceptedAnswer": {"@type": "Answer", "text": "1,500–2,500 words for in-depth articles."}}, {"@type": "Question", "name": "Word count and AI search?", "acceptedAnswer": {"@type": "Answer", "text": "AI cites 1,500+ word authoritative content."}}]}),
+    },
   }
 }
 

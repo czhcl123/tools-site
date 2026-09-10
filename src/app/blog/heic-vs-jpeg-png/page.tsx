@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/heic-vs-jpeg-png', 'x-default': '/blog/heic-vs-jpeg-png' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/heic-vs-jpeg-png' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "HEIC vs JPEG vs PNG?", "acceptedAnswer": {"@type": "Answer", "text": "HEIC for storage, JPEG for sharing, PNG for design."}}]}),
+    },
   }
 }
 

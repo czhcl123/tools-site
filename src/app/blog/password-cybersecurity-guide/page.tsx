@@ -12,6 +12,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/password-cybersecurity-guide', 'x-default': '/blog/password-cybersecurity-guide' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/password-cybersecurity-guide' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Common attacks?", "acceptedAnswer": {"@type": "Answer", "text": "Credential stuffing and phishing. Strong passwords + 2FA."}}, {"@type": "Question", "name": "Password leaked?", "acceptedAnswer": {"@type": "Answer", "text": "Change immediately, check other sites, monitor activity."}}]}),
+    },
   }
 }
 

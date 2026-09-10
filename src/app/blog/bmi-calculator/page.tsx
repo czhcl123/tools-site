@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/bmi-calculator', 'x-default': '/blog/bmi-calculator' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/bmi-calculator' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "BMI formula?", "acceptedAnswer": {"@type": "Answer", "text": "BMI = weight (kg) ÷ height (m)²."}}, {"@type": "Question", "name": "Healthy BMI range?", "acceptedAnswer": {"@type": "Answer", "text": "WHO: 18.5–24.9. Asian: 18.5–23.9."}}, {"@type": "Question", "name": "BMI limitations?", "acceptedAnswer": {"@type": "Answer", "text": "Cannot distinguish muscle from fat."}}]}),
+    },
   }
 }
 

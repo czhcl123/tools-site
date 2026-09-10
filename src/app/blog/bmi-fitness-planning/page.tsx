@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/bmi-fitness-planning', 'x-default': '/blog/bmi-fitness-planning' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/bmi-fitness-planning' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does BMI help weight loss?", "acceptedAnswer": {"@type": "Answer", "text": "Check range, set target, calculate ideal weight."}}, {"@type": "Question", "name": "Normal BMI but high body fat?", "acceptedAnswer": {"@type": "Answer", "text": "Focus on strength training."}}]}),
+    },
   }
 }
 

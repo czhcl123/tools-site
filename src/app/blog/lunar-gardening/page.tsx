@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/lunar-gardening', 'x-default': '/blog/lunar-gardening' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/lunar-gardening' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Moon phases and plants?", "acceptedAnswer": {"@type": "Answer", "text": "Traditionally: new moon for roots, full moon for leaves."}}]}),
+    },
   }
 }
 

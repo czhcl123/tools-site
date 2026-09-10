@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/metric-vs-imperial', 'x-default': '/blog/metric-vs-imperial' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/metric-vs-imperial' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which is more common?", "acceptedAnswer": {"@type": "Answer", "text": "Metric globally. US still uses imperial widely."}}]}),
+    },
   }
 }
 

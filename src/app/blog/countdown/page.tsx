@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/countdown', 'x-default': '/blog/countdown' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/countdown' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does countdown work?", "acceptedAnswer": {"@type": "Answer", "text": "Enter target date, see remaining time instantly."}}, {"@type": "Question", "name": "What can I use it for?", "acceptedAnswer": {"@type": "Answer", "text": "Birthdays, exams, deadlines, weddings, trips."}}]}),
+    },
   }
 }
 

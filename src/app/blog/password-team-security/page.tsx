@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/password-team-security', 'x-default': '/blog/password-team-security' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/password-team-security' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Biggest team risk?", "acceptedAnswer": {"@type": "Answer", "text": "Password sharing and weak passwords. Use a team manager."}}, {"@type": "Question", "name": "Team password management?", "acceptedAnswer": {"@type": "Answer", "text": "Manager with individual accounts, 60–90 day rotation, 2FA."}}]}),
+    },
   }
 }
 

@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/sleep-calculator', 'x-default': '/blog/sleep-calculator' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/sleep-calculator' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Sleep cycle length?", "acceptedAnswer": {"@type": "Answer", "text": "About 90 minutes: light, deep, REM stages."}}, {"@type": "Question", "name": "Calculate bedtime?", "acceptedAnswer": {"@type": "Answer", "text": "Bedtime = wake time - (90 min × cycles)."}}, {"@type": "Question", "name": "Ideal nap length?", "acceptedAnswer": {"@type": "Answer", "text": "20–30 minutes for quick energy restore."}}]}),
+    },
   }
 }
 

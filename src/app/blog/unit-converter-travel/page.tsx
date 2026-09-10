@@ -12,6 +12,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/unit-converter-travel', 'x-default': '/blog/unit-converter-travel' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/unit-converter-travel' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Travel conversions?", "acceptedAnswer": {"@type": "Answer", "text": "Temperature, distance, weight, liquids, currency."}}, {"@type": "Question", "name": "US vs UK gallons?", "acceptedAnswer": {"@type": "Answer", "text": "US ≈ 3.785L; UK ≈ 4.546L."}}]}),
+    },
   }
 }
 

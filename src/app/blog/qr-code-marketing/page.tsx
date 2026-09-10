@@ -12,6 +12,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/qr-code-marketing', 'x-default': '/blog/qr-code-marketing' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/qr-code-marketing' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "QR in marketing?", "acceptedAnswer": {"@type": "Answer", "text": "On cards, flyers, posters. Scan to visit, claim offers."}}, {"@type": "Question", "name": "Track scan data?", "acceptedAnswer": {"@type": "Answer", "text": "UTM parameters + Google Analytics."}}]}),
+    },
   }
 }
 

@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/qr-code-generator', 'x-default': '/blog/qr-code-generator' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/qr-code-generator' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "QR code data limit?", "acceptedAnswer": {"@type": "Answer", "text": "Up to 4,296 digits. Less data = faster scanning."}}, {"@type": "Question", "name": "Error correction levels?", "acceptedAnswer": {"@type": "Answer", "text": "L(7%), M(15%), Q(25%), H(30%)."}}, {"@type": "Question", "name": "Improve scan success?", "acceptedAnswer": {"@type": "Answer", "text": "Min 2cm×2cm, high contrast, no blur."}}]}),
+    },
   }
 }
 

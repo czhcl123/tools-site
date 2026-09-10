@@ -12,6 +12,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/word-counter-writing-tips', 'x-default': '/blog/word-counter-writing-tips' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/word-counter-writing-tips' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Control word count?", "acceptedAnswer": {"@type": "Answer", "text": "Outline first, check periodically, fine-tune."}}]}),
+    },
   }
 }
 

@@ -16,6 +16,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       languages: { 'en-US': '/blog/bmi-calculator-vs-body-fat', 'x-default': '/blog/bmi-calculator-vs-body-fat' },
     },
       openGraph: { url: 'https://tools-site-production.up.railway.app/blog/bmi-calculator-vs-body-fat' },
+    other: {
+      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "BMI vs body fat accuracy?", "acceptedAnswer": {"@type": "Answer", "text": "Body fat more accurate but harder to measure. Use both."}}]}),
+    },
   }
 }
 
