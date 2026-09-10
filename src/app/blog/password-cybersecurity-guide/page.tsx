@@ -53,6 +53,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           定期检查:①更换弱密码 ②开启2FA ③检查账户泄露Have I Been Pwned ④更新软件 ⑤备份重要数据。
         </p>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">最常见攻击方式?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">撞库攻击和钓鱼邮件。唯一强密码 + 2FA 是最有效防御。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">密码泄露怎么办?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">立即更改，检查其他网站是否相同密码，监控异常活动。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/password-generator" className="text-orange-600 font-medium hover:underline">
             → 生成安全密码
@@ -92,6 +104,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         <p className="text-gray-700 leading-relaxed mb-4">
           Regular checks: ①Replace weak passwords ②Enable 2FA ③Check Have I Been Pwned ④Update software ⑤Backup important data.
         </p>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">Most common attacks?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Credential stuffing and phishing. Unique strong passwords + 2FA are the best defense.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">Password leaked?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Change immediately, check other sites, monitor for suspicious activity.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/password-generator" className="text-orange-600 font-medium hover:underline">

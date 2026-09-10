@@ -51,6 +51,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           输入公历日期(如 2026-01-29),计算器返回对应的农历日期(如乙巳年正月初一)。也支持反向查询:输入农历日期,得到公历。一秒钟搞定,不用翻万年历。
         </p>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">什么是农历?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">中国传统历法，结合太阳和月亮运行周期。春节、中秋基于农历。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">农历每年一样吗?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">不一样。春节在 1 月下旬到 2 月中旬之间浮动。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/lunar-calendar" className="text-orange-600 font-medium hover:underline">
             → 立即使用农历转换器
@@ -84,6 +96,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         <p className="text-gray-700 leading-relaxed mb-4">
           Enter a solar date (e.g., 2026-01-29), and the converter returns the corresponding lunar date (e.g., first day of the first lunar month, Year of the Snake). It also works in reverse: enter a lunar date to get the solar equivalent. Instant, no need to flip through a perpetual calendar.
         </p>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">What is the lunar calendar?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">A traditional Chinese calendar combining sun and moon cycles.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">Are lunar dates the same every year?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">No. Chinese New Year floats between late January and mid-February.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/lunar-calendar" className="text-orange-600 font-medium hover:underline">

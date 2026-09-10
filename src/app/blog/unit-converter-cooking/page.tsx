@@ -63,6 +63,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>糖和泡打粉</strong>：高海拔适当减少糖量，增加泡打粉</li>
         </ul>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">1杯面粉多少克?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">约 120g。白糖 1 cup ≈ 200g，黄油 1 cup ≈ 227g。建议用电子秤。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">海拔对烘焙有影响吗?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">1500m以上水沸点降低，温度提高 15–25°C，液体增加，酵母减少 25%。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/unit-converter" className="text-orange-600 font-medium hover:underline">
             → 用单位换算工具搞定所有烹饪测量
@@ -108,6 +120,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>Yeast fermentation</strong> — faster at altitude, reduce yeast by 25%</li>
           <li><strong>Sugar and baking powder</strong> — reduce sugar, increase baking powder at high altitude</li>
         </ul>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">Grams in a cup of flour?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">About 120g. Sugar: ~200g/cup. Butter: ~227g/cup. Use a scale.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">Does altitude affect baking?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Above 1500m: raise temp 15–25°C, add liquid, reduce yeast 25%.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/unit-converter" className="text-orange-600 font-medium hover:underline">

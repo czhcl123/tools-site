@@ -72,6 +72,22 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <strong>发票(Invoice)</strong>:服务完成后开具,要求客户付款。<strong>收据(Receipt)</strong>:收到付款后开具,证明已付款。<strong>报价单(Quote/Estimate)</strong>:服务开始前给客户的预估价格。三者用途不同,不要混淆。
         </p>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">发票需要哪些信息?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">编号、日期、双方信息、商品描述、数量、单价、总额、付款条款。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">自由职业者需要开发票吗?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">需要。发票是正式收款凭证和税务记录。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">发票和收据有什么区别?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">发票是收款请求(未收到钱)，收据是付款确认(已收到钱)。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/invoice-generator" className="text-orange-600 font-medium hover:underline">
             → 立即生成发票
@@ -126,6 +142,22 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         <p className="text-gray-700 leading-relaxed mb-4">
           <strong>Invoice</strong>: issued after service completion, requesting payment. <strong>Receipt</strong>: issued after payment received, proving payment. <strong>Quote/Estimate</strong>: price estimate given before starting work. They serve different purposes — don't mix them up.
         </p>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">What should an invoice include?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Invoice number, date, buyer/seller info, items, quantities, prices, total, payment terms.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">Do freelancers need to invoice?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Yes. Invoices are formal payment requests and tax records.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">Invoice vs receipt?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">An invoice requests payment; a receipt confirms payment was received.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/invoice-generator" className="text-orange-600 font-medium hover:underline">

@@ -50,6 +50,14 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li>对逾期付款收取滞纳金</li>
         </ul>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">发票格式有要求吗?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">无统一格式，但必须含: 发票号、日期、客户信息、服务描述、金额、付款方式。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/invoice-generator" className="text-orange-600 font-medium hover:underline">
             → 免费创建专业发票
@@ -86,6 +94,14 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li>Automatic payment reminders</li>
           <li>Late fees for overdue payments</li>
         </ul>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">Invoice format requirements?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">No standard format, but must include: invoice number, date, client info, service description, amount, and payment method.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/invoice-generator" className="text-orange-600 font-medium hover:underline">

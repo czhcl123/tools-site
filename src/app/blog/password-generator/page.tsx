@@ -89,6 +89,22 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>凭证填充</strong> — 使用泄露的密码尝试其他网站,每个账户用不同密码</li>
         </ul>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">密码多长才安全?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">至少 12 位，含大小写、数字和特殊符号。16+ 位极难暴力破解。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">比自己想的密码安全吗?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">是的。人类倾向可记忆模式，生成器创建真正随机密码。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">生成的密码怎么保存?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">用密码管理器安全保存，不要写在便签或明文文件中。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/password-generator" className="text-orange-600 font-medium hover:underline">
             → 立即使用密码生成器创建安全密码
@@ -160,6 +176,22 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>Social engineering</strong> — uses personal information to guess; avoid birthdays and names</li>
           <li><strong>Credential stuffing</strong> — uses leaked passwords on other sites; use unique passwords for each account</li>
         </ul>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">How long should a password be?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">At least 12 characters with uppercase, lowercase, numbers, symbols. 16+ is very hard to crack.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">Is a generated password safer?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Yes. Humans pick predictable patterns; generators create truly random passwords.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">How to store generated passwords?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Use a password manager. Never write on sticky notes or plain text files.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/password-generator" className="text-orange-600 font-medium hover:underline">

@@ -61,6 +61,22 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <p>❌ 注释: JSON 不支持注释(// 或 /* */)</p>
         </div>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">什么是 JSON?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">JavaScript Object Notation，轻量级数据交换格式，广泛用于 API。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">格式化和压缩有什么区别?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">格式化添加缩进便于阅读；压缩去掉空白减小体积。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">格式化失败说明什么?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">JSON 语法有错误: 缺逗号、引号不匹配等。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/json-formatter" className="text-orange-600 font-medium hover:underline">
             → 立即使用 JSON 格式化工具
@@ -104,6 +120,22 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <p>❌ Single quotes: {`{"name": 'John'}`} ← must use double quotes</p>
           <p>❌ Comments: JSON does not support comments (// or /* */)</p>
         </div>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">What is JSON?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">JavaScript Object Notation, a lightweight data format widely used in APIs.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">Formatted vs minified?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Formatted adds indentation for readability; minified removes whitespace.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">What does a formatting failure mean?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">The JSON has syntax errors: missing commas, mismatched quotes, etc.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/json-formatter" className="text-orange-600 font-medium hover:underline">

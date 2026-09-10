@@ -44,6 +44,14 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           设置→相机→格式→选择"最兼容"(JPG)或"高效"(HEIC)。如果你经常需要分享照片,建议选择JPG。
         </p>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">iPhone 为什么默认 HEIC?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">文件体积只有 JPEG 的一半，节省存储，画质相当。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/heic-to-jpg" className="text-orange-600 font-medium hover:underline">
             → 免费转换 HEIC 到 JPG
@@ -74,6 +82,14 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         <p className="text-gray-700 leading-relaxed mb-4">
           Settings → Camera → Formats → Choose "Most Compatible" (JPG) or "High Efficiency" (HEIC). Choose JPG if you share photos frequently.
         </p>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">Why does iPhone default to HEIC?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Files are half the size of JPEG with comparable quality, saving storage.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/heic-to-jpg" className="text-orange-600 font-medium hover:underline">

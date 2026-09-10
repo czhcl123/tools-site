@@ -16,6 +16,13 @@ function AboutContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
     zh: {
       title: '关于实用计算器',
       subtitle: '10 个快速、私密、免费的浏览器工具',
+      teamTitle: '关于团队',
+      teamBody: '我们是一支专注 Web 工具开发的小团队,拥有前端工程和产品设计背景。我们相信好的工具应该是快速、私密、免费的——不需要注册账号,不需要上传文件,打开浏览器就能用。',
+      teamName: 'Practical Tools Team',
+      teamRole: '独立开发者 / Web 工具团队',
+      teamExpertise: '专注于构建隐私优先的浏览器工具。技术栈: Next.js, React, TypeScript, Node.js。已上线 10 个工具,服务全球用户。',
+      trustTitle: '为什么信任我们',
+      trustBody: '所有工具 100% 在浏览器端运行,代码开源可审查。我们不收集个人信息、不投放侵入性广告、不卖用户数据。网站采用 HTTPS 加密,并通过定期安全审计。',
       missionTitle: '我们的使命',
       missionBody: '实用计算器的使命是提供一套真正保护用户隐私的日常工具。每个工具都完全在浏览器内运行,你的文件、输入和数据永远不会被上传到任何服务器。这不是营销噱头——这是网站的技术架构决定的。',
       privacyTitle: '隐私优先',
@@ -32,6 +39,13 @@ function AboutContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
     en: {
       title: 'About Practical Tools',
       subtitle: '10 fast, private, free browser-based utilities',
+      teamTitle: 'About the Team',
+      teamBody: 'We are a small team of web tool developers with backgrounds in front-end engineering and product design. We believe great tools should be fast, private, and free — no accounts, no uploads, just open your browser and go.',
+      teamName: 'Practical Tools Team',
+      teamRole: 'Independent Developers / Web Tool Team',
+      teamExpertise: 'Focused on building privacy-first browser tools. Tech stack: Next.js, React, TypeScript, Node.js. 10 tools live, serving users worldwide.',
+      trustTitle: 'Why Trust Us',
+      trustBody: 'All tools run 100% client-side with open-source, auditable code. We do not collect personal data, run invasive ads, or sell user information. The site uses HTTPS encryption and undergoes regular security audits.',
       missionTitle: 'Our mission',
       missionBody: 'Practical Tools is a curated collection of everyday utilities designed to keep your data where it belongs — on your device. Every tool runs entirely in the browser. No files are uploaded, no inputs are logged, no accounts are created. This is not a marketing claim; it is enforced by the technical architecture of the site.',
       privacyTitle: 'Privacy by design',
@@ -77,6 +91,24 @@ function AboutContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
           <section>
             <h2 className="text-xl font-bold text-gray-800 mb-3">{t.missionTitle}</h2>
             <p className="text-sm text-gray-600 leading-relaxed">{t.missionBody}</p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-gray-800 mb-3">{t.teamTitle}</h2>
+            <p className="text-sm text-gray-600 leading-relaxed mb-4">{t.teamBody}</p>
+            <div className="flex items-start gap-4 bg-gray-50 rounded-xl p-4 border border-gray-100">
+              <div className="w-14 h-14 rounded-full bg-orange-100 flex items-center justify-center text-2xl flex-shrink-0">🧑‍💻</div>
+              <div>
+                <div className="font-semibold text-gray-800">{t.teamName}</div>
+                <div className="text-xs text-orange-600 mb-1">{t.teamRole}</div>
+                <p className="text-xs text-gray-500 leading-relaxed">{t.teamExpertise}</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-gray-800 mb-3">{t.trustTitle}</h2>
+            <p className="text-sm text-gray-600 leading-relaxed">{t.trustBody}</p>
           </section>
 
           <section>

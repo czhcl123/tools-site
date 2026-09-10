@@ -58,6 +58,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>安全培训</strong>：每季度做一次钓鱼邮件识别培训</li>
         </ul>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">团队最大风险是什么?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">密码共享和弱密码。聊天发密码=明文传输，离职未改密码=安全漏洞。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">团队如何管理密码?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">密码管理器团队版，一人一账号，60–90天轮换，开启2FA。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/password-generator" className="text-orange-600 font-medium hover:underline">
             → 用密码生成器为团队创建强密码
@@ -98,6 +110,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>Breach monitoring</strong> — regularly check Have I Been Pwned for team email exposure</li>
           <li><strong>Security training</strong> — quarterly phishing email recognition workshops</li>
         </ul>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">Biggest team security risk?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Password sharing and weak passwords. Chat = plaintext. Departed employees with access = security hole.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">How should teams manage passwords?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Team password manager, one account per person, rotate every 60–90 days, enable 2FA.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/password-generator" className="text-orange-600 font-medium hover:underline">

@@ -51,6 +51,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           折扣计算器的隐藏功能：输入目标利润率和成本价，反推出最高可承受折扣。例如成本 60 元、目标利润率 30%，最高售价 = 60 ÷ (1 - 0.3) = 85.7 元。任何低于此价格的折扣都会侵蚀利润。
         </p>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">如何用折扣器定价?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">输入成本价和目标利润率，反推最高可承受折扣。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">批量折扣怎么不亏?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">用计算器验证每个层级的利润率，确保最低折扣仍在成本线以上。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/discount-calculator" className="text-orange-600 font-medium hover:underline">
             → 用折扣计算器优化你的定价
@@ -84,6 +96,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         <p className="text-gray-700 leading-relaxed mb-4">
           The calculator's hidden power: enter your target profit margin and cost price to reverse-engineer the maximum discount you can afford. Cost $60, target margin 30% — max price = $60 ÷ (1 - 0.3) = $85.70. Any discount below this erodes profit.
         </p>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">How to use it for pricing?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Enter cost and target margin to reverse-engineer the maximum discount.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">How to set bulk discounts without losing money?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Verify each tier's margin with the calculator.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/discount-calculator" className="text-orange-600 font-medium hover:underline">

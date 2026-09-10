@@ -53,6 +53,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           大多数国家用公里/小时(km/h),美国用英里/小时(mph)。限速100km/h ≈ 62mph。租车时务必注意仪表盘单位。
         </p>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">出国旅行需要哪些换算?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">温度、距离、重量、液体、货币。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">美国加仑和英国一样吗?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">不一样。美国 ≈ 3.785L，英国 ≈ 4.546L，差 20%。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/unit-converter" className="text-orange-600 font-medium hover:underline">
             → 在线单位换算器
@@ -92,6 +104,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         <p className="text-gray-700 leading-relaxed mb-4">
           Most countries use km/h; the US uses mph. Speed limit 100km/h ≈ 62mph. Always check your rental car's speedometer unit.
         </p>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">What conversions do travelers need?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Temperature, distance, weight, liquids, and currency.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">US vs UK gallons?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">US gallon ≈ 3.785L; UK gallon ≈ 4.546L — a 20% difference.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/unit-converter" className="text-orange-600 font-medium hover:underline">

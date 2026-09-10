@@ -63,6 +63,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           大多数格式要求正文字数不含参考文献列表。用字数统计工具时，注意区分"正文"和"全文"。APA 格式中，标题页和参考文献不计入正文字数。
         </p>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">字数不够怎么办?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">扩展论证(加例子数据)、增加文献综述、添加案例分析。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">参考文献算字数吗?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">大多数格式不包含参考文献。注意区分「正文」和「全文」。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/word-counter" className="text-orange-600 font-medium hover:underline">
             → 用字数统计工具精确监控你的论文
@@ -108,6 +120,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         <p className="text-gray-700 leading-relaxed mb-4">
           Most formats exclude the reference list from body word count. When using a word counter, distinguish between "body" and "total." In APA format, the title page and references don't count toward body word count.
         </p>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">How to meet word count?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Expand arguments with examples, add literature review, include case studies.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">Do references count?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Most formats exclude references. Distinguish body count from total.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/word-counter" className="text-orange-600 font-medium hover:underline">

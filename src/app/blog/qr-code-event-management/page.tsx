@@ -54,6 +54,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>数据分析</strong>：哪些环节最受欢迎？哪个时段到场率最高？</li>
         </ul>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">如何用 QR 码签到?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">为每人生成唯一 QR 码，到场扫码确认身份。速度快、数据自动记录。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">需要什么设备?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">手机或平板即可，参与者只需保存或打印 QR 码。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/qr-code-generator" className="text-orange-600 font-medium hover:underline">
             → 为你的活动生成 QR 码
@@ -90,6 +102,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>Post-event follow-up</strong> — send personalized thank-you emails based on check-in data</li>
           <li><strong>Data analytics</strong> — which sessions were most popular? Which time slot had peak attendance?</li>
         </ul>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">How to use QR codes for check-in?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Generate a unique QR per attendee. Scan on arrival for instant recording.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">What equipment is needed?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Just a phone or tablet. Attendees save or print their QR code.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/qr-code-generator" className="text-orange-600 font-medium hover:underline">

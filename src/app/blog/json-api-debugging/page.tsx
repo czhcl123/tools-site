@@ -58,6 +58,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>大型响应处理</strong>：截取关键部分格式化，避免浏览器卡顿</li>
         </ul>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">为什么 API 返回的 JSON 难读?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">API 返回压缩格式，数据挤在一行，用格式化工具展开即可。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">能发现哪些问题?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">语法错误、类型不匹配、嵌套过深、编码问题。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/json-formatter" className="text-orange-600 font-medium hover:underline">
             → 用 JSON 格式化工具调试你的 API
@@ -98,6 +110,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>Check encoding</strong> — garbled characters usually mean UTF-8 BOM or encoding mismatch</li>
           <li><strong>Large responses</strong> — extract and format only the relevant section to avoid browser lag</li>
         </ul>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">Why is API JSON hard to read?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">APIs return minified JSON on one line. Use a formatter to expand it.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">What issues can it spot?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Syntax errors, type mismatches, deep nesting, and encoding problems.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/json-formatter" className="text-orange-600 font-medium hover:underline">

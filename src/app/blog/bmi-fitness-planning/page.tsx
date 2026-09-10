@@ -54,6 +54,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>不调整饮食</strong>：运动消耗的热量常被高估，饮食控制才是减重关键</li>
         </ul>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">BMI 如何帮助减重?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">通过 BMI 了解当前区间，设定目标 BMI，反推理想体重。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">BMI 正常但体脂高怎么办?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">侧重力量训练增加肌肉量，而非单纯减重。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/bmi-calculator" className="text-orange-600 font-medium hover:underline">
             → 先用 BMI 计算器了解你的起点
@@ -90,6 +102,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>Losing too fast</strong> — 0.5–1 kg per week is safe; faster loss often rebounds</li>
           <li><strong>Ignoring diet</strong> — exercise calorie burn is often overestimated; diet control is key</li>
         </ul>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">How does BMI help weight loss?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Check your range, set target BMI, calculate ideal weight.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">Normal BMI but high body fat?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Focus on strength training to build muscle.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/bmi-calculator" className="text-orange-600 font-medium hover:underline">

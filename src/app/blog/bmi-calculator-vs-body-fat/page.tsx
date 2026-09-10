@@ -49,6 +49,14 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           建议先用BMI快速筛查,如果BMI在正常范围但你担心身体成分,再用体脂率测量。两者结合能给出更全面的健康画像。
         </p>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">BMI 和体脂率哪个更准确?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">体脂率更准确但测量复杂，BMI 是便捷筛查工具，两者结合最佳。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/bmi-calculator" className="text-orange-600 font-medium hover:underline">
             → 免费计算你的 BMI
@@ -80,6 +88,14 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         <p className="text-gray-700 leading-relaxed mb-4">
           Use BMI for quick screening first. If BMI is normal but you're concerned about body composition, measure body fat percentage. Together, they provide a more complete health picture.
         </p>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">Which is more accurate, BMI or body fat?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Body fat is more accurate but harder to measure. BMI is a convenient screener; use both.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/bmi-calculator" className="text-orange-600 font-medium hover:underline">

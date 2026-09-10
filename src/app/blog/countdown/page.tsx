@@ -53,6 +53,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           不只是算天数,还能排除周末和法定假日,告诉你实际有多少个工作日。适合项目排期、请假规划。
         </p>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">倒计时怎么用?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">输入目标日期，立即显示剩余天/小时/分钟。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">可以用于哪些场景?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">生日、考试、项目截止日、婚礼、旅行——任何有明确日期的事件。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/countdown" className="text-orange-600 font-medium hover:underline">
             → 立即使用日期倒计时计算器
@@ -88,6 +100,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         <p className="text-gray-700 leading-relaxed mb-4">
           Beyond simple day counting, some calculators exclude weekends and public holidays to show actual working days. Useful for project planning, leave requests, and sprint scheduling.
         </p>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">How does a countdown timer work?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Enter a target date and instantly see remaining days/hours/minutes.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">What can I use it for?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Birthdays, exams, deadlines, weddings, trips — any event with a fixed date.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/countdown" className="text-orange-600 font-medium hover:underline">

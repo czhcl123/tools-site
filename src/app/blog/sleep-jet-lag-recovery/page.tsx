@@ -55,6 +55,22 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>多喝水</strong>：脱水加重时差症状</li>
         </ul>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">时差多久恢复?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">每跨 1 个时区约 1 天。跨 5 个时区约 5 天。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">飞行前怎么调整?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">往东飞提前 1–2h 睡觉，往西飞推迟。出发前 2–3 天开始。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">到达后怎么适应?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">白天多晒太阳，晚上避免蓝光，按当地时间作息。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/sleep-calculator" className="text-orange-600 font-medium hover:underline">
             → 用睡眠计算器规划你的旅行睡眠
@@ -92,6 +108,22 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>Limit naps to 20 minutes</strong> — longer naps disrupt nighttime sleep</li>
           <li><strong>Stay hydrated</strong> — dehydration worsens jet lag symptoms</li>
         </ul>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">How long does jet lag take to recover?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">About 1 day per time zone. 5 zones ≈ 5 days.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">How to adjust before flying?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Shift sleep 1–2 hours earlier (east) or later (west) 2–3 days before.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">How to adapt after arrival?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Sunlight during day, avoid blue light at night, live on local time.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/sleep-calculator" className="text-orange-600 font-medium hover:underline">

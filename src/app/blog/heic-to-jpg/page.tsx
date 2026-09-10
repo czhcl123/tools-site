@@ -53,6 +53,22 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <strong>HEIC</strong>:体积最小,画质最好,但兼容性差(苹果生态)。<strong>JPG</strong>:万能格式,兼容所有平台,有损压缩。<strong>PNG</strong>:无损压缩,支持透明,但文件大。日常用 JPG,需要透明背景用 PNG,苹果设备内部用 HEIC。
         </p>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">什么是 HEIC?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">iPhone 从 iOS 11 默认的照片格式，体积只有 JPEG 的一半。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">为什么需要转换?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">很多网站和软件不支持 HEIC，转 JPG 确保兼容性。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">转换会损失画质吗?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">95%+ 质量肉眼几乎无差别。打印用最高质量，网页用 80%。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/heic-to-jpg" className="text-orange-600 font-medium hover:underline">
             → 立即转换 HEIC 为 JPG
@@ -88,6 +104,22 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         <p className="text-gray-700 leading-relaxed mb-4">
           <strong>HEIC</strong>: smallest files, best quality, but limited compatibility (Apple ecosystem). <strong>JPG</strong>: universal format, works everywhere, lossy compression. <strong>PNG</strong>: lossless, supports transparency, but larger files. Use JPG for daily use, PNG when you need transparency, HEIC within Apple devices.
         </p>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">What is HEIC?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">iPhone's default photo format since iOS 11, half the size of JPEG.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">Why convert to JPG?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Many websites and apps don't support HEIC. Converting ensures compatibility.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">Does conversion lose quality?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">At 95%+ quality, the difference is imperceptible.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/heic-to-jpg" className="text-orange-600 font-medium hover:underline">

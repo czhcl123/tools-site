@@ -58,6 +58,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>逾期 60 天</strong>：考虑暂停服务或发送律师函</li>
         </ul>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">Net 30 是什么?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">发票日期后 30 天内付清全款。最常见的商业付款条款。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">2/10 Net 30 呢?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">10 天内付款享 2% 折扣，否则 30 天内全额付清。年化收益约 36%。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/invoice-generator" className="text-orange-600 font-medium hover:underline">
             → 用发票生成器创建专业发票
@@ -98,6 +110,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>Day 30</strong> — formal collection letter mentioning late fees</li>
           <li><strong>Day 60</strong> — consider suspending services or sending a legal notice</li>
         </ul>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">What does Net 30 mean?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Full payment due within 30 days of the invoice date.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">What is 2/10 Net 30?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Pay within 10 days for 2% off; otherwise full amount due in 30 days.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/invoice-generator" className="text-orange-600 font-medium hover:underline">

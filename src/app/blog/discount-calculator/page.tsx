@@ -59,6 +59,22 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <p>打 5 折 = 50% off → 付 50%（半价）</p>
         </div>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">折扣计算器怎么用?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">输入原价和折扣百分比，立即显示折后价和节省金额。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">打 8 折和减 20% 一样吗?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">一样。打8折 = 减20% = 原价 × 0.8。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">多层折扣怎么算?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">先算第一层折扣价，再在新价格上算第二层。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/discount-calculator" className="text-orange-600 font-medium hover:underline">
             → 立即使用折扣计算器
@@ -101,6 +117,22 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <p>50% off → pay 50% (half price)</p>
           <p>75% off → pay 25% (quarter price)</p>
         </div>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">How do I use a discount calculator?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Enter original price and discount percentage to see the sale price and savings.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">Is 20% off the same as 8折?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Yes. 20% off = original price × 0.8.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">How do stacked discounts work?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Apply the first discount, then apply the second to the new price.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/discount-calculator" className="text-orange-600 font-medium hover:underline">

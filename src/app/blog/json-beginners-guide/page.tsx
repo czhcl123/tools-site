@@ -46,6 +46,14 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           压缩的JSON难以阅读。格式化后添加缩进和换行,让数据结构一目了然。调试API时,格式化能快速定位问题。
         </p>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">JSON 基本语法是什么?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">花括号{}表示对象，方括号[]表示数组，键值对用冒号分隔。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/json-formatter" className="text-orange-600 font-medium hover:underline">
             → 免费格式化你的 JSON
@@ -78,6 +86,14 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         <p className="text-gray-700 leading-relaxed mb-4">
           Compressed JSON is hard to read. Formatting adds indentation and line breaks, making data structure clear at a glance. Essential for API debugging.
         </p>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">What are JSON basics?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Curly braces {} for objects, square brackets [] for arrays, colons separate keys from values.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/json-formatter" className="text-orange-600 font-medium hover:underline">

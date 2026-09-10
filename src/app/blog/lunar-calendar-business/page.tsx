@@ -58,6 +58,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>本地化</strong>：不同地区庆祝方式不同，南方和北方习俗有差异</li>
         </ul>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">商家为什么关注农历?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">全球 15 亿人庆祝农历节日，春节中秋是巨大商业机会。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">春节营销提前多久?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">节前 2–3 个月启动预热，1 个月上线促销。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/lunar-calendar" className="text-orange-600 font-medium hover:underline">
             → 用农历转换工具规划你的营销日历
@@ -98,6 +110,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>Number symbolism</strong> — 4 is unlucky (sounds like "death"), 8 is lucky</li>
           <li><strong>Regional differences</strong> — customs vary between northern and southern China</li>
         </ul>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">Why should businesses care about the lunar calendar?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">1.5 billion people celebrate lunar festivals. They're huge commercial opportunities.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">How early to plan Chinese New Year marketing?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Start 2–3 months before; launch promotions 1 month out.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/lunar-calendar" className="text-orange-600 font-medium hover:underline">

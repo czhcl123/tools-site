@@ -56,6 +56,14 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li>在团队共享文档中显示关键截止日期的倒计时</li>
         </ul>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">倒计时如何提高效率?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">可视化剩余时间创造紧迫感，对抗帕金森定律。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/countdown" className="text-orange-600 font-medium hover:underline">
             → 立即使用倒计时计算器
@@ -94,6 +102,14 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li>Track progress with "days elapsed" counters</li>
           <li>Display key deadline countdowns in team shared documents</li>
         </ul>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">How do countdown timers improve efficiency?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Visualizing remaining time creates urgency, combating Parkinson's Law.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/countdown" className="text-orange-600 font-medium hover:underline">

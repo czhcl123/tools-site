@@ -47,6 +47,14 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           农历使用天干地支组合纪年,60年一循环。2024年是甲辰年(龙年),2025年是乙巳年(蛇年)。
         </p>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">春节有哪些习俗?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">贴春联、放鞭炮、吃年夜饭、发红包、拜年、舞龙舞狮。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/lunar-calendar" className="text-orange-600 font-medium hover:underline">
             → 查询任意日期的农历
@@ -80,6 +88,14 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         <p className="text-gray-700 leading-relaxed mb-4">
           The calendar uses a 60-year cycle combining Heavenly Stems and Earthly Branches. 2024 is the Year of the Dragon, 2025 is the Year of the Snake.
         </p>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">What are Chinese New Year traditions?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Spring couplets, firecrackers, reunion dinner, red envelopes, and dragon dances.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/lunar-calendar" className="text-orange-600 font-medium hover:underline">

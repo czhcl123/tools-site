@@ -51,6 +51,22 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           输入身高（厘米）和体重（千克），点击计算。结果会显示 BMI 数字、所属区间和颜色提示。支持亚洲/WHO 双标准对比，也支持英制单位（英尺/磅）。
         </p>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">BMI 的计算公式是什么?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">BMI = 体重(kg) ÷ 身高(m)²。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">BMI 正常范围是多少?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">WHO 标准: 18.5–24.9 正常，亚洲人 18.5–23.9。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">BMI 有什么局限性?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">不区分肌肉和脂肪，不反映内脏脂肪分布。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/bmi-calculator" className="text-orange-600 font-medium hover:underline">
             → 立即使用 BMI 计算器
@@ -84,6 +100,22 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         <p className="text-gray-700 leading-relaxed mb-4">
           Enter your height in cm and weight in kg, click calculate. The result shows your BMI number, category (underweight/normal/overweight/obese), and a color-coded indicator. Our tool supports both WHO and Asian thresholds, plus imperial units (feet/inches, pounds).
         </p>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">What is the BMI formula?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">BMI = weight (kg) ÷ height (m)².</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">What is a healthy BMI range?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">WHO: 18.5–24.9 normal. Asian threshold: 18.5–23.9.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">What are BMI limitations?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Cannot distinguish muscle from fat or reflect visceral fat.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/bmi-calculator" className="text-orange-600 font-medium hover:underline">

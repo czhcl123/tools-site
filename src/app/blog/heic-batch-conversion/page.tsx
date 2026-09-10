@@ -54,6 +54,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>批量重命名</strong>：转换后统一重命名，保持一致性</li>
         </ul>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">如何批量转换?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">使用在线工具一次选择多张照片，按项目创建文件夹保持组织。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">EXIF 数据保留吗?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">取决于工具，选择时检查是否保留拍摄参数和 GPS。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/heic-to-jpg" className="text-orange-600 font-medium hover:underline">
             → 批量转换 HEIC 照片
@@ -90,6 +102,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>Folder structure</strong> — organize by year/month/project for easy retrieval</li>
           <li><strong>Batch rename</strong> — standardize filenames after conversion for consistency</li>
         </ul>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">How to batch convert HEIC?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Use an online tool to upload multiple photos. Organize by project folders.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">Is EXIF data preserved?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Depends on the tool. Check if shooting parameters and GPS are retained.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/heic-to-jpg" className="text-orange-600 font-medium hover:underline">

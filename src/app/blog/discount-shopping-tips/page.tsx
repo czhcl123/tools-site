@@ -45,6 +45,14 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           8折=原价×0.8,75折=原价×0.75,6折=原价×0.6。用计算器快速换算,不用心算。
         </p>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">如何判断折扣是否划算?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">用计算器算出实际折扣率，对比历史价格。先涨后降的假折扣也能识破。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/discount-calculator" className="text-orange-600 font-medium hover:underline">
             → 立即使用折扣计算器
@@ -76,6 +84,14 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         <p className="text-gray-700 leading-relaxed mb-4">
           20% off = ×0.8, 25% off = ×0.75, 40% off = ×0.6. Use the calculator for quick conversions without mental math.
         </p>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">How to tell if a discount is real?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Calculate the actual discount rate and compare with historical prices.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/discount-calculator" className="text-orange-600 font-medium hover:underline">

@@ -58,6 +58,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>留缓冲时间</strong>：每个任务提前 1–2 天完成，应对突发情况</li>
         </ul>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">婚礼筹备提前多久?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">至少 6–12 个月。热门场地需提前 12 个月以上预订。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">婚礼当天怎么用倒计时?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">为每个环节设时间: 化妆(3h)、仪式(30min)、拍照(1h)、宴会(3h)。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/countdown" className="text-orange-600 font-medium hover:underline">
             → 开始你的婚礼倒计时
@@ -98,6 +110,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li><strong>Share with your partner</strong> — sync progress to avoid duplicate work</li>
           <li><strong>Build in buffers</strong> — finish each task 1–2 days early for unexpected delays</li>
         </ul>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">How early should I start wedding planning?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">At least 6–12 months. Popular venues need 12+ months advance booking.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">How to use countdown on the wedding day?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Set timers for each segment: makeup (3h), ceremony (30min), photos (1h), reception (3h).</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/countdown" className="text-orange-600 font-medium hover:underline">

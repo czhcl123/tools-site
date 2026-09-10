@@ -49,6 +49,14 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li>阅读时间=字数÷200(分钟)</li>
         </ul>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">如何精确控制字数?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">先写大纲定比例，写作时定期检查，最后微调。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/word-counter" className="text-orange-600 font-medium hover:underline">
             → 免费统计你的字数
@@ -84,6 +92,14 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li>Use word count to check paragraph balance</li>
           <li>Reading time = word count ÷ 200 (minutes)</li>
         </ul>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">How to precisely control word count?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Outline first, check periodically, then fine-tune.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/word-counter" className="text-orange-600 font-medium hover:underline">

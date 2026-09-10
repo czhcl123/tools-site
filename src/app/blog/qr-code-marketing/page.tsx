@@ -62,6 +62,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li>添加CTA(如"扫码领取优惠")</li>
         </ul>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">QR 码在营销中怎么用?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">印在名片、传单、海报上。扫码跳转网站、领优惠、关注社媒。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">如何追踪扫描数据?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">用带UTM参数的 QR 码，结合 Analytics 追踪来源和转化。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/qr-code-generator" className="text-orange-600 font-medium hover:underline">
             → 免费生成你的营销QR码
@@ -110,6 +122,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <li>Test readability in different lighting</li>
           <li>Add a CTA (e.g., "Scan for discount")</li>
         </ul>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">How are QR codes used in marketing?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Print on cards, flyers, posters. Scan to visit sites, claim offers, follow social media.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">How to track scan data?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Use QR codes with UTM parameters and track with Google Analytics.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/qr-code-generator" className="text-orange-600 font-medium hover:underline">

@@ -45,6 +45,14 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           保持规律作息、控制光照(白天多晒太阳,晚上避蓝光)、优化卧室环境(18-22°C)、避免睡前剧烈运动和大量进食。
         </p>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">深度睡眠和 REM 有什么区别?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">深度睡眠负责身体修复，REM 负责记忆巩固和情绪调节。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/sleep-calculator" className="text-orange-600 font-medium hover:underline">
             → 计算你的最佳睡眠时间
@@ -76,6 +84,14 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         <p className="text-gray-700 leading-relaxed mb-4">
           Maintain regular sleep schedule, control light exposure (sunlight during day, avoid blue light at night), optimize bedroom environment (18-22°C), avoid intense exercise and heavy meals before bed.
         </p>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">Deep sleep vs REM?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Deep sleep handles physical recovery; REM handles memory and emotional regulation.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/sleep-calculator" className="text-orange-600 font-medium hover:underline">

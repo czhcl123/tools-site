@@ -58,6 +58,22 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           1 加仑(美) = 3.785 升 | 1 加仑(英) = 4.546 升 | 1 杯 = 236.6 毫升 | 1 液盎司 = 29.57 毫升。做饭/烘焙必会。
         </p>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">支持哪些单位?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">长度、重量、温度、体积、面积、数据存储等多种互转。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">杯和毫升怎么换算?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">1 cup = 240 ml，1 tbsp = 15 ml，1 tsp = 5 ml。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">华氏和摄氏怎么转?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">°C = (°F - 32) × 5/9。350°F = 175°C，400°F = 200°C。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/unit-converter" className="text-orange-600 font-medium hover:underline">
             → 立即使用单位换算器
@@ -98,6 +114,22 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         <p className="text-gray-700 leading-relaxed mb-4">
           1 US gallon = 3.785 liters | 1 UK gallon = 4.546 liters | 1 cup = 236.6 ml | 1 fl oz = 29.57 ml. Essential for cooking with international recipes.
         </p>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">What units does it support?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Length, weight, temperature, volume, area, data storage, and more.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">How many ml in a cup?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">1 cup = 240 ml. 1 tbsp = 15 ml. 1 tsp = 5 ml.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">Fahrenheit to Celsius?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">°C = (°F - 32) × 5/9. Common: 350°F = 175°C, 400°F = 200°C.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/unit-converter" className="text-orange-600 font-medium hover:underline">

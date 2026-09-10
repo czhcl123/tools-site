@@ -58,6 +58,22 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <strong>尺寸</strong>:最小 2cm × 2cm,扫描距离越远越大。<strong>对比度</strong>:深色码+浅色背景,避免花哨背景。<strong>纠错</strong>:QR 码有 4 级容错(L/M/Q/H),最高可损毁 30% 仍可识别。<strong>格式</strong>:PNG 适合打印,SVG 适合缩放。
         </p>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">QR 码最多存多少数据?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">最多 4296 个数字。数据越少码越小、扫描越快。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">纠错级别有哪些?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">L(7%)、M(15%)、Q(25%)、H(30%)。H 级损毁 30% 仍可识别。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">如何提高扫描成功率?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">最小 2cm×2cm、高对比度、避免模糊反光。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/qr-code-generator" className="text-orange-600 font-medium hover:underline">
             → 立即生成 QR 码
@@ -98,6 +114,22 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         <p className="text-gray-700 leading-relaxed mb-4">
           <strong>Size</strong>: minimum 2cm × 2cm; larger for longer scan distances. <strong>Contrast</strong>: dark code on light background, avoid busy patterns. <strong>Error correction</strong>: QR codes have 4 levels (L/M/Q/H); Level H still works even if 30% is damaged. <strong>Format</strong>: PNG for printing, SVG for scaling.
         </p>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">How much data can a QR code hold?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Up to 4,296 digits. Less data = smaller code = faster scanning.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">Error correction levels?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">L(7%), M(15%), Q(25%), H(30%). Level H works even if 30% damaged.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">How to improve scan success?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Minimum 2cm×2cm, high contrast, avoid blur and glare.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/qr-code-generator" className="text-orange-600 font-medium hover:underline">

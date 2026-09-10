@@ -63,6 +63,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <p>产品描述: 150–300 词</p>
         </div>
 
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">常见问题</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">怎么用?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">粘贴文本，立即显示字数、字符数、段落数和句子数。</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">中文按字还是词?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">中文按「字」，英文按「词」。工具自动识别。</dd>
+        </div>
+      </dl>
+
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/word-counter" className="text-orange-600 font-medium hover:underline">
             → 立即使用字数统计工具
@@ -108,6 +120,18 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <p>College essay: 2,000–5,000 words</p>
           <p>Master's thesis: 15,000–25,000 words</p>
         </div>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">How do I use it?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Paste text and see word count, character count, paragraphs, and sentences.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">Chinese: characters or words?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Chinese counts characters; English counts words. Auto-detected.</dd>
+        </div>
+      </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
           <Link href="/word-counter" className="text-orange-600 font-medium hover:underline">
