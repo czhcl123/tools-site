@@ -112,7 +112,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'qr-code-event-management',
     'sleep-jet-lag-recovery',
     'unit-converter-cooking',
-    'word-counter-academic',
+        'word-counter-academic',
+    // Ultimate guides (deep-dive long-form)
+    'ultimate-invoicing-guide',
+    'ultimate-json-guide',
+    'ultimate-sleep-guide',
   ]
 
   entries.push(

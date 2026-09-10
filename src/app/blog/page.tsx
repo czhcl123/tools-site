@@ -66,6 +66,10 @@ const posts = [
   { slug: 'sleep-jet-lag-recovery', icon: '✈️', title: 'Beat Jet Lag: Sleep Calculator for Travelers', zhTitle: '时差调整：旅行者睡眠计算器' },
   { slug: 'unit-converter-cooking', icon: '🍳', title: 'Kitchen Unit Converter: Cooking Measurements Guide', zhTitle: '厨房单位换算：烹饪测量完全指南' },
   { slug: 'word-counter-academic', icon: '📝', title: 'Academic Writing: Meeting Word Count Requirements', zhTitle: '学术写作：满足字数要求' },
+  // Ultimate guides (deep-dive long-form)
+  { slug: 'ultimate-invoicing-guide', icon: '📘', title: 'The Ultimate Invoicing Guide', zhTitle: '终极发票指南：从零到专业开票' },
+  { slug: 'ultimate-json-guide', icon: '📘', title: 'The Complete JSON Guide', zhTitle: 'JSON 完全指南：从入门到精通' },
+  { slug: 'ultimate-sleep-guide', icon: '📘', title: 'The Complete Sleep Science Guide', zhTitle: '睡眠科学完全指南：优化你的每一觉' },
 ]
 
 export default function BlogIndex() {
