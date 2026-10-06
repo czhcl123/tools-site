@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://tools-site-production.up.railway.app'
   // Hardcoded to force re-crawl signal after 7-18 GKP title/desc updates
-  const today = '2026-07-28'
+  const today = '2026-10-06'
 
   // 工具 slug 清单 (en + zh 双路径)
   const tools = [
@@ -117,6 +117,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'ultimate-invoicing-guide',
     'ultimate-json-guide',
     'ultimate-sleep-guide',
+    // 5th post per tool (2026-10)
+    'percent-off-vs-amount-off',
+    'bmi-asian-adults',
+    'countdown-study-pomodoro',
+    'lunar-leap-month',
+    'unit-conversion-formulas',
+    'qr-code-size-error-correction',
+    'reading-time-1000-words',
+    'json-common-errors',
+    'heic-privacy-metadata',
+    'invoice-numbering-rules',
+    'sleep-debt-recovery',
+    'password-strength-length-vs-complexity',
   ]
 
   entries.push(

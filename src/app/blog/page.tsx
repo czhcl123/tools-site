@@ -70,6 +70,19 @@ const posts = [
   { slug: 'ultimate-invoicing-guide', icon: '📘', title: 'The Ultimate Invoicing Guide', zhTitle: '终极发票指南：从零到专业开票' },
   { slug: 'ultimate-json-guide', icon: '📘', title: 'The Complete JSON Guide', zhTitle: 'JSON 完全指南：从入门到精通' },
   { slug: 'ultimate-sleep-guide', icon: '📘', title: 'The Complete Sleep Science Guide', zhTitle: '睡眠科学完全指南：优化你的每一觉' },
+  // 5th post per tool (2026-10)
+  { slug: 'percent-off-vs-amount-off', icon: '🏷️', title: 'Percent Off vs Amount Off: Which Deal Is Better?', zhTitle: '打几折还是立减？哪种优惠更划算' },
+  { slug: 'bmi-asian-adults', icon: '🌏', title: 'BMI for Asian Adults: Why the Cutoffs Are Lower', zhTitle: '亚洲人 BMI 标准：为什么切点更低' },
+  { slug: 'countdown-study-pomodoro', icon: '🍅', title: 'Study Countdown Timers: Pomodoro and Exam Prep', zhTitle: '学习倒计时：番茄工作法与备考计时' },
+  { slug: 'lunar-leap-month', icon: '🐉', title: 'Leap Months in the Lunar Calendar Explained', zhTitle: '农历闰月：为什么有的年份有 13 个月' },
+  { slug: 'unit-conversion-formulas', icon: '📐', title: 'Unit Conversion Formulas: Length, Weight, Volume', zhTitle: '单位换算公式：长度、重量、体积一文通' },
+  { slug: 'qr-code-size-error-correction', icon: '📏', title: 'QR Code Size and Error Correction: Scans That Work', zhTitle: 'QR 码尺寸与容错：保证扫码成功' },
+  { slug: 'reading-time-1000-words', icon: '📖', title: 'Reading Speed: How Long to Read 1,000 Words?', zhTitle: '阅读速度对照：读 1000 字要多久' },
+  { slug: 'json-common-errors', icon: '🐛', title: 'Common JSON Errors: Find and Fix Them Fast', zhTitle: 'JSON 常见错误：一行定位，快速修复' },
+  { slug: 'heic-privacy-metadata', icon: '🔒', title: 'HEIC Privacy: What Your Photos Reveal When Converted', zhTitle: 'HEIC 隐私与安全：转换时会泄露什么' },
+  { slug: 'invoice-numbering-rules', icon: '🔢', title: 'Invoice Numbering Rules: Never Duplicate or Skip', zhTitle: '发票编号规则：不再重复和跳号' },
+  { slug: 'sleep-debt-recovery', icon: '😴', title: 'Sleep Debt: Can You Actually Catch Up on Lost Sleep?', zhTitle: '睡眠负债：欠的觉真的能补回来吗' },
+  { slug: 'password-strength-length-vs-complexity', icon: '🔐', title: 'Password Strength: Length vs Complexity, What Wins', zhTitle: '密码强度解析：长度和复杂度哪个更重要' },
 ]
 
 export default function BlogIndex() {
