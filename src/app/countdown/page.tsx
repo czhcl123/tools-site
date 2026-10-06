@@ -10,12 +10,12 @@ export async function generateMetadata({
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
 
   const titles = {
-    zh: '在线倒计时计算器：选择任意目标日期和时间，实时跳秒显示距离目标还有几天几小时几分钟几秒。支持正计时和倒计时两种模式，可用于考试倒计时、生日倒计时、项目截止日等场景，免费无需注册。',
+    zh: '在线倒计时计算器：距离目标日期还有几天',
     en: 'Countdown Calculator — Days Until Date',
   }
   const descriptions = {
     zh: '在线倒计时计算器:实时跳秒,选择目标日期+时间,显示还有几天几小时几分钟几秒。也支持距今已过去天数模式,免费无需注册。',
-    en: 'Free countdown calculator: count down days, hours, minutes, seconds to any date. Live timer updates every second. Free, no signup.',
+    en: 'Free countdown calculator and date counter: days until any date, days left, and days since. Live second-by-second timer. No signup.',
   }
   const ogTitles = { zh: '日期计算器 - 实用计算器', en: 'Countdown Calculator - Practical Tools' }
   const ogDescs = {
@@ -145,7 +145,14 @@ const seoBodyZh = (
 
 const seoBodyEn = (
   <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
-    <p>Enter any target date and instantly see how many days remain. Perfect for birthdays, holidays, exam deadlines, and project timelines. Also counts working days excluding weekends and public holidays.</p>
+    <p>Enter any target date and instantly see how many days remain. This tool works as a countdown calculator, a date counter, and a days-left tracker — pick a future date to count down, or a past date to count how many days have passed.</p>
+    <h3 className="font-semibold text-gray-700">What you can calculate</h3>
+    <ul className="list-disc list-inside space-y-1">
+      <li><strong>Days until a date</strong> — birthdays, holidays, exams, project deadlines, vacation start</li>
+      <li><strong>Days left</strong> — how much time remains before a fixed deadline</li>
+      <li><strong>Days since</strong> — sobriety milestones, baby age in days, work anniversaries, days since launch</li>
+      <li><strong>Live countdown timer</strong> — second-by-second display for New Year, weddings, launches</li>
+    </ul>
     <p>Counting down to Chinese New Year or Mid-Autumn Festival? Use our <a href="/lunar-calendar" className="text-orange-500 hover:underline">lunar calendar converter</a> first to find the exact Gregorian date.</p>
   </div>
 )

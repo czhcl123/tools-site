@@ -157,6 +157,13 @@ const faqSchemaEn = {
 const seoBodyZh = (
   <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
     <p>基于 90 分钟睡眠周期,输入你几点睡觉或几点起床,算出最佳入睡/起床时间,让你醒来时不犯困。</p>
+    <h3 className="font-semibold text-gray-700">90 分钟睡眠周期怎么算</h3>
+    <p>一个完整睡眠周期约 <strong>90 分钟</strong>:浅睡(N1/N2)→ 深睡(N3)→ REM。成年人每晚需要 4-6 个完整周期——所以反推很简单:7:00 起床 → 21:45 入睡(6 周期 + 15 分钟入睡时间)或 23:15(5 周期)。本页所有推荐时间都是 90 分钟的倍数。</p>
+    <ul className="list-disc list-inside space-y-1">
+      <li><strong>90 分钟一个周期</strong> — 浅睡 → 深睡 → REM,四阶段循环</li>
+      <li><strong>+15 分钟入睡时间</strong> — 平均入睡耗时,已加进每个推荐 bedtime</li>
+      <li><strong>个体差异 70-110 分钟</strong> — 90 分钟是规划用的平均值</li>
+    </ul>
     <p>传统说法认为农历初一和十五的月相会影响睡眠质量,可以用<a href="/lunar-calendar" className="text-orange-500 hover:underline">农历转换器</a>查看月相日期。</p>
   </div>
 )
@@ -164,6 +171,13 @@ const seoBodyZh = (
 const seoBodyEn = (
   <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
     <p>Based on 90-minute sleep cycles, enter your bedtime or wake-up time to find the optimal schedule. Wake up feeling refreshed instead of groggy — no more alarm clock fatigue.</p>
+    <h3 className="font-semibold text-gray-700">How the 90-minute sleep cycle works</h3>
+    <p>A full sleep cycle runs about <strong>90 minutes</strong>: light sleep (N1/N2), deep sleep (N3), then REM. Adults need 4-6 complete cycles per night — so the 90-minute sleep cycle calculator works backwards from your alarm: 7:00 AM wake-up means bedtime around 9:45 PM (6 cycles + 15 min to fall asleep) or 11:15 PM (5 cycles).</p>
+    <ul className="list-disc list-inside space-y-1">
+      <li><strong>90-minute intervals</strong> — every option on this page is a multiple of 90 minutes</li>
+      <li><strong>+15 minutes</strong> — average time to fall asleep, added to every bedtime</li>
+      <li><strong>70-110 min variance</strong> — real cycles vary; 90 minutes is the planning average</li>
+    </ul>
     <p>Some believe moon phases affect sleep quality. Check full moon dates with our <a href="/lunar-calendar" className="text-orange-500 hover:underline">lunar calendar converter</a>.</p>
   </div>
 )

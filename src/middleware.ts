@@ -34,6 +34,13 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(newUrl, 301)
   }
 
+  if (lang === 'en') {
+    // ?lang=en → clean URL (English is the default language; avoid duplicate indexing)
+    const newUrl = new URL(url.pathname, request.url)
+    newUrl.search = ''
+    return NextResponse.redirect(newUrl, 301)
+  }
+
   const response = NextResponse.next()
   // Set language header for root layout to read
   const isZh = url.pathname.startsWith('/zh')
