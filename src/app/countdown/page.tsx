@@ -86,6 +86,14 @@ const faqSchemaZh = {
         text: '有。点击页面顶部"实时倒计时"切换后,选择目标日期+时间(精确到分钟),工具会每秒刷新显示"还剩 X 天 X 小时 X 分钟 X 秒"。常用于婚礼仪式、跨年倒计时、考试交卷、太空发射等需要秒级精度的场景。所有计算在浏览器本地完成,不依赖服务器。',
       },
     },
+    {
+      '@type': 'Question',
+      name: '距离圣诞节还有多少天?怎么倒计时?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '圣诞节是每年12月25日(平安夜12月24日)。2026年的圣诞节是12月25日星期五。在本工具选择12月25日作为目标日期,即可得到实时的"距离圣诞节还有多少天"。常见节点:12月1日(还有24天)、黑五(11月27日,购物截止)、平安夜(最后1天)。',
+      },
+    },
   ],
 }
 
@@ -133,12 +141,22 @@ const faqSchemaEn = {
         text: 'Yes. Switch to the "Live Timer" mode, pick a target date and time (to the minute), and the timer updates every second showing days, hours, minutes, and seconds remaining. Common uses: wedding ceremony, New Year countdown, exam deadline, rocket launch. All calculations happen in your browser — no server calls, no latency.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'How many days until Christmas?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Christmas Day is December 25 every year (Christmas Eve is December 24). For 2026, Christmas falls on Friday, December 25. Set December 25 as the target date in this countdown calculator for the live days-until-Christmas number. Common milestones: December 1 (24 days out), Black Friday November 27 (shopping deadline), and December 24 (one day left).',
+      },
+    },
   ],
 }
 
 const seoBodyZh = (
   <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
     <p>输入目标日期,立刻算出距离今天还有多少天。支持生日倒计时、节假日倒计时、考试/截止日期倒计时,也能统计排除周末和节假日后的工作日数。</p>
+    <h3 className="font-semibold text-gray-700">2026 年圣诞节倒计时</h3>
+    <p>2026 年的圣诞节是 <strong>12 月 25 日(星期五)</strong>,平安夜是 12 月 24 日。在工具里选 12 月 25 日作为目标日期,就能得到实时的「距离圣诞节还有多少天」。常见节点:12 月 1 日(还有 24 天)、黑五 11 月 27 日(购物截止)、平安夜(最后 1 天)。黑五折扣力度用<a href="/discount-calculator" className="text-orange-500 hover:underline">折扣计算器</a>算实付价。</p>
     <p>想倒计时春节、中秋等农历节日？先用<a href="/lunar-calendar" className="text-orange-500 hover:underline">农历转换器</a>查出对应的公历日期,再来倒计时。</p>
   </div>
 )
@@ -154,6 +172,8 @@ const seoBodyEn = (
       <li><strong>Live countdown timer</strong> — second-by-second display for New Year, weddings, launches</li>
     </ul>
     <p>Counting down to Chinese New Year or Mid-Autumn Festival? Use our <a href="/lunar-calendar" className="text-orange-500 hover:underline">lunar calendar converter</a> first to find the exact Gregorian date.</p>
+    <h3 className="font-semibold text-gray-700">Christmas 2026 countdown</h3>
+    <p>Christmas Day 2026 falls on <strong>Friday, December 25</strong> (Christmas Eve: December 24). Set December 25 as your target date to get the live days-until-Christmas count. Common milestones: December 1 (24 days out), Black Friday November 27 (shopping deadline — check the real discount with our <a href="/discount-calculator" className="text-orange-500 hover:underline">discount calculator</a>), and December 24 (one day left).</p>
   </div>
 )
 
@@ -192,7 +212,7 @@ export default async function CountdownPage({
       'Free, no signup, no ads',
       'Bilingual English / Chinese',
     ],
-    dateModified: '2026-07-18',
+    dateModified: '2026-10-06',
   }
 
   return (

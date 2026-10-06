@@ -96,6 +96,14 @@ const faqSchemaZh = {
         text: '睡眠模式计算器(sleep pattern calculator)是根据你最近的作息记录(入睡时间、起床时间、睡眠质量)反推你的睡眠周期分布。它能告诉你自己是"早起型"还是"夜猫型",适合调整作息。本工具主要推荐 4-6 个完整 90 分钟周期方案,帮助用户找到最规律的睡眠节奏。',
       },
     },
+    {
+      '@type': 'Question',
+      name: '8小时睡眠有几个周期?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '8 小时 = 480 分钟。480 ÷ 90 ≈ 5.3,所以 8 小时包含约 5 个完整睡眠周期(7.5 小时)加 30 分钟零头。这 30 分钟要么是入睡缓冲,要么会落在半个周期里被闹钟打断——这就是"睡满 8 小时还是困"的常见原因。想在周期边界醒来,实际睡眠目标设 7.5 小时(5 周期)或 9 小时(6 周期)。',
+      },
+    },
   ],
 }
 
@@ -151,6 +159,14 @@ const faqSchemaEn = {
         text: 'A sleep pattern calculator analyzes your recent sleep logs (bedtime, wake time, quality) to determine your sleep cycle distribution. It can tell you whether you\'re a "morning lark" or "night owl" and help you optimize your schedule. This tool focuses on the simpler question: given a wake-up or bedtime, what are the best 4-6 complete 90-minute cycles to aim for?',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'How many sleep cycles in 8 hours?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Eight hours is 480 minutes. 480 ÷ 90 ≈ 5.3, so an 8-hour window contains about 5 complete sleep cycles (7.5 hours) plus a 30-minute remainder. That remainder is either fall-asleep buffer or half a cycle cut off by your alarm — which is why people wake from 8 hours feeling groggy. To wake at a cycle boundary, target 7.5 hours (5 cycles) or 9 hours (6 cycles) of actual sleep.',
+      },
+    },
   ],
 }
 
@@ -165,6 +181,8 @@ const seoBodyZh = (
       <li><strong>个体差异 70-110 分钟</strong> — 90 分钟是规划用的平均值</li>
     </ul>
     <p>传统说法认为农历初一和十五的月相会影响睡眠质量,可以用<a href="/lunar-calendar" className="text-orange-500 hover:underline">农历转换器</a>查看月相日期。</p>
+    <h3 className="font-semibold text-gray-700">8 小时睡眠有几个周期?</h3>
+    <p>8 小时 = 480 分钟,480 ÷ 90 ≈ 5.3——所以 8 小时里有约 <strong>5 个完整周期(7.5 小时)</strong>加 30 分钟零头。这 30 分钟要么是入睡缓冲,要么落在半个周期里被闹钟打断,这就是「睡满 8 小时还是困」的常见原因。想在周期边界醒来:实际睡眠目标设 <strong>7.5 小时(5 周期)</strong>或 9 小时(6 周期)。</p>
   </div>
 )
 
@@ -179,6 +197,8 @@ const seoBodyEn = (
       <li><strong>70-110 min variance</strong> — real cycles vary; 90 minutes is the planning average</li>
     </ul>
     <p>Some believe moon phases affect sleep quality. Check full moon dates with our <a href="/lunar-calendar" className="text-orange-500 hover:underline">lunar calendar converter</a>.</p>
+    <h3 className="font-semibold text-gray-700">How many sleep cycles in 8 hours?</h3>
+    <p>Eight hours is 480 minutes; 480 ÷ 90 ≈ 5.3 — so 8 hours holds about <strong>5 complete cycles (7.5 hours)</strong> plus a 30-minute remainder. That remainder is either fall-asleep buffer or half a cycle cut off by your alarm, which is why "8 full hours" can still feel groggy. To wake at a cycle boundary, target <strong>7.5 hours (5 cycles)</strong> or 9 hours (6 cycles) of actual sleep.</p>
   </div>
 )
 
@@ -217,7 +237,7 @@ export default async function SleepCalculatorPage({
       'Free, no signup, browser-only',
       'Bilingual English / Chinese',
     ],
-    dateModified: '2026-07-25',
+    dateModified: '2026-10-06',
   }
 
   return (
