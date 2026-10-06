@@ -68,6 +68,14 @@ const faqSchemaZh = {
         text: '有。点击页面顶部"实时倒计时"切换后,选择目标日期+时间(精确到分钟),工具会每秒刷新显示"还剩 X 天 X 小时 X 分钟 X 秒"。常用于婚礼仪式、跨年倒计时、考试交卷、太空发射等需要秒级精度的场景。所有计算在浏览器本地完成,不依赖服务器。',
       },
     },
+    {
+      '@type': 'Question',
+      name: '距离圣诞节还有多少天?怎么倒计时?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '圣诞节是每年12月25日(平安夜12月24日)。2026年的圣诞节是12月25日星期五。在本工具选择12月25日作为目标日期,即可得到实时的"距离圣诞节还有多少天"。常见节点:12月1日(还有24天)、黑五(11月27日,购物截止)、平安夜(最后1天)。',
+      },
+    },
   ],
 }
 
@@ -79,6 +87,8 @@ const seoBodyZh = (
       <li>📅 <strong>天数模式</strong> — 距目标还有多少天</li>
       <li>⏱️ <strong>实时倒计时</strong> — 天+小时+分钟+秒</li>
     </ul>
+    <h3 className="font-semibold text-gray-700 text-base mt-4">2026 年圣诞节倒计时</h3>
+    <p>2026 年的圣诞节是 <strong>12 月 25 日(星期五)</strong>,平安夜是 12 月 24 日。在工具里选 12 月 25 日作为目标日期,就能得到实时的「距离圣诞节还有多少天」。常见节点:12 月 1 日(还有 24 天)、黑五 11 月 27 日(购物截止)、平安夜(最后 1 天)。</p>
     <p className="text-xs text-gray-400 mt-4">所有计算在浏览器本地完成，数据不上传。</p>
   </div>
 )
@@ -114,7 +124,7 @@ export default async function CountdownPage({
       'Free, no signup, no ads',
       'Bilingual English / Chinese',
     ],
-    dateModified: '2026-07-18',
+    dateModified: '2026-10-06',
   }
 
   return (

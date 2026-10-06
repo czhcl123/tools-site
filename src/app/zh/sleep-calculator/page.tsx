@@ -76,6 +76,14 @@ const faqSchemaZh = {
         text: '睡眠模式计算器(sleep pattern calculator)是根据你最近的作息记录(入睡时间、起床时间、睡眠质量)反推你的睡眠周期分布。它能告诉你自己是"早起型"还是"夜猫型",适合调整作息。本工具主要推荐 4-6 个完整 90 分钟周期方案,帮助用户找到最规律的睡眠节奏。',
       },
     },
+    {
+      '@type': 'Question',
+      name: '8小时睡眠有几个周期?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '8 小时 = 480 分钟。480 ÷ 90 ≈ 5.3,所以 8 小时包含约 5 个完整睡眠周期(7.5 小时)加 30 分钟零头。这 30 分钟要么是入睡缓冲,要么会落在半个周期里被闹钟打断——这就是"睡满 8 小时还是困"的常见原因。想在周期边界醒来,实际睡眠目标设 7.5 小时(5 周期)或 9 小时(6 周期)。',
+      },
+    },
   ],
 }
 
@@ -90,6 +98,8 @@ const seoBodyZh = (
       <li>💤 5 个周期 = 7.5 小时（推荐）</li>
       <li>⏰ 4 个周期 = 6 小时（最低）</li>
     </ul>
+    <h3 className="font-semibold text-gray-700 text-base mt-4">8 小时睡眠有几个周期?</h3>
+    <p>8 小时 = 480 分钟,480 ÷ 90 ≈ 5.3——所以 8 小时里有约 <strong>5 个完整周期(7.5 小时)</strong>加 30 分钟零头。这 30 分钟要么是入睡缓冲,要么落在半个周期里被闹钟打断,这就是「睡满 8 小时还是困」的常见原因。想在周期边界醒来:实际睡眠目标设 <strong>7.5 小时(5 周期)</strong>或 9 小时(6 周期)。</p>
     <p className="text-xs text-gray-400 mt-4">所有计算在浏览器本地完成，数据不上传。</p>
   </div>
 )
@@ -125,7 +135,7 @@ export default async function SleepCalculatorPage({
       'Free, no signup, browser-only',
       'Bilingual English / Chinese',
     ],
-    dateModified: '2026-07-25',
+    dateModified: '2026-10-06',
   }
 
   return (
