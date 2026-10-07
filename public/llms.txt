@@ -1,6 +1,6 @@
 # Practical Tools
 
-> A collection of 10 fast, browser-based calculators and utilities. No signup, no installation, no tracking. Each tool runs entirely client-side in JavaScript and works offline once loaded. Optimized for both English and Chinese users, with `?lang=zh` / `?lang=en` query-string language switching.
+> A collection of 12 fast, browser-based calculators and utilities. No signup, no installation, no tracking. Each tool runs entirely client-side in JavaScript and works offline once loaded. English pages live at clean root URLs (e.g. `/bmi-calculator`); Chinese versions live under `/zh/` (e.g. `/zh/bmi-calculator`). Legacy `?lang=en` URLs redirect to the English clean URLs.
 
 ## Calculators
 
@@ -9,12 +9,14 @@
 - [Date Countdown](https://tools-site-production.up.railway.app/countdown): Count days, hours, minutes, and seconds until or since any date. Useful for deadlines, anniversaries, and project milestones.
 - [Lunar Calendar](https://tools-site-production.up.railway.app/lunar-calendar): Convert between Gregorian (solar) and Chinese lunar (农历) calendars. Shows lunar dates, zodiac year, and traditional festivals.
 - [Unit Converter](https://tools-site-production.up.railway.app/unit-converter): Convert between common units of length, weight, temperature, area, volume, and time.
+- [Sleep Calculator](https://tools-site-production.up.railway.app/sleep-calculator): Pick the ideal bedtime or wake-up time based on 90-minute sleep cycles, so you fall asleep and wake up feeling rested.
 
 ## Generators & Formatters
 
 - [QR Code Generator](https://tools-site-production.up.railway.app/qr-code-generator): Generate QR codes for URLs, text, contact cards (vCard), and Wi-Fi credentials. Download as PNG.
 - [Invoice Generator](https://tools-site-production.up.railway.app/invoice-generator): Create simple invoices with line items, tax, and totals. Print or save as PDF.
 - [JSON Formatter](https://tools-site-production.up.railway.app/json-formatter): Pretty-print, validate, and minify JSON. Highlights syntax errors with line numbers.
+- [Password Generator](https://tools-site-production.up.railway.app/password-generator): Generate strong, random passwords in your browser with configurable length and character sets. Nothing is uploaded.
 
 ## File & Text Utilities
 

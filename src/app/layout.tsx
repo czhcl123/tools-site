@@ -31,7 +31,7 @@ const organizationSchema = {
     width: 512,
     height: 512,
   },
-  description: 'A collection of 10 fast, browser-based calculators and utilities. No signup, no installation, no tracking. Supports English and Chinese.',
+  description: 'A collection of 12 fast, browser-based calculators and utilities. No signup, no installation, no tracking. Supports English and Chinese.',
   foundingDate: '2026',
   knowsAbout: [
     'Discount calculation',
