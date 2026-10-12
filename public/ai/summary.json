@@ -1,7 +1,7 @@
 {
   "name": "Practical Tools",
   "alternateName": "实用计算器",
-  "url": "https://tools-site-production.up.railway.app",
+  "url": "https://getpracticaltools.com",
   "description": "A collection of 10 free, fast, browser-based calculators and utilities. No signup, no installation, no tracking. Each tool runs entirely client-side and supports both English and Chinese.",
   "category": "ProductivityUtilities",
   "operatingSystem": "Any (web browser)",
@@ -25,12 +25,12 @@
     "HEIC to JPG Converter (client-side, private)",
     "Word Counter"
   ],
-  "privacyPolicy": "https://tools-site-production.up.railway.app/privacy",
-  "termsOfService": "https://tools-site-production.up.railway.app/terms",
+  "privacyPolicy": "https://getpracticaltools.com/privacy",
+  "termsOfService": "https://getpracticaltools.com/terms",
   "foundingDate": "2026",
   "author": {
     "@type": "Organization",
     "name": "Practical Tools",
-    "url": "https://tools-site-production.up.railway.app"
+    "url": "https://getpracticaltools.com"
   }
 }

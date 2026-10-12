@@ -22,14 +22,14 @@ export async function generateMetadata({
     title: titles[lang],
     description: descriptions[lang],
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/password-generator' : '/password-generator'}`,
+      canonical: `https://getpracticaltools.com${lang === 'zh' ? '/zh/password-generator' : '/password-generator'}`,
       languages: {
         'zh-CN': '/zh/password-generator',
         'en-US': '/password-generator',
         'x-default': '/password-generator',
       },
     },
-      openGraph: { url: `${lang === 'zh' ? 'https://tools-site-production.up.railway.app/zh/password-generator' : 'https://tools-site-production.up.railway.app/password-generator'}` },
+      openGraph: { url: `${lang === 'zh' ? 'https://getpracticaltools.com/zh/password-generator' : 'https://getpracticaltools.com/password-generator'}` },
   }
 }
 
@@ -153,7 +153,7 @@ export default async function PasswordGeneratorPage({
     '@type': 'WebApplication',
     name: lang === 'zh' ? '密码生成器' : 'Password Generator',
     alternateName: lang === 'zh' ? '随机密码生成' : 'Random Password Generator',
-    url: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/password-generator' : '/password-generator'}`,
+    url: `https://getpracticaltools.com${lang === 'zh' ? '/zh/password-generator' : '/password-generator'}`,
     applicationCategory: 'SecurityApplication',
     operatingSystem: 'Any (web browser with JavaScript)',
     browserRequirements: 'Requires JavaScript.',

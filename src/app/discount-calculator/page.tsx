@@ -24,12 +24,12 @@ export async function generateMetadata({
     title: data[lang].title,
     description: data[lang].description,
     openGraph: {
-        url: `${lang === 'zh' ? 'https://tools-site-production.up.railway.app/zh/discount-calculator' : 'https://tools-site-production.up.railway.app/discount-calculator'}`,
+        url: `${lang === 'zh' ? 'https://getpracticaltools.com/zh/discount-calculator' : 'https://getpracticaltools.com/discount-calculator'}`,
       title: data[lang].title,
       description: data[lang].description,
     },
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/discount-calculator',
+      canonical: 'https://getpracticaltools.com/discount-calculator',
       languages: {
         'zh-CN': '/zh/discount-calculator',
         'en-US': '/discount-calculator',

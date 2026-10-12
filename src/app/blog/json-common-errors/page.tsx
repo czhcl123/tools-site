@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? 'JSON 报错看不懂？逗号、引号、括号、注释——最常见的 7 类错误逐个示例，教你用格式化工具精确定位。'
       : 'Trailing commas, single quotes, mismatched brackets — the seven most common JSON errors with examples, and how a formatter pinpoints each one.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/json-common-errors',
+      canonical: 'https://getpracticaltools.com/blog/json-common-errors',
       languages: { 'en-US': '/blog/json-common-errors', 'x-default': '/blog/json-common-errors' },
     },
-    openGraph: { url: 'https://tools-site-production.up.railway.app/blog/json-common-errors' },
+    openGraph: { url: 'https://getpracticaltools.com/blog/json-common-errors' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why does my JSON say unexpected token?", "acceptedAnswer": {"@type": "Answer", "text": "Usually a trailing comma, a single quote, or an unquoted key right before that position. The error line and column point at the first invalid character."}}, {"@type": "Question", "name": "Does JSON allow comments?", "acceptedAnswer": {"@type": "Answer", "text": "No. Standard JSON (RFC 8259) has no comment syntax. Use JSONC or strip comments before parsing."}}]}),
     },

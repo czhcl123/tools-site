@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '教你用折扣计算器快速算出打折后的价格和省钱金额,含公式、实例和常见场景。'
       : 'Learn how to use a discount calculator to find sale prices, savings, and multi-step discounts. Includes formulas and real examples.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/discount-calculator',
+      canonical: 'https://getpracticaltools.com/blog/discount-calculator',
       languages: { 'en-US': '/blog/discount-calculator', 'x-default': '/blog/discount-calculator' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/discount-calculator' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/discount-calculator' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How to use discount calculator?", "acceptedAnswer": {"@type": "Answer", "text": "Enter original price and discount percentage."}}, {"@type": "Question", "name": "20% off vs 8折?", "acceptedAnswer": {"@type": "Answer", "text": "Same thing: original price × 0.8."}}, {"@type": "Question", "name": "Stacked discounts?", "acceptedAnswer": {"@type": "Answer", "text": "Apply first, then second to the new price."}}]}),
     },

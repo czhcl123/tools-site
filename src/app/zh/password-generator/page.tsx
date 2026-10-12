@@ -14,7 +14,7 @@ export async function generateMetadata({
       description: '免费在线密码生成器:自定义长度、大小写、数字和符号,一键生成高强度随机密码。',
     },
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/zh/password-generator',
+      canonical: 'https://getpracticaltools.com/zh/password-generator',
       languages: {
         'zh-CN': '/zh/password-generator',
         'en-US': '/password-generator',
@@ -90,7 +90,7 @@ export default async function PasswordGeneratorPage({
     '@type': 'WebApplication',
     name: '密码生成器',
     alternateName: '随机密码生成',
-    url: 'https://tools-site-production.up.railway.app/zh/password-generator',
+    url: 'https://getpracticaltools.com/zh/password-generator',
     applicationCategory: 'SecurityApplication',
     operatingSystem: 'Any (web browser with JavaScript)',
     browserRequirements: 'Requires JavaScript.',

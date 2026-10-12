@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? 'QR 码创意应用大全：餐厅菜单、名片、活动门票、Wi-Fi 分享、产品包装、社交媒体、教育场景。'
       : 'Creative QR code uses: restaurant menus, business cards, event tickets, Wi-Fi sharing, product packaging, social media, education.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/qr-code-creative-uses',
+      canonical: 'https://getpracticaltools.com/blog/qr-code-creative-uses',
       languages: { 'en-US': '/blog/qr-code-creative-uses', 'x-default': '/blog/qr-code-creative-uses' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/qr-code-creative-uses' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/qr-code-creative-uses' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Other QR code uses?", "acceptedAnswer": {"@type": "Answer", "text": "WiFi sharing, digital cards, product tracking, AR experiences."}}]}),
     },

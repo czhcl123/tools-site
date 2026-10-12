@@ -8,10 +8,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
     title: lang === 'zh' ? 'QR码营销：商业应用完全指南' : 'QR Code Marketing Guide',
     description: lang === 'zh' ? '如何用QR码提升营销效果、门店引流、产品追溯,以及QR码最佳实践。' : 'How to use QR codes for marketing, store traffic, product tracking, and QR code best practices.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/qr-code-marketing',
+      canonical: 'https://getpracticaltools.com/blog/qr-code-marketing',
       languages: { 'en-US': '/blog/qr-code-marketing', 'x-default': '/blog/qr-code-marketing' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/qr-code-marketing' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/qr-code-marketing' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "QR in marketing?", "acceptedAnswer": {"@type": "Answer", "text": "On cards, flyers, posters. Scan to visit, claim offers."}}, {"@type": "Question", "name": "Track scan data?", "acceptedAnswer": {"@type": "Answer", "text": "UTM parameters + Google Analytics."}}]}),
     },

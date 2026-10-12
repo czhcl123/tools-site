@@ -24,12 +24,12 @@ export async function generateMetadata({
     title: data[lang].title,
     description: data[lang].description,
     openGraph: {
-        url: `${lang === 'zh' ? 'https://tools-site-production.up.railway.app/zh/invoice-generator' : 'https://tools-site-production.up.railway.app/invoice-generator'}`,
+        url: `${lang === 'zh' ? 'https://getpracticaltools.com/zh/invoice-generator' : 'https://getpracticaltools.com/invoice-generator'}`,
       title: data[lang].title,
       description: data[lang].description,
     },
     alternates: {
-    canonical: 'https://tools-site-production.up.railway.app/invoice-generator',
+    canonical: 'https://getpracticaltools.com/invoice-generator',
       languages: {
         'zh-CN': '/zh/invoice-generator',
         'en-US': '/invoice-generator',
@@ -159,7 +159,7 @@ export default async function InvoiceGeneratorPage({
     '@type': 'WebApplication',
     name: lang === 'zh' ? '免费发票生成器 - PDF 发票工具' : 'Free Invoice Generator - PDF Invoice Maker',
     alternateName: lang === 'zh' ? '发票生成器' : 'Invoice Generator',
-    url: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/invoice-generator' : '/invoice-generator'}`,
+    url: `https://getpracticaltools.com${lang === 'zh' ? '/zh/invoice-generator' : '/invoice-generator'}`,
     applicationCategory: 'BusinessApplication',
     applicationSubCategory: 'InvoiceGenerator',
     operatingSystem: 'Any (web browser with JavaScript)',

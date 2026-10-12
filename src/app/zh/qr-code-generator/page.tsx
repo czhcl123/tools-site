@@ -14,7 +14,7 @@ export async function generateMetadata({
       description: '免费二维码生成器，无水印，无需注册。',
     },
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/zh/qr-code-generator',
+      canonical: 'https://getpracticaltools.com/zh/qr-code-generator',
       languages: {
         'zh-CN': '/zh/qr-code-generator',
         'en-US': '/qr-code-generator',

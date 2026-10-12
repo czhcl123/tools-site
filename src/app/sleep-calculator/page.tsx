@@ -29,12 +29,12 @@ export async function generateMetadata({
     title: titles[lang],
     description: descriptions[lang],
     openGraph: {
-        url: `${lang === 'zh' ? 'https://tools-site-production.up.railway.app/zh/sleep-calculator' : 'https://tools-site-production.up.railway.app/sleep-calculator'}`,
+        url: `${lang === 'zh' ? 'https://getpracticaltools.com/zh/sleep-calculator' : 'https://getpracticaltools.com/sleep-calculator'}`,
       title: ogTitles[lang],
       description: ogDescs[lang],
     },
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/sleep-calculator' : '/sleep-calculator'}`,
+      canonical: `https://getpracticaltools.com${lang === 'zh' ? '/zh/sleep-calculator' : '/sleep-calculator'}`,
       languages: {
         'zh-CN': '/zh/sleep-calculator',
         'en-US': '/sleep-calculator',
@@ -216,7 +216,7 @@ export default async function SleepCalculatorPage({
     '@type': 'WebApplication',
     name: lang === 'zh' ? '睡眠计算器 - 90 分钟周期反推' : 'Sleep Calculator - 90-Minute Cycle, Bedtime & Wake Time',
     alternateName: lang === 'zh' ? '睡眠周期计算器' : 'Sleep Cycle Calculator',
-    url: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/sleep-calculator' : '/sleep-calculator'}`,
+    url: `https://getpracticaltools.com${lang === 'zh' ? '/zh/sleep-calculator' : '/sleep-calculator'}`,
     applicationCategory: 'UtilityApplication',
     applicationSubCategory: 'SleepCalculator',
     operatingSystem: 'Any (web browser with JavaScript)',

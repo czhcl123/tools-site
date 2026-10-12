@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '学术写作如何满足字数要求,扩展和精简论文的策略,引用和参考文献计数技巧。'
       : 'How to meet word count requirements in academic writing, strategies to expand or condense essays, and citation counting tips.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/word-counter-academic',
+      canonical: 'https://getpracticaltools.com/blog/word-counter-academic',
       languages: { 'en-US': '/blog/word-counter-academic', 'x-default': '/blog/word-counter-academic' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/word-counter-academic' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/word-counter-academic' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Word count too low?", "acceptedAnswer": {"@type": "Answer", "text": "Expand arguments, add literature review, case studies."}}, {"@type": "Question", "name": "References count?", "acceptedAnswer": {"@type": "Answer", "text": "Most formats exclude references."}}]}),
     },

@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '团队如何建立强密码策略,保护共享账户安全,使用密码生成器的最佳实践。'
       : 'How teams can build strong password policies, protect shared accounts, and use password generators for security.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/password-team-security',
+      canonical: 'https://getpracticaltools.com/blog/password-team-security',
       languages: { 'en-US': '/blog/password-team-security', 'x-default': '/blog/password-team-security' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/password-team-security' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/password-team-security' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Biggest team risk?", "acceptedAnswer": {"@type": "Answer", "text": "Password sharing and weak passwords. Use a team manager."}}, {"@type": "Question", "name": "Team password management?", "acceptedAnswer": {"@type": "Answer", "text": "Manager with individual accounts, 60–90 day rotation, 2FA."}}]}),
     },

@@ -5,8 +5,8 @@ export const metadata: Metadata = {
   title: 'Blog — Practical Tool Guides & Tips',
   description: 'Step-by-step guides for free online calculators: discount, BMI, countdown, QR code, JSON, HEIC, word counter, and more.',
   alternates: {
-    canonical: 'https://tools-site-production.up.railway.app/blog',
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog' },
+    canonical: 'https://getpracticaltools.com/blog',
+      openGraph: { url: 'https://getpracticaltools.com/blog' },
     languages: {
       'en-US': '/blog',
       'x-default': '/blog',

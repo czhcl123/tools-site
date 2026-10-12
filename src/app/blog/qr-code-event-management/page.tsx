@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '如何用 QR 码实现活动注册、无接触签到和出勤追踪。'
       : 'How to use QR codes for event registration, contactless check-in, name badge printing, and attendance tracking.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/qr-code-event-management',
+      canonical: 'https://getpracticaltools.com/blog/qr-code-event-management',
       languages: { 'en-US': '/blog/qr-code-event-management', 'x-default': '/blog/qr-code-event-management' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/qr-code-event-management' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/qr-code-event-management' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "QR code check-in?", "acceptedAnswer": {"@type": "Answer", "text": "Unique code per attendee, scan on arrival."}}, {"@type": "Question", "name": "Equipment needed?", "acceptedAnswer": {"@type": "Answer", "text": "Phone or tablet. Attendees save/print QR code."}}]}),
     },

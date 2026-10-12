@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '最常用的单位换算公式速查：英寸厘米、磅公斤、加仑升、华氏摄氏，附换算系数记忆法和常见错误。'
       : 'Every unit conversion formula you actually use — inches to cm, pounds to kg, gallons to liters, Fahrenheit to Celsius — plus memory tricks and common mistakes.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/unit-conversion-formulas',
+      canonical: 'https://getpracticaltools.com/blog/unit-conversion-formulas',
       languages: { 'en-US': '/blog/unit-conversion-formulas', 'x-default': '/blog/unit-conversion-formulas' },
     },
-    openGraph: { url: 'https://tools-site-production.up.railway.app/blog/unit-conversion-formulas' },
+    openGraph: { url: 'https://getpracticaltools.com/blog/unit-conversion-formulas' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do you convert inches to centimeters?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply inches by 2.54. One inch equals exactly 2.54 centimeters, so 10 inches is 25.4 cm."}}, {"@type": "Question", "name": "Why is temperature conversion different?", "acceptedAnswer": {"@type": "Answer", "text": "Temperature scales have different zero points, so you need an offset as well as a multiplier: °C = (°F − 32) × 5/9."}}]}),
     },

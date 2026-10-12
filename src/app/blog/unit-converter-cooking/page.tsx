@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '烹饪烘焙常用单位换算,cup 到 ml、温度换算、国际食谱转换和海拔调整指南。'
       : 'Common cooking unit conversions: cups to ml, temperature conversions, international recipe adaptation, and altitude adjustments.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/unit-converter-cooking',
+      canonical: 'https://getpracticaltools.com/blog/unit-converter-cooking',
       languages: { 'en-US': '/blog/unit-converter-cooking', 'x-default': '/blog/unit-converter-cooking' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/unit-converter-cooking' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/unit-converter-cooking' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Grams in a cup of flour?", "acceptedAnswer": {"@type": "Answer", "text": "About 120g. Sugar ~200g. Butter ~227g."}}, {"@type": "Question", "name": "Altitude effects?", "acceptedAnswer": {"@type": "Answer", "text": "Above 1500m: raise temp, add liquid, reduce yeast."}}]}),
     },

@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '教你用日期倒计时计算器算出距离生日、节假日、考试还有多少天,含跨年计算和工作日统计。'
       : 'Learn how to count days until a date — birthdays, holidays, exams. Includes cross-year calculations and working-day counting.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/countdown',
+      canonical: 'https://getpracticaltools.com/blog/countdown',
       languages: { 'en-US': '/blog/countdown', 'x-default': '/blog/countdown' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/countdown' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/countdown' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does countdown work?", "acceptedAnswer": {"@type": "Answer", "text": "Enter target date, see remaining time instantly."}}, {"@type": "Question", "name": "What can I use it for?", "acceptedAnswer": {"@type": "Answer", "text": "Birthdays, exams, deadlines, weddings, trips."}}]}),
     },

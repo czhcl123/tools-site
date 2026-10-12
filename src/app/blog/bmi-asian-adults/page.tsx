@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '亚洲人群在更低的 BMI 就出现代谢风险。看懂亚太区调整后的 BMI 分类，了解腰围和体脂为什么同样重要。'
       : 'Asian adults face higher metabolic risk at lower BMI values. See the adjusted Asia-Pacific cutoffs and why waist circumference matters just as much.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/bmi-asian-adults',
+      canonical: 'https://getpracticaltools.com/blog/bmi-asian-adults',
       languages: { 'en-US': '/blog/bmi-asian-adults', 'x-default': '/blog/bmi-asian-adults' },
     },
-    openGraph: { url: 'https://tools-site-production.up.railway.app/blog/bmi-asian-adults' },
+    openGraph: { url: 'https://getpracticaltools.com/blog/bmi-asian-adults' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is BMI 24 overweight for Asians?", "acceptedAnswer": {"@type": "Answer", "text": "Under WHO Asia-Pacific criteria, BMI 23–24.9 is already classed as overweight for Asian adults."}}, {"@type": "Question", "name": "Why do Asians have lower BMI cutoffs?", "acceptedAnswer": {"@type": "Answer", "text": "At the same BMI, Asian populations tend to carry more visceral fat and face higher risks of diabetes and heart disease, so health bodies use lower thresholds."}}]}),
     },

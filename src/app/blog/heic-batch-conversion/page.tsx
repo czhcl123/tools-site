@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '摄影师如何高效批量转换 HEIC 文件,保留 EXIF 数据,选择合适的质量设置。'
       : 'How photographers and content creators efficiently batch convert HEIC files while preserving EXIF data and choosing optimal quality settings.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/heic-batch-conversion',
+      canonical: 'https://getpracticaltools.com/blog/heic-batch-conversion',
       languages: { 'en-US': '/blog/heic-batch-conversion', 'x-default': '/blog/heic-batch-conversion' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/heic-batch-conversion' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/heic-batch-conversion' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How to batch convert?", "acceptedAnswer": {"@type": "Answer", "text": "Use online tool, organize by project folders."}}, {"@type": "Question", "name": "EXIF preserved?", "acceptedAnswer": {"@type": "Answer", "text": "Depends on tool. Check before committing."}}]}),
     },

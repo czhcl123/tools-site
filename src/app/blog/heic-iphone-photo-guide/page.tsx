@@ -8,10 +8,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
     title: lang === 'zh' ? 'iPhone照片格式指南：HEIC vs JPG vs PNG' : 'iPhone HEIC Photo Format Guide',
     description: lang === 'zh' ? '详解iPhone照片格式区别,如何选择最佳格式,以及如何转换HEIC到JPG。' : 'Detailed comparison of iPhone photo formats, how to choose the best format, and converting HEIC to JPG.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/heic-iphone-photo-guide',
+      canonical: 'https://getpracticaltools.com/blog/heic-iphone-photo-guide',
       languages: { 'en-US': '/blog/heic-iphone-photo-guide', 'x-default': '/blog/heic-iphone-photo-guide' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/heic-iphone-photo-guide' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/heic-iphone-photo-guide' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why iPhone defaults to HEIC?", "acceptedAnswer": {"@type": "Answer", "text": "Half the size of JPEG, comparable quality."}}]}),
     },

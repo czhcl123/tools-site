@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '公历转农历、农历转公历的完整教程,含天干地支、生肖、节气解读和使用场景。'
       : 'How to convert solar dates to Chinese lunar dates and back. Includes Heavenly Stems, Chinese zodiac, solar terms, and real use cases.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/lunar-calendar',
+      canonical: 'https://getpracticaltools.com/blog/lunar-calendar',
       languages: { 'en-US': '/blog/lunar-calendar', 'x-default': '/blog/lunar-calendar' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/lunar-calendar' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/lunar-calendar' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is lunar calendar?", "acceptedAnswer": {"@type": "Answer", "text": "Chinese calendar combining sun and moon cycles."}}, {"@type": "Question", "name": "Same dates every year?", "acceptedAnswer": {"@type": "Answer", "text": "No. Chinese New Year floats between late Jan and mid-Feb."}}]}),
     },

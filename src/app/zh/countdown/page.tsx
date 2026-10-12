@@ -14,7 +14,7 @@ export async function generateMetadata({
       description: '任意日期距今天数 / 已过去天数计算',
     },
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/zh/countdown',
+      canonical: 'https://getpracticaltools.com/zh/countdown',
       languages: {
         'zh-CN': '/zh/countdown',
         'en-US': '/countdown',
@@ -106,7 +106,7 @@ export default async function CountdownPage({
     '@type': 'WebApplication',
     name: '在线倒计时器 — 实时跳秒',
     alternateName: '倒计时器',
-    url: 'https://tools-site-production.up.railway.app/zh/countdown',
+    url: 'https://getpracticaltools.com/zh/countdown',
     applicationCategory: 'UtilityApplication',
     applicationSubCategory: 'CountdownTimer',
     operatingSystem: 'Any (web browser with JavaScript)',

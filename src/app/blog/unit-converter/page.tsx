@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '长度、重量、温度、面积、体积单位换算教程,含公制英制对照和常见换算公式。'
       : 'How to convert units: length, weight, temperature, area, volume. Metric-imperial conversion tables and formulas included.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/unit-converter',
+      canonical: 'https://getpracticaltools.com/blog/unit-converter',
       languages: { 'en-US': '/blog/unit-converter', 'x-default': '/blog/unit-converter' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/unit-converter' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/unit-converter' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Supported units?", "acceptedAnswer": {"@type": "Answer", "text": "Length, weight, temperature, volume, area, data."}}, {"@type": "Question", "name": "Cups to ml?", "acceptedAnswer": {"@type": "Answer", "text": "1 cup = 240 ml. 1 tbsp = 15 ml."}}, {"@type": "Question", "name": "Fahrenheit to Celsius?", "acceptedAnswer": {"@type": "Answer", "text": "°C = (°F - 32) × 5/9."}}]}),
     },

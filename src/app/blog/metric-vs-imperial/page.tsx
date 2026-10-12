@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '公制和英制单位的完整对比：历史、使用国家、换算表（长度、重量、温度），为什么公制更简单。'
       : 'Complete metric vs imperial comparison: history, countries, conversion tables (length, weight, temperature), and why metric is easier.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/metric-vs-imperial',
+      canonical: 'https://getpracticaltools.com/blog/metric-vs-imperial',
       languages: { 'en-US': '/blog/metric-vs-imperial', 'x-default': '/blog/metric-vs-imperial' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/metric-vs-imperial' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/metric-vs-imperial' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which is more common?", "acceptedAnswer": {"@type": "Answer", "text": "Metric globally. US still uses imperial widely."}}]}),
     },

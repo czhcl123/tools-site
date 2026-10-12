@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '如何在发票中设置清晰的付款条件,加速回款,减少逾期付款。'
       : 'How to set clear payment terms on invoices, including Net 15/30/60, early payment discounts, and follow-up strategies to get paid faster.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/invoice-payment-terms',
+      canonical: 'https://getpracticaltools.com/blog/invoice-payment-terms',
       languages: { 'en-US': '/blog/invoice-payment-terms', 'x-default': '/blog/invoice-payment-terms' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/invoice-payment-terms' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/invoice-payment-terms' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is Net 30?", "acceptedAnswer": {"@type": "Answer", "text": "Full payment due within 30 days."}}, {"@type": "Question", "name": "2/10 Net 30?", "acceptedAnswer": {"@type": "Answer", "text": "2% discount if paid in 10 days, otherwise 30 days."}}]}),
     },

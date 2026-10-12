@@ -8,10 +8,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
     title: lang === 'zh' ? '旅行指南：国际单位换算完全手册' : 'Travel Unit Conversion Guide',
     description: lang === 'zh' ? '出国旅行必备单位换算：长度、温度、重量、速度,以及常用换算速查表。' : 'Essential unit conversions for international travel: length, temperature, weight, speed, with quick reference tables.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/unit-converter-travel',
+      canonical: 'https://getpracticaltools.com/blog/unit-converter-travel',
       languages: { 'en-US': '/blog/unit-converter-travel', 'x-default': '/blog/unit-converter-travel' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/unit-converter-travel' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/unit-converter-travel' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Travel conversions?", "acceptedAnswer": {"@type": "Answer", "text": "Temperature, distance, weight, liquids, currency."}}, {"@type": "Question", "name": "US vs UK gallons?", "acceptedAnswer": {"@type": "Answer", "text": "US ≈ 3.785L; UK ≈ 4.546L."}}]}),
     },

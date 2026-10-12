@@ -24,12 +24,12 @@ export async function generateMetadata({
     title: data[lang].title,
     description: data[lang].description,
     openGraph: {
-        url: `${lang === 'zh' ? 'https://tools-site-production.up.railway.app/zh/word-counter' : 'https://tools-site-production.up.railway.app/word-counter'}`,
+        url: `${lang === 'zh' ? 'https://getpracticaltools.com/zh/word-counter' : 'https://getpracticaltools.com/word-counter'}`,
       title: data[lang].title,
       description: data[lang].description,
     },
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/word-counter',
+      canonical: 'https://getpracticaltools.com/word-counter',
       languages: {
         'zh-CN': '/zh/word-counter',
         'en-US': '/word-counter',

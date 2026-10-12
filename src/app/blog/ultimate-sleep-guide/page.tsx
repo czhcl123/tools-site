@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '睡眠科学完全指南:90分钟周期、深度睡眠vs REM、最佳入睡时间计算、午睡科学、时差调整和15个改善睡眠的实用技巧。'
       : 'Complete sleep science guide: 90-minute cycles, deep vs REM sleep, optimal bedtime calculation, napping science, jet lag recovery, and 15 practical tips.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/ultimate-sleep-guide',
+      canonical: 'https://getpracticaltools.com/blog/ultimate-sleep-guide',
       languages: { 'en-US': '/blog/ultimate-sleep-guide', 'x-default': '/blog/ultimate-sleep-guide' },
     },
-    openGraph: { url: 'https://tools-site-production.up.railway.app/blog/ultimate-sleep-guide' },
+    openGraph: { url: 'https://getpracticaltools.com/blog/ultimate-sleep-guide' },
     other: {
       'application/ld+json': JSON.stringify({
         '@context': 'https://schema.org',

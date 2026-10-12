@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '发票生成器使用教程:填写客户信息、项目明细、税率,导出 PDF 发票,适用于自由职业和小企业。'
       : 'How to use a free invoice generator: fill in client details, line items, tax rates, and export professional PDF invoices for freelancers.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/invoice-generator',
+      canonical: 'https://getpracticaltools.com/blog/invoice-generator',
       languages: { 'en-US': '/blog/invoice-generator', 'x-default': '/blog/invoice-generator' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/invoice-generator' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/invoice-generator' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Invoice essentials?", "acceptedAnswer": {"@type": "Answer", "text": "Number, date, parties, items, quantities, prices, terms."}}, {"@type": "Question", "name": "Freelancers need invoices?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Formal payment request and tax record."}}, {"@type": "Question", "name": "Invoice vs receipt?", "acceptedAnswer": {"@type": "Answer", "text": "Invoice requests payment; receipt confirms it."}}]}),
     },

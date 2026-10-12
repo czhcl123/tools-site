@@ -14,7 +14,7 @@ export async function generateMetadata({
       description: '免费在线单位换算器:长度/重量/温度即时互转',
     },
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/zh/unit-converter',
+      canonical: 'https://getpracticaltools.com/zh/unit-converter',
       languages: {
         'zh-CN': '/zh/unit-converter',
         'en-US': '/unit-converter',
@@ -91,7 +91,7 @@ export default async function UnitConverterPage({
     '@type': 'WebApplication',
     name: '单位换算器 — 30+ 单位即时互转',
     alternateName: '单位换算',
-    url: 'https://tools-site-production.up.railway.app/zh/unit-converter',
+    url: 'https://getpracticaltools.com/zh/unit-converter',
     applicationCategory: 'UtilityApplication',
     applicationSubCategory: 'UnitConverter',
     operatingSystem: 'Any (web browser with JavaScript)',

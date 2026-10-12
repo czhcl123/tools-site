@@ -27,12 +27,12 @@ export async function generateMetadata({
     title: titles[lang],
     description: descriptions[lang],
     openGraph: {
-        url: `${lang === 'zh' ? 'https://tools-site-production.up.railway.app/zh/unit-converter' : 'https://tools-site-production.up.railway.app/unit-converter'}`,
+        url: `${lang === 'zh' ? 'https://getpracticaltools.com/zh/unit-converter' : 'https://getpracticaltools.com/unit-converter'}`,
       title: ogTitles[lang],
       description: ogDescs[lang],
     },
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/unit-converter' : '/unit-converter'}`,
+      canonical: `https://getpracticaltools.com${lang === 'zh' ? '/zh/unit-converter' : '/unit-converter'}`,
       languages: {
         'zh-CN': '/zh/unit-converter',
         'en-US': '/unit-converter',
@@ -146,7 +146,7 @@ export default async function UnitConverterPage({
     '@type': 'WebApplication',
     name: lang === 'zh' ? '单位换算器 — 30+ 单位即时互转' : 'Unit Converter - 30+ Units cm to inches, kg to lb',
     alternateName: lang === 'zh' ? '单位换算' : 'Measurement Converter',
-    url: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/unit-converter' : '/unit-converter'}`,
+    url: `https://getpracticaltools.com${lang === 'zh' ? '/zh/unit-converter' : '/unit-converter'}`,
     applicationCategory: 'UtilityApplication',
     applicationSubCategory: 'UnitConverter',
     operatingSystem: 'Any (web browser with JavaScript)',

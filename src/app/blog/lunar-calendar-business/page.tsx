@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '如何利用农历节日安排促销活动,春节中秋端午营销时间线,跨文化营销注意事项。'
       : 'How to plan marketing campaigns around lunar holidays like Chinese New Year, Mid-Autumn Festival, and Dragon Boat Festival.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/lunar-calendar-business',
+      canonical: 'https://getpracticaltools.com/blog/lunar-calendar-business',
       languages: { 'en-US': '/blog/lunar-calendar-business', 'x-default': '/blog/lunar-calendar-business' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/lunar-calendar-business' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/lunar-calendar-business' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why businesses care?", "acceptedAnswer": {"@type": "Answer", "text": "1.5 billion people celebrate. Huge commercial opportunities."}}, {"@type": "Question", "name": "Chinese New Year marketing timing?", "acceptedAnswer": {"@type": "Answer", "text": "Start 2–3 months before; promotions 1 month out."}}]}),
     },

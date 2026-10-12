@@ -8,10 +8,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
     title: lang === 'zh' ? '写作技巧：如何用字数统计提高写作效率' : 'Writing Tips for Word Count',
     description: lang === 'zh' ? '字数统计工具的使用技巧、不同场景的字数要求,以及如何规划写作目标。' : 'Word counter tool tips, word count requirements for different scenarios, and how to plan writing goals.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/word-counter-writing-tips',
+      canonical: 'https://getpracticaltools.com/blog/word-counter-writing-tips',
       languages: { 'en-US': '/blog/word-counter-writing-tips', 'x-default': '/blog/word-counter-writing-tips' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/word-counter-writing-tips' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/word-counter-writing-tips' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Control word count?", "acceptedAnswer": {"@type": "Answer", "text": "Outline first, check periodically, fine-tune."}}]}),
     },

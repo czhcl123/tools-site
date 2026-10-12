@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '密码强度由什么决定？为什么 12 位以上比加符号更重要，口令短语比随机密码更实用，附暴力破解时间对照。'
       : 'What actually makes a password strong — length beats special characters, and passphrases beat gibberish. With brute-force time comparisons.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/password-strength-length-vs-complexity',
+      canonical: 'https://getpracticaltools.com/blog/password-strength-length-vs-complexity',
       languages: { 'en-US': '/blog/password-strength-length-vs-complexity', 'x-default': '/blog/password-strength-length-vs-complexity' },
     },
-    openGraph: { url: 'https://tools-site-production.up.railway.app/blog/password-strength-length-vs-complexity' },
+    openGraph: { url: 'https://getpracticaltools.com/blog/password-strength-length-vs-complexity' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What makes a password strong?", "acceptedAnswer": {"@type": "Answer", "text": "Length first, randomness second. A 16-character random password resists brute force orders of magnitude better than an 8-character password with symbols. Uniqueness across sites matters as much as strength itself."}}, {"@type": "Question", "name": "Are passphrases better than passwords?", "acceptedAnswer": {"@type": "Answer", "text": "For human-memorized credentials, yes. A four-word passphrase like correct-harbor-violet-92 has high entropy, resists dictionary attacks, and is far easier to remember than 16 characters of gibberish."}}]}),
     },

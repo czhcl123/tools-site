@@ -1,7 +1,7 @@
 export const dynamic = 'force-static'
 
 export async function GET(): Promise<Response> {
-  const base = 'https://tools-site-production.up.railway.app'
+  const base = 'https://getpracticaltools.com'
   const now = new Date().toUTCString()
 
   const items = [

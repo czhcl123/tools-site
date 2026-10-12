@@ -14,7 +14,7 @@ export async function generateMetadata({
       description: '免费在线字数统计：中英文实时统计字数、字符、句子和段落。',
     },
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/zh/word-counter',
+      canonical: 'https://getpracticaltools.com/zh/word-counter',
       languages: {
         'zh-CN': '/zh/word-counter',
         'en-US': '/word-counter',

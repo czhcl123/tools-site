@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '用倒计时工具管理婚礼准备的每个关键节点,确保一切有条不紊。'
       : 'Use countdown timers to manage every milestone of wedding planning, from venue booking to the big day timeline.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/countdown-wedding-planner',
+      canonical: 'https://getpracticaltools.com/blog/countdown-wedding-planner',
       languages: { 'en-US': '/blog/countdown-wedding-planner', 'x-default': '/blog/countdown-wedding-planner' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/countdown-wedding-planner' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/countdown-wedding-planner' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How early to plan wedding?", "acceptedAnswer": {"@type": "Answer", "text": "6–12 months minimum. Popular venues need 12+."}}, {"@type": "Question", "name": "Countdown on wedding day?", "acceptedAnswer": {"@type": "Answer", "text": "Set timers for each segment: makeup, ceremony, photos, reception."}}]}),
     },

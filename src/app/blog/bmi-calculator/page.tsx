@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? 'BMI 计算公式、亚洲人标准、男女差异,以及如何用 BMI 计算器判断体重是否健康。'
       : 'BMI formula, WHO Asian thresholds, gender differences, and how to use an online BMI calculator to check if your weight is healthy.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/bmi-calculator',
+      canonical: 'https://getpracticaltools.com/blog/bmi-calculator',
       languages: { 'en-US': '/blog/bmi-calculator', 'x-default': '/blog/bmi-calculator' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/bmi-calculator' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/bmi-calculator' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "BMI formula?", "acceptedAnswer": {"@type": "Answer", "text": "BMI = weight (kg) ÷ height (m)²."}}, {"@type": "Question", "name": "Healthy BMI range?", "acceptedAnswer": {"@type": "Answer", "text": "WHO: 18.5–24.9. Asian: 18.5–23.9."}}, {"@type": "Question", "name": "BMI limitations?", "acceptedAnswer": {"@type": "Answer", "text": "Cannot distinguish muscle from fat."}}]}),
     },

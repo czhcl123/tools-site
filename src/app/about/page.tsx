@@ -28,10 +28,10 @@ export async function generateMetadata({
       title: titles[lang],
       description: descriptions[lang],
       type: 'profile',
-      url: 'https://tools-site-production.up.railway.app/about',
+      url: 'https://getpracticaltools.com/about',
     },
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/about',
+      canonical: 'https://getpracticaltools.com/about',
       languages: {
         'en-US': '/about',
         'zh-CN': '/zh/about',

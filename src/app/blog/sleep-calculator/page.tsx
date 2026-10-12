@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '教你用睡眠计算器根据90分钟睡眠周期计算最佳入睡和起床时间,提升睡眠质量。'
       : 'Learn how to use a sleep calculator based on 90-minute sleep cycles to find the best bedtime and wake time for better sleep quality.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/sleep-calculator',
+      canonical: 'https://getpracticaltools.com/blog/sleep-calculator',
       languages: { 'en-US': '/blog/sleep-calculator', 'x-default': '/blog/sleep-calculator' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/sleep-calculator' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/sleep-calculator' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Sleep cycle length?", "acceptedAnswer": {"@type": "Answer", "text": "About 90 minutes: light, deep, REM stages."}}, {"@type": "Question", "name": "Calculate bedtime?", "acceptedAnswer": {"@type": "Answer", "text": "Bedtime = wake time - (90 min × cycles)."}}, {"@type": "Question", "name": "Ideal nap length?", "acceptedAnswer": {"@type": "Answer", "text": "20–30 minutes for quick energy restore."}}]}),
     },

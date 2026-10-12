@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? 'JSON 完全指南:语法、数据类型、嵌套结构、验证、格式化、API 集成和常见错误排查。'
       : 'Complete JSON guide: syntax, data types, nesting, validation, formatting, API integration, and troubleshooting common errors.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/ultimate-json-guide',
+      canonical: 'https://getpracticaltools.com/blog/ultimate-json-guide',
       languages: { 'en-US': '/blog/ultimate-json-guide', 'x-default': '/blog/ultimate-json-guide' },
     },
-    openGraph: { url: 'https://tools-site-production.up.railway.app/blog/ultimate-json-guide' },
+    openGraph: { url: 'https://getpracticaltools.com/blog/ultimate-json-guide' },
     other: {
       'application/ld+json': JSON.stringify({
         '@context': 'https://schema.org',

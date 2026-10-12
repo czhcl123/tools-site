@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? 'HEIC 照片里藏着哪些位置和设备信息？转换成 JPG 时元数据会被抹掉吗？分享照片前的隐私检查清单。'
       : 'What location and device data hides inside HEIC files, whether conversion strips it, and a pre-share privacy checklist for your photos.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/heic-privacy-metadata',
+      canonical: 'https://getpracticaltools.com/blog/heic-privacy-metadata',
       languages: { 'en-US': '/blog/heic-privacy-metadata', 'x-default': '/blog/heic-privacy-metadata' },
     },
-    openGraph: { url: 'https://tools-site-production.up.railway.app/blog/heic-privacy-metadata' },
+    openGraph: { url: 'https://getpracticaltools.com/blog/heic-privacy-metadata' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do HEIC photos contain location data?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, if Location Services is enabled for the camera. HEIC files embed EXIF metadata including GPS coordinates, capture time, and device model."}}, {"@type": "Question", "name": "Does converting HEIC to JPG remove metadata?", "acceptedAnswer": {"@type": "Answer", "text": "Basic converters usually strip EXIF in the process, but not always by design — some preserve it. For privacy-sensitive shares, strip metadata explicitly or disable location access for the camera."}}]}),
     },

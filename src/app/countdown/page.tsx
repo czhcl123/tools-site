@@ -27,12 +27,12 @@ export async function generateMetadata({
     title: titles[lang],
     description: descriptions[lang],
     openGraph: {
-        url: `${lang === 'zh' ? 'https://tools-site-production.up.railway.app/zh/countdown' : 'https://tools-site-production.up.railway.app/countdown'}`,
+        url: `${lang === 'zh' ? 'https://getpracticaltools.com/zh/countdown' : 'https://getpracticaltools.com/countdown'}`,
       title: ogTitles[lang],
       description: ogDescs[lang],
     },
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/countdown' : '/countdown'}`,
+      canonical: `https://getpracticaltools.com${lang === 'zh' ? '/zh/countdown' : '/countdown'}`,
       languages: {
         'zh-CN': '/zh/countdown',
         'en-US': '/countdown',
@@ -191,7 +191,7 @@ export default async function CountdownPage({
     '@type': 'WebApplication',
     name: lang === 'zh' ? '在线倒计时器 — 实时跳秒' : 'Countdown Timer - Live Days Hours Minutes',
     alternateName: lang === 'zh' ? '倒计时器' : 'Countdown Calculator',
-    url: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/countdown' : '/countdown'}`,
+    url: `https://getpracticaltools.com${lang === 'zh' ? '/zh/countdown' : '/countdown'}`,
     applicationCategory: 'UtilityApplication',
     applicationSubCategory: 'CountdownTimer',
     operatingSystem: 'Any (web browser with JavaScript)',

@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '睡眠负债是什么？周末补觉有用吗？慢性缺觉对注意力、代谢和情绪的真实影响，以及科学还款方法。'
       : 'What sleep debt does to your body, why weekend lie-ins only partially work, and how to repay lost sleep without wrecking your schedule.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/sleep-debt-recovery',
+      canonical: 'https://getpracticaltools.com/blog/sleep-debt-recovery',
       languages: { 'en-US': '/blog/sleep-debt-recovery', 'x-default': '/blog/sleep-debt-recovery' },
     },
-    openGraph: { url: 'https://tools-site-production.up.railway.app/blog/sleep-debt-recovery' },
+    openGraph: { url: 'https://getpracticaltools.com/blog/sleep-debt-recovery' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can you pay off sleep debt by sleeping more on weekends?", "acceptedAnswer": {"@type": "Answer", "text": "Partially. Extra weekend sleep restores some alertness and reduces immediate deficits, but studies show metabolic and cognitive effects from chronic restriction persist even after recovery sleep."}}, {"@type": "Question", "name": "How do you calculate sleep debt?", "acceptedAnswer": {"@type": "Answer", "text": "Subtract hours slept from hours needed over the past 7–14 days. Sleeping 6 hours a night for five days against an 8-hour need leaves roughly 10 hours of debt."}}]}),
     },

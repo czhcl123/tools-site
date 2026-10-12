@@ -27,12 +27,12 @@ export async function generateMetadata({
     title: titles[lang],
     description: descriptions[lang],
     openGraph: {
-        url: `${lang === 'zh' ? 'https://tools-site-production.up.railway.app/zh/lunar-calendar' : 'https://tools-site-production.up.railway.app/lunar-calendar'}`,
+        url: `${lang === 'zh' ? 'https://getpracticaltools.com/zh/lunar-calendar' : 'https://getpracticaltools.com/lunar-calendar'}`,
       title: ogTitles[lang],
       description: ogDescs[lang],
     },
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/lunar-calendar' : '/lunar-calendar'}`,
+      canonical: `https://getpracticaltools.com${lang === 'zh' ? '/zh/lunar-calendar' : '/lunar-calendar'}`,
       languages: {
         'zh-CN': '/zh/lunar-calendar',
         'en-US': '/lunar-calendar',

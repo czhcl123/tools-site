@@ -74,7 +74,7 @@ export async function generateMetadata({
       description: descriptions[lang],
     },
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/zh',
+      canonical: 'https://getpracticaltools.com/zh',
       languages: {
         'zh-CN': '/zh',
         'en-US': '/',

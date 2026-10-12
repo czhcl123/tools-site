@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '用午睡计算器找到最佳午睡时长。20分钟小睡 vs 90分钟全周期,哪种适合你？科学午睡提升精力。'
       : 'Use a nap calculator to find your ideal nap length. 20-minute power nap vs 90-minute full cycle — which is right for you? Boost energy with napping.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/nap-calculator',
+      canonical: 'https://getpracticaltools.com/blog/nap-calculator',
       languages: { 'en-US': '/blog/nap-calculator', 'x-default': '/blog/nap-calculator' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/nap-calculator' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/nap-calculator' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Best nap length?", "acceptedAnswer": {"@type": "Answer", "text": "20–30 minutes. Over 30 causes grogginess."}}, {"@type": "Question", "name": "Best nap time?", "acceptedAnswer": {"@type": "Answer", "text": "1–3 PM during natural energy dip."}}]}),
     },

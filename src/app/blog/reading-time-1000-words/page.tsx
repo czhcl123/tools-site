@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '普通人阅读速度是多少？博客、论文、邮件各需要多长时间读完，怎么用字数换算阅读时间。'
       : 'Average reading speeds for adults, how long blog posts and papers take to read, and how to convert word counts into reading time.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/reading-time-1000-words',
+      canonical: 'https://getpracticaltools.com/blog/reading-time-1000-words',
       languages: { 'en-US': '/blog/reading-time-1000-words', 'x-default': '/blog/reading-time-1000-words' },
     },
-    openGraph: { url: 'https://tools-site-production.up.railway.app/blog/reading-time-1000-words' },
+    openGraph: { url: 'https://getpracticaltools.com/blog/reading-time-1000-words' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the average reading speed?", "acceptedAnswer": {"@type": "Answer", "text": "Most adults read English prose at 200–250 words per minute. That puts 1,000 words at roughly 4–5 minutes."}}, {"@type": "Question", "name": "How long does it take to read a 1,500-word article?", "acceptedAnswer": {"@type": "Answer", "text": "About 6–8 minutes at normal speed. Skimming for key points cuts that to 2–3 minutes."}}]}),
     },

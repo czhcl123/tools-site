@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '发票编号怎么编才合规又清晰？年份前缀、顺序号、客户代码的组合规则，跳号、重号的处理方法。'
       : 'How to structure invoice numbers with year prefixes and sequence rules, and what to do when a number is duplicated or skipped.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/invoice-numbering-rules',
+      canonical: 'https://getpracticaltools.com/blog/invoice-numbering-rules',
       languages: { 'en-US': '/blog/invoice-numbering-rules', 'x-default': '/blog/invoice-numbering-rules' },
     },
-    openGraph: { url: 'https://tools-site-production.up.railway.app/blog/invoice-numbering-rules' },
+    openGraph: { url: 'https://getpracticaltools.com/blog/invoice-numbering-rules' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a good invoice number format?", "acceptedAnswer": {"@type": "Answer", "text": "A readable, chronological format like INV-2026-0042 or 2026-0042 works well: year first, then a zero-padded sequential number. Avoid characters that are hard to read over the phone (O vs 0)."}}, {"@type": "Question", "name": "What if I issue an invoice with the wrong number?", "acceptedAnswer": {"@type": "Answer", "text": "Void or cancel it with a clear note, issue the corrected invoice with the next sequential number, and keep the voided document in your records. Never reuse the number."}}]}),
     },

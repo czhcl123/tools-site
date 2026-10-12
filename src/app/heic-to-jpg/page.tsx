@@ -24,12 +24,12 @@ export async function generateMetadata({
     title: data[lang].title,
     description: data[lang].description,
     openGraph: {
-        url: `${lang === 'zh' ? 'https://tools-site-production.up.railway.app/zh/heic-to-jpg' : 'https://tools-site-production.up.railway.app/heic-to-jpg'}`,
+        url: `${lang === 'zh' ? 'https://getpracticaltools.com/zh/heic-to-jpg' : 'https://getpracticaltools.com/heic-to-jpg'}`,
       title: data[lang].title,
       description: data[lang].description,
     },
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/heic-to-jpg',
+      canonical: 'https://getpracticaltools.com/heic-to-jpg',
       languages: {
         'zh-CN': '/zh/heic-to-jpg',
         'en-US': '/heic-to-jpg',

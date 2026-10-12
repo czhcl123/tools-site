@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '为什么倒计时能让学习更专注？番茄工作法 25/5 怎么用，考试时如何分配时间，长时间复习怎么安排休息。'
       : 'Why countdown timers sharpen study focus, how to run the Pomodoro technique, and how to pace yourself on exam day.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/countdown-study-pomodoro',
+      canonical: 'https://getpracticaltools.com/blog/countdown-study-pomodoro',
       languages: { 'en-US': '/blog/countdown-study-pomodoro', 'x-default': '/blog/countdown-study-pomodoro' },
     },
-    openGraph: { url: 'https://tools-site-production.up.railway.app/blog/countdown-study-pomodoro' },
+    openGraph: { url: 'https://getpracticaltools.com/blog/countdown-study-pomodoro' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long should a study session be?", "acceptedAnswer": {"@type": "Answer", "text": "Most students focus well for 25–50 minutes. Pair a 25 or 50-minute countdown with a 5–10 minute break."}}, {"@type": "Question", "name": "Does a countdown timer help concentration?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A visible deadline creates mild pressure that crowds out distraction, and it gives your brain a fixed finish line to work toward."}}]}),
     },

@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '教你用 QR 码生成器创建二维码,支持网址、文本、WiFi、联系方式,含使用技巧和场景。'
       : 'Learn how to generate QR codes for URLs, text, WiFi, and contacts. Includes tips, best practices, and real-world use cases.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/qr-code-generator',
+      canonical: 'https://getpracticaltools.com/blog/qr-code-generator',
       languages: { 'en-US': '/blog/qr-code-generator', 'x-default': '/blog/qr-code-generator' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/qr-code-generator' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/qr-code-generator' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "QR code data limit?", "acceptedAnswer": {"@type": "Answer", "text": "Up to 4,296 digits. Less data = faster scanning."}}, {"@type": "Question", "name": "Error correction levels?", "acceptedAnswer": {"@type": "Answer", "text": "L(7%), M(15%), Q(25%), H(30%)."}}, {"@type": "Question", "name": "Improve scan success?", "acceptedAnswer": {"@type": "Answer", "text": "Min 2cm×2cm, high contrast, no blur."}}]}),
     },

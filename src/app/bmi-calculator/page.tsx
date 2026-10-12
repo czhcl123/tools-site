@@ -22,14 +22,14 @@ export async function generateMetadata({
     title: titles[lang],
     description: descriptions[lang],
     alternates: {
-      canonical: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/bmi-calculator' : '/bmi-calculator'}`,
+      canonical: `https://getpracticaltools.com${lang === 'zh' ? '/zh/bmi-calculator' : '/bmi-calculator'}`,
       languages: {
         'zh-CN': '/zh/bmi-calculator',
         'en-US': '/bmi-calculator',
         'x-default': '/bmi-calculator',
       },
     },
-      openGraph: { url: `${lang === 'zh' ? 'https://tools-site-production.up.railway.app/zh/bmi-calculator' : 'https://tools-site-production.up.railway.app/bmi-calculator'}` },
+      openGraph: { url: `${lang === 'zh' ? 'https://getpracticaltools.com/zh/bmi-calculator' : 'https://getpracticaltools.com/bmi-calculator'}` },
   }
 }
 
@@ -133,7 +133,7 @@ export default async function BmiCalculatorPage({
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
     name: lang === 'zh' ? 'BMI 计算器' : 'BMI Calculator',
-    url: `https://tools-site-production.up.railway.app${lang === 'zh' ? '/zh/bmi-calculator' : '/bmi-calculator'}`,
+    url: `https://getpracticaltools.com${lang === 'zh' ? '/zh/bmi-calculator' : '/bmi-calculator'}`,
     applicationCategory: 'HealthApplication',
     operatingSystem: 'Any',
     isAccessibleForFree: true,

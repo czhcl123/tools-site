@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? 'JSON 格式化工具使用教程:美化、压缩、验证 JSON 数据,含常见错误修复和开发者技巧。'
       : 'How to use a JSON formatter to beautify, minify, and validate JSON data. Includes common error fixes and developer tips.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/json-formatter',
+      canonical: 'https://getpracticaltools.com/blog/json-formatter',
       languages: { 'en-US': '/blog/json-formatter', 'x-default': '/blog/json-formatter' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/json-formatter' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/json-formatter' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is JSON?", "acceptedAnswer": {"@type": "Answer", "text": "Lightweight data format used in APIs."}}, {"@type": "Question", "name": "Formatted vs minified?", "acceptedAnswer": {"@type": "Answer", "text": "Formatted for readability; minified for size."}}, {"@type": "Question", "name": "Format failure meaning?", "acceptedAnswer": {"@type": "Answer", "text": "Syntax error in the JSON."}}]}),
     },

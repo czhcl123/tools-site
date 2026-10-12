@@ -8,10 +8,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
     title: lang === 'zh' ? '购物省钱技巧：如何用折扣计算器' : 'Shopping Savings Tips',
     description: lang === 'zh' ? '教你用折扣计算器比较优惠、计算真实折扣、避免购物陷阱。' : 'Learn to compare deals, calculate real discounts, and avoid shopping traps with a discount calculator.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/discount-shopping-tips',
+      canonical: 'https://getpracticaltools.com/blog/discount-shopping-tips',
       languages: { 'en-US': '/blog/discount-shopping-tips', 'x-default': '/blog/discount-shopping-tips' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/discount-shopping-tips' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/discount-shopping-tips' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How to tell if discount is real?", "acceptedAnswer": {"@type": "Answer", "text": "Calculate actual rate and compare with historical prices."}}]}),
     },

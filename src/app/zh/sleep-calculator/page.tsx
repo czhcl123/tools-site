@@ -14,7 +14,7 @@ export async function generateMetadata({
       description: '90 分钟睡眠周期反推最佳入睡时间。',
     },
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/zh/sleep-calculator',
+      canonical: 'https://getpracticaltools.com/zh/sleep-calculator',
       languages: {
         'zh-CN': '/zh/sleep-calculator',
         'en-US': '/sleep-calculator',
@@ -117,7 +117,7 @@ export default async function SleepCalculatorPage({
     '@type': 'WebApplication',
     name: '睡眠计算器 - 90 分钟周期反推',
     alternateName: '睡眠周期计算器',
-    url: 'https://tools-site-production.up.railway.app/zh/sleep-calculator',
+    url: 'https://getpracticaltools.com/zh/sleep-calculator',
     applicationCategory: 'UtilityApplication',
     applicationSubCategory: 'SleepCalculator',
     operatingSystem: 'Any (web browser with JavaScript)',

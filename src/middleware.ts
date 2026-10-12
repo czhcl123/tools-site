@@ -5,6 +5,13 @@ import type { NextRequest } from 'next/server'
 export function middleware(request: NextRequest) {
   const url = request.nextUrl
 
+  // Old Railway subdomain → new domain (permanent migration 301)
+  if (url.hostname.endsWith('.up.railway.app')) {
+    const newUrl = new URL(url.pathname + url.search, request.url)
+    newUrl.hostname = 'getpracticaltools.com'
+    return NextResponse.redirect(newUrl, 301)
+  }
+
   // www → non-www redirect
   if (url.hostname.startsWith('www.')) {
     const newUrl = new URL(url.pathname + url.search, request.url)

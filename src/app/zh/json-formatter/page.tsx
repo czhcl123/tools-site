@@ -14,7 +14,7 @@ export async function generateMetadata({
       description: '免费 JSON 格式化与验证工具：粘贴 JSON 一键美化、压缩、验证。',
     },
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/zh/json-formatter',
+      canonical: 'https://getpracticaltools.com/zh/json-formatter',
       languages: {
         'zh-CN': '/zh/json-formatter',
         'en-US': '/json-formatter',

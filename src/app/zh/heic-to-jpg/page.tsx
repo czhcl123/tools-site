@@ -14,7 +14,7 @@ export async function generateMetadata({
       description: '免费在线 HEIC 转 JPG 工具:批量转换 iPhone 照片,30 秒处理 100 张。',
     },
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/zh/heic-to-jpg',
+      canonical: 'https://getpracticaltools.com/zh/heic-to-jpg',
       languages: {
         'zh-CN': '/zh/heic-to-jpg',
         'en-US': '/heic-to-jpg',

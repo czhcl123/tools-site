@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '倒计时器如何利用紧迫感和稀缺性提升转化率？了解倒计时心理学原理和实际应用场景。'
       : 'How countdown timers use urgency and scarcity to boost conversions? Learn the psychology behind countdown timers and practical use cases.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/countdown-timer-psychology',
+      canonical: 'https://getpracticaltools.com/blog/countdown-timer-psychology',
       languages: { 'en-US': '/blog/countdown-timer-psychology', 'x-default': '/blog/countdown-timer-psychology' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/countdown-timer-psychology' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/countdown-timer-psychology' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why do countdowns boost productivity?", "acceptedAnswer": {"@type": "Answer", "text": "Trigger urgency and loss aversion."}}]}),
     },

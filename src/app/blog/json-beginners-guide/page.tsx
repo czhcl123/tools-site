@@ -8,10 +8,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
     title: lang === 'zh' ? 'JSON入门：数据格式详解与格式化技巧' : 'JSON for Beginners Guide',
     description: lang === 'zh' ? '什么是JSON、语法规则、常见错误,以及如何用JSON格式化工具快速美化代码。' : 'What is JSON, syntax rules, common errors, and how to format code with JSON formatter tools.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/json-beginners-guide',
+      canonical: 'https://getpracticaltools.com/blog/json-beginners-guide',
       languages: { 'en-US': '/blog/json-beginners-guide', 'x-default': '/blog/json-beginners-guide' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/json-beginners-guide' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/json-beginners-guide' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "JSON basics?", "acceptedAnswer": {"@type": "Answer", "text": "Braces for objects, brackets for arrays, colons separate keys from values."}}]}),
     },

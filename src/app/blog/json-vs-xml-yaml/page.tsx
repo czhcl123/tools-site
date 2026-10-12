@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? 'JSON、XML、YAML 三种数据格式的对比：可读性、文件大小、使用场景和代码示例。'
       : 'JSON vs XML vs YAML comparison: readability, file size, use cases, and code examples for each format.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/json-vs-xml-yaml',
+      canonical: 'https://getpracticaltools.com/blog/json-vs-xml-yaml',
       languages: { 'en-US': '/blog/json-vs-xml-yaml', 'x-default': '/blog/json-vs-xml-yaml' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/json-vs-xml-yaml' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/json-vs-xml-yaml' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "JSON or XML?", "acceptedAnswer": {"@type": "Answer", "text": "JSON lighter for APIs; XML for complex enterprise structures."}}]}),
     },

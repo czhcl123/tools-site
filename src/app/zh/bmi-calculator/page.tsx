@@ -22,7 +22,7 @@ export async function generateMetadata({
     title: titles[lang],
     description: descriptions[lang],
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/zh/bmi-calculator',
+      canonical: 'https://getpracticaltools.com/zh/bmi-calculator',
       languages: {
         'zh-CN': '/zh/bmi-calculator',
         'en-US': '/bmi-calculator',
@@ -107,7 +107,7 @@ export default async function BmiCalculatorPage({
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
     name: 'BMI 计算器',
-    url: 'https://tools-site-production.up.railway.app/zh/bmi-calculator',
+    url: 'https://getpracticaltools.com/zh/bmi-calculator',
     applicationCategory: 'HealthApplication',
     operatingSystem: 'Any',
     isAccessibleForFree: true,

@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? 'QR 码多大才能扫出来？印刷最小尺寸、容错等级 L/M/Q/H 怎么选、贴在曲面和户外的实用技巧。'
       : 'How big a QR code must be, which error correction level to pick, and practical tips for curved surfaces, print, and outdoor use.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/qr-code-size-error-correction',
+      canonical: 'https://getpracticaltools.com/blog/qr-code-size-error-correction',
       languages: { 'en-US': '/blog/qr-code-size-error-correction', 'x-default': '/blog/qr-code-size-error-correction' },
     },
-    openGraph: { url: 'https://tools-site-production.up.railway.app/blog/qr-code-size-error-correction' },
+    openGraph: { url: 'https://getpracticaltools.com/blog/qr-code-size-error-correction' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the minimum QR code size for print?", "acceptedAnswer": {"@type": "Answer", "text": "Aim for at least 2 cm (0.8 in) square for close-range scanning, and 5 cm or more for distances beyond an arm's length. Rule of thumb: 1 mm per module."}}, {"@type": "Question", "name": "What error correction level should I use?", "acceptedAnswer": {"@type": "Answer", "text": "Level M is the default balance — it recovers about 15% damage and keeps codes compact. Use H (30% recovery) when you add a logo or print on curved surfaces."}}]}),
     },

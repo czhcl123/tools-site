@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '农历为什么会有闰月？闰月怎么定、多久一次、对节日和生日有什么影响，一篇文章讲清楚。'
       : 'Why the Chinese lunar calendar inserts leap months, how they are decided, how often they occur, and what they mean for festivals and birthdays.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/lunar-leap-month',
+      canonical: 'https://getpracticaltools.com/blog/lunar-leap-month',
       languages: { 'en-US': '/blog/lunar-leap-month', 'x-default': '/blog/lunar-leap-month' },
     },
-    openGraph: { url: 'https://tools-site-production.up.railway.app/blog/lunar-leap-month' },
+    openGraph: { url: 'https://getpracticaltools.com/blog/lunar-leap-month' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How often does a leap month occur?", "acceptedAnswer": {"@type": "Answer", "text": "Roughly seven times every 19 years. A leap month appears about every two to three years on average."}}, {"@type": "Question", "name": "Which year is the next leap month?", "acceptedAnswer": {"@type": "Answer", "text": "Use a lunar calendar converter to check any year — it shows the leap month (闰月) directly for the Chinese calendar in use."}}]}),
     },

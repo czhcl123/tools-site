@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '百分比折扣和固定金额立减哪个更划算？一个简单公式快速判断，避开叠加优惠的算钱误区。'
       : 'Percent off vs fixed amount off — learn the one formula that tells you which deal saves more, and how stacking discounts really works.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/percent-off-vs-amount-off',
+      canonical: 'https://getpracticaltools.com/blog/percent-off-vs-amount-off',
       languages: { 'en-US': '/blog/percent-off-vs-amount-off', 'x-default': '/blog/percent-off-vs-amount-off' },
     },
-    openGraph: { url: 'https://tools-site-production.up.railway.app/blog/percent-off-vs-amount-off' },
+    openGraph: { url: 'https://getpracticaltools.com/blog/percent-off-vs-amount-off' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which is better: 20% off or $10 off?", "acceptedAnswer": {"@type": "Answer", "text": "Compare $10 to 20% of the price. Below $50, $10 off saves more. Above $50, 20% off saves more."}}, {"@type": "Question", "name": "Do 50% off and 30% off add up to 80% off?", "acceptedAnswer": {"@type": "Answer", "text": "No. They multiply: you pay 50% then 70% of that, so you pay 35% of the original price — 65% off total."}}]}),
     },

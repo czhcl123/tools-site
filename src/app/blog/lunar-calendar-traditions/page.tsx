@@ -8,10 +8,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
     title: lang === 'zh' ? '农历与节日：中国传统历法详解' : 'Chinese Lunar Calendar Traditions',
     description: lang === 'zh' ? '农历原理、闰月规则、传统节日日期,以及如何用农历转换器查询。' : 'Lunar calendar principles, leap month rules, traditional festival dates, and how to use a lunar converter.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/lunar-calendar-traditions',
+      canonical: 'https://getpracticaltools.com/blog/lunar-calendar-traditions',
       languages: { 'en-US': '/blog/lunar-calendar-traditions', 'x-default': '/blog/lunar-calendar-traditions' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/lunar-calendar-traditions' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/lunar-calendar-traditions' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Chinese New Year traditions?", "acceptedAnswer": {"@type": "Answer", "text": "Spring couplets, firecrackers, reunion dinner, red envelopes."}}]}),
     },

@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '不同内容类型的理想字数：博客、产品页、元描述。Google 对内容长度的看法，质量 vs 数量。'
       : 'Ideal word counts by content type: blog posts, product pages, meta descriptions. Google\'s stance on content length, quality vs quantity.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/word-count-seo',
+      canonical: 'https://getpracticaltools.com/blog/word-count-seo',
       languages: { 'en-US': '/blog/word-count-seo', 'x-default': '/blog/word-count-seo' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/word-count-seo' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/word-count-seo' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Ideal SEO word count?", "acceptedAnswer": {"@type": "Answer", "text": "1,500–2,500 words for in-depth articles."}}, {"@type": "Question", "name": "Word count and AI search?", "acceptedAnswer": {"@type": "Answer", "text": "AI cites 1,500+ word authoritative content."}}]}),
     },

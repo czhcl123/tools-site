@@ -14,7 +14,7 @@ export async function generateMetadata({
       description: '免费发票生成器:输入商家、客户和商品信息,一键生成专业 PDF 发票。',
     },
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/zh/invoice-generator',
+      canonical: 'https://getpracticaltools.com/zh/invoice-generator',
       languages: {
         'zh-CN': '/zh/invoice-generator',
         'en-US': '/invoice-generator',
@@ -98,7 +98,7 @@ export default async function InvoiceGeneratorPage({
     '@type': 'WebApplication',
     name: '免费发票生成器 - PDF 发票工具',
     alternateName: '发票生成器',
-    url: 'https://tools-site-production.up.railway.app/zh/invoice-generator',
+    url: 'https://getpracticaltools.com/zh/invoice-generator',
     applicationCategory: 'BusinessApplication',
     applicationSubCategory: 'InvoiceGenerator',
     operatingSystem: 'Any (web browser with JavaScript)',

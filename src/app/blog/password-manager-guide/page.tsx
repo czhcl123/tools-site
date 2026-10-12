@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '为什么需要密码管理器，它们如何工作，选择要点，主密码技巧，以及生成密码 vs 记忆密码。'
       : 'Why you need a password manager, how they work, key features, master password tips, and generated vs remembered passwords.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/password-manager-guide',
+      canonical: 'https://getpracticaltools.com/blog/password-manager-guide',
       languages: { 'en-US': '/blog/password-manager-guide', 'x-default': '/blog/password-manager-guide' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/password-manager-guide' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/password-manager-guide' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Are password managers secure?", "acceptedAnswer": {"@type": "Answer", "text": "End-to-end encryption. Safe even if service is breached."}}, {"@type": "Question", "name": "Free vs paid?", "acceptedAnswer": {"@type": "Answer", "text": "Free for individuals; paid adds team features."}}]}),
     },

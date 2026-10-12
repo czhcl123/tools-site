@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       { userAgent: '*', allow: '/' },
     ],
-    sitemap: 'https://tools-site-production.up.railway.app/sitemap.xml',
-    host: 'https://tools-site-production.up.railway.app',
+    sitemap: 'https://getpracticaltools.com/sitemap.xml',
+    host: 'https://getpracticaltools.com',
   }
 }

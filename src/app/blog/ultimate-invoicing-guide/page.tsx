@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '从零开始学会专业开票:发票要素、付款条款、税务处理、催款策略,自由职业者和小企业的完整指南。'
       : 'Complete invoicing guide: invoice essentials, payment terms, tax handling, collection strategies, and full workflows for freelancers and small businesses.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/ultimate-invoicing-guide',
+      canonical: 'https://getpracticaltools.com/blog/ultimate-invoicing-guide',
       languages: { 'en-US': '/blog/ultimate-invoicing-guide', 'x-default': '/blog/ultimate-invoicing-guide' },
     },
-    openGraph: { url: 'https://tools-site-production.up.railway.app/blog/ultimate-invoicing-guide' },
+    openGraph: { url: 'https://getpracticaltools.com/blog/ultimate-invoicing-guide' },
     other: {
       'application/ld+json': JSON.stringify({
         '@context': 'https://schema.org',

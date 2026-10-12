@@ -14,7 +14,7 @@ export async function generateMetadata({
       description: '免费公历农历双向转换,生肖干支节日查询',
     },
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/zh/lunar-calendar',
+      canonical: 'https://getpracticaltools.com/zh/lunar-calendar',
       languages: {
         'zh-CN': '/zh/lunar-calendar',
         'en-US': '/lunar-calendar',

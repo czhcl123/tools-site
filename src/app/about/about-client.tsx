@@ -127,8 +127,8 @@ function AboutContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
             <ul className="text-sm space-y-1">
               <li>
                 <strong className="text-gray-800">{t.contactEmail}:</strong>{' '}
-                <a href="mailto:contact@tools-site-production.up.railway.app" className="text-orange-600 hover:underline">
-                  contact@tools-site-production.up.railway.app
+                <a href="mailto:contact@getpracticaltools.com" className="text-orange-600 hover:underline">
+                  contact@getpracticaltools.com
                 </a>
               </li>
             </ul>

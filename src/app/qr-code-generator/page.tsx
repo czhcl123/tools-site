@@ -24,12 +24,12 @@ export async function generateMetadata({
     title: data[lang].title,
     description: data[lang].description,
     openGraph: {
-        url: `${lang === 'zh' ? 'https://tools-site-production.up.railway.app/zh/qr-code-generator' : 'https://tools-site-production.up.railway.app/qr-code-generator'}`,
+        url: `${lang === 'zh' ? 'https://getpracticaltools.com/zh/qr-code-generator' : 'https://getpracticaltools.com/qr-code-generator'}`,
       title: data[lang].title,
       description: data[lang].description,
     },
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/qr-code-generator',
+      canonical: 'https://getpracticaltools.com/qr-code-generator',
       languages: {
         'zh-CN': '/zh/qr-code-generator',
         'en-US': '/qr-code-generator',

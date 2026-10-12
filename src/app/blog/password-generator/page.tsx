@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '教你用密码生成器创建安全强密码,了解密码强度、长度和字符组合的最佳实践,保护你的在线账户安全。'
       : 'Learn how to create strong passwords with a password generator. Best practices for length, character mixing, and security tips to protect your accounts.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/password-generator',
+      canonical: 'https://getpracticaltools.com/blog/password-generator',
       languages: { 'en-US': '/blog/password-generator', 'x-default': '/blog/password-generator' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/password-generator' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/password-generator' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long should passwords be?", "acceptedAnswer": {"@type": "Answer", "text": "At least 12 chars with mixed character types."}}, {"@type": "Question", "name": "Generated vs self-made?", "acceptedAnswer": {"@type": "Answer", "text": "Generated is truly random; humans pick predictable patterns."}}, {"@type": "Question", "name": "How to store?", "acceptedAnswer": {"@type": "Answer", "text": "Use a password manager. Never plain text."}}]}),
     },

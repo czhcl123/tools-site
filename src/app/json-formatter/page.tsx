@@ -24,12 +24,12 @@ export async function generateMetadata({
     title: data[lang].title,
     description: data[lang].description,
     openGraph: {
-        url: `${lang === 'zh' ? 'https://tools-site-production.up.railway.app/zh/json-formatter' : 'https://tools-site-production.up.railway.app/json-formatter'}`,
+        url: `${lang === 'zh' ? 'https://getpracticaltools.com/zh/json-formatter' : 'https://getpracticaltools.com/json-formatter'}`,
       title: data[lang].title,
       description: data[lang].description,
     },
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/json-formatter',
+      canonical: 'https://getpracticaltools.com/json-formatter',
       languages: {
         'zh-CN': '/zh/json-formatter',
         'en-US': '/json-formatter',

@@ -14,7 +14,7 @@ export async function generateMetadata({
       description: '输入商品原价和折扣力度（1-99折），快速计算折后价和节省金额。',
     },
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/zh/discount-calculator',
+      canonical: 'https://getpracticaltools.com/zh/discount-calculator',
       languages: {
         'zh-CN': '/zh/discount-calculator',
         'en-US': '/discount-calculator',

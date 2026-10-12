@@ -12,10 +12,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       ? '小型企业如何用折扣计算器优化促销、批量定价和利润率保护。'
       : 'How small businesses use discount calculators for seasonal sales, bulk pricing, competitor price matching, and profit margin protection.',
     alternates: {
-      canonical: 'https://tools-site-production.up.railway.app/blog/discount-business-pricing',
+      canonical: 'https://getpracticaltools.com/blog/discount-business-pricing',
       languages: { 'en-US': '/blog/discount-business-pricing', 'x-default': '/blog/discount-business-pricing' },
     },
-      openGraph: { url: 'https://tools-site-production.up.railway.app/blog/discount-business-pricing' },
+      openGraph: { url: 'https://getpracticaltools.com/blog/discount-business-pricing' },
     other: {
       'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How to price with calculator?", "acceptedAnswer": {"@type": "Answer", "text": "Enter cost and target margin to find max discount."}}, {"@type": "Question", "name": "Bulk discounts without losing money?", "acceptedAnswer": {"@type": "Answer", "text": "Verify each tier's margin."}}]}),
     },

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://tools-site-production.up.railway.app'
+  const base = 'https://getpracticaltools.com'
   // Hardcoded to force re-crawl signal after 7-18 GKP title/desc updates
   const today = '2026-10-06'
 
