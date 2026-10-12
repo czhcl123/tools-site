@@ -4,19 +4,22 @@ import type { NextRequest } from 'next/server'
 // Redirect old ?lang=zh URLs to /zh/<slug>
 export function middleware(request: NextRequest) {
   const url = request.nextUrl
+  const host = (request.headers.get('host') ?? '').toLowerCase()
 
   // Old Railway subdomain → new domain (permanent migration 301)
-  if (url.hostname.endsWith('.up.railway.app')) {
-    const newUrl = new URL(url.pathname + url.search, request.url)
-    newUrl.hostname = 'getpracticaltools.com'
-    return NextResponse.redirect(newUrl, 301)
+  if (host.endsWith('.up.railway.app')) {
+    return NextResponse.redirect(
+      new URL(url.pathname + url.search, 'https://getpracticaltools.com'),
+      301
+    )
   }
 
   // www → non-www redirect
-  if (url.hostname.startsWith('www.')) {
-    const newUrl = new URL(url.pathname + url.search, request.url)
-    newUrl.hostname = url.hostname.replace('www.', '')
-    return NextResponse.redirect(newUrl, 301)
+  if (host.startsWith('www.')) {
+    return NextResponse.redirect(
+      new URL(url.pathname + url.search, 'https://' + host.slice(4)),
+      301
+    )
   }
 
   const lang = url.searchParams.get('lang')
