@@ -284,6 +284,7 @@ export default async function RootLayout({
         <link rel="icon" href="/favicon.svg" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly site index" />
         <link rel="alternate" type="application/rss+xml" title="Practical Tools RSS Feed" href="/rss.xml" />
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="cjsU3KU/EW7HI9mKf1+lbg" async></script>
       </head>
       <body className="min-h-full flex flex-col antialiased bg-gray-50">
         <script
