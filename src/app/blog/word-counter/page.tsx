@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '字数统计工具指南 — 精确统计中英文字符数'
-      : 'Word Counter Guide',
+      : 'Word Counter Guide: Chinese Characters',
     description: lang === 'zh'
       ? '字数统计工具使用教程:统计中英文字符数、单词数、段落数,适用于论文、文案、SEO 写作。'
       : 'How to use a word counter to count Chinese characters, English words, paragraphs, and more. Essential for essays, copywriting, and SEO.',
@@ -151,6 +151,22 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
       <h1 className="text-2xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '字数统计工具指南' : 'Word Counter Guide'}
       </h1>
+
+      {/* 首屏工具入口：搜「word count chinese」的人是来找工具的，入口不能只放在文末 */}
+      <div className="mb-8 p-4 bg-orange-50 border border-orange-100 rounded-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <p className="text-sm text-gray-700">
+          {lang === 'zh'
+            ? '中英文混排也能数清楚——工具就在旁边，粘贴即出结果。'
+            : 'Counts Chinese characters and English words side by side — paste your text and see the result instantly.'}
+        </p>
+        <Link
+          href="/word-counter"
+          className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-orange-500 text-white text-sm font-medium hover:bg-orange-600 whitespace-nowrap"
+        >
+          {lang === 'zh' ? '打开字数统计工具 →' : 'Count Chinese characters →'}
+        </Link>
+      </div>
+
       {content[lang]}
     </div>
   )
