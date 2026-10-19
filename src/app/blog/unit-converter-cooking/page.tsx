@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? '厨房单位换算完全指南：烹饪和烘焙中常用的体积、重量和温度换算，为什么精确测量很重要，如何转换国际食谱，以及海拔对烹饪的影响。' : 'en'
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
     title: lang === 'zh'
       ? '厨房单位换算：烹饪测量完全指南'

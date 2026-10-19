@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? '时差调整完全指南：旅行者如何用睡眠计算器对抗时差反应，包括飞行前调整、飞机上睡眠技巧和到达后的恢复策略。' : 'en'
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
     title: lang === 'zh'
       ? '时差调整：旅行者睡眠计算器'

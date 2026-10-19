@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? '发票付款条款完全指南：如何在发票中设置清晰的付款条件，包括 Net 15/30/60、早付折扣、逾期罚金，以及跟进未付款发票的实用策略，加速回款。' : 'en'
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
     title: lang === 'zh'
       ? '发票付款条款：如何更快收到款项'

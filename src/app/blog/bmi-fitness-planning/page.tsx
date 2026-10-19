@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'BMI 与健身：如何根据 BMI 制定科学减重计划，计算理想体重范围，结合运动方案追踪进度，了解 BMI 在健身中的实际意义和局限性。' : 'en'
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
     title: lang === 'zh'
       ? 'BMI 与健身：如何制定减重计划'

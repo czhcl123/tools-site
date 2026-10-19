@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? '婚礼倒计时规划指南：用倒计时工具管理婚礼准备的每个关键节点，从场地预订到婚纱选购，从宾客名单到婚礼当天时间线，确保一切有条不紊。' : 'en'
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
     title: lang === 'zh'
       ? '婚礼倒计时：完美婚礼规划指南'

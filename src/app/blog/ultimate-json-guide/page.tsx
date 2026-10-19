@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'JSON 完全指南：从入门到精通，涵盖 JSON 语法、数据类型、嵌套结构、验证、格式化、与 API 集成，以及常见错误排查，适合开发者和数据分析师。' : 'en'
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
     title: lang === 'zh'
       ? 'JSON 完全指南：从入门到精通'

@@ -155,11 +155,6 @@ const webAppSchema = {
     '100% browser-side, no upload',
   ],
   dateModified: '2026-07-18',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.8',
-    ratingCount: '142',
-  },
 }
 
 export default async function QrCodeGeneratorPage({

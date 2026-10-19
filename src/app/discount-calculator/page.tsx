@@ -147,11 +147,6 @@ const webAppSchema = {
     priceCurrency: 'USD',
   },
   description: 'Free online discount calculator. Enter original price and discount percentage to instantly get the final price and savings amount. Works for both "X% off" and "X 折" notation.',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.8',
-    ratingCount: '127',
-  },
 }
 
 export default async function DiscountCalculatorPage({

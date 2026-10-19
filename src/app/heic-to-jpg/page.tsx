@@ -155,11 +155,6 @@ const webAppSchema = {
     'Works on Mac, Windows, Android',
   ],
   dateModified: '2026-07-18',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.8',
-    ratingCount: '213',
-  },
 }
 
 export default async function HeicToJpgPage({

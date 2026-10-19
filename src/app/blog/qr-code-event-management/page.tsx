@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? 'QR 码活动管理完全指南：如何用 QR 码实现活动注册、无接触签到、名牌打印和出勤追踪，提升活动管理效率和参与者体验。' : 'en'
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
     title: lang === 'zh'
       ? 'QR 码活动管理：签到与注册'

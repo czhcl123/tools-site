@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? '终极发票指南：从零开始学会专业开票，涵盖发票要素、付款条款、税务处理、催款策略，以及自由职业者和小企业的完整开票工作流。' : 'en'
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
     title: lang === 'zh'
       ? '终极发票指南：从零到专业开票'

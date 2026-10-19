@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? '智能定价策略：小型企业如何用折扣计算器优化促销活动、批量定价、竞争对手价格匹配和利润率保护，提升销售额同时守住利润。' : 'en'
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
     title: lang === 'zh'
       ? '智能定价：用折扣计算器优化商业策略'

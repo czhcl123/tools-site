@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? '睡眠科学完全指南：深入理解 90 分钟睡眠周期、深度睡眠与 REM 的区别、如何计算最佳睡眠时间、午睡科学、时差调整，以及改善睡眠质量的 15 个实用技巧。' : 'en'
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
     title: lang === 'zh'
       ? '睡眠科学完全指南：优化你的每一觉'

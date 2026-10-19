@@ -155,11 +155,6 @@ const webAppSchema = {
     'No signup, no upload, 100% browser-side',
   ],
   dateModified: '2026-07-18',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.8',
-    ratingCount: '142',
-  },
 }
 
 export default async function JsonFormatterPage({

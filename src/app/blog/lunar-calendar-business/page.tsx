@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? '农历与商业节日营销规划指南：如何利用农历节日安排促销活动，春节、中秋节、端午节的营销时间线，以及跨文化营销中的农历敏感性。' : 'en'
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
     title: lang === 'zh'
       ? '农历与商业：节日营销规划指南'

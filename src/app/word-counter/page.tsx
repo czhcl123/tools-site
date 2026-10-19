@@ -155,11 +155,6 @@ const webAppSchema = {
     'No upload, all in browser',
   ],
   dateModified: '2026-07-18',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.8',
-    ratingCount: '142',
-  },
 }
 
 export default async function WordCounterPage({

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? '批量转换 HEIC 格式完全指南：摄影师和内容创作者如何高效处理 HEIC 文件，保留 EXIF 元数据，选择合适的质量设置，建立标准化的文件管理流程。' : 'en'
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
     title: lang === 'zh'
       ? '批量转换 HEIC：摄影师工作流指南'

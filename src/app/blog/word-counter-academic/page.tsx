@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
-  const lang = sp.lang === 'zh' ? '学术写作字数要求完全指南：为什么字数在学术写作中很重要，如何策略性地扩展或精简论文，不同格式的字数统计方法，以及引用和参考文献的计数技巧。' : 'en'
+  const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
     title: lang === 'zh'
       ? '学术写作：满足字数要求'
