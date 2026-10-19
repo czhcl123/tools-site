@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '厨房单位换算：烹饪测量完全指南'
-      : 'Kitchen Unit Converter: Cooking Measurements Guide',
+      : 'Kitchen Unit Converter: Cooking Measures',
     description: lang === 'zh'
       ? '烹饪烘焙常用单位换算,cup 到 ml、温度换算、国际食谱转换和海拔调整指南。'
       : 'Common cooking unit conversions: cups to ml, temperature conversions, international recipe adaptation, and altitude adjustments.',

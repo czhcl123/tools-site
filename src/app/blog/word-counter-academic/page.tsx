@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '学术写作：满足字数要求'
-      : 'Academic Writing: Meeting Word Count Requirements',
+      : 'Academic Writing: Word Count Requirements',
     description: lang === 'zh'
       ? '学术写作如何满足字数要求,扩展和精简论文的策略,引用和参考文献计数技巧。'
       : 'How to meet word count requirements in academic writing, strategies to expand or condense essays, and citation counting tips.',

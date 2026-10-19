@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '农历与商业：节日营销规划指南'
-      : 'Lunar Calendar for Business: Planning Around Holidays',
+      : 'Lunar Calendar for Business Planning',
     description: lang === 'zh'
       ? '如何利用农历节日安排促销活动,春节中秋端午营销时间线,跨文化营销注意事项。'
       : 'How to plan marketing campaigns around lunar holidays like Chinese New Year, Mid-Autumn Festival, and Dragon Boat Festival.',

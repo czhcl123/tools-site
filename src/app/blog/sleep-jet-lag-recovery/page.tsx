@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '时差调整：旅行者睡眠计算器'
-      : 'Beat Jet Lag: Sleep Calculator for Travelers',
+      : 'Jet Lag Recovery: Sleep Calculator',
     description: lang === 'zh'
       ? '旅行者如何用睡眠计算器对抗时差反应,飞行前调整和到达后恢复策略。'
       : 'How travelers use sleep calculators to beat jet lag, with pre-flight adjustment and post-arrival recovery strategies.',

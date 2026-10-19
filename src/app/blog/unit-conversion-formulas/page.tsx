@@ -7,10 +7,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '单位换算公式：长度、重量、体积一文通'
-      : 'Unit Conversion Formulas: Length, Weight, Volume',
+      : 'Unit Conversion Formulas: Length & Weight',
     description: lang === 'zh'
       ? '最常用的单位换算公式速查：英寸厘米、磅公斤、加仑升、华氏摄氏，附换算系数记忆法和常见错误。'
-      : 'Every unit conversion formula you actually use — inches to cm, pounds to kg, gallons to liters, Fahrenheit to Celsius — plus memory tricks and common mistakes.',
+      : 'Every unit conversion formula you use — inches to cm, pounds to kg, gallons to liters, Fahrenheit to Celsius — plus memory tricks and common mistakes.',
     alternates: {
       canonical: 'https://getpracticaltools.com/blog/unit-conversion-formulas',
       languages: { 'en-US': '/blog/unit-conversion-formulas', 'x-default': '/blog/unit-conversion-formulas' },

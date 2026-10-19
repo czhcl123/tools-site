@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '学习倒计时：番茄工作法与备考计时'
-      : 'Study Countdown Timers: Pomodoro and Exam Prep',
+      : 'Study Countdown: Pomodoro & Exam Prep',
     description: lang === 'zh'
       ? '为什么倒计时能让学习更专注？番茄工作法 25/5 怎么用，考试时如何分配时间，长时间复习怎么安排休息。'
       : 'Why countdown timers sharpen study focus, how to run the Pomodoro technique, and how to pace yourself on exam day.',

@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '智能定价：用折扣计算器优化商业策略'
-      : 'Smart Pricing: Using Discount Calculators for Business',
+      : 'Discount Calculator for Business Pricing',
     description: lang === 'zh'
       ? '小型企业如何用折扣计算器优化促销、批量定价和利润率保护。'
       : 'How small businesses use discount calculators for seasonal sales, bulk pricing, competitor price matching, and profit margin protection.',

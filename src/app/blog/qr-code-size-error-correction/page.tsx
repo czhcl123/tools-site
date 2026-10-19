@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? 'QR 码尺寸与容错：保证扫码成功'
-      : 'QR Code Size and Error Correction: Scans That Work',
+      : 'QR Code Size and Error Correction',
     description: lang === 'zh'
       ? 'QR 码多大才能扫出来？印刷最小尺寸、容错等级 L/M/Q/H 怎么选、贴在曲面和户外的实用技巧。'
       : 'How big a QR code must be, which error correction level to pick, and practical tips for curved surfaces, print, and outdoor use.',

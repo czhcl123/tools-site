@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '发票编号规则：不再重复和跳号'
-      : 'Invoice Numbering Rules: Never Duplicate or Skip',
+      : 'Invoice Numbering Rules: Never Duplicate',
     description: lang === 'zh'
       ? '发票编号怎么编才合规又清晰？年份前缀、顺序号、客户代码的组合规则，跳号、重号的处理方法。'
       : 'How to structure invoice numbers with year prefixes and sequence rules, and what to do when a number is duplicated or skipped.',

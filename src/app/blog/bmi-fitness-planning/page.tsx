@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? 'BMI 与健身：如何制定减重计划'
-      : 'BMI and Fitness: Creating a Weight Loss Plan',
+      : 'BMI and Fitness: A Weight Loss Plan',
     description: lang === 'zh'
       ? '根据 BMI 制定科学减重计划,计算理想体重范围,结合运动方案追踪进度。'
       : 'Learn how to use BMI to create a science-based weight loss plan, calculate your ideal weight range, and track fitness progress beyond the scale.',

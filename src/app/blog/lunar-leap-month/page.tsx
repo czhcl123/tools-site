@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '农历闰月：为什么有的年份有 13 个月'
-      : 'Leap Months in the Lunar Calendar: Why Some Years Have 13 Months',
+      : 'Lunar Leap Month: Why a Year Has 13 Months',
     description: lang === 'zh'
       ? '农历为什么会有闰月？闰月怎么定、多久一次、对节日和生日有什么影响，一篇文章讲清楚。'
       : 'Why the Chinese lunar calendar inserts leap months, how they are decided, how often they occur, and what they mean for festivals and birthdays.',

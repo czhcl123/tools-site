@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '折扣 vs 优惠券 vs 促销码：有什么区别？'
-      : 'Discount vs Coupon vs Promo Code: What\'s the Difference?',
+      : 'Discount vs Coupon: What\'s the Difference?',
     description: lang === 'zh'
       ? '折扣、优惠券、促销码三者的定义和区别，如何叠加使用，以及计算折扣时的常见错误。'
       : 'Discount vs coupon vs promo code: definitions, differences, how to stack them, and common calculation mistakes.',

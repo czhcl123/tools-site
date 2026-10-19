@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? 'HEIC 隐私与安全：转换时会泄露什么'
-      : 'HEIC Privacy: What Your Photos Reveal When Converted',
+      : 'HEIC Privacy: What Your Photos Reveal',
     description: lang === 'zh'
       ? 'HEIC 照片里藏着哪些位置和设备信息？转换成 JPG 时元数据会被抹掉吗？分享照片前的隐私检查清单。'
       : 'What location and device data hides inside HEIC files, whether conversion strips it, and a pre-share privacy checklist for your photos.',

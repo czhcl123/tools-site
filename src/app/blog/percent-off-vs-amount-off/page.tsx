@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '打几折还是立减？哪种优惠更划算'
-      : 'Percent Off vs Amount Off: Which Deal Is Better?',
+      : 'Percent Off vs Amount Off: Which Is Best?',
     description: lang === 'zh'
       ? '百分比折扣和固定金额立减哪个更划算？一个简单公式快速判断，避开叠加优惠的算钱误区。'
       : 'Percent off vs fixed amount off — learn the one formula that tells you which deal saves more, and how stacking discounts really works.',

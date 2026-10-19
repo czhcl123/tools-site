@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '批量转换 HEIC：摄影师工作流指南'
-      : 'Batch Convert HEIC: Workflow for Photographers',
+      : 'Batch Convert HEIC: Photographer Workflow',
     description: lang === 'zh'
       ? '摄影师如何高效批量转换 HEIC 文件,保留 EXIF 数据,选择合适的质量设置。'
       : 'How photographers and content creators efficiently batch convert HEIC files while preserving EXIF data and choosing optimal quality settings.',

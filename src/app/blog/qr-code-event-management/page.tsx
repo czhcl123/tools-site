@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? 'QR 码活动管理：签到与注册'
-      : 'QR Codes for Events: Registration and Check-in',
+      : 'QR Codes for Events: Check-in & Signup',
     description: lang === 'zh'
       ? '如何用 QR 码实现活动注册、无接触签到和出勤追踪。'
       : 'How to use QR codes for event registration, contactless check-in, name badge printing, and attendance tracking.',

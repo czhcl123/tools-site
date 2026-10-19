@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '睡眠负债：欠的觉真的能补回来吗'
-      : 'Sleep Debt: Can You Actually Catch Up on Lost Sleep?',
+      : 'Sleep Debt: Can You Catch Up on Sleep?',
     description: lang === 'zh'
       ? '睡眠负债是什么？周末补觉有用吗？慢性缺觉对注意力、代谢和情绪的真实影响，以及科学还款方法。'
       : 'What sleep debt does to your body, why weekend lie-ins only partially work, and how to repay lost sleep without wrecking your schedule.',

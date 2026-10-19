@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '阅读速度对照：读 1000 字要多久'
-      : 'Reading Speed: How Long to Read 1,000 Words',
+      : 'Reading Speed: How Long Is 1,000 Words?',
     description: lang === 'zh'
       ? '普通人阅读速度是多少？博客、论文、邮件各需要多长时间读完，怎么用字数换算阅读时间。'
       : 'Average reading speeds for adults, how long blog posts and papers take to read, and how to convert word counts into reading time.',

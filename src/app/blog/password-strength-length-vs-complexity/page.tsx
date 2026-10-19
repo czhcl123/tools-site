@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '密码强度解析：长度和复杂度哪个更重要'
-      : 'Password Strength: Length vs Complexity, What Wins',
+      : 'Password Strength: Length vs Complexity',
     description: lang === 'zh'
       ? '密码强度由什么决定？为什么 12 位以上比加符号更重要，口令短语比随机密码更实用，附暴力破解时间对照。'
       : 'What actually makes a password strong — length beats special characters, and passphrases beat gibberish. With brute-force time comparisons.',

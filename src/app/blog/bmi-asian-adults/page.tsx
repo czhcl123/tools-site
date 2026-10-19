@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '亚洲人 BMI 标准：为什么切点更低'
-      : 'BMI for Asian Adults: Why the Cutoffs Are Lower',
+      : 'BMI for Asian Adults: Why Cutoffs Differ',
     description: lang === 'zh'
       ? '亚洲人群在更低的 BMI 就出现代谢风险。看懂亚太区调整后的 BMI 分类，了解腰围和体脂为什么同样重要。'
       : 'Asian adults face higher metabolic risk at lower BMI values. See the adjusted Asia-Pacific cutoffs and why waist circumference matters just as much.',

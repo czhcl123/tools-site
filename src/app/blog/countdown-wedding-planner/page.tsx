@@ -7,7 +7,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title: lang === 'zh'
       ? '婚礼倒计时：完美婚礼规划指南'
-      : 'Wedding Countdown: Planning Your Perfect Day',
+      : 'Wedding Countdown: Plan Your Big Day',
     description: lang === 'zh'
       ? '用倒计时工具管理婚礼准备的每个关键节点,确保一切有条不紊。'
       : 'Use countdown timers to manage every milestone of wedding planning, from venue booking to the big day timeline.',
