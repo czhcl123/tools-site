@@ -167,6 +167,24 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         </Link>
       </div>
 
+      <p className="mb-6 text-sm text-gray-500">
+        {lang === 'zh' ? (
+          <>
+            想放到自己的网站？
+            <Link href="/embed" className="text-orange-500 hover:underline">
+              嵌入字数统计组件 →
+            </Link>
+          </>
+        ) : (
+          <>
+            Teacher or blogger?{' '}
+            <Link href="/embed" className="text-orange-500 hover:underline">
+              Embed this counter on your page →
+            </Link>
+          </>
+        )}
+      </p>
+
       {content[lang]}
     </div>
   )

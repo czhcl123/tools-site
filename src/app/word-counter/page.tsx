@@ -170,12 +170,14 @@ export default async function WordCounterPage({
   const seoBodyZh = (
   <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
     <p>粘贴文本立刻统计中英文字符数、单词数、段落数和句子数。论文限字、SEO 写作目标字数、社交媒体字符限制都能精准把控。</p>
+    <p className="text-sm"><a href="/embed" className="text-orange-500 hover:underline">把这个字数统计嵌入你的网站 →</a></p>
   </div>
 )
 
 const seoBodyEn = (
   <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6 text-gray-700 leading-relaxed text-[15px] space-y-3">
     <p>Paste any text to instantly count characters, words, paragraphs, and sentences. Essential for hitting essay word limits, SEO content targets, and social media character restrictions.</p>
+    <p className="text-sm"><a href="/embed" className="text-orange-500 hover:underline">Embed this word counter on your site →</a></p>
   </div>
 )
 

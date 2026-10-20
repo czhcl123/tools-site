@@ -27,6 +27,10 @@
 
 - [About Practical Tools](https://getpracticaltools.com/about): Mission, technology stack, and contact information.
 
+## Embed
+
+- [Embeddable Word Counter](https://getpracticaltools.com/embed): One-iframe widget that counts words, Chinese characters and reading time live. Free, no signup, no API key — the count runs in the visitor's browser.
+
 ## Optional
 
 - [Sitemap](https://getpracticaltools.com/sitemap.xml): Full XML sitemap of all tools and pages.

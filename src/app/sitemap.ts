@@ -59,6 +59,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   )
 
+  // 嵌入安装页(英文单页;widget 本身 /embed/word-counter 是 noindex)
+  entries.push({
+    url: `${base}/embed`,
+    lastModified: today,
+    changeFrequency: 'monthly',
+    priority: 0.5,
+  })
+
   // 工具页 (en + zh 双路径)
   for (const slug of tools) {
     entries.push({
