@@ -4,6 +4,36 @@ import Link from 'next/link'
 const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long should passwords be?", "acceptedAnswer": {"@type": "Answer", "text": "At least 12 chars with mixed character types."}}, {"@type": "Question", "name": "Generated vs self-made?", "acceptedAnswer": {"@type": "Answer", "text": "Generated is truly random; humans pick predictable patterns."}}, {"@type": "Question", "name": "How to store?", "acceptedAnswer": {"@type": "Answer", "text": "Use a password manager. Never plain text."}}]}
 
 
+const articleLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Password Generator Guide",
+  "description": "Learn how to create strong passwords with a password generator. Best practices for length, character mixing, and security tips to protect your accounts.",
+  "image": [
+    "https://getpracticaltools.com/og-image.png"
+  ],
+  "datePublished": "2026-08-23",
+  "dateModified": "2026-10-21",
+  "author": {
+    "@type": "Organization",
+    "name": "Practical Tools",
+    "url": "https://getpracticaltools.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Practical Tools",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://getpracticaltools.com/favicon.svg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://getpracticaltools.com/blog/password-generator"
+  },
+  "inLanguage": "en"
+}
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -211,10 +241,21 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-2xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '密码生成器使用指南' : 'Password Generator Guide'}
       </h1>
+      <p className="text-sm text-gray-500 mb-6">
+        {lang === 'zh' ? '实用计算器' : 'Practical Tools'}
+        {' · '}
+        {lang === 'zh' ? '发布于' : 'Published'} 2026-08-23
+        {' · '}
+        {lang === 'zh' ? '更新于' : 'Updated'} 2026-10-21
+      </p>
       {content[lang]}
     </div>
   )

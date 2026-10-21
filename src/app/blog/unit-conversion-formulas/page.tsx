@@ -4,6 +4,36 @@ import Link from 'next/link'
 const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do you convert inches to centimeters?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply inches by 2.54. One inch equals exactly 2.54 centimeters, so 10 inches is 25.4 cm."}}, {"@type": "Question", "name": "Why is temperature conversion different?", "acceptedAnswer": {"@type": "Answer", "text": "Temperature scales have different zero points, so you need an offset as well as a multiplier: °C = (°F − 32) × 5/9."}}]}
 
 
+const articleLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Unit Conversion Formulas: Length & Weight",
+  "description": "Every unit conversion formula you use — inches to cm, pounds to kg, gallons to liters, Fahrenheit to Celsius — plus memory tricks and common mistakes.",
+  "image": [
+    "https://getpracticaltools.com/og-image.png"
+  ],
+  "datePublished": "2026-10-06",
+  "dateModified": "2026-10-21",
+  "author": {
+    "@type": "Organization",
+    "name": "Practical Tools",
+    "url": "https://getpracticaltools.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Practical Tools",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://getpracticaltools.com/favicon.svg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://getpracticaltools.com/blog/unit-conversion-formulas"
+  },
+  "inLanguage": "en"
+}
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -191,10 +221,21 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '单位换算公式：长度、重量、体积一文通' : 'Unit Conversion Formulas: Length, Weight, Volume'}
       </h1>
+      <p className="text-sm text-gray-500 mb-6">
+        {lang === 'zh' ? '实用计算器' : 'Practical Tools'}
+        {' · '}
+        {lang === 'zh' ? '发布于' : 'Published'} 2026-10-06
+        {' · '}
+        {lang === 'zh' ? '更新于' : 'Updated'} 2026-10-21
+      </p>
       {content[lang]}
     </div>
   )

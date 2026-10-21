@@ -4,6 +4,36 @@ import Link from 'next/link'
 const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the minimum QR code size for print?", "acceptedAnswer": {"@type": "Answer", "text": "Aim for at least 2 cm (0.8 in) square for close-range scanning, and 5 cm or more for distances beyond an arm's length. Rule of thumb: 1 mm per module."}}, {"@type": "Question", "name": "What error correction level should I use?", "acceptedAnswer": {"@type": "Answer", "text": "Level M is the default balance — it recovers about 15% damage and keeps codes compact. Use H (30% recovery) when you add a logo or print on curved surfaces."}}]}
 
 
+const articleLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "QR Code Size and Error Correction",
+  "description": "How big a QR code must be, which error correction level to pick, and practical tips for curved surfaces, print, and outdoor use.",
+  "image": [
+    "https://getpracticaltools.com/og-image.png"
+  ],
+  "datePublished": "2026-10-06",
+  "dateModified": "2026-10-21",
+  "author": {
+    "@type": "Organization",
+    "name": "Practical Tools",
+    "url": "https://getpracticaltools.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Practical Tools",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://getpracticaltools.com/favicon.svg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://getpracticaltools.com/blog/qr-code-size-error-correction"
+  },
+  "inLanguage": "en"
+}
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -163,10 +193,21 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? 'QR 码尺寸与容错：保证扫码成功' : 'QR Code Size and Error Correction: Scans That Work'}
       </h1>
+      <p className="text-sm text-gray-500 mb-6">
+        {lang === 'zh' ? '实用计算器' : 'Practical Tools'}
+        {' · '}
+        {lang === 'zh' ? '发布于' : 'Published'} 2026-10-06
+        {' · '}
+        {lang === 'zh' ? '更新于' : 'Updated'} 2026-10-21
+      </p>
       {content[lang]}
     </div>
   )

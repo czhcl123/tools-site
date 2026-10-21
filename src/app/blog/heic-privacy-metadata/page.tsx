@@ -4,6 +4,36 @@ import Link from 'next/link'
 const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do HEIC photos contain location data?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, if Location Services is enabled for the camera. HEIC files embed EXIF metadata including GPS coordinates, capture time, and device model."}}, {"@type": "Question", "name": "Does converting HEIC to JPG remove metadata?", "acceptedAnswer": {"@type": "Answer", "text": "Basic converters usually strip EXIF in the process, but not always by design — some preserve it. For privacy-sensitive shares, strip metadata explicitly or disable location access for the camera."}}]}
 
 
+const articleLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "HEIC Privacy: What Your Photos Reveal",
+  "description": "What location and device data hides inside HEIC files, whether conversion strips it, and a pre-share privacy checklist for your photos.",
+  "image": [
+    "https://getpracticaltools.com/og-image.png"
+  ],
+  "datePublished": "2026-10-06",
+  "dateModified": "2026-10-21",
+  "author": {
+    "@type": "Organization",
+    "name": "Practical Tools",
+    "url": "https://getpracticaltools.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Practical Tools",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://getpracticaltools.com/favicon.svg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://getpracticaltools.com/blog/heic-privacy-metadata"
+  },
+  "inLanguage": "en"
+}
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -139,10 +169,21 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? 'HEIC 隐私与安全：转换时会泄露什么' : 'HEIC Privacy: What Your Photos Reveal When Converted'}
       </h1>
+      <p className="text-sm text-gray-500 mb-6">
+        {lang === 'zh' ? '实用计算器' : 'Practical Tools'}
+        {' · '}
+        {lang === 'zh' ? '发布于' : 'Published'} 2026-10-06
+        {' · '}
+        {lang === 'zh' ? '更新于' : 'Updated'} 2026-10-21
+      </p>
       {content[lang]}
     </div>
   )

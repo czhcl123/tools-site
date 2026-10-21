@@ -4,6 +4,36 @@ import Link from 'next/link'
 const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How to use?", "acceptedAnswer": {"@type": "Answer", "text": "Paste text, see word/character/paragraph/sentence count."}}, {"@type": "Question", "name": "Chinese counting?", "acceptedAnswer": {"@type": "Answer", "text": "Characters for Chinese, words for English. Auto-detected."}}]}
 
 
+const articleLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Word Counter Guide: Chinese Characters",
+  "description": "How to use a word counter to count Chinese characters, English words, paragraphs, and more. Essential for essays, copywriting, and SEO.",
+  "image": [
+    "https://getpracticaltools.com/og-image.png"
+  ],
+  "datePublished": "2026-08-22",
+  "dateModified": "2026-10-21",
+  "author": {
+    "@type": "Organization",
+    "name": "Practical Tools",
+    "url": "https://getpracticaltools.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Practical Tools",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://getpracticaltools.com/favicon.svg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://getpracticaltools.com/blog/word-counter"
+  },
+  "inLanguage": "en"
+}
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -151,10 +181,21 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-2xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '字数统计工具指南' : 'Word Counter Guide'}
       </h1>
+      <p className="text-sm text-gray-500 mb-6">
+        {lang === 'zh' ? '实用计算器' : 'Practical Tools'}
+        {' · '}
+        {lang === 'zh' ? '发布于' : 'Published'} 2026-08-22
+        {' · '}
+        {lang === 'zh' ? '更新于' : 'Updated'} 2026-10-21
+      </p>
 
       {/* 首屏工具入口：搜「word count chinese」的人是来找工具的，入口不能只放在文末 */}
       <div className="mb-8 p-4 bg-orange-50 border border-orange-100 rounded-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
