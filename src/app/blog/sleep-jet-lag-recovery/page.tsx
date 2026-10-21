@@ -69,6 +69,31 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           出发前 2–3 天开始逐步调整作息：<strong>往东飞</strong>：每天提前 1 小时睡觉和起床。<strong>往西飞</strong>：每天推迟 1 小时。用睡眠计算器规划每天的入睡和起床时间，让身体提前适应目的地时区。
         </p>
 
+        <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">时差恢复时间怎么算？</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          常用估算公式：<strong>完全恢复天数 ≈ 跨越的时区数 × 系数</strong>。系数取 <strong>1.5（往东飞）</strong> 或 <strong>1.0（往西飞）</strong>。原因是人体昼夜节律本身略长于 24 小时，往后推迟总是比往前提前容易。
+        </p>
+        <div className="overflow-x-auto mb-4">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead>
+              <tr className="border-b-2 border-gray-200">
+                <th className="py-2 pr-3 font-semibold text-gray-800">跨越时区</th>
+                <th className="py-2 pr-3 font-semibold text-gray-800">往西（推迟）</th>
+                <th className="py-2 font-semibold text-gray-800">往东（提前）</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700">
+              <tr className="border-b border-gray-100"><td className="py-2 pr-3">3 小时</td><td className="py-2 pr-3">约 3 天</td><td className="py-2">约 4–5 天</td></tr>
+              <tr className="border-b border-gray-100"><td className="py-2 pr-3">6 小时</td><td className="py-2 pr-3">约 6 天</td><td className="py-2">约 9 天</td></tr>
+              <tr className="border-b border-gray-100"><td className="py-2 pr-3">9 小时</td><td className="py-2 pr-3">约 9 天</td><td className="py-2">约 13 天</td></tr>
+              <tr><td className="py-2 pr-3">12 小时</td><td className="py-2 pr-3">约 12 天</td><td className="py-2">约 18 天</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          例：北京飞到纽约，12 个时区、往东，完全对齐约需 18 天。但主观上 3–5 天就能正常作息——剩下的差距出现在深夜清醒、清晨犯困这类细节上。所以「感觉好了」和「节律完全恢复」是两件事。
+        </p>
+
         <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">飞机上的睡眠策略</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
           根据目的地时间决定在飞机上是睡还是醒。如果到达时是晚上，飞机上尽量睡觉；如果到达时是白天，保持清醒。用睡眠计算器计算飞行途中需要的睡眠周期数（每个 90 分钟）。
@@ -121,6 +146,31 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">Pre-Flight Sleep Adjustment</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
           Start adjusting 2–3 days before departure: <strong>flying east</strong> — shift bedtime and wake time 1 hour earlier each day. <strong>Flying west</strong> — shift 1 hour later. Use a sleep calculator to plan each day's sleep schedule so your body adapts ahead of time.
+        </p>
+
+        <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">Jet Lag Recovery Time Formula</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          The working formula: <strong>days to full recovery ≈ time zones crossed × a factor</strong>. Use <strong>1.5 when flying east</strong> and <strong>1.0 when flying west</strong>. The reason is that the human circadian clock runs slightly longer than 24 hours, so delaying it is always easier than advancing it.
+        </p>
+        <div className="overflow-x-auto mb-4">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead>
+              <tr className="border-b-2 border-gray-200">
+                <th className="py-2 pr-3 font-semibold text-gray-800">Time zones</th>
+                <th className="py-2 pr-3 font-semibold text-gray-800">Westbound (delay)</th>
+                <th className="py-2 font-semibold text-gray-800">Eastbound (advance)</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700">
+              <tr className="border-b border-gray-100"><td className="py-2 pr-3">3 hours</td><td className="py-2 pr-3">~3 days</td><td className="py-2">~4–5 days</td></tr>
+              <tr className="border-b border-gray-100"><td className="py-2 pr-3">6 hours</td><td className="py-2 pr-3">~6 days</td><td className="py-2">~9 days</td></tr>
+              <tr className="border-b border-gray-100"><td className="py-2 pr-3">9 hours</td><td className="py-2 pr-3">~9 days</td><td className="py-2">~13 days</td></tr>
+              <tr><td className="py-2 pr-3">12 hours</td><td className="py-2 pr-3">~12 days</td><td className="py-2">~18 days</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          Example: Beijing to New York is 12 zones eastbound, so full entrainment takes roughly 18 days. Functionally you will feel normal within 3–5 days — what remains is the residual mismatch that shows up as waking at 3 a.m. or crashing at 6 p.m. Feeling recovered and being recovered are not the same thing.
         </p>
 
         <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">In-Flight Sleep Strategy</h2>

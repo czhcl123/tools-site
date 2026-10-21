@@ -64,6 +64,37 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           公历（阳历）是国际通用的太阳历,一年 365/366 天。农历（阴历）是中国传统历法,实际上是阴阳合历——月份按月亮周期（29.5 天）,年份通过闰月对齐太阳年。所以农历和公历的日期每年都在变。
         </p>
 
+        <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">农历 vs 公历：一张表看清楚</h2>
+        <div className="overflow-x-auto mb-4">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead>
+              <tr className="border-b-2 border-gray-200">
+                <th className="py-2 pr-3 font-semibold text-gray-800">对比项</th>
+                <th className="py-2 pr-3 font-semibold text-gray-800">公历（阳历）</th>
+                <th className="py-2 font-semibold text-gray-800">农历（阴阳合历）</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700">
+              <tr className="border-b border-gray-100"><td className="py-2 pr-3">依据</td><td className="py-2 pr-3">地球绕太阳</td><td className="py-2">月亮盈亏 + 太阳回归年</td></tr>
+              <tr className="border-b border-gray-100"><td className="py-2 pr-3">一年长度</td><td className="py-2 pr-3">365 或 366 天</td><td className="py-2">354 或 384 天（有闰月）</td></tr>
+              <tr className="border-b border-gray-100"><td className="py-2 pr-3">月份</td><td className="py-2 pr-3">固定 12 个月，28–31 天</td><td className="py-2">12 或 13 个月，29–30 天</td></tr>
+              <tr className="border-b border-gray-100"><td className="py-2 pr-3">修正方式</td><td className="py-2 pr-3">每 4 年加 1 个闰日</td><td className="py-2">每 2–3 年加 1 个闰月</td></tr>
+              <tr className="border-b border-gray-100"><td className="py-2 pr-3">新年</td><td className="py-2 pr-3">固定 1 月 1 日</td><td className="py-2">浮动于 1 月下旬至 2 月中旬</td></tr>
+              <tr><td className="py-2 pr-3">使用场景</td><td className="py-2 pr-3">国际通用、商业、行政</td><td className="py-2">传统节日、生肖、择日、八字</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">公历转农历的三步</h2>
+        <ol className="list-decimal list-inside text-gray-700 leading-relaxed mb-4 space-y-2">
+          <li>确定目标公历年份对应的农历年范围（从该年春节开始，到次年春节前一天结束）</li>
+          <li>判断该农历年是否有闰月——有闰月的年份共 13 个月，日期会整体后移</li>
+          <li>按朔日（新月）定位月份，再按日序推算日期</li>
+        </ol>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          手工做这三步很麻烦，所以实际都交给转换器。这也是为什么「1990 年农历八月十五是几号」这类问题，很少有人能心算出来。
+        </p>
+
         <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">为什么要查农历?</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
           <strong>传统节日</strong>:春节、元宵、端午、中秋、重阳都是农历日期。<strong>生日</strong>:很多老人只记农历生日。<strong>择日</strong>:搬家、结婚、开业,传统上要选农历黄道吉日。<strong>命理</strong>:八字算命需要农历出生日期。
@@ -108,6 +139,37 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">Lunar vs. Solar Calendar</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
           The solar (Gregorian) calendar is the international standard: 365/366 days per year. The Chinese lunar calendar is actually a lunisolar calendar — months follow the moon cycle (29.5 days), while the year is aligned to the solar year through leap months. That's why lunar dates shift every year relative to the solar calendar.
+        </p>
+
+        <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">Lunar vs Gregorian Calendar: Side by Side</h2>
+        <div className="overflow-x-auto mb-4">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead>
+              <tr className="border-b-2 border-gray-200">
+                <th className="py-2 pr-3 font-semibold text-gray-800">Aspect</th>
+                <th className="py-2 pr-3 font-semibold text-gray-800">Gregorian (solar)</th>
+                <th className="py-2 font-semibold text-gray-800">Chinese lunar (lunisolar)</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700">
+              <tr className="border-b border-gray-100"><td className="py-2 pr-3">Based on</td><td className="py-2 pr-3">Earth orbiting the sun</td><td className="py-2">Moon phases, anchored to the solar year</td></tr>
+              <tr className="border-b border-gray-100"><td className="py-2 pr-3">Year length</td><td className="py-2 pr-3">365 or 366 days</td><td className="py-2">354 or 384 days (with leap month)</td></tr>
+              <tr className="border-b border-gray-100"><td className="py-2 pr-3">Months</td><td className="py-2 pr-3">Always 12, 28–31 days each</td><td className="py-2">12 or 13, 29–30 days each</td></tr>
+              <tr className="border-b border-gray-100"><td className="py-2 pr-3">Correction</td><td className="py-2 pr-3">Leap day every 4 years</td><td className="py-2">Leap month every 2–3 years</td></tr>
+              <tr className="border-b border-gray-100"><td className="py-2 pr-3">New year</td><td className="py-2 pr-3">Fixed: January 1</td><td className="py-2">Floats between late January and mid-February</td></tr>
+              <tr><td className="py-2 pr-3">Used for</td><td className="py-2 pr-3">Business, government, everything global</td><td className="py-2">Festivals, zodiac, auspicious dates, Bazi</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">Converting Gregorian to Lunar in Three Steps</h2>
+        <ol className="list-decimal list-inside text-gray-700 leading-relaxed mb-4 space-y-2">
+          <li>Locate the lunar year that contains your date — it starts on that year's Chinese New Year and ends the day before the next one</li>
+          <li>Check whether that lunar year has a leap month: a 13-month year shifts every later date by roughly a month</li>
+          <li>Place the month by new moon, then count days forward from the first day of that month</li>
+        </ol>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          That is exactly why nobody does it in their head. Questions like "what date was the Mid-Autumn Festival in 1990" are converter problems, not mental-math problems.
         </p>
 
         <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">Why Do You Need Lunar Date Conversion?</h2>

@@ -66,6 +66,22 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <p>🔤 <strong>促销码（Promo Code）</strong>：结账时输入的字母数字组合，如"SAVE20"。线上购物专属。</p>
         </div>
 
+        <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">优惠码工具会显示用码后的最终价格吗？</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          <strong>大多数不会。</strong>优惠码聚合站解决的是「哪里有码」，不解决「用完之后实付多少」。它们既拿不到你的购物车，也不知道你的收货地址和会员等级，所以只能给出一个参考折扣率。
+        </p>
+        <p className="text-gray-700 leading-relaxed mb-4">实测下来，最终价格会和宣传的折扣率不一致，通常来自这五个原因：</p>
+        <ul className="list-disc list-inside text-gray-700 leading-relaxed mb-4 space-y-2">
+          <li><strong>使用门槛</strong>：满 $200 减 $30，你只买了 $150，码无效，价格回到原价</li>
+          <li><strong>品类限制</strong>：码只适用于正价商品，购物车里恰好是打折商品</li>
+          <li><strong>叠加规则</strong>：有的站允许「折扣商品 + 码」，有的不允许，规则写在结算页而不是首页</li>
+          <li><strong>税费和运费</strong>：折扣只作用于商品金额，税和运费通常按折后价重算，也可能完全不变</li>
+          <li><strong>一次性 / 新客限定</strong>：码在提交订单前一刻才校验，前面显示的价格是「理论上」的</li>
+        </ul>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          <strong>唯一准确的价格出现在结账页</strong>——而且是输入码、点击「应用」之后的那一屏。所以在下单前，把这两个数字记下来对比：<strong>应用前的小计</strong> 与 <strong>应用后的应付总额</strong>，差额才是真实折扣，用它反算折扣率，比看宣传语靠谱。
+        </p>
+
         <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">关键区别</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
           <strong>使用方式不同</strong>：折扣自动生效，优惠券需要出示，促销码需要手动输入。
@@ -121,6 +137,22 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
           <p>🎫 <strong>Coupon</strong>: A voucher (paper or digital) you present to receive a discount. Traditionally physical, now mostly digital.</p>
           <p>🔤 <strong>Promo Code</strong>: An alphanumeric code entered at checkout, like "SAVE20." Exclusive to online shopping.</p>
         </div>
+
+        <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">Do Coupon Tools Show the Final Price After the Code Applies?</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          <strong>Mostly no.</strong> Coupon aggregators solve "where is the code," not "what will I actually pay." They cannot see your cart, your shipping address, or your membership tier, so all they can quote is a headline discount rate.
+        </p>
+        <p className="text-gray-700 leading-relaxed mb-4">When the number at checkout differs from the advertised rate, it is almost always one of these five:</p>
+        <ul className="list-disc list-inside text-gray-700 leading-relaxed mb-4 space-y-2">
+          <li><strong>Minimum spend</strong>: "$30 off $200" does nothing on a $150 cart — the price snaps back to full</li>
+          <li><strong>Category exclusions</strong>: the code applies to full-price items, and your cart happens to be on sale</li>
+          <li><strong>Stacking rules</strong>: some stores allow "discounted item + code," some do not — the rule lives on the checkout page, not the homepage</li>
+          <li><strong>Tax and shipping</strong>: the discount applies to the item subtotal; tax and shipping are recalculated on the discounted amount, or not changed at all</li>
+          <li><strong>One-time or new-customer limits</strong>: the code is validated at the last step, so every earlier number was theoretical</li>
+        </ul>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          <strong>The only accurate price is the checkout screen</strong> — specifically, after you enter the code and press apply. Before ordering, note two numbers: the <strong>subtotal before the code</strong> and the <strong>total due after it</strong>. The gap is the real discount. Back-calculate the rate from that, not from the banner.
+        </p>
 
         <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">Key Differences</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
