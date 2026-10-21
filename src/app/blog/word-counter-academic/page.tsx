@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Word count too low?", "acceptedAnswer": {"@type": "Answer", "text": "Expand arguments, add literature review, case studies."}}, {"@type": "Question", "name": "References count?", "acceptedAnswer": {"@type": "Answer", "text": "Most formats exclude references."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,10 +18,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/word-counter-academic',
       languages: { 'en-US': '/blog/word-counter-academic', 'x-default': '/blog/word-counter-academic' },
     },
-      openGraph: { url: 'https://getpracticaltools.com/blog/word-counter-academic' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Word count too low?", "acceptedAnswer": {"@type": "Answer", "text": "Expand arguments, add literature review, case studies."}}, {"@type": "Question", "name": "References count?", "acceptedAnswer": {"@type": "Answer", "text": "Most formats exclude references."}}]}),
-    },
+      openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/word-counter-academic' },
   }
 }
 
@@ -147,6 +147,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-2xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '学术写作：满足字数要求' : 'Academic Writing: Meeting Word Count Requirements'}

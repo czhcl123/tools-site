@@ -1,6 +1,17 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'What must an invoice include?', acceptedAnswer: { '@type': 'Answer', text: 'Invoice number, date, buyer/seller details, itemized services/products, quantities, unit prices, total amount, payment terms, and payment method.' } },
+          { '@type': 'Question', name: 'What is the difference between an invoice and a receipt?', acceptedAnswer: { '@type': 'Answer', text: 'An invoice is a payment request sent before payment. A receipt confirms payment was received. Issue the invoice first, then the receipt upon payment.' } },
+          { '@type': 'Question', name: 'How do freelancers handle taxes on invoices?', acceptedAnswer: { '@type': 'Answer', text: 'Track all income from invoices, deduct business expenses, and set aside 25-30% of gross income for estimated tax payments. Consult a tax professional for your specific situation.' } },
+        ],
+      }
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,18 +26,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/ultimate-invoicing-guide',
       languages: { 'en-US': '/blog/ultimate-invoicing-guide', 'x-default': '/blog/ultimate-invoicing-guide' },
     },
-    openGraph: { url: 'https://getpracticaltools.com/blog/ultimate-invoicing-guide' },
-    other: {
-      'application/ld+json': JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: [
-          { '@type': 'Question', name: 'What must an invoice include?', acceptedAnswer: { '@type': 'Answer', text: 'Invoice number, date, buyer/seller details, itemized services/products, quantities, unit prices, total amount, payment terms, and payment method.' } },
-          { '@type': 'Question', name: 'What is the difference between an invoice and a receipt?', acceptedAnswer: { '@type': 'Answer', text: 'An invoice is a payment request sent before payment. A receipt confirms payment was received. Issue the invoice first, then the receipt upon payment.' } },
-          { '@type': 'Question', name: 'How do freelancers handle taxes on invoices?', acceptedAnswer: { '@type': 'Answer', text: 'Track all income from invoices, deduct business expenses, and set aside 25-30% of gross income for estimated tax payments. Consult a tax professional for your specific situation.' } },
-        ],
-      }),
-    },
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/ultimate-invoicing-guide' },
   }
 }
 
@@ -211,6 +211,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-2xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '终极发票指南：从零到专业开票' : 'The Ultimate Invoicing Guide'}

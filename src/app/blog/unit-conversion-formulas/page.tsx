@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do you convert inches to centimeters?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply inches by 2.54. One inch equals exactly 2.54 centimeters, so 10 inches is 25.4 cm."}}, {"@type": "Question", "name": "Why is temperature conversion different?", "acceptedAnswer": {"@type": "Answer", "text": "Temperature scales have different zero points, so you need an offset as well as a multiplier: °C = (°F − 32) × 5/9."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,10 +18,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/unit-conversion-formulas',
       languages: { 'en-US': '/blog/unit-conversion-formulas', 'x-default': '/blog/unit-conversion-formulas' },
     },
-    openGraph: { url: 'https://getpracticaltools.com/blog/unit-conversion-formulas' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do you convert inches to centimeters?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply inches by 2.54. One inch equals exactly 2.54 centimeters, so 10 inches is 25.4 cm."}}, {"@type": "Question", "name": "Why is temperature conversion different?", "acceptedAnswer": {"@type": "Answer", "text": "Temperature scales have different zero points, so you need an offset as well as a multiplier: °C = (°F − 32) × 5/9."}}]}),
-    },
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/unit-conversion-formulas' },
   }
 }
 
@@ -187,6 +187,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '单位换算公式：长度、重量、体积一文通' : 'Unit Conversion Formulas: Length, Weight, Volume'}

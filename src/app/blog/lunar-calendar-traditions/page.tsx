@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Chinese New Year traditions?", "acceptedAnswer": {"@type": "Answer", "text": "Spring couplets, firecrackers, reunion dinner, red envelopes."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -11,10 +14,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/lunar-calendar-traditions',
       languages: { 'en-US': '/blog/lunar-calendar-traditions', 'x-default': '/blog/lunar-calendar-traditions' },
     },
-      openGraph: { url: 'https://getpracticaltools.com/blog/lunar-calendar-traditions' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Chinese New Year traditions?", "acceptedAnswer": {"@type": "Answer", "text": "Spring couplets, firecrackers, reunion dinner, red envelopes."}}]}),
-    },
+      openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/lunar-calendar-traditions' },
   }
 }
 
@@ -111,6 +111,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-2xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '农历与传统节日' : 'Lunar Calendar and Traditions'}

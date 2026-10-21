@@ -9,7 +9,7 @@ export async function generateMetadata({
   return {
     title: 'QR 码生成器 - 免费二维码无水印',
     description: '免费二维码生成器，无水印，无需注册。支持 PNG/SVG 下载，自定义尺寸和颜色。本地浏览器生成，数据安全。',
-    openGraph: {
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }],
       title: 'QR 码生成器 - 免费二维码无水印',
       description: '免费二维码生成器，无水印，无需注册。',
     },

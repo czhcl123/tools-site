@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "QR code data limit?", "acceptedAnswer": {"@type": "Answer", "text": "Up to 4,296 digits. Less data = faster scanning."}}, {"@type": "Question", "name": "Error correction levels?", "acceptedAnswer": {"@type": "Answer", "text": "L(7%), M(15%), Q(25%), H(30%)."}}, {"@type": "Question", "name": "Improve scan success?", "acceptedAnswer": {"@type": "Answer", "text": "Min 2cm×2cm, high contrast, no blur."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,10 +18,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/qr-code-generator',
       languages: { 'en-US': '/blog/qr-code-generator', 'x-default': '/blog/qr-code-generator' },
     },
-      openGraph: { url: 'https://getpracticaltools.com/blog/qr-code-generator' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "QR code data limit?", "acceptedAnswer": {"@type": "Answer", "text": "Up to 4,296 digits. Less data = faster scanning."}}, {"@type": "Question", "name": "Error correction levels?", "acceptedAnswer": {"@type": "Answer", "text": "L(7%), M(15%), Q(25%), H(30%)."}}, {"@type": "Question", "name": "Improve scan success?", "acceptedAnswer": {"@type": "Answer", "text": "Min 2cm×2cm, high contrast, no blur."}}]}),
-    },
+      openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/qr-code-generator' },
   }
 }
 
@@ -145,6 +145,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-2xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? 'QR 码生成器使用指南' : 'QR Code Generator Guide'}

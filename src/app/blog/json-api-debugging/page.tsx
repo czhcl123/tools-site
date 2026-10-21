@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why is API JSON hard to read?", "acceptedAnswer": {"@type": "Answer", "text": "APIs return minified JSON. Use a formatter."}}, {"@type": "Question", "name": "What issues can it spot?", "acceptedAnswer": {"@type": "Answer", "text": "Syntax errors, type mismatches, deep nesting."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,10 +18,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/json-api-debugging',
       languages: { 'en-US': '/blog/json-api-debugging', 'x-default': '/blog/json-api-debugging' },
     },
-      openGraph: { url: 'https://getpracticaltools.com/blog/json-api-debugging' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why is API JSON hard to read?", "acceptedAnswer": {"@type": "Answer", "text": "APIs return minified JSON. Use a formatter."}}, {"@type": "Question", "name": "What issues can it spot?", "acceptedAnswer": {"@type": "Answer", "text": "Syntax errors, type mismatches, deep nesting."}}]}),
-    },
+      openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/json-api-debugging' },
   }
 }
 
@@ -137,6 +137,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-2xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '用 JSON 格式化工具调试 API' : 'Debug APIs with JSON Formatter'}

@@ -1,6 +1,18 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'How long is a sleep cycle?', acceptedAnswer: { '@type': 'Answer', text: 'A complete sleep cycle is approximately 90 minutes, consisting of light sleep, deep sleep, and REM (Rapid Eye Movement) stages.' } },
+          { '@type': 'Question', name: 'How many hours of sleep do adults need?', acceptedAnswer: { '@type': 'Answer', text: 'Most adults need 7-9 hours, which equals about 5-6 complete sleep cycles. However, individual needs vary.' } },
+          { '@type': 'Question', name: 'What is the best time to go to sleep?', acceptedAnswer: { '@type': 'Answer', text: 'Use the formula: Bedtime = Wake time - (90 minutes × number of cycles). For a 7 AM wake-up with 6 cycles, sleep at 10 PM.' } },
+          { '@type': 'Question', name: 'How do you recover from jet lag?', acceptedAnswer: { '@type': 'Answer', text: 'Adjust sleep 1-2 hours per day before traveling, get sunlight on arrival, avoid blue light at night, and live on local time immediately.' } },
+        ],
+      }
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,19 +27,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/ultimate-sleep-guide',
       languages: { 'en-US': '/blog/ultimate-sleep-guide', 'x-default': '/blog/ultimate-sleep-guide' },
     },
-    openGraph: { url: 'https://getpracticaltools.com/blog/ultimate-sleep-guide' },
-    other: {
-      'application/ld+json': JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: [
-          { '@type': 'Question', name: 'How long is a sleep cycle?', acceptedAnswer: { '@type': 'Answer', text: 'A complete sleep cycle is approximately 90 minutes, consisting of light sleep, deep sleep, and REM (Rapid Eye Movement) stages.' } },
-          { '@type': 'Question', name: 'How many hours of sleep do adults need?', acceptedAnswer: { '@type': 'Answer', text: 'Most adults need 7-9 hours, which equals about 5-6 complete sleep cycles. However, individual needs vary.' } },
-          { '@type': 'Question', name: 'What is the best time to go to sleep?', acceptedAnswer: { '@type': 'Answer', text: 'Use the formula: Bedtime = Wake time - (90 minutes × number of cycles). For a 7 AM wake-up with 6 cycles, sleep at 10 PM.' } },
-          { '@type': 'Question', name: 'How do you recover from jet lag?', acceptedAnswer: { '@type': 'Answer', text: 'Adjust sleep 1-2 hours per day before traveling, get sunlight on arrival, avoid blue light at night, and live on local time immediately.' } },
-        ],
-      }),
-    },
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/ultimate-sleep-guide' },
   }
 }
 
@@ -244,6 +244,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-2xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '睡眠科学完全指南：优化你的每一觉' : 'The Complete Sleep Science Guide'}

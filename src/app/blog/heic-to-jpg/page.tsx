@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is HEIC?", "acceptedAnswer": {"@type": "Answer", "text": "iPhone default since iOS 11, half the size of JPEG."}}, {"@type": "Question", "name": "Why convert to JPG?", "acceptedAnswer": {"@type": "Answer", "text": "Compatibility with websites and apps."}}, {"@type": "Question", "name": "Quality loss?", "acceptedAnswer": {"@type": "Answer", "text": "At 95%+ quality, imperceptible."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,10 +18,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/heic-to-jpg',
       languages: { 'en-US': '/blog/heic-to-jpg', 'x-default': '/blog/heic-to-jpg' },
     },
-      openGraph: { url: 'https://getpracticaltools.com/blog/heic-to-jpg' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is HEIC?", "acceptedAnswer": {"@type": "Answer", "text": "iPhone default since iOS 11, half the size of JPEG."}}, {"@type": "Question", "name": "Why convert to JPG?", "acceptedAnswer": {"@type": "Answer", "text": "Compatibility with websites and apps."}}, {"@type": "Question", "name": "Quality loss?", "acceptedAnswer": {"@type": "Answer", "text": "At 95%+ quality, imperceptible."}}]}),
-    },
+      openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/heic-to-jpg' },
   }
 }
 
@@ -135,6 +135,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-2xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? 'HEIC 转 JPG 完全指南' : 'HEIC to JPG Converter Guide'}

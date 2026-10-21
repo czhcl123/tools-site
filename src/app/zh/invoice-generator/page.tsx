@@ -9,7 +9,7 @@ export async function generateMetadata({
   return {
     title: '免费发票生成器 - 一键生成PDF发票',
     description: '免费发票生成器:输入商家、客户和商品信息,一键生成专业 PDF 发票。支持多币种、自定义税率,无需注册。',
-    openGraph: {
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }],
       title: '免费发票生成器 - 一键生成PDF发票',
       description: '免费发票生成器:输入商家、客户和商品信息,一键生成专业 PDF 发票。',
     },

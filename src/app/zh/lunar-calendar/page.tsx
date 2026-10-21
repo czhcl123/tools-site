@@ -9,7 +9,7 @@ export async function generateMetadata({
   return {
     title: '农历转换器 - 公历转农历日期查询|实用计算器',
     description: '免费公历农历双向转换工具:输入日期即可查询农历、生肖、干支、传统节日,覆盖 1900-2100 年,无需注册。',
-    openGraph: {
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }],
       title: '农历转换器 - 实用计算器',
       description: '免费公历农历双向转换,生肖干支节日查询',
     },

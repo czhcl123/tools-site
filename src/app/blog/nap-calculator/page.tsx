@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Best nap length?", "acceptedAnswer": {"@type": "Answer", "text": "20–30 minutes. Over 30 causes grogginess."}}, {"@type": "Question", "name": "Best nap time?", "acceptedAnswer": {"@type": "Answer", "text": "1–3 PM during natural energy dip."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,10 +18,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/nap-calculator',
       languages: { 'en-US': '/blog/nap-calculator', 'x-default': '/blog/nap-calculator' },
     },
-      openGraph: { url: 'https://getpracticaltools.com/blog/nap-calculator' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Best nap length?", "acceptedAnswer": {"@type": "Answer", "text": "20–30 minutes. Over 30 causes grogginess."}}, {"@type": "Question", "name": "Best nap time?", "acceptedAnswer": {"@type": "Answer", "text": "1–3 PM during natural energy dip."}}]}),
-    },
+      openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/nap-calculator' },
   }
 }
 
@@ -161,6 +161,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '午睡计算器：你应该午睡多久？' : 'Nap Calculator: How Long Should You Nap?'}

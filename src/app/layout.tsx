@@ -49,9 +49,6 @@ const organizationSchema = {
     'https://github.com/czhcl123/tools-site',
     'https://twitter.com/practical_tools',
     'https://www.producthunt.com/products/practical-tools',
-    'https://en.wikipedia.org/wiki/Unit_converter',
-    'https://en.wikipedia.org/wiki/BMI_calculator',
-    'https://www.wikidata.org/wiki/Q1148331',
   ],
   founder: {
     '@type': 'Person',
@@ -104,8 +101,10 @@ const webAppSchema = {
     'JSON Formatter',
     'HEIC to JPG',
     'Word Counter',
+    'Sleep Calculator',
+    'Password Generator',
   ],
-  dateModified: '2026-06-29',
+  dateModified: '2026-10-21',
   datePublished: '2026-06-01',
   creator: {
     '@type': 'Organization',
@@ -215,10 +214,11 @@ export const metadata = {
     url: 'https://getpracticaltools.com',
     siteName: 'Practical Tools',
     title: 'Practical Tools — 12 free online calculators & Utilities',
-    description: '12 free online calculators and utilities — discount, BMI, countdown, QR code, JSON, HEIC, word count, and more. No signup, no installation, no tracking.',
+    description: '12 free online calculators and utilities — discount, BMI, countdown, QR code, JSON, HEIC, word count, and more. No signup, no installation.',
     images: [
       {
-        url: 'https://getpracticaltools.com/og-image.svg',
+        url: 'https://getpracticaltools.com/og-image.png',
+        type: 'image/png',
         width: 1200,
         height: 630,
         alt: 'Practical Tools — 12 free online calculators & Utilities',
@@ -229,7 +229,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Practical Tools — 12 free online calculators & Utilities',
     description: '12 free online calculators and utilities — discount, BMI, QR code, JSON, HEIC, word count, and more. No signup, no install.',
-    images: ['https://getpracticaltools.com/og-image.svg'],
+    images: ['https://getpracticaltools.com/og-image.png'],
   },
   alternates: {
     canonical: 'https://getpracticaltools.com',
@@ -238,10 +238,6 @@ export const metadata = {
       'zh-CN': 'https://getpracticaltools.com/?lang=zh',
       'x-default': 'https://getpracticaltools.com',
     },
-  },
-  other: {
-    'dateModified': '2026-06-29',
-    'article:modified_time': '2026-06-29',
   },
   robots: {
     index: true,
@@ -266,8 +262,6 @@ export default async function RootLayout({
     <html lang={lang}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <meta name="build-id" content="pending" />
-        <meta name="build-time" content="2026-07-11T23:55:00Z" />
         <meta name="site-version" content="v0.3.0" />
         <meta name="theme-color" content="#f97316" />
         <meta name="apple-mobile-web-app-capable" content="yes" />

@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "QR code check-in?", "acceptedAnswer": {"@type": "Answer", "text": "Unique code per attendee, scan on arrival."}}, {"@type": "Question", "name": "Equipment needed?", "acceptedAnswer": {"@type": "Answer", "text": "Phone or tablet. Attendees save/print QR code."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,10 +18,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/qr-code-event-management',
       languages: { 'en-US': '/blog/qr-code-event-management', 'x-default': '/blog/qr-code-event-management' },
     },
-      openGraph: { url: 'https://getpracticaltools.com/blog/qr-code-event-management' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "QR code check-in?", "acceptedAnswer": {"@type": "Answer", "text": "Unique code per attendee, scan on arrival."}}, {"@type": "Question", "name": "Equipment needed?", "acceptedAnswer": {"@type": "Answer", "text": "Phone or tablet. Attendees save/print QR code."}}]}),
-    },
+      openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/qr-code-event-management' },
   }
 }
 
@@ -129,6 +129,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-2xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? 'QR 码活动管理：签到与注册' : 'QR Codes for Events: Registration and Check-in'}

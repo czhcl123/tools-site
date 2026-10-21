@@ -9,7 +9,7 @@ export async function generateMetadata({
   return {
     title: '单位换算器 - 长度/重量/温度即时互转',
     description: '免费在线单位换算器:长度、重量、温度等 30+ 单位即时互转,无需注册,无广告。',
-    openGraph: {
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }],
       title: '单位换算器 - 实用计算器',
       description: '免费在线单位换算器:长度/重量/温度即时互转',
     },

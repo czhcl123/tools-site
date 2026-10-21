@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the minimum QR code size for print?", "acceptedAnswer": {"@type": "Answer", "text": "Aim for at least 2 cm (0.8 in) square for close-range scanning, and 5 cm or more for distances beyond an arm's length. Rule of thumb: 1 mm per module."}}, {"@type": "Question", "name": "What error correction level should I use?", "acceptedAnswer": {"@type": "Answer", "text": "Level M is the default balance — it recovers about 15% damage and keeps codes compact. Use H (30% recovery) when you add a logo or print on curved surfaces."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,10 +18,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/qr-code-size-error-correction',
       languages: { 'en-US': '/blog/qr-code-size-error-correction', 'x-default': '/blog/qr-code-size-error-correction' },
     },
-    openGraph: { url: 'https://getpracticaltools.com/blog/qr-code-size-error-correction' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the minimum QR code size for print?", "acceptedAnswer": {"@type": "Answer", "text": "Aim for at least 2 cm (0.8 in) square for close-range scanning, and 5 cm or more for distances beyond an arm's length. Rule of thumb: 1 mm per module."}}, {"@type": "Question", "name": "What error correction level should I use?", "acceptedAnswer": {"@type": "Answer", "text": "Level M is the default balance — it recovers about 15% damage and keeps codes compact. Use H (30% recovery) when you add a logo or print on curved surfaces."}}]}),
-    },
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/qr-code-size-error-correction' },
   }
 }
 
@@ -159,6 +159,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? 'QR 码尺寸与容错：保证扫码成功' : 'QR Code Size and Error Correction: Scans That Work'}

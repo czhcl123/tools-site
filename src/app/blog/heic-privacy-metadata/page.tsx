@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do HEIC photos contain location data?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, if Location Services is enabled for the camera. HEIC files embed EXIF metadata including GPS coordinates, capture time, and device model."}}, {"@type": "Question", "name": "Does converting HEIC to JPG remove metadata?", "acceptedAnswer": {"@type": "Answer", "text": "Basic converters usually strip EXIF in the process, but not always by design — some preserve it. For privacy-sensitive shares, strip metadata explicitly or disable location access for the camera."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,10 +18,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/heic-privacy-metadata',
       languages: { 'en-US': '/blog/heic-privacy-metadata', 'x-default': '/blog/heic-privacy-metadata' },
     },
-    openGraph: { url: 'https://getpracticaltools.com/blog/heic-privacy-metadata' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do HEIC photos contain location data?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, if Location Services is enabled for the camera. HEIC files embed EXIF metadata including GPS coordinates, capture time, and device model."}}, {"@type": "Question", "name": "Does converting HEIC to JPG remove metadata?", "acceptedAnswer": {"@type": "Answer", "text": "Basic converters usually strip EXIF in the process, but not always by design — some preserve it. For privacy-sensitive shares, strip metadata explicitly or disable location access for the camera."}}]}),
-    },
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/heic-privacy-metadata' },
   }
 }
 
@@ -135,6 +135,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? 'HEIC 隐私与安全：转换时会泄露什么' : 'HEIC Privacy: What Your Photos Reveal When Converted'}

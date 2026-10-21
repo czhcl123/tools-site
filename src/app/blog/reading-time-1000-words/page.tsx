@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the average reading speed?", "acceptedAnswer": {"@type": "Answer", "text": "Most adults read English prose at 200–250 words per minute. That puts 1,000 words at roughly 4–5 minutes."}}, {"@type": "Question", "name": "How long does it take to read a 1,500-word article?", "acceptedAnswer": {"@type": "Answer", "text": "About 6–8 minutes at normal speed. Skimming for key points cuts that to 2–3 minutes."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,10 +18,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/reading-time-1000-words',
       languages: { 'en-US': '/blog/reading-time-1000-words', 'x-default': '/blog/reading-time-1000-words' },
     },
-    openGraph: { url: 'https://getpracticaltools.com/blog/reading-time-1000-words' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the average reading speed?", "acceptedAnswer": {"@type": "Answer", "text": "Most adults read English prose at 200–250 words per minute. That puts 1,000 words at roughly 4–5 minutes."}}, {"@type": "Question", "name": "How long does it take to read a 1,500-word article?", "acceptedAnswer": {"@type": "Answer", "text": "About 6–8 minutes at normal speed. Skimming for key points cuts that to 2–3 minutes."}}]}),
-    },
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/reading-time-1000-words' },
   }
 }
 
@@ -133,6 +133,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '阅读速度对照：读 1000 字要多久' : 'Reading Speed: How Long to Read 1,000 Words?'}

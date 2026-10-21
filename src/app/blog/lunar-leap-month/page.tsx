@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How often does a leap month occur?", "acceptedAnswer": {"@type": "Answer", "text": "Roughly seven times every 19 years. A leap month appears about every two to three years on average."}}, {"@type": "Question", "name": "Which year is the next leap month?", "acceptedAnswer": {"@type": "Answer", "text": "Use a lunar calendar converter to check any year — it shows the leap month (闰月) directly for the Chinese calendar in use."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,10 +18,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/lunar-leap-month',
       languages: { 'en-US': '/blog/lunar-leap-month', 'x-default': '/blog/lunar-leap-month' },
     },
-    openGraph: { url: 'https://getpracticaltools.com/blog/lunar-leap-month' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How often does a leap month occur?", "acceptedAnswer": {"@type": "Answer", "text": "Roughly seven times every 19 years. A leap month appears about every two to three years on average."}}, {"@type": "Question", "name": "Which year is the next leap month?", "acceptedAnswer": {"@type": "Answer", "text": "Use a lunar calendar converter to check any year — it shows the leap month (闰月) directly for the Chinese calendar in use."}}]}),
-    },
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/lunar-leap-month' },
   }
 }
 
@@ -123,6 +123,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '农历闰月：为什么有的年份有 13 个月' : 'Leap Months in the Lunar Calendar: Why Some Years Have 13 Months'}

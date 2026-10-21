@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is Net 30?", "acceptedAnswer": {"@type": "Answer", "text": "Full payment due within 30 days."}}, {"@type": "Question", "name": "2/10 Net 30?", "acceptedAnswer": {"@type": "Answer", "text": "2% discount if paid in 10 days, otherwise 30 days."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,10 +18,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/invoice-payment-terms',
       languages: { 'en-US': '/blog/invoice-payment-terms', 'x-default': '/blog/invoice-payment-terms' },
     },
-      openGraph: { url: 'https://getpracticaltools.com/blog/invoice-payment-terms' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is Net 30?", "acceptedAnswer": {"@type": "Answer", "text": "Full payment due within 30 days."}}, {"@type": "Question", "name": "2/10 Net 30?", "acceptedAnswer": {"@type": "Answer", "text": "2% discount if paid in 10 days, otherwise 30 days."}}]}),
-    },
+      openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/invoice-payment-terms' },
   }
 }
 
@@ -137,6 +137,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-2xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '发票付款条款：如何更快收到款项' : 'Invoice Payment Terms: Getting Paid Faster'}

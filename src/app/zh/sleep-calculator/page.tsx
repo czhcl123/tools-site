@@ -9,7 +9,7 @@ export async function generateMetadata({
   return {
     title: '睡眠计算器 - 90 分钟周期反推最佳入睡/起床时间',
     description: '免费在线睡眠计算器:输入起床时间反推最佳入睡时间(90 分钟周期),或输入入睡时间反推最佳起床时间。支持深度睡眠/REM 周期说明,无需注册。',
-    openGraph: {
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }],
       title: '睡眠计算器 - 实用计算器',
       description: '90 分钟睡眠周期反推最佳入睡时间。',
     },

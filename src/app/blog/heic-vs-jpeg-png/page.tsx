@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "HEIC vs JPEG vs PNG?", "acceptedAnswer": {"@type": "Answer", "text": "HEIC for storage, JPEG for sharing, PNG for design."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,10 +18,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/heic-vs-jpeg-png',
       languages: { 'en-US': '/blog/heic-vs-jpeg-png', 'x-default': '/blog/heic-vs-jpeg-png' },
     },
-      openGraph: { url: 'https://getpracticaltools.com/blog/heic-vs-jpeg-png' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "HEIC vs JPEG vs PNG?", "acceptedAnswer": {"@type": "Answer", "text": "HEIC for storage, JPEG for sharing, PNG for design."}}]}),
-    },
+      openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/heic-vs-jpeg-png' },
   }
 }
 
@@ -163,6 +163,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? 'HEIC vs JPEG vs PNG：应该用哪种图片格式？' : 'HEIC vs JPEG vs PNG: Which Image Format Should You Use?'}

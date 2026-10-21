@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which is better: 20% off or $10 off?", "acceptedAnswer": {"@type": "Answer", "text": "Compare $10 to 20% of the price. Below $50, $10 off saves more. Above $50, 20% off saves more."}}, {"@type": "Question", "name": "Do 50% off and 30% off add up to 80% off?", "acceptedAnswer": {"@type": "Answer", "text": "No. They multiply: you pay 50% then 70% of that, so you pay 35% of the original price — 65% off total."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,10 +18,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/percent-off-vs-amount-off',
       languages: { 'en-US': '/blog/percent-off-vs-amount-off', 'x-default': '/blog/percent-off-vs-amount-off' },
     },
-    openGraph: { url: 'https://getpracticaltools.com/blog/percent-off-vs-amount-off' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which is better: 20% off or $10 off?", "acceptedAnswer": {"@type": "Answer", "text": "Compare $10 to 20% of the price. Below $50, $10 off saves more. Above $50, 20% off saves more."}}, {"@type": "Question", "name": "Do 50% off and 30% off add up to 80% off?", "acceptedAnswer": {"@type": "Answer", "text": "No. They multiply: you pay 50% then 70% of that, so you pay 35% of the original price — 65% off total."}}]}),
-    },
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/percent-off-vs-amount-off' },
   }
 }
 
@@ -143,6 +143,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '打几折还是立减？哪种优惠更划算' : 'Percent Off vs Amount Off: Which Deal Is Better?'}

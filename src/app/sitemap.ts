@@ -1,11 +1,14 @@
+import fs from 'node:fs'
+import path from 'node:path'
 import { MetadataRoute } from 'next'
+
+// Bump this when page content changes: it is the only honest "last modified"
+// signal we have (file mtimes are reset by the git checkout on every deploy).
+const LAST_UPDATED = '2026-10-21'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://getpracticaltools.com'
-  // Hardcoded to force re-crawl signal after 7-18 GKP title/desc updates
-  const today = '2026-10-06'
 
-  // 工具 slug 清单 (en + zh 双路径)
   const tools = [
     'discount-calculator',
     'bmi-calculator',
@@ -23,18 +26,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const entries: MetadataRoute.Sitemap = []
 
-  // 主页 (en + zh)
+  // Home (en + zh)
   entries.push(
     {
       url: base,
-      lastModified: today,
+      lastModified: LAST_UPDATED,
       changeFrequency: 'weekly',
       priority: 1,
       alternates: { languages: { 'en-US': base, 'zh-CN': `${base}/zh`, 'x-default': base } },
     },
     {
       url: `${base}/zh`,
-      lastModified: today,
+      lastModified: LAST_UPDATED,
       changeFrequency: 'weekly',
       priority: 1,
       alternates: { languages: { 'en-US': base, 'zh-CN': `${base}/zh`, 'x-default': base } },
@@ -45,33 +48,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
   entries.push(
     {
       url: `${base}/about`,
-      lastModified: today,
+      lastModified: LAST_UPDATED,
       changeFrequency: 'monthly',
       priority: 0.5,
       alternates: { languages: { 'en-US': `${base}/about`, 'zh-CN': `${base}/zh/about`, 'x-default': `${base}/about` } },
     },
     {
       url: `${base}/zh/about`,
-      lastModified: today,
+      lastModified: LAST_UPDATED,
       changeFrequency: 'monthly',
       priority: 0.5,
       alternates: { languages: { 'en-US': `${base}/about`, 'zh-CN': `${base}/zh/about`, 'x-default': `${base}/about` } },
     }
   )
 
-  // 嵌入安装页(英文单页;widget 本身 /embed/word-counter 是 noindex)
+  // Embed install page (English only; /embed/<slug> widgets are noindex)
   entries.push({
     url: `${base}/embed`,
-    lastModified: today,
+    lastModified: LAST_UPDATED,
     changeFrequency: 'monthly',
     priority: 0.5,
   })
 
-  // 工具页 (en + zh 双路径)
+  // Tools (en + zh)
   for (const slug of tools) {
     entries.push({
       url: `${base}/${slug}`,
-      lastModified: today,
+      lastModified: LAST_UPDATED,
       changeFrequency: 'weekly',
       priority: slug === 'sleep-calculator' ? 1.0 : 0.9,
       alternates: {
@@ -84,82 +87,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   }
 
-  // Blog index + blog posts (en + zh)
-  const blogSlugs = [
-    'discount-calculator',
-    'bmi-calculator',
-    'countdown',
-    'lunar-calendar',
-    'unit-converter',
-    'qr-code-generator',
-    'word-counter',
-    'json-formatter',
-    'heic-to-jpg',
-    'invoice-generator',
-    'nap-calculator',
-    'bmi-categories',
-    'countdown-timer-psychology',
-    'discount-vs-coupon',
-    'heic-vs-jpeg-png',
-    'freelancer-tax-deductions',
-    'json-vs-xml-yaml',
-    'lunar-gardening',
-    'qr-code-creative-uses',
-    'metric-vs-imperial',
-    'word-count-seo',
-    'password-manager-guide',
-    // New tool-specific articles (4th post per tool)
-    'bmi-fitness-planning',
-    'countdown-wedding-planner',
-    'discount-business-pricing',
-    'heic-batch-conversion',
-    'invoice-payment-terms',
-    'json-api-debugging',
-    'lunar-calendar-business',
-    'password-team-security',
-    'qr-code-event-management',
-    'sleep-jet-lag-recovery',
-    'unit-converter-cooking',
-        'word-counter-academic',
-    // Ultimate guides (deep-dive long-form)
-    'ultimate-invoicing-guide',
-    'ultimate-json-guide',
-    'ultimate-sleep-guide',
-    // 5th post per tool (2026-10)
-    'percent-off-vs-amount-off',
-    'bmi-asian-adults',
-    'countdown-study-pomodoro',
-    'lunar-leap-month',
-    'unit-conversion-formulas',
-    'qr-code-size-error-correction',
-    'reading-time-1000-words',
-    'json-common-errors',
-    'heic-privacy-metadata',
-    'invoice-numbering-rules',
-    'sleep-debt-recovery',
-    'password-strength-length-vs-complexity',
-  ]
+  // Blog index
+  entries.push({
+    url: `${base}/blog`,
+    lastModified: LAST_UPDATED,
+    changeFrequency: 'weekly',
+    priority: 0.7,
+    alternates: { languages: { 'en-US': `${base}/blog`, 'x-default': `${base}/blog` } },
+  })
 
-  entries.push(
-    {
-      url: `${base}/blog`,
-      lastModified: today,
-      changeFrequency: 'weekly',
-      priority: 0.7,
-      alternates: { languages: { 'en-US': `${base}/blog`, 'x-default': `${base}/blog` } },
-    }
-  )
+  // Blog posts, read from the filesystem so new posts can never be forgotten
+  // again (14 of 63 were missing from the hand-maintained list before).
+  const blogDir = path.join(process.cwd(), 'src', 'app', 'blog')
+  const blogSlugs = fs
+    .readdirSync(blogDir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && fs.existsSync(path.join(blogDir, entry.name, 'page.tsx')))
+    .map((entry) => entry.name)
+    .sort()
 
   for (const slug of blogSlugs) {
     entries.push({
       url: `${base}/blog/${slug}`,
-      lastModified: today,
+      lastModified: LAST_UPDATED,
       changeFrequency: 'monthly',
       priority: 0.6,
       alternates: {
         languages: {
           'en-US': `${base}/blog/${slug}`,
-
           'x-default': `${base}/blog/${slug}`,
         },
       },

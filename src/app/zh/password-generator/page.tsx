@@ -9,7 +9,7 @@ export async function generateMetadata({
   return {
     title: '密码生成器 - 在线生成安全随机密码',
     description: '免费在线密码生成器:自定义长度、大小写、数字和符号,一键生成高强度随机密码。支持密码强度检测和一键复制,无需注册。',
-    openGraph: {
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }],
       title: '密码生成器 - 实用计算器',
       description: '免费在线密码生成器:自定义长度、大小写、数字和符号,一键生成高强度随机密码。',
     },

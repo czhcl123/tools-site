@@ -1,37 +1,106 @@
 # Practical Tools
 
-> A collection of 12 fast, browser-based calculators and utilities. No signup, no installation, no tracking. Each tool runs entirely client-side in JavaScript and works offline once loaded. English pages live at clean root URLs (e.g. `/bmi-calculator`); Chinese versions live under `/zh/` (e.g. `/zh/bmi-calculator`). Legacy `?lang=en` URLs redirect to the English clean URLs.
+> A collection of 12 free, browser-based calculators and utilities, plus a blog that explains the maths and the research behind them. No signup, no installation, nothing uploaded: every tool runs client-side. English pages use root URLs (e.g. `/bmi-calculator`); Chinese versions live under `/zh/` (e.g. `/zh/bmi-calculator`). The only third-party script is an aggregate analytics tag.
 
-## Calculators
+## Tools (English)
+- [Discount Calculator](https://getpracticaltools.com/discount-calculator): Compute the final price after a percentage discount. Supports stacked discounts, currency display, and "X% off when you buy Y" rules.
+- [BMI Calculator](https://getpracticaltools.com/bmi-calculator): Calculate Body Mass Index from height and weight using the WHO standard formula. Shows BMI category and the healthy weight range for a given height.
+- [Date Countdown](https://getpracticaltools.com/countdown): Count days, hours, minutes and seconds until or since any date. Deadlines, anniversaries, project milestones.
+- [Lunar Calendar](https://getpracticaltools.com/lunar-calendar): Convert between Gregorian (solar) and Chinese lunar calendars. Shows lunar dates, zodiac year and traditional festivals.
+- [Unit Converter](https://getpracticaltools.com/unit-converter): Convert length, weight, temperature, area, volume and time.
+- [Sleep Calculator](https://getpracticaltools.com/sleep-calculator): Pick the ideal bedtime or wake-up time from 90-minute sleep cycles.
+- [QR Code Generator](https://getpracticaltools.com/qr-code-generator): Generate QR codes for URLs, text, vCards and Wi-Fi credentials. Download as PNG.
+- [Invoice Generator](https://getpracticaltools.com/invoice-generator): Create invoices with line items, tax and totals. Print or save as PDF.
+- [JSON Formatter](https://getpracticaltools.com/json-formatter): Pretty-print, validate and minify JSON with syntax errors highlighted by line.
+- [Password Generator](https://getpracticaltools.com/password-generator): Generate random passwords in the browser with configurable length and character sets. Nothing is uploaded.
+- [HEIC to JPG](https://getpracticaltools.com/heic-to-jpg): Convert Apple HEIC photos to JPG in the browser. Files never leave the device.
+- [Word Counter](https://getpracticaltools.com/word-counter): Count words, characters, sentences, paragraphs and reading time for English and Chinese text.
 
-- [Discount Calculator](https://getpracticaltools.com/discount-calculator): Compute final price after a percentage discount. Supports stacked discounts, currency display, and "X% off when you buy Y" rules.
-- [BMI Calculator](https://getpracticaltools.com/bmi-calculator): Calculate Body Mass Index from height and weight using the WHO standard formula. Shows BMI category (underweight, normal, overweight, obese) and the healthy weight range for a given height.
-- [Date Countdown](https://getpracticaltools.com/countdown): Count days, hours, minutes, and seconds until or since any date. Useful for deadlines, anniversaries, and project milestones.
-- [Lunar Calendar](https://getpracticaltools.com/lunar-calendar): Convert between Gregorian (solar) and Chinese lunar (农历) calendars. Shows lunar dates, zodiac year, and traditional festivals.
-- [Unit Converter](https://getpracticaltools.com/unit-converter): Convert between common units of length, weight, temperature, area, volume, and time.
-- [Sleep Calculator](https://getpracticaltools.com/sleep-calculator): Pick the ideal bedtime or wake-up time based on 90-minute sleep cycles, so you fall asleep and wake up feeling rested.
+## 工具（中文）
+- [在线折扣计算器_打折省钱金额计算_实用计算器](https://getpracticaltools.com/zh/discount-calculator): 输入商品原价和折扣力度（1-99折），快速计算折后价和节省金额。支持微信、电商平台各种折扣场景，免费使用。
+- [BMI 计算器 - 免费在线体重指数计算](https://getpracticaltools.com/zh/bmi-calculator): 免费在线 BMI 计算器:输入身高体重即出体重指数,支持亚洲人阈值,男女分类判断,无需注册。
+- [倒计时计算器 - 距任意日期还有几天几小时几分钟几秒](https://getpracticaltools.com/zh/countdown): 在线倒计时计算器:实时跳秒,选择目标日期+时间,显示还有几天几小时几分钟几秒。也支持距今已过去天数模式,免费无需注册。
+- [农历转换器 - 公历转农历日期查询|实用计算器](https://getpracticaltools.com/zh/lunar-calendar): 免费公历农历双向转换工具:输入日期即可查询农历、生肖、干支、传统节日,覆盖 1900-2100 年,无需注册。
+- [单位换算器 - 长度/重量/温度即时互转](https://getpracticaltools.com/zh/unit-converter): 免费在线单位换算器:长度、重量、温度等 30+ 单位即时互转,无需注册,无广告。
+- [睡眠计算器 - 90 分钟周期反推最佳入睡/起床时间](https://getpracticaltools.com/zh/sleep-calculator): 免费在线睡眠计算器:输入起床时间反推最佳入睡时间(90 分钟周期),或输入入睡时间反推最佳起床时间。支持深度睡眠/REM 周期说明,无需注册。
+- [QR 码生成器 - 免费二维码无水印](https://getpracticaltools.com/zh/qr-code-generator): 免费二维码生成器，无水印，无需注册。支持 PNG/SVG 下载，自定义尺寸和颜色。本地浏览器生成，数据安全。
+- [免费发票生成器 - 一键生成PDF发票](https://getpracticaltools.com/zh/invoice-generator): 免费发票生成器:输入商家、客户和商品信息,一键生成专业 PDF 发票。支持多币种、自定义税率,无需注册。
+- [JSON 格式化 - 在线 API 调试器与验证器](https://getpracticaltools.com/zh/json-formatter): 免费 JSON 格式化与验证工具：粘贴 JSON 一键美化、压缩、验证。自定义缩进，错误精确到行列号。本地处理，数据安全。
+- [密码生成器 - 在线生成安全随机密码](https://getpracticaltools.com/zh/password-generator): 免费在线密码生成器:自定义长度、大小写、数字和符号,一键生成高强度随机密码。支持密码强度检测和一键复制,无需注册。
+- [HEIC 转 JPG - iPhone 照片批量转换](https://getpracticaltools.com/zh/heic-to-jpg): 免费在线 HEIC 转 JPG 工具:批量转换 iPhone 照片,30 秒处理 100 张。无需上传,本地处理保护隐私。
+- [字数统计 - 中英文混排实时计数](https://getpracticaltools.com/zh/word-counter): 免费在线字数统计：中英文实时统计字数、字符、句子和段落，含阅读时间估算。无需注册，数据本地处理。
 
-## Generators & Formatters
-
-- [QR Code Generator](https://getpracticaltools.com/qr-code-generator): Generate QR codes for URLs, text, contact cards (vCard), and Wi-Fi credentials. Download as PNG.
-- [Invoice Generator](https://getpracticaltools.com/invoice-generator): Create simple invoices with line items, tax, and totals. Print or save as PDF.
-- [JSON Formatter](https://getpracticaltools.com/json-formatter): Pretty-print, validate, and minify JSON. Highlights syntax errors with line numbers.
-- [Password Generator](https://getpracticaltools.com/password-generator): Generate strong, random passwords in your browser with configurable length and character sets. Nothing is uploaded.
-
-## File & Text Utilities
-
-- [HEIC to JPG](https://getpracticaltools.com/heic-to-jpg): Convert Apple HEIC photos to JPG in the browser. Files never leave your device.
-- [Word Counter](https://getpracticaltools.com/word-counter): Count words, characters, sentences, paragraphs, and estimated reading time for any text.
+## Blog
+- [BMI for Asian Adults: Why Cutoffs Differ](https://getpracticaltools.com/blog/bmi-asian-adults): Asian adults face higher metabolic risk at lower BMI values. See the adjusted Asia-Pacific cutoffs and why waist circumference matters just as much.
+- [BMI Calculator Guide](https://getpracticaltools.com/blog/bmi-calculator): BMI formula, WHO Asian thresholds, gender differences, and how to use an online BMI calculator to check if your weight is healthy.
+- [BMI vs Body Fat — Which Matters?](https://getpracticaltools.com/blog/bmi-calculator-vs-body-fat): The difference between BMI and body fat percentage, their pros and cons, and how to use both for accurate health assessment.
+- [BMI Categories Explained](https://getpracticaltools.com/blog/bmi-categories): BMI categories explained: underweight, normal, overweight, obese ranges. Learn BMI limitations and more accurate body assessment methods.
+- [BMI and Fitness: A Weight Loss Plan](https://getpracticaltools.com/blog/bmi-fitness-planning): Learn how to use BMI to create a science-based weight loss plan, calculate your ideal weight range, and track fitness progress beyond the scale.
+- [Countdown Calculator Guide](https://getpracticaltools.com/blog/countdown): Learn how to count days until a date — birthdays, holidays, exams. Includes cross-year calculations and working-day counting.
+- [Countdown Timers for Productivity](https://getpracticaltools.com/blog/countdown-project-management): How to use countdown timers for project deadline management, team efficiency, and overcoming procrastination.
+- [Study Countdown: Pomodoro & Exam Prep](https://getpracticaltools.com/blog/countdown-study-pomodoro): Why countdown timers sharpen study focus, how to run the Pomodoro technique, and how to pace yourself on exam day.
+- [Psychology of Countdown Timers](https://getpracticaltools.com/blog/countdown-timer-psychology): How countdown timers use urgency and scarcity to boost conversions? Learn the psychology behind countdown timers and practical use cases.
+- [Wedding Countdown: Plan Your Big Day](https://getpracticaltools.com/blog/countdown-wedding-planner): Use countdown timers to manage every milestone of wedding planning, from venue booking to the big day timeline.
+- [Discount Calculator for Business Pricing](https://getpracticaltools.com/blog/discount-business-pricing): How small businesses use discount calculators for seasonal sales, bulk pricing, competitor price matching, and profit margin protection.
+- [Discount Calculator Guide](https://getpracticaltools.com/blog/discount-calculator): Learn how to use a discount calculator to find sale prices, savings, and multi-step discounts. Includes formulas and real examples.
+- [Shopping Savings Tips](https://getpracticaltools.com/blog/discount-shopping-tips): Learn to compare deals, calculate real discounts, and avoid shopping traps with a discount calculator.
+- [Discount vs Coupon: What's the Difference?](https://getpracticaltools.com/blog/discount-vs-coupon): Discount vs coupon vs promo code: definitions, differences, how to stack them, and common calculation mistakes.
+- [Freelancer Tax Deductions Guide](https://getpracticaltools.com/blog/freelancer-tax-deductions): Common freelancer tax deductions: home office, equipment, software, travel expenses, and how to properly track invoices.
+- [Batch Convert HEIC: Photographer Workflow](https://getpracticaltools.com/blog/heic-batch-conversion): How photographers and content creators efficiently batch convert HEIC files while preserving EXIF data and choosing optimal quality settings.
+- [iPhone HEIC Photo Format Guide](https://getpracticaltools.com/blog/heic-iphone-photo-guide): Detailed comparison of iPhone photo formats, how to choose the best format, and converting HEIC to JPG.
+- [HEIC Privacy: What Your Photos Reveal](https://getpracticaltools.com/blog/heic-privacy-metadata): What location and device data hides inside HEIC files, whether conversion strips it, and a pre-share privacy checklist for your photos.
+- [HEIC to JPG Conversion Guide](https://getpracticaltools.com/blog/heic-to-jpg): What is HEIC? Why convert HEIC to JPG? Free online conversion method, quality settings, and everything you need to know.
+- [HEIC vs JPEG vs PNG Compared](https://getpracticaltools.com/blog/heic-vs-jpeg-png): Detailed comparison of HEIC, JPEG, and PNG: file size, quality, use cases, and social media platform format requirements.
+- [Freelancer Invoicing Guide](https://getpracticaltools.com/blog/invoice-freelancer-guide): Freelancer invoice templates, required fields, tax considerations, and how to quickly create invoices.
+- [Invoice Generator Guide](https://getpracticaltools.com/blog/invoice-generator): How to use a free invoice generator: fill in client details, line items, tax rates, and export professional PDF invoices for freelancers.
+- [Invoice Numbering Rules: Never Duplicate](https://getpracticaltools.com/blog/invoice-numbering-rules): How to structure invoice numbers with year prefixes and sequence rules, and what to do when a number is duplicated or skipped.
+- [Invoice Payment Terms: Getting Paid Faster](https://getpracticaltools.com/blog/invoice-payment-terms): How to set clear payment terms on invoices, including Net 15/30/60, early payment discounts, and follow-up strategies to get paid faster.
+- [Debug APIs with JSON Formatter](https://getpracticaltools.com/blog/json-api-debugging): How to use a JSON formatter to quickly spot API errors, validate structure, and speed up development debugging.
+- [JSON for Beginners Guide](https://getpracticaltools.com/blog/json-beginners-guide): What is JSON, syntax rules, common errors, and how to format code with JSON formatter tools.
+- [Common JSON Errors: Find and Fix Them Fast](https://getpracticaltools.com/blog/json-common-errors): Trailing commas, single quotes, mismatched brackets — the seven most common JSON errors with examples, and how a formatter pinpoints each one.
+- [JSON Formatter Guide](https://getpracticaltools.com/blog/json-formatter): How to use a JSON formatter to beautify, minify, and validate JSON data. Includes common error fixes and developer tips.
+- [JSON vs XML vs YAML](https://getpracticaltools.com/blog/json-vs-xml-yaml): JSON vs XML vs YAML comparison: readability, file size, use cases, and code examples for each format.
+- [Lunar Calendar Converter Guide](https://getpracticaltools.com/blog/lunar-calendar): How to convert solar dates to Chinese lunar dates and back. Includes Heavenly Stems, Chinese zodiac, solar terms, and real use cases.
+- [Lunar Calendar for Business Planning](https://getpracticaltools.com/blog/lunar-calendar-business): How to plan marketing campaigns around lunar holidays like Chinese New Year, Mid-Autumn Festival, and Dragon Boat Festival.
+- [Chinese Lunar Calendar Traditions](https://getpracticaltools.com/blog/lunar-calendar-traditions): Lunar calendar principles, leap month rules, traditional festival dates, and how to use a lunar converter.
+- [Lunar Gardening Guide](https://getpracticaltools.com/blog/lunar-gardening): Lunar gardening: how moon phases affect planting, waxing vs waning moon activities, scientific evidence, and practical tips.
+- [Lunar Leap Month: Why a Year Has 13 Months](https://getpracticaltools.com/blog/lunar-leap-month): Why the Chinese lunar calendar inserts leap months, how they are decided, how often they occur, and what they mean for festivals and birthdays.
+- [Metric vs Imperial Units](https://getpracticaltools.com/blog/metric-vs-imperial): Complete metric vs imperial comparison: history, countries, conversion tables (length, weight, temperature), and why metric is easier.
+- [Nap Calculator Guide](https://getpracticaltools.com/blog/nap-calculator): Use a nap calculator to find your ideal nap length. 20-minute power nap vs 90-minute full cycle — which is right for you? Boost energy with napping.
+- [Cybersecurity 101 Guide](https://getpracticaltools.com/blog/password-cybersecurity-guide): Password security, two-factor authentication, phishing prevention, and creating strong passwords.
+- [Password Generator Guide](https://getpracticaltools.com/blog/password-generator): Learn how to create strong passwords with a password generator. Best practices for length, character mixing, and security tips to protect your accounts.
+- [Password Manager Guide](https://getpracticaltools.com/blog/password-manager-guide): Why you need a password manager, how they work, key features, master password tips, and generated vs remembered passwords.
+- [Password Strength: Length vs Complexity](https://getpracticaltools.com/blog/password-strength-length-vs-complexity): What actually makes a password strong — length beats special characters, and passphrases beat gibberish. With brute-force time comparisons.
+- [Team Password Security: Best Practices](https://getpracticaltools.com/blog/password-team-security): How teams can build strong password policies, protect shared accounts, and use password generators for security.
+- [Percent Off vs Amount Off: Which Is Best?](https://getpracticaltools.com/blog/percent-off-vs-amount-off): Percent off vs fixed amount off — learn the one formula that tells you which deal saves more, and how stacking discounts really works.
+- [20 Creative QR Code Uses](https://getpracticaltools.com/blog/qr-code-creative-uses): Creative QR code uses: restaurant menus, business cards, event tickets, Wi-Fi sharing, product packaging, social media, education.
+- [QR Codes for Events: Check-in & Signup](https://getpracticaltools.com/blog/qr-code-event-management): How to use QR codes for event registration, contactless check-in, name badge printing, and attendance tracking.
+- [QR Code Generator Guide](https://getpracticaltools.com/blog/qr-code-generator): Learn how to generate QR codes for URLs, text, WiFi, and contacts. Includes tips, best practices, and real-world use cases.
+- [QR Code Marketing Guide](https://getpracticaltools.com/blog/qr-code-marketing): How to use QR codes for marketing, store traffic, product tracking, and QR code best practices.
+- [QR Code Size and Error Correction](https://getpracticaltools.com/blog/qr-code-size-error-correction): How big a QR code must be, which error correction level to pick, and practical tips for curved surfaces, print, and outdoor use.
+- [Reading Speed: How Long Is 1,000 Words?](https://getpracticaltools.com/blog/reading-time-1000-words): Average reading speeds for adults, how long blog posts and papers take to read, and how to convert word counts into reading time.
+- [Sleep Calculator Guide](https://getpracticaltools.com/blog/sleep-calculator): Learn how to use a sleep calculator based on 90-minute sleep cycles to find the best bedtime and wake time for better sleep quality.
+- [Sleep Debt: Can You Catch Up on Sleep?](https://getpracticaltools.com/blog/sleep-debt-recovery): What sleep debt does to your body, why weekend lie-ins only partially work, and how to repay lost sleep without wrecking your schedule.
+- [Jet Lag Recovery: Sleep Calculator](https://getpracticaltools.com/blog/sleep-jet-lag-recovery): How travelers use sleep calculators to beat jet lag, with pre-flight adjustment and post-arrival recovery strategies.
+- [Sleep Science Guide](https://getpracticaltools.com/blog/sleep-science-guide): Sleep science principles, individual differences, sleep quality assessment, and how to optimize your sleep.
+- [The Ultimate Invoicing Guide](https://getpracticaltools.com/blog/ultimate-invoicing-guide): Complete invoicing guide: invoice essentials, payment terms, tax handling, collection strategies, and full workflows for freelancers and small businesses.
+- [The Complete JSON Guide](https://getpracticaltools.com/blog/ultimate-json-guide): Complete JSON guide: syntax, data types, nesting, validation, formatting, API integration, and troubleshooting common errors.
+- [The Complete Sleep Science Guide](https://getpracticaltools.com/blog/ultimate-sleep-guide): Complete sleep science guide: 90-minute cycles, deep vs REM sleep, optimal bedtime calculation, napping science, jet lag recovery, and 15 practical tips.
+- [Unit Conversion Formulas: Length & Weight](https://getpracticaltools.com/blog/unit-conversion-formulas): Every unit conversion formula you use — inches to cm, pounds to kg, gallons to liters, Fahrenheit to Celsius — plus memory tricks and common mistakes.
+- [Unit Converter Guide](https://getpracticaltools.com/blog/unit-converter): How to convert units: length, weight, temperature, area, volume. Metric-imperial conversion tables and formulas included.
+- [Kitchen Unit Converter: Cooking Measures](https://getpracticaltools.com/blog/unit-converter-cooking): Common cooking unit conversions: cups to ml, temperature conversions, international recipe adaptation, and altitude adjustments.
+- [Travel Unit Conversion Guide](https://getpracticaltools.com/blog/unit-converter-travel): Essential unit conversions for international travel: length, temperature, weight, speed, with quick reference tables.
+- [Word Count and SEO](https://getpracticaltools.com/blog/word-count-seo): Ideal word counts by content type: blog posts, product pages, meta descriptions. Google's stance on content length, quality vs quantity.
+- [Word Counter Guide: Chinese Characters](https://getpracticaltools.com/blog/word-counter): How to use a word counter to count Chinese characters, English words, paragraphs, and more. Essential for essays, copywriting, and SEO.
+- [Academic Writing: Word Count Requirements](https://getpracticaltools.com/blog/word-counter-academic): How to meet word count requirements in academic writing, strategies to expand or condense essays, and citation counting tips.
+- [Writing Tips for Word Count](https://getpracticaltools.com/blog/word-counter-writing-tips): Word counter tool tips, word count requirements for different scenarios, and how to plan writing goals.
 
 ## About
-
-- [About Practical Tools](https://getpracticaltools.com/about): Mission, technology stack, and contact information.
+- [About Practical Tools](https://getpracticaltools.com/about): Mission, technology stack and contact information.
 
 ## Embed
-
-- [Embeddable Word Counter](https://getpracticaltools.com/embed): One-iframe widget that counts words, Chinese characters and reading time live. Free, no signup, no API key — the count runs in the visitor's browser.
+- [Embeddable word counter](https://getpracticaltools.com/embed): One-iframe widget that counts words, Chinese characters and reading time live. Free, no signup, no API key; the counting runs in the visitor's browser.
 
 ## Optional
-
-- [Sitemap](https://getpracticaltools.com/sitemap.xml): Full XML sitemap of all tools and pages.
-- [RSS Feed](https://getpracticaltools.com/rss.xml): Updates when new tools are added.
+- [Sitemap](https://getpracticaltools.com/sitemap.xml): Full XML sitemap of all pages.
+- [RSS Feed](https://getpracticaltools.com/rss.xml): Updates when new tools or posts are added.

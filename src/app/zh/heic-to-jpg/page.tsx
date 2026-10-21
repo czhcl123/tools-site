@@ -9,7 +9,7 @@ export async function generateMetadata({
   return {
     title: 'HEIC 转 JPG - iPhone 照片批量转换',
     description: '免费在线 HEIC 转 JPG 工具:批量转换 iPhone 照片,30 秒处理 100 张。无需上传,本地处理保护隐私。',
-    openGraph: {
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }],
       title: 'HEIC 转 JPG - iPhone 照片批量转换',
       description: '免费在线 HEIC 转 JPG 工具:批量转换 iPhone 照片,30 秒处理 100 张。',
     },

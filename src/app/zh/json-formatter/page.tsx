@@ -9,7 +9,7 @@ export async function generateMetadata({
   return {
     title: 'JSON 格式化 - 在线 API 调试器与验证器',
     description: '免费 JSON 格式化与验证工具：粘贴 JSON 一键美化、压缩、验证。自定义缩进，错误精确到行列号。本地处理，数据安全。',
-    openGraph: {
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }],
       title: 'JSON 格式化 - 在线 API 调试器与验证器',
       description: '免费 JSON 格式化与验证工具：粘贴 JSON 一键美化、压缩、验证。',
     },

@@ -29,7 +29,7 @@ export async function generateMetadata({
         'x-default': '/password-generator',
       },
     },
-      openGraph: { url: `${lang === 'zh' ? 'https://getpracticaltools.com/zh/password-generator' : 'https://getpracticaltools.com/password-generator'}` },
+      openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: `${lang === 'zh' ? 'https://getpracticaltools.com/zh/password-generator' : 'https://getpracticaltools.com/password-generator'}` },
   }
 }
 

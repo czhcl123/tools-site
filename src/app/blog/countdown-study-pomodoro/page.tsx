@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long should a study session be?", "acceptedAnswer": {"@type": "Answer", "text": "Most students focus well for 25–50 minutes. Pair a 25 or 50-minute countdown with a 5–10 minute break."}}, {"@type": "Question", "name": "Does a countdown timer help concentration?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A visible deadline creates mild pressure that crowds out distraction, and it gives your brain a fixed finish line to work toward."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,10 +18,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/countdown-study-pomodoro',
       languages: { 'en-US': '/blog/countdown-study-pomodoro', 'x-default': '/blog/countdown-study-pomodoro' },
     },
-    openGraph: { url: 'https://getpracticaltools.com/blog/countdown-study-pomodoro' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long should a study session be?", "acceptedAnswer": {"@type": "Answer", "text": "Most students focus well for 25–50 minutes. Pair a 25 or 50-minute countdown with a 5–10 minute break."}}, {"@type": "Question", "name": "Does a countdown timer help concentration?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A visible deadline creates mild pressure that crowds out distraction, and it gives your brain a fixed finish line to work toward."}}]}),
-    },
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/countdown-study-pomodoro' },
   }
 }
 
@@ -135,6 +135,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '学习倒计时：番茄工作法与备考计时' : 'Study Countdown Timers: Pomodoro and Exam Prep'}

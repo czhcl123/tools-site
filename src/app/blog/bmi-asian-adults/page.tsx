@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is BMI 24 overweight for Asians?", "acceptedAnswer": {"@type": "Answer", "text": "Under WHO Asia-Pacific criteria, BMI 23–24.9 is already classed as overweight for Asian adults."}}, {"@type": "Question", "name": "Why do Asians have lower BMI cutoffs?", "acceptedAnswer": {"@type": "Answer", "text": "At the same BMI, Asian populations tend to carry more visceral fat and face higher risks of diabetes and heart disease, so health bodies use lower thresholds."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,10 +18,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/bmi-asian-adults',
       languages: { 'en-US': '/blog/bmi-asian-adults', 'x-default': '/blog/bmi-asian-adults' },
     },
-    openGraph: { url: 'https://getpracticaltools.com/blog/bmi-asian-adults' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is BMI 24 overweight for Asians?", "acceptedAnswer": {"@type": "Answer", "text": "Under WHO Asia-Pacific criteria, BMI 23–24.9 is already classed as overweight for Asian adults."}}, {"@type": "Question", "name": "Why do Asians have lower BMI cutoffs?", "acceptedAnswer": {"@type": "Answer", "text": "At the same BMI, Asian populations tend to carry more visceral fat and face higher risks of diabetes and heart disease, so health bodies use lower thresholds."}}]}),
-    },
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/bmi-asian-adults' },
   }
 }
 
@@ -131,6 +131,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '亚洲人 BMI 标准：为什么切点更低' : 'BMI for Asian Adults: Why the Cutoffs Are Lower'}

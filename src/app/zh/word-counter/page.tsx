@@ -9,7 +9,7 @@ export async function generateMetadata({
   return {
     title: '字数统计 - 中英文混排实时计数',
     description: '免费在线字数统计：中英文实时统计字数、字符、句子和段落，含阅读时间估算。无需注册，数据本地处理。',
-    openGraph: {
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }],
       title: '字数统计 - 中英文混排实时计数',
       description: '免费在线字数统计：中英文实时统计字数、字符、句子和段落。',
     },

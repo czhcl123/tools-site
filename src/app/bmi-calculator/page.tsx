@@ -29,7 +29,7 @@ export async function generateMetadata({
         'x-default': '/bmi-calculator',
       },
     },
-      openGraph: { url: `${lang === 'zh' ? 'https://getpracticaltools.com/zh/bmi-calculator' : 'https://getpracticaltools.com/bmi-calculator'}` },
+      openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: `${lang === 'zh' ? 'https://getpracticaltools.com/zh/bmi-calculator' : 'https://getpracticaltools.com/bmi-calculator'}` },
   }
 }
 

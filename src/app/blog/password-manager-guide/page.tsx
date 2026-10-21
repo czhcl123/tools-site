@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Are password managers secure?", "acceptedAnswer": {"@type": "Answer", "text": "End-to-end encryption. Safe even if service is breached."}}, {"@type": "Question", "name": "Free vs paid?", "acceptedAnswer": {"@type": "Answer", "text": "Free for individuals; paid adds team features."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,10 +18,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/password-manager-guide',
       languages: { 'en-US': '/blog/password-manager-guide', 'x-default': '/blog/password-manager-guide' },
     },
-      openGraph: { url: 'https://getpracticaltools.com/blog/password-manager-guide' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Are password managers secure?", "acceptedAnswer": {"@type": "Answer", "text": "End-to-end encryption. Safe even if service is breached."}}, {"@type": "Question", "name": "Free vs paid?", "acceptedAnswer": {"@type": "Answer", "text": "Free for individuals; paid adds team features."}}]}),
-    },
+      openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/password-manager-guide' },
   }
 }
 
@@ -149,6 +149,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '密码管理器指南：保护你的所有密码' : 'Password Manager Guide: Keep All Your Passwords Safe'}

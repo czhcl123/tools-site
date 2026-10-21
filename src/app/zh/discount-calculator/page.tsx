@@ -9,7 +9,7 @@ export async function generateMetadata({
   return {
     title: '在线折扣计算器_打折省钱金额计算_实用计算器',
     description: '输入商品原价和折扣力度（1-99折），快速计算折后价和节省金额。支持微信、电商平台各种折扣场景，免费使用。',
-    openGraph: {
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }],
       title: '在线折扣计算器_打折省钱金额计算_实用计算器',
       description: '输入商品原价和折扣力度（1-99折），快速计算折后价和节省金额。',
     },

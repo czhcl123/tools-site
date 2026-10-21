@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a good invoice number format?", "acceptedAnswer": {"@type": "Answer", "text": "A readable, chronological format like INV-2026-0042 or 2026-0042 works well: year first, then a zero-padded sequential number. Avoid characters that are hard to read over the phone (O vs 0)."}}, {"@type": "Question", "name": "What if I issue an invoice with the wrong number?", "acceptedAnswer": {"@type": "Answer", "text": "Void or cancel it with a clear note, issue the corrected invoice with the next sequential number, and keep the voided document in your records. Never reuse the number."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,10 +18,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/invoice-numbering-rules',
       languages: { 'en-US': '/blog/invoice-numbering-rules', 'x-default': '/blog/invoice-numbering-rules' },
     },
-    openGraph: { url: 'https://getpracticaltools.com/blog/invoice-numbering-rules' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a good invoice number format?", "acceptedAnswer": {"@type": "Answer", "text": "A readable, chronological format like INV-2026-0042 or 2026-0042 works well: year first, then a zero-padded sequential number. Avoid characters that are hard to read over the phone (O vs 0)."}}, {"@type": "Question", "name": "What if I issue an invoice with the wrong number?", "acceptedAnswer": {"@type": "Answer", "text": "Void or cancel it with a clear note, issue the corrected invoice with the next sequential number, and keep the voided document in your records. Never reuse the number."}}]}),
-    },
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/invoice-numbering-rules' },
   }
 }
 
@@ -129,6 +129,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '发票编号规则：不再重复和跳号' : 'Invoice Numbering Rules: Never Duplicate or Skip'}

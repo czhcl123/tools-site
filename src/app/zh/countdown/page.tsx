@@ -9,7 +9,7 @@ export async function generateMetadata({
   return {
     title: '倒计时计算器 - 距任意日期还有几天几小时几分钟几秒',
     description: '在线倒计时计算器:实时跳秒,选择目标日期+时间,显示还有几天几小时几分钟几秒。也支持距今已过去天数模式,免费无需注册。',
-    openGraph: {
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }],
       title: '日期计算器 - 实用计算器',
       description: '任意日期距今天数 / 已过去天数计算',
     },

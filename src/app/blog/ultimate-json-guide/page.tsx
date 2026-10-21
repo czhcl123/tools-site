@@ -1,6 +1,17 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'What is JSON used for?', acceptedAnswer: { '@type': 'Answer', text: 'JSON is used for data exchange between servers and browsers, API responses, configuration files, and storing structured data.' } },
+          { '@type': 'Question', name: 'What are the rules of JSON syntax?', acceptedAnswer: { '@type': 'Answer', text: 'JSON requires double quotes for keys and strings, uses {} for objects and [] for arrays, separates key-value pairs with colons, and items with commas. No trailing commas allowed.' } },
+          { '@type': 'Question', name: 'How do I validate JSON?', acceptedAnswer: { '@type': 'Answer', text: 'Use a JSON formatter/validator tool. Paste your JSON and it will highlight syntax errors like missing commas, unmatched quotes, or trailing commas.' } },
+        ],
+      }
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,18 +26,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/ultimate-json-guide',
       languages: { 'en-US': '/blog/ultimate-json-guide', 'x-default': '/blog/ultimate-json-guide' },
     },
-    openGraph: { url: 'https://getpracticaltools.com/blog/ultimate-json-guide' },
-    other: {
-      'application/ld+json': JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: [
-          { '@type': 'Question', name: 'What is JSON used for?', acceptedAnswer: { '@type': 'Answer', text: 'JSON is used for data exchange between servers and browsers, API responses, configuration files, and storing structured data.' } },
-          { '@type': 'Question', name: 'What are the rules of JSON syntax?', acceptedAnswer: { '@type': 'Answer', text: 'JSON requires double quotes for keys and strings, uses {} for objects and [] for arrays, separates key-value pairs with colons, and items with commas. No trailing commas allowed.' } },
-          { '@type': 'Question', name: 'How do I validate JSON?', acceptedAnswer: { '@type': 'Answer', text: 'Use a JSON formatter/validator tool. Paste your JSON and it will highlight syntax errors like missing commas, unmatched quotes, or trailing commas.' } },
-        ],
-      }),
-    },
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/ultimate-json-guide' },
   }
 }
 
@@ -214,6 +214,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-2xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? 'JSON 完全指南：从入门到精通' : 'The Complete JSON Guide'}

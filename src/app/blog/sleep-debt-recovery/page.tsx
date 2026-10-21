@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can you pay off sleep debt by sleeping more on weekends?", "acceptedAnswer": {"@type": "Answer", "text": "Partially. Extra weekend sleep restores some alertness and reduces immediate deficits, but studies show metabolic and cognitive effects from chronic restriction persist even after recovery sleep."}}, {"@type": "Question", "name": "How do you calculate sleep debt?", "acceptedAnswer": {"@type": "Answer", "text": "Subtract hours slept from hours needed over the past 7–14 days. Sleeping 6 hours a night for five days against an 8-hour need leaves roughly 10 hours of debt."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,10 +18,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/sleep-debt-recovery',
       languages: { 'en-US': '/blog/sleep-debt-recovery', 'x-default': '/blog/sleep-debt-recovery' },
     },
-    openGraph: { url: 'https://getpracticaltools.com/blog/sleep-debt-recovery' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can you pay off sleep debt by sleeping more on weekends?", "acceptedAnswer": {"@type": "Answer", "text": "Partially. Extra weekend sleep restores some alertness and reduces immediate deficits, but studies show metabolic and cognitive effects from chronic restriction persist even after recovery sleep."}}, {"@type": "Question", "name": "How do you calculate sleep debt?", "acceptedAnswer": {"@type": "Answer", "text": "Subtract hours slept from hours needed over the past 7–14 days. Sleeping 6 hours a night for five days against an 8-hour need leaves roughly 10 hours of debt."}}]}),
-    },
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/sleep-debt-recovery' },
   }
 }
 
@@ -123,6 +123,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '睡眠负债：欠的觉真的能补回来吗' : 'Sleep Debt: Can You Actually Catch Up on Lost Sleep?'}

@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How to batch convert?", "acceptedAnswer": {"@type": "Answer", "text": "Use online tool, organize by project folders."}}, {"@type": "Question", "name": "EXIF preserved?", "acceptedAnswer": {"@type": "Answer", "text": "Depends on tool. Check before committing."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,10 +18,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/heic-batch-conversion',
       languages: { 'en-US': '/blog/heic-batch-conversion', 'x-default': '/blog/heic-batch-conversion' },
     },
-      openGraph: { url: 'https://getpracticaltools.com/blog/heic-batch-conversion' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How to batch convert?", "acceptedAnswer": {"@type": "Answer", "text": "Use online tool, organize by project folders."}}, {"@type": "Question", "name": "EXIF preserved?", "acceptedAnswer": {"@type": "Answer", "text": "Depends on tool. Check before committing."}}]}),
-    },
+      openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/heic-batch-conversion' },
   }
 }
 
@@ -129,6 +129,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-2xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '批量转换 HEIC：摄影师工作流指南' : 'Batch Convert HEIC: Workflow for Photographers'}

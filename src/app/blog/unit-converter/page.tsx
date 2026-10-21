@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Supported units?", "acceptedAnswer": {"@type": "Answer", "text": "Length, weight, temperature, volume, area, data."}}, {"@type": "Question", "name": "Cups to ml?", "acceptedAnswer": {"@type": "Answer", "text": "1 cup = 240 ml. 1 tbsp = 15 ml."}}, {"@type": "Question", "name": "Fahrenheit to Celsius?", "acceptedAnswer": {"@type": "Answer", "text": "°C = (°F - 32) × 5/9."}}]}
+
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
@@ -15,10 +18,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       canonical: 'https://getpracticaltools.com/blog/unit-converter',
       languages: { 'en-US': '/blog/unit-converter', 'x-default': '/blog/unit-converter' },
     },
-      openGraph: { url: 'https://getpracticaltools.com/blog/unit-converter' },
-    other: {
-      'application/ld+json': JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Supported units?", "acceptedAnswer": {"@type": "Answer", "text": "Length, weight, temperature, volume, area, data."}}, {"@type": "Question", "name": "Cups to ml?", "acceptedAnswer": {"@type": "Answer", "text": "1 cup = 240 ml. 1 tbsp = 15 ml."}}, {"@type": "Question", "name": "Fahrenheit to Celsius?", "acceptedAnswer": {"@type": "Answer", "text": "°C = (°F - 32) × 5/9."}}]}),
-    },
+      openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/unit-converter' },
   }
 }
 
@@ -145,6 +145,10 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-2xl font-bold text-gray-800 mt-4 mb-6">
         {lang === 'zh' ? '单位换算完全指南' : 'Unit Converter Guide'}
