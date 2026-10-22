@@ -194,7 +194,7 @@ const seoBodyEn = (
 )
 
 const deepDiveZh = (
-  <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-gray-700 leading-relaxed text-[15px] space-y-4">
+  <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-gray-700 leading-relaxed text-[15px] space-y-4 [&>*]:mx-auto [&>*]:w-full [&>*]:max-w-3xl">
     <h2 className="text-lg font-bold text-gray-800">倒计时的天数是怎么算出来的</h2>
     <p>
       工具把「今天」和「目标日」都归零到当天 00:00,再做减法,所以结果永远是整数天。这意味着两件事:第一,结果在<strong>当地时间的午夜跳变</strong>,不是在你设定的时刻跳变;第二,精确到秒的实时模式是另一套算法——它用真实的时间戳相减,所以跨夏令时那天会少或多 1 小时,但天数不变。
@@ -271,7 +271,7 @@ const deepDiveZh = (
 )
 
 const deepDiveEn = (
-  <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-gray-700 leading-relaxed text-[15px] space-y-4">
+  <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-gray-700 leading-relaxed text-[15px] space-y-4 [&>*]:mx-auto [&>*]:w-full [&>*]:max-w-3xl">
     <h2 className="text-lg font-bold text-gray-800">How the day count is actually calculated</h2>
     <p>
       The calculator normalises both dates to 00:00 local time and subtracts, so the headline result is always a whole number of days. Two consequences follow. First, the number flips at <strong>midnight in your own timezone</strong>, not at the time you entered. Second, the live second-by-second mode is a different calculation — it subtracts real timestamps, so it can be off by one hour across a daylight-saving change while the day count stays correct.
@@ -435,7 +435,7 @@ export default async function CountdownPage({
               </div>
             </aside>
           </div>
-          <div className="mt-8 max-w-3xl">
+          <div className="mt-8">
             {lang === 'zh' ? deepDiveZh : deepDiveEn}
           </div>
         </main>
