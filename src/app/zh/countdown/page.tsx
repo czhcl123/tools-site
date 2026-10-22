@@ -33,7 +33,7 @@ const faqSchemaZh = {
       name: '怎么计算"距今天有多少天"?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '选择未来某天作为目标日期,点击"计算",会显示"距离目标还有 X 天"。例如今天是 2026-07-14,目标是 2026-10-01,显示距离还有 79 天。本工具按自然日计算(不是工作日),凌晨 0 点跨天自动 +1。',
+        text: '选择未来某天作为目标日期,点击"计算",会显示"距离目标还有 X 天"。例如今天是 2026-07-14,目标是 2026-10-01,显示距离还有 79 天。天数是按自然日算的,凌晨 0 点跨天自动 +1;要排除周末和假日记工作日,勾选"只算工作日"。',
       },
     },
     {
@@ -54,10 +54,10 @@ const faqSchemaZh = {
     },
     {
       '@type': 'Question',
-      name: '工作日怎么算?(排除周末)',
+      name: '可以只算工作日吗?排除哪些日子?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '本工具不算工作日,只算自然日(包含周末和法定节假日)。如果需要工作日计算,搭配 Excel NETWORKDAYS 函数或公司项目管理工具。本工具适合:高考倒计时、婚礼倒计时、孕周计算、周年纪念日——这些都按自然日。',
+        text: '可以。勾选"只算工作日",工具会排除周六、周日,以及 11 个美国联邦法定假日(元旦、马丁·路德·金日、总统日、阵亡将士纪念日、六月节、独立日、劳动节、哥伦布日、退伍军人节、感恩节、圣诞节),假日撞周末时按惯例顺延。口径是不含起始日、含目标日。注意不含中国的法定节假日和调休。',
       },
     },
     {
@@ -96,10 +96,19 @@ const seoBodyZh = (
 export default async function CountdownPage({
   searchParams,
 }: {
-  searchParams: Promise<{ lang?: string }>
+  searchParams: Promise<Record<string, string | string[] | undefined>>
 }) {
   const sp = await searchParams
   const lang = sp.lang === 'en' ? 'en' : 'zh'
+  const one = (v: string | string[] | undefined) => (Array.isArray(v) ? v[0] : v)
+  const initial = {
+    to: one(sp.to),
+    from: one(sp.from),
+    t: one(sp.t),
+    name: one(sp.name),
+    bd: one(sp.bd),
+    mode: one(sp.mode),
+  }
 
   const webAppSchema = {
     '@context': 'https://schema.org',
@@ -138,7 +147,7 @@ export default async function CountdownPage({
           </div>
         </header>
         <main className="max-w-6xl mx-auto px-4 py-6">
-          <h1 className="text-xl font-bold text-gray-800 mb-4">倒计时计算器</h1>
+          <h1 className="text-xl font-bold text-gray-800 mb-4">倒计时计算器：距任意日期还有几天</h1>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             <aside className="lg:col-span-3">
               <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 sticky top-20">
@@ -146,7 +155,7 @@ export default async function CountdownPage({
               </div>
             </aside>
             <section className="lg:col-span-6">
-              <Countdown lang={lang} />
+              <Countdown lang={lang} initial={initial} />
             </section>
             <aside className="lg:col-span-3">
               <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 sticky top-20">

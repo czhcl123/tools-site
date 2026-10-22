@@ -1,17 +1,19 @@
 'use client'
 
-import { Suspense, useState, useEffect } from 'react'
-import { useSearchParams, usePathname } from 'next/navigation'
+import { useState, useEffect, useMemo, useCallback } from 'react'
+import { usePathname } from 'next/navigation'
 
 const t = {
   zh: {
-    siteTitle: '实用计算器',
-    title: '倒计时计算器 — 距任意日期还有多久',
-    description: '在线倒计时计算器:实时显示距任意日期的天数、小时、分钟、秒数。或计算距今已过去几天。',
-    subtitle: '高考、婚礼、项目上线、戒烟里程碑 — 500K+ 人月用',
-    targetDate: '目标日期',
-    modeDays: '天',
-    modeLive: '实时倒计时',
+    description: '在线倒计时计算器：距任意日期还有多少天，支持实时跳秒、工作日计算、两个日期之间的间隔。',
+    modeUntil: '倒计时到某天',
+    modeBetween: '两个日期之间',
+    fromDate: '起始日期',
+    toDate: '目标日期',
+    timeLabel: '时间',
+    eventName: '事件名称（可选）',
+    eventPlaceholder: '圣诞节 / 婚礼 / 项目上线',
+    businessMode: '只算工作日（排除周末与美国联邦假日）',
     start: '开始',
     stop: '停止',
     reset: '重置',
@@ -22,19 +24,32 @@ const t = {
     hours: '小时',
     minutes: '分钟',
     seconds: '秒',
+    weeks: '周',
+    months: '个月',
+    businessDays: '工作日',
+    totalHours: '合计小时',
+    totalMinutes: '合计分钟',
+    totalSeconds: '合计秒',
+    span: '间隔',
     targetPassed: '目标已过',
     targetFuture: '目标未到',
-    moreCalc: '更多计算器',
-    home: '← 返回首页',
+    copyLink: '复制分享链接',
+    copied: '已复制',
+    onlyWorkdays: '仅工作日',
+    noteExclusive: '不含起始日、含目标日',
+    inclusive: '含首尾两天',
+    calendarDays: '日历天数(不含起始日)',
   },
   en: {
-    siteTitle: 'Practical Tools',
-    title: 'Countdown Calculator - Days Until Any Date',
-    description: 'Live countdown calculator showing days, hours, minutes, and seconds until any date or event. Free, no signup.',
-    subtitle: 'Wedding, graduation, project deadline, sobriety milestones — 500K+ monthly users',
-    targetDate: 'Target Date',
-    modeDays: 'Days',
-    modeLive: 'Live Timer',
+    description: 'Days until any date, with a live second-by-second countdown, business-day mode, and the gap between two dates.',
+    modeUntil: 'Countdown to a date',
+    modeBetween: 'Between two dates',
+    fromDate: 'From date',
+    toDate: 'To date',
+    timeLabel: 'Time',
+    eventName: 'Event name (optional)',
+    eventPlaceholder: 'Christmas / Wedding / Launch',
+    businessMode: 'Business days only (exclude weekends & US federal holidays)',
     start: 'Start',
     stop: 'Stop',
     reset: 'Reset',
@@ -45,232 +60,440 @@ const t = {
     hours: 'hours',
     minutes: 'minutes',
     seconds: 'seconds',
+    weeks: 'weeks',
+    months: 'months',
+    businessDays: 'business days',
+    totalHours: 'total hours',
+    totalMinutes: 'total minutes',
+    totalSeconds: 'total seconds',
+    span: 'span',
     targetPassed: 'Target passed',
     targetFuture: 'Target upcoming',
-    moreCalc: 'More Calculators',
-    home: '← Back to Home',
+    copyLink: 'Copy share link',
+    copied: 'Copied',
+    onlyWorkdays: 'Weekdays only',
+    noteExclusive: 'Start date excluded, end date included',
+    inclusive: 'Including both start and end days',
+    calendarDays: 'Calendar days (start day excluded)',
   },
 }
 
-function formatDate(date: Date, lang: 'zh' | 'en') {
-  const y = date.getFullYear()
-  const m = String(date.getMonth() + 1).padStart(2, '0')
-  const d = String(date.getDate()).padStart(2, '0')
-  if (lang === 'zh') return `${y}年${m}月${d}日`
-  return `${y}-${m}-${d}`
-}
+const MS_DAY = 86400000
 
 function pad(n: number) {
   return String(Math.max(0, n)).padStart(2, '0')
 }
 
-// Returns signed diff in ms (positive = future, negative = past)
-function getMsDiff(target: Date, now: Date) {
-  return target.getTime() - now.getTime()
+function toISODate(d: Date) {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
 }
 
-function CountdownContent({ lang: initialLang }: { lang?: "zh" | "en" }) {
-  const searchParams = useSearchParams()
+function parseISODate(s: string): Date | null {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s || '')
+  if (!m) return null
+  const d = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]))
+  return Number.isNaN(d.getTime()) ? null : d
+}
+
+function startOfDay(d: Date) {
+  const x = new Date(d)
+  x.setHours(0, 0, 0, 0)
+  return x
+}
+
+function diffDays(a: Date, b: Date) {
+  return Math.round((startOfDay(b).getTime() - startOfDay(a).getTime()) / MS_DAY)
+}
+
+function nthWeekdayOfMonth(year: number, month: number, weekday: number, n: number) {
+  // n = 1..5 ; weekday 0=Sun..6=Sat
+  const first = new Date(year, month, 1)
+  const shift = (weekday - first.getDay() + 7) % 7
+  const day = 1 + shift + (n - 1) * 7
+  return new Date(year, month, day)
+}
+
+function lastWeekdayOfMonth(year: number, month: number, weekday: number) {
+  const last = new Date(year, month + 1, 0)
+  const shift = (last.getDay() - weekday + 7) % 7
+  return new Date(year, month, last.getDate() - shift)
+}
+
+// US federal holidays, with the standard weekend-observance shift.
+function observedHoliday(d: Date) {
+  const day = d.getDay()
+  if (day === 6) return new Date(d.getTime() - MS_DAY)
+  if (day === 0) return new Date(d.getTime() + MS_DAY)
+  return d
+}
+
+const holidayCache = new Map<number, Set<string>>()
+function usFederalHolidays(year: number): Set<string> {
+  if (holidayCache.has(year)) return holidayCache.get(year)!
+  const list = [
+    observedHoliday(new Date(year, 0, 1)),
+    nthWeekdayOfMonth(year, 0, 1, 3),   // MLK
+    nthWeekdayOfMonth(year, 1, 1, 3),   // Presidents
+    lastWeekdayOfMonth(year, 4, 1),     // Memorial
+    observedHoliday(new Date(year, 5, 19)), // Juneteenth
+    observedHoliday(new Date(year, 6, 4)),  // Independence
+    nthWeekdayOfMonth(year, 8, 1, 1),   // Labor
+    nthWeekdayOfMonth(year, 9, 1, 2),   // Columbus
+    observedHoliday(new Date(year, 10, 11)), // Veterans
+    nthWeekdayOfMonth(year, 10, 4, 4),  // Thanksgiving
+    observedHoliday(new Date(year, 11, 25)), // Christmas
+  ]
+  const set = new Set(list.map(toISODate))
+  holidayCache.set(year, set)
+  return set
+}
+
+function isBusinessDay(d: Date) {
+  const wd = d.getDay()
+  if (wd === 0 || wd === 6) return false
+  return !usFederalHolidays(d.getFullYear()).has(toISODate(d))
+}
+
+// Start date excluded, end date included.
+function businessDaysBetween(a: Date, b: Date) {
+  const sign = b >= a ? 1 : -1
+  const from = sign > 0 ? startOfDay(a) : startOfDay(b)
+  const to = sign > 0 ? startOfDay(b) : startOfDay(a)
+  const total = Math.round((to.getTime() - from.getTime()) / MS_DAY)
+  if (total > 4000) return 0
+  let count = 0
+  for (let i = 1; i <= total; i++) {
+    if (isBusinessDay(new Date(from.getTime() + i * MS_DAY))) count++
+  }
+  return count * sign
+}
+
+function monthsAndDays(a: Date, b: Date) {
+  const from = startOfDay(a)
+  const to = startOfDay(b)
+  const sign = to >= from ? 1 : -1
+  const start = sign > 0 ? from : to
+  const end = sign > 0 ? to : from
+  const anchorFor = (m: number) => new Date(start.getFullYear(), start.getMonth() + m, start.getDate())
+  let months = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth())
+  let anchor = anchorFor(months)
+  if (anchor > end) {
+    months--
+    anchor = anchorFor(months)
+  }
+  if (anchor > end) {
+    // Day-of-month overflow (e.g. Jan 31 + 1 month lands in March) — step back once more.
+    months--
+    anchor = anchorFor(months)
+  }
+  const days = Math.round((end.getTime() - anchor.getTime()) / MS_DAY)
+  return { months: months * sign, days: days * sign }
+}
+
+type InitialState = { to?: string; from?: string; t?: string; name?: string; bd?: string; mode?: string }
+
+function CountdownContent({ lang: initialLang, initial }: { lang?: 'zh' | 'en'; initial?: InitialState }) {
   const pathname = usePathname()
-  const isZh = pathname?.startsWith('/zh') || searchParams.get('lang') === 'zh'
-  const lang = (isZh ? 'zh' : 'en') as 'zh' | 'en'
+  const isZhPath = pathname?.startsWith('/zh')
+  const lang = (initialLang ?? (isZhPath ? 'zh' : 'en')) as 'zh' | 'en'
+  const u = useCallback((key: keyof typeof t.zh) => t[lang][key], [lang])
 
-  // Default: 30 days from now
-  const defaultDate = (() => {
-    const d = new Date()
-    d.setDate(d.getDate() + 30)
-    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
-  })()
+  const todayISO = toISODate(new Date())
+  const defaultTarget = toISODate(new Date(Date.now() + 30 * MS_DAY))
+  const seedDate = (v: string | undefined, fallback: string) => (v && parseISODate(v) ? v : fallback)
 
-  const [targetDate, setTargetDate] = useState(defaultDate)
-  const [targetTime, setTargetTime] = useState('12:00') // noon default
-  const [mode, setMode] = useState<'days' | 'live'>('live') // default = live to match GKP
-  const [isRunning, setIsRunning] = useState(false)
-  const [now, setNow] = useState<number | null>(null) // ms timestamp
+  const [mode, setMode] = useState<'until' | 'between'>(initial?.mode === 'between' ? 'between' : 'until')
+  const [fromDate, setFromDate] = useState(() => seedDate(initial?.from, ''))
+  const [toDate, setToDate] = useState(() => seedDate(initial?.to, ''))
+  const [targetTime, setTargetTime] = useState(() =>
+    initial?.t && /^\d{2}:\d{2}$/.test(initial.t) ? initial.t : '12:00'
+  )
+  const [eventName, setEventName] = useState(() => (initial?.name || '').slice(0, 48))
+  const [businessOnly, setBusinessOnly] = useState(initial?.bd === '1')
+  const [isRunning, setIsRunning] = useState(true)
+  const [now, setNow] = useState<number | null>(null)
+  const [copied, setCopied] = useState(false)
 
-  // Live tick — updates every 1s when running
+  // Defaults depend on the visitor's own clock, so they are filled in after mount.
+  // Rendering them on the server would produce a hydration mismatch for anyone
+  // whose local date differs from the server's UTC date.
   useEffect(() => {
-    if (!isRunning || mode !== 'live') return
+    if (!toDate) setToDate(defaultTarget)
+    if (!fromDate) setFromDate(todayISO)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  useEffect(() => {
+    if (mode !== 'until' || !isRunning) return
     const id = setInterval(() => setNow(Date.now()), 1000)
     return () => clearInterval(id)
-  }, [isRunning, mode])
+  }, [mode, isRunning])
 
-  // Auto-start on mount for live mode (better UX, matches search intent)
   useEffect(() => {
-    if (mode === 'live' && now === null) {
-      setNow(Date.now())
-      setIsRunning(true)
+    if (mode === 'until' && now === null) setNow(Date.now())
+  }, [mode, now])
+
+  const target = useMemo(() => {
+    const d = parseISODate(toDate)
+    if (!d) return null
+    const [h, m] = (targetTime || '12:00').split(':').map(Number)
+    d.setHours(h || 0, m || 0, 0, 0)
+    return d
+  }, [toDate, targetTime])
+
+  const from = useMemo(() => parseISODate(fromDate), [fromDate])
+
+  const result = useMemo(() => {
+    if (mode === 'between') {
+      if (!from || !target) return null
+      const days = diffDays(from, parseISODate(toDate) || target)
+      return {
+        days,
+        business: businessOnly ? businessDaysBetween(from, parseISODate(toDate) || target) : null,
+        months: monthsAndDays(from, parseISODate(toDate) || target),
+        past: days < 0,
+      }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mode])
-
-  const u = (key: string) => t[lang][key as keyof typeof t.zh] as string
-
-  const target = (() => {
-    if (!targetDate) return null
-    // Combine date + time in user's local timezone
-    return new Date(`${targetDate}T${targetTime || '12:00'}:00`)
-  })()
-  const todayStr = (() => {
-    const d = new Date()
-    return formatDate(d, lang)
-  })()
-
-  // Days calculation (no live timer)
-  const daysResult = (() => {
-    if (mode !== 'days' || !target) return null
-    const t0 = new Date(target.getTime())
-    t0.setHours(0, 0, 0, 0)
-    const t1 = new Date()
-    t1.setHours(0, 0, 0, 0)
-    const diff = t0.getTime() - t1.getTime()
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24))
-    return { days: Math.abs(days), future: days >= 0 }
-  })()
-
-  // Live calculation (hh:mm:ss)
-  const liveResult = (() => {
-    if (mode !== 'live' || !target || now === null) return null
-    const msDiff = getMsDiff(target, new Date(now))
-    const absMs = Math.abs(msDiff)
-    const totalSec = Math.floor(absMs / 1000)
+    if (!target) return null
+    if (now === null) return null
+    const base = new Date(now)
+    const msLeft = target.getTime() - base.getTime()
+    const abs = Math.abs(msLeft)
+    const totalSec = Math.floor(abs / 1000)
     const days = Math.floor(totalSec / 86400)
-    const hours = Math.floor((totalSec % 86400) / 3600)
-    const minutes = Math.floor((totalSec % 3600) / 60)
-    const seconds = totalSec % 60
-    return { days, hours, minutes, seconds, future: msDiff >= 0 }
-  })()
+    return {
+      days,
+      hours: Math.floor((totalSec % 86400) / 3600),
+      minutes: Math.floor((totalSec % 3600) / 60),
+      seconds: totalSec % 60,
+      business: businessOnly ? businessDaysBetween(startOfDay(base), startOfDay(target)) : null,
+      months: monthsAndDays(startOfDay(base), startOfDay(target)),
+      future: msLeft >= 0,
+      exactDays: diffDays(startOfDay(base), startOfDay(target)),
+    }
+  }, [mode, from, target, toDate, now, businessOnly])
 
-  const calc = () => {
-    setIsRunning(true)
-    setNow(Date.now())
+  const shareUrl = useMemo(() => {
+    if (typeof window === 'undefined') return ''
+    const p = new URLSearchParams()
+    p.set('to', toDate)
+    if (mode === 'between') {
+      p.set('mode', 'between')
+      p.set('from', fromDate)
+    } else if (targetTime) {
+      p.set('t', targetTime)
+    }
+    if (eventName.trim()) p.set('name', eventName.trim())
+    if (businessOnly) p.set('bd', '1')
+    return `${window.location.origin}${pathname}?${p.toString()}`
+  }, [toDate, fromDate, targetTime, eventName, businessOnly, mode, pathname])
+
+  const copyShare = async () => {
+    try {
+      await navigator.clipboard.writeText(shareUrl)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 1800)
+    } catch {
+      setCopied(false)
+    }
   }
 
-  const stop = () => setIsRunning(false)
-
-  const reset = () => {
-    setIsRunning(false)
-    setNow(null)
-  }
+  const label = eventName.trim()
 
   return (
     <>
-    
-        <p className="text-gray-500 text-sm mb-1">{u('description')}</p>
-        <p className="text-orange-600 text-xs font-medium mb-6">{u('subtitle')}</p>
+      <p className="text-gray-500 text-sm mb-6">{u('description')}</p>
 
-        {/* Mode toggle */}
-        <div className="bg-white rounded-xl p-2 shadow-sm border border-gray-100 mb-4 flex gap-2">
-          <button
-            onClick={() => { setMode('live'); calc() }}
-            className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${mode === 'live' ? 'bg-orange-500 text-white' : 'text-gray-600 hover:bg-orange-50'}`}
-          >
-            {u('modeLive')}
-          </button>
-          <button
-            onClick={() => { setMode('days'); reset() }}
-            className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${mode === 'days' ? 'bg-orange-500 text-white' : 'text-gray-600 hover:bg-orange-50'}`}
-          >
-            {u('modeDays')}
-          </button>
+      {/* Mode toggle */}
+      <div className="bg-white rounded-xl p-2 shadow-sm border border-gray-100 mb-4 flex gap-2">
+        <button
+          onClick={() => setMode('until')}
+          className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${mode === 'until' ? 'bg-orange-500 text-white' : 'text-gray-600 hover:bg-orange-50'}`}
+        >
+          {u('modeUntil')}
+        </button>
+        <button
+          onClick={() => setMode('between')}
+          className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${mode === 'between' ? 'bg-orange-500 text-white' : 'text-gray-600 hover:bg-orange-50'}`}
+        >
+          {u('modeBetween')}
+        </button>
+      </div>
+
+      {/* Inputs */}
+      <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-6 space-y-4">
+        {mode === 'between' && (
+          <div>
+            <label className="block text-sm font-medium text-gray-600 mb-1">{u('fromDate')}</label>
+            <input
+              type="date"
+              value={fromDate}
+              onChange={(e) => setFromDate(e.target.value)}
+              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
+            />
+          </div>
+        )}
+
+        <div>
+          <label className="block text-sm font-medium text-gray-600 mb-1">{u('toDate')}</label>
+          <div className="flex gap-2">
+            <input
+              type="date"
+              value={toDate}
+              onChange={(e) => setToDate(e.target.value)}
+              className="flex-1 px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
+            />
+            {mode === 'until' && (
+              <input
+                type="time"
+                value={targetTime}
+                onChange={(e) => setTargetTime(e.target.value)}
+                aria-label={u('timeLabel')}
+                className="w-32 px-3 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
+              />
+            )}
+          </div>
         </div>
 
-        {/* Date + time picker */}
-        <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-6">
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-600 mb-1">{u('targetDate')}</label>
-            <div className="flex gap-2">
-              <input
-                type="date"
-                value={targetDate}
-                onChange={(e) => setTargetDate(e.target.value)}
-                className="flex-1 px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
-              />
-              {mode === 'live' && (
-                <input
-                  type="time"
-                  value={targetTime}
-                  onChange={(e) => setTargetTime(e.target.value)}
-                  className="w-32 px-3 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
-                />
-              )}
-            </div>
-          </div>
-          {mode === 'live' ? (
-            <div className="flex gap-2">
-              <button
-                onClick={isRunning ? stop : calc}
-                className={`flex-1 ${isRunning ? 'bg-gray-400 hover:bg-gray-500' : 'bg-orange-500 hover:bg-orange-600'} text-white font-semibold py-3 rounded-lg transition-colors`}
-              >
-                {isRunning ? u('stop') : u('start')}
-              </button>
-              <button
-                onClick={reset}
-                className="px-6 border border-gray-200 rounded-lg text-gray-500 hover:bg-gray-50"
-              >
-                {u('reset')}
-              </button>
-            </div>
-          ) : (
+        <div>
+          <label className="block text-sm font-medium text-gray-600 mb-1">{u('eventName')}</label>
+          <input
+            type="text"
+            value={eventName}
+            onChange={(e) => setEventName(e.target.value)}
+            placeholder={u('eventPlaceholder')}
+            maxLength={48}
+            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
+          />
+        </div>
+
+        <label className="flex items-start gap-2 text-sm text-gray-600 cursor-pointer">
+          <input
+            type="checkbox"
+            checked={businessOnly}
+            onChange={(e) => setBusinessOnly(e.target.checked)}
+            className="mt-1 h-4 w-4 accent-orange-500"
+          />
+          <span>
+            {u('businessMode')}
+            <span className="block text-xs text-gray-400">{u('noteExclusive')}</span>
+          </span>
+        </label>
+
+        {mode === 'until' && (
+          <div className="flex gap-2 pt-1">
             <button
-              onClick={calc}
-              className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-lg transition-colors"
+              onClick={() => {
+                setIsRunning(!isRunning)
+                setNow(Date.now())
+              }}
+              className={`flex-1 ${isRunning ? 'bg-gray-400 hover:bg-gray-500' : 'bg-orange-500 hover:bg-orange-600'} text-white font-semibold py-3 rounded-lg transition-colors`}
             >
-              {u('start')}
+              {isRunning ? u('stop') : u('start')}
             </button>
+            <button
+              onClick={() => {
+                setNow(Date.now())
+                setIsRunning(true)
+              }}
+              className="px-6 border border-gray-200 rounded-lg text-gray-500 hover:bg-gray-50"
+            >
+              {u('reset')}
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* Result */}
+      {result && (
+        <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-4 text-center">
+          {mode === 'until' ? (
+            <>
+              <div className="text-sm text-gray-500 mb-1">
+                {u('today')} {todayISO} ·{' '}
+                {label ? `${label} · ` : ''}
+                {toDate} {targetTime}
+              </div>
+              <div className={`text-2xl font-medium my-3 ${result.future ? 'text-orange-500' : 'text-red-500'}`}>
+                {result.future ? u('targetFuture') : u('targetPassed')}
+              </div>
+              {businessOnly ? (
+                <>
+                  <div className="text-6xl md:text-7xl font-bold text-orange-500 my-3 tabular-nums">{Math.abs(result.business ?? 0)}</div>
+                  <div className="text-lg font-semibold text-gray-600">{u('businessDays')}</div>
+                  <div className="text-sm text-gray-400 mt-2">
+                    {u('calendarDays')}: {Math.abs(result.exactDays)}
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="grid grid-cols-4 gap-3 my-5">
+                    <div className="bg-orange-50 rounded-lg p-3">
+                      <div className="text-3xl md:text-4xl font-bold text-orange-600 tabular-nums">{result.days}</div>
+                      <div className="text-xs text-gray-500 mt-1">{u('days')}</div>
+                    </div>
+                    <div className="bg-orange-50 rounded-lg p-3">
+                      <div className="text-3xl md:text-4xl font-bold text-orange-600 tabular-nums">{pad(result.hours ?? 0)}</div>
+                      <div className="text-xs text-gray-500 mt-1">{u('hours')}</div>
+                    </div>
+                    <div className="bg-orange-50 rounded-lg p-3">
+                      <div className="text-3xl md:text-4xl font-bold text-orange-600 tabular-nums">{pad(result.minutes ?? 0)}</div>
+                      <div className="text-xs text-gray-500 mt-1">{u('minutes')}</div>
+                    </div>
+                    <div className="bg-orange-50 rounded-lg p-3">
+                      <div className="text-3xl md:text-4xl font-bold text-orange-600 tabular-nums">{pad(result.seconds ?? 0)}</div>
+                      <div className="text-xs text-gray-500 mt-1">{u('seconds')}</div>
+                    </div>
+                  </div>
+                  <div className="text-sm text-gray-500">
+                    {u('months')}: {Math.abs(result.months.months)} · {u('weeks')}: {Math.floor(Math.abs(result.days) / 7)} · {u('days')}: {Math.abs(result.days) % 7}
+                  </div>
+                  <div className="text-xs text-gray-400 mt-1">
+                    {u('calendarDays')}: {Math.abs(result.exactDays)}
+                  </div>
+                </>
+              )}
+              {isRunning && mode === 'until' && <div className="text-xs text-green-600 mt-3">● live</div>}
+            </>
+          ) : (
+            <>
+              <div className="text-sm text-gray-500 mb-1">
+                {fromDate} → {toDate}{label ? ` · ${label}` : ''}
+              </div>
+              <div className="text-6xl md:text-7xl font-bold text-orange-500 my-3 tabular-nums">{Math.abs(result.days)}</div>
+              <div className="text-lg font-semibold text-gray-600">{u('days')}</div>
+              <div className="text-xs text-gray-400 mt-1">{u('inclusive')}: {Math.abs(result.days) + 1}</div>
+              <div className="grid grid-cols-3 gap-3 mt-5 text-sm">
+                <div className="bg-gray-50 rounded-lg p-3">
+                  <div className="font-semibold text-gray-700 tabular-nums">{Math.abs(result.months.months)}m {Math.abs(result.months.days)}d</div>
+                  <div className="text-xs text-gray-500 mt-1">{u('months')}</div>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-3">
+                  <div className="font-semibold text-gray-700 tabular-nums">{Math.floor(Math.abs(result.days) / 7)}w {Math.abs(result.days) % 7}d</div>
+                  <div className="text-xs text-gray-500 mt-1">{u('weeks')}</div>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-3">
+                  <div className="font-semibold text-gray-700 tabular-nums">{result.business === null ? '—' : Math.abs(result.business)}</div>
+                  <div className="text-xs text-gray-500 mt-1">{u('businessDays')}</div>
+                </div>
+              </div>
+            </>
           )}
         </div>
+      )}
 
-        {/* Result panel */}
-        {mode === 'days' && daysResult && (
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-6 text-center">
-            <div className="text-sm text-gray-500 mb-1">{u('today')}: {todayStr}</div>
-            <div className="text-sm text-gray-500 mb-1">{u('targetDate')}: {targetDate}</div>
-            <div className="text-7xl font-bold text-orange-500 my-4">{daysResult.days}</div>
-            <div className="text-lg font-semibold text-gray-600">
-              {daysResult.future ? u('daysLeft') : u('daysPassed')} {u('days')}
-            </div>
-          </div>
-        )}
-
-        {mode === 'live' && liveResult && (
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-6 text-center">
-            <div className="text-sm text-gray-500 mb-1">
-              {u('today')} {todayStr} · {u('targetDate')} {targetDate} {targetTime}
-            </div>
-            <div className={`text-2xl font-medium my-3 ${liveResult.future ? 'text-orange-500' : 'text-red-500'}`}>
-              {liveResult.future ? u('targetFuture') : u('targetPassed')}
-            </div>
-            <div className="grid grid-cols-4 gap-3 my-5">
-              <div className="bg-orange-50 rounded-lg p-3">
-                <div className="text-3xl md:text-4xl font-bold text-orange-600 tabular-nums">{liveResult.days}</div>
-                <div className="text-xs text-gray-500 mt-1">{u('days')}</div>
-              </div>
-              <div className="bg-orange-50 rounded-lg p-3">
-                <div className="text-3xl md:text-4xl font-bold text-orange-600 tabular-nums">{pad(liveResult.hours)}</div>
-                <div className="text-xs text-gray-500 mt-1">{u('hours')}</div>
-              </div>
-              <div className="bg-orange-50 rounded-lg p-3">
-                <div className="text-3xl md:text-4xl font-bold text-orange-600 tabular-nums">{pad(liveResult.minutes)}</div>
-                <div className="text-xs text-gray-500 mt-1">{u('minutes')}</div>
-              </div>
-              <div className="bg-orange-50 rounded-lg p-3">
-                <div className="text-3xl md:text-4xl font-bold text-orange-600 tabular-nums">{pad(liveResult.seconds)}</div>
-                <div className="text-xs text-gray-500 mt-1">{u('seconds')}</div>
-              </div>
-            </div>
-            {isRunning && <div className="text-xs text-green-600">● live</div>}
-          </div>
-        )}
-
+      <div className="flex items-center justify-between gap-3 mb-6 text-xs">
+        <button onClick={copyShare} className="px-3 py-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50">
+          {copied ? `✓ ${u('copied')}` : `🔗 ${u('copyLink')}`}
+        </button>
+        {businessOnly && <span className="text-gray-400">{u('onlyWorkdays')}</span>}
+      </div>
     </>
   )
 }
 
-export default function Countdown(props: { lang?: "zh" | "en" }) {
-  return (
-    <Suspense>
-      <CountdownContent {...props} />
-    </Suspense>
-  )
+export type { InitialState }
+
+export default function Countdown(props: { lang?: 'zh' | 'en'; initial?: InitialState }) {
+  return <CountdownContent {...props} />
 }
