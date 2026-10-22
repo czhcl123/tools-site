@@ -10,6 +10,7 @@ const t = {
     modeBetween: '两个日期之间',
     fromDate: '起始日期',
     toDate: '目标日期',
+    endDate: '结束日期',
     timeLabel: '时间',
     eventName: '事件名称（可选）',
     eventPlaceholder: '圣诞节 / 婚礼 / 项目上线',
@@ -45,7 +46,8 @@ const t = {
     modeUntil: 'Countdown to a date',
     modeBetween: 'Between two dates',
     fromDate: 'From date',
-    toDate: 'To date',
+    toDate: 'Target date',
+    endDate: 'End date',
     timeLabel: 'Time',
     eventName: 'Event name (optional)',
     eventPlaceholder: 'Christmas / Wedding / Launch',
@@ -335,7 +337,7 @@ function CountdownContent({ lang: initialLang, initial }: { lang?: 'zh' | 'en'; 
         )}
 
         <div>
-          <label className="block text-sm font-medium text-gray-600 mb-1">{u('toDate')}</label>
+          <label className="block text-sm font-medium text-gray-600 mb-1">{mode === 'until' ? u('toDate') : u('endDate')}</label>
           <div className="flex gap-2">
             <input
               type="date"
@@ -446,7 +448,13 @@ function CountdownContent({ lang: initialLang, initial }: { lang?: 'zh' | 'en'; 
                     </div>
                   </div>
                   <div className="text-sm text-gray-500">
-                    {u('months')}: {Math.abs(result.months.months)} · {u('weeks')}: {Math.floor(Math.abs(result.days) / 7)} · {u('days')}: {Math.abs(result.days) % 7}
+                    <span className="tabular-nums">
+                      {Math.abs(result.months.months)} {u('months')} {Math.abs(result.months.days)} {u('days')}
+                    </span>
+                    <span className="mx-2 text-gray-300">·</span>
+                    <span className="tabular-nums">
+                      {Math.floor(Math.abs(result.days) / 7)} {u('weeks')} {Math.abs(result.days) % 7} {u('days')}
+                    </span>
                   </div>
                   <div className="text-xs text-gray-400 mt-1">
                     {u('calendarDays')}: {Math.abs(result.exactDays)}
