@@ -41,6 +41,10 @@ export default function Footer({ lang = 'zh' }: FooterProps) {
             {t.about}
           </Link>
           <span className="text-gray-200">·</span>
+          <Link href="/work" className="text-gray-400 hover:text-orange-500 transition-colors">
+            {lang === 'zh' ? '案例' : 'Work'}
+          </Link>
+          <span className="text-gray-200">·</span>
           <a href={`/llms.txt`} className="text-gray-400 hover:text-orange-500 transition-colors">
             llms.txt
           </a>

@@ -4,7 +4,7 @@ import { MetadataRoute } from 'next'
 
 // Bump this when page content changes: it is the only honest "last modified"
 // signal we have (file mtimes are reset by the git checkout on every deploy).
-const LAST_UPDATED = '2026-10-21'
+const LAST_UPDATED = '2026-10-24'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://getpracticaltools.com'
@@ -68,6 +68,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: LAST_UPDATED,
     changeFrequency: 'monthly',
     priority: 0.5,
+  })
+
+  // Case notes / services page (English only)
+  entries.push({
+    url: `${base}/work`,
+    lastModified: LAST_UPDATED,
+    changeFrequency: 'monthly',
+    priority: 0.6,
   })
 
   // Tools (en + zh)
