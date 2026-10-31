@@ -15,8 +15,8 @@ export async function generateMetadata({
       description: '输入商品原价和折扣力度（1-99折），快速计算折后价和节省金额。支持微信、电商平台各种折扣场景，免费使用。',
     },
     en: {
-      title: 'Discount Calculator - Calculate 30, 50, 70 Percent Off Instantly',
-      description: 'Free online discount calculator: enter original price and discount percentage to get the final price. Works for any currency. No signup required.',
+      title: 'Discount vs Coupon — Calculate Real Savings Instantly',
+      description: 'Discount vs coupon: calculate real savings instantly. Compare discount types, apply codes, and see which gives you the biggest savings. No signup, instant results.',
     },
   }
 

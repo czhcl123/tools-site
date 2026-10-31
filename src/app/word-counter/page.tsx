@@ -15,8 +15,8 @@ export async function generateMetadata({
       description: '免费在线字数统计：中英文实时统计字数、字符、句子和段落，含阅读时间估算。无需注册，数据本地处理。',
     },
     en: {
-      title: 'Word Counter: Chinese Characters & Words',
-      description: 'Free online word counter: count words, characters, sentences, and paragraphs in real time for English and Chinese. Includes reading time estimate. No signup.',
+      title: 'Word Count Chinese — 免费中文字数统计',
+      description: 'Free word count for Chinese text: count characters, words and sentences instantly. Accurate Chinese word counter with reading time, no signup.',
     },
   }
 
