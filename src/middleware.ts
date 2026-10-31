@@ -44,12 +44,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(newUrl, 301)
   }
 
-  if (lang === 'en') {
-    // ?lang=en → clean URL (English is the default language; avoid duplicate indexing)
-    const newUrl = new URL(url.pathname, request.url)
-    newUrl.search = ''
-    return NextResponse.redirect(newUrl, 301)
-  }
+  // en is default — no redirect needed (avoids Coverage auto-redirect entries)
 
   const response = NextResponse.next()
   // Set language header for root layout to read
