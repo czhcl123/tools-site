@@ -38,8 +38,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   const sp = await searchParams
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
-    title: lang === 'zh' ? '写作技巧：如何用字数统计提高写作效率' : 'Writing Tips for Word Count',
-    description: lang === 'zh' ? '字数统计工具的使用技巧、不同场景的字数要求,以及如何规划写作目标。' : 'Word counter tool tips, word count requirements for different scenarios, and how to plan writing goals.',
+    title: lang === 'zh' ? '写作字数统计技巧 — 提高写作效率' : 'Writing Word Count Tips — Improve Your Writing Efficiency',
+    description: lang === 'zh' ? '字数统计写作技巧：设定每日目标、检查段落比例、中英文统计差异、常见平台字数要求。' : 'Word count writing tips: set daily goals, check paragraph balance, Chinese vs English counting, and platform word limits.',
     alternates: {
       canonical: 'https://getpracticaltools.com/blog/word-counter-writing-tips',
       languages: { 'en-US': '/blog/word-counter-writing-tips', 'x-default': '/blog/word-counter-writing-tips' },

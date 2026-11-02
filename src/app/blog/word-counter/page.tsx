@@ -39,11 +39,11 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
     title: lang === 'zh'
-      ? '字数统计工具指南 — 精确统计中英文字符数'
-      : 'Word Counter Guide: Chinese Characters',
+      ? '字数统计工具 — 免费在线字数统计'
+      : 'Word Counter — Free Online Word Count Tool',
     description: lang === 'zh'
-      ? '字数统计工具使用教程:统计中英文字符数、单词数、段落数,适用于论文、文案、SEO 写作。'
-      : 'How to use a word counter to count Chinese characters, English words, paragraphs, and more. Essential for essays, copywriting, and SEO.',
+      ? '免费统计中文字数、英文单词数、段落数和句子数。精确、快速、无需注册。适用于论文、SEO 写作、社交媒体。'
+      : 'Free online word counter: count Chinese characters, English words, paragraphs, and sentences instantly. Accurate, fast, no signup required.',
     alternates: {
       canonical: 'https://getpracticaltools.com/blog/word-counter',
       languages: { 'en-US': '/blog/word-counter', 'x-default': '/blog/word-counter' },
