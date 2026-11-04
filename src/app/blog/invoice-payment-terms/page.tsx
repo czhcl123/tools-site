@@ -104,7 +104,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
       </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/invoice-generator" className="text-orange-600 font-medium hover:underline">
+          <Link href="/invoice-generator" className="text-orange-700 font-medium hover:underline">
             → 用发票生成器创建专业发票
           </Link>
         </div>
@@ -157,7 +157,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
       </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/invoice-generator" className="text-orange-600 font-medium hover:underline">
+          <Link href="/invoice-generator" className="text-orange-700 font-medium hover:underline">
             → Create a Professional Invoice Now
           </Link>
         </div>

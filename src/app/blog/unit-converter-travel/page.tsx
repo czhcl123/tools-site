@@ -99,7 +99,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
       </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/unit-converter" className="text-orange-600 font-medium hover:underline">
+          <Link href="/unit-converter" className="text-orange-700 font-medium hover:underline">
             → 在线单位换算器
           </Link>
         </div>
@@ -151,7 +151,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
       </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/unit-converter" className="text-orange-600 font-medium hover:underline">
+          <Link href="/unit-converter" className="text-orange-700 font-medium hover:underline">
             → Try the Online Unit Converter
           </Link>
         </div>

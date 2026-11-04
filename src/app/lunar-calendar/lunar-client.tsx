@@ -154,7 +154,7 @@ function LunarCalendarContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
               type="date"
               value={solarDate}
               onChange={(e) => setSolarDate(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
+              className="w-full px-4 py-3 border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
             />
           </div>
           <button
@@ -171,7 +171,7 @@ function LunarCalendarContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
             <div className="text-2xl font-bold text-orange-500">
               {result.year} {getMonthName(result.month, lang)} {getDayName(result.day, lang)}
             </div>
-            <div className="text-sm text-gray-400 mt-1">
+            <div className="text-sm text-gray-500 mt-1">
               {u('lunarYear')} {result.year}，{u('lunarMonth')} {getMonthName(result.month, lang)}，{u('lunarDay')} {getDayName(result.day, lang)}
             </div>
           </div>

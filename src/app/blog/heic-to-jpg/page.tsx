@@ -103,7 +103,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
       </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/heic-to-jpg" className="text-orange-600 font-medium hover:underline">
+          <Link href="/heic-to-jpg" className="text-orange-700 font-medium hover:underline">
             → 立即转换 HEIC 为 JPG
           </Link>
         </div>
@@ -155,7 +155,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
       </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/heic-to-jpg" className="text-orange-600 font-medium hover:underline">
+          <Link href="/heic-to-jpg" className="text-orange-700 font-medium hover:underline">
             → Convert HEIC to JPG Now
           </Link>
         </div>

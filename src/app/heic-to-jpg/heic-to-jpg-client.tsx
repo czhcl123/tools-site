@@ -112,7 +112,7 @@ function HeicToJpgContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
 
   return (
     <>
-        <p className="text-sm text-gray-400 mb-6">{u('pageSubtitle', lang)}</p>
+        <p className="text-sm text-gray-500 mb-6">{u('pageSubtitle', lang)}</p>
 
         {/* Dropzone */}
         <div
@@ -132,7 +132,7 @@ function HeicToJpgContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
           <label htmlFor="heic-input" className="cursor-pointer block">
             <div className="text-4xl mb-2">📱</div>
             <div className="text-base font-medium text-gray-700 mb-1">{u('dropzone', lang)}</div>
-            <div className="text-xs text-gray-400">{u('dropzoneSub', lang)}</div>
+            <div className="text-xs text-gray-500">{u('dropzoneSub', lang)}</div>
           </label>
         </div>
 
@@ -141,7 +141,7 @@ function HeicToJpgContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
           <div className="flex flex-wrap items-center gap-2">
             <div className="flex items-center gap-1.5">
               <label className="text-xs text-gray-500">{u('quality', lang)}:</label>
-              <select value={quality} onChange={(e) => setQuality(Number(e.target.value))} className="px-2 py-1.5 border border-gray-200 rounded-lg text-xs bg-white">
+              <select value={quality} onChange={(e) => setQuality(Number(e.target.value))} className="px-2 py-1.5 border border-gray-500 rounded-lg text-xs bg-white">
                 <option value={1.0}>100%</option>
                 <option value={0.92}>92%</option>
                 <option value={0.85}>85%</option>
@@ -174,7 +174,7 @@ function HeicToJpgContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
                 {files.map((f, i) => (
                   <div key={i} className="flex justify-between">
                     <span className="truncate">{f.name}</span>
-                    <span className="text-gray-400 ml-2">{formatSize(f.size)}</span>
+                    <span className="text-gray-500 ml-2">{formatSize(f.size)}</span>
                   </div>
                 ))}
               </div>
@@ -191,7 +191,7 @@ function HeicToJpgContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
                 <div key={i} className="flex items-center justify-between p-2.5 bg-gray-50 rounded-lg">
                   <div className="flex-1 min-w-0">
                     <div className="text-xs font-medium text-gray-700 truncate">✓ {c.name}</div>
-                    <div className="text-xs text-gray-400">{formatSize(c.size)}</div>
+                    <div className="text-xs text-gray-500">{formatSize(c.size)}</div>
                   </div>
                   <a href={c.url} download={c.name} className="ml-2 px-2.5 py-1.5 bg-orange-500 hover:bg-orange-600 text-white text-xs rounded-md">
                     {lang === 'zh' ? '下载' : 'Download'}
@@ -205,7 +205,7 @@ function HeicToJpgContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
         <RelatedTools lang={lang} paths={['/unit-converter', '/qr-code-generator', '/json-formatter', '/invoice-generator']} />
 
         <div className="text-center">
-          <Link href="/" className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
+          <Link href="/" className="text-sm text-gray-500 hover:text-orange-500 transition-colors">
             {u('backHome', lang)}
           </Link>
         </div>

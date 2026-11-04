@@ -62,7 +62,7 @@ function BmiCalculatorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
           value={height}
           onChange={(e) => setHeight(e.target.value)}
           placeholder="170"
-          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
+          className="w-full px-4 py-3 border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
         />
       </div>
       <div className="mb-4">
@@ -72,7 +72,7 @@ function BmiCalculatorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
           value={weight}
           onChange={(e) => setWeight(e.target.value)}
           placeholder="65"
-          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
+          className="w-full px-4 py-3 border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
         />
       </div>
       <button

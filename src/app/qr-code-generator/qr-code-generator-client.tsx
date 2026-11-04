@@ -119,7 +119,7 @@ function QrCodeGeneratorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
 
   return (
     <>
-        <p className="text-sm text-gray-400 mb-6">{u('pageSubtitle', lang)}</p>
+        <p className="text-sm text-gray-500 mb-6">{u('pageSubtitle', lang)}</p>
 
         {/* Input card */}
         <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-4">
@@ -131,7 +131,7 @@ function QrCodeGeneratorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
                 onChange={(e) => setText(e.target.value)}
                 placeholder={u('inputPlaceholder', lang)}
                 rows={3}
-                className="w-full px-4 py-3 text-base border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all resize-none"
+                className="w-full px-4 py-3 text-base border border-gray-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all resize-none"
               />
             </div>
             <div className="grid grid-cols-2 gap-3">
@@ -140,7 +140,7 @@ function QrCodeGeneratorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
                 <select
                   value={size}
                   onChange={(e) => setSize(Number(e.target.value))}
-                  className="w-full px-3 py-3 text-base border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400 bg-white"
+                  className="w-full px-3 py-3 text-base border border-gray-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400 bg-white"
                 >
                   <option value={128}>128</option>
                   <option value={256}>256</option>
@@ -153,7 +153,7 @@ function QrCodeGeneratorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
                 <select
                   value={errorLevel}
                   onChange={(e) => setErrorLevel(e.target.value as 'L' | 'M' | 'Q' | 'H')}
-                  className="w-full px-3 py-3 text-base border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400 bg-white"
+                  className="w-full px-3 py-3 text-base border border-gray-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400 bg-white"
                 >
                   {(['L', 'M', 'Q', 'H'] as const).map((l) => (
                     <option key={l} value={l}>{t[lang].errorLevels[l]}</option>
@@ -166,7 +166,7 @@ function QrCodeGeneratorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
                   type="color"
                   value={fgColor}
                   onChange={(e) => setFgColor(e.target.value)}
-                  className="w-full h-12 border border-gray-200 rounded-xl cursor-pointer"
+                  className="w-full h-12 border border-gray-500 rounded-xl cursor-pointer"
                 />
               </div>
               <div>
@@ -175,7 +175,7 @@ function QrCodeGeneratorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
                   type="color"
                   value={bgColor}
                   onChange={(e) => setBgColor(e.target.value)}
-                  className="w-full h-12 border border-gray-200 rounded-xl cursor-pointer"
+                  className="w-full h-12 border border-gray-500 rounded-xl cursor-pointer"
                 />
               </div>
             </div>
@@ -243,7 +243,7 @@ function QrCodeGeneratorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
         <RelatedTools lang={lang} paths={['/invoice-generator', '/heic-to-jpg', '/json-formatter', '/word-counter']} />
 
         <div className="text-center">
-          <Link href="/" className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
+          <Link href="/" className="text-sm text-gray-500 hover:text-orange-500 transition-colors">
             {u('backHome', lang)}
           </Link>
         </div>

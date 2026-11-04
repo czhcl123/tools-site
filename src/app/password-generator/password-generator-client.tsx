@@ -120,7 +120,7 @@ function PasswordGeneratorContent({ initialLang }: { initialLang?: 'zh' | 'en' }
         {password ? (
           <span className="text-gray-800">{password}</span>
         ) : (
-          <span className="text-gray-400 text-sm">{u('noPassword')}</span>
+          <span className="text-gray-500 text-sm">{u('noPassword')}</span>
         )}
       </div>
 
@@ -143,14 +143,14 @@ function PasswordGeneratorContent({ initialLang }: { initialLang?: 'zh' | 'en' }
       <div className="mb-4">
         <div className="flex items-center justify-between mb-1">
           <label className="text-sm font-medium text-gray-600">{u('length')}</label>
-          <span className="text-sm font-mono text-orange-600 bg-orange-50 px-2 py-0.5 rounded">{length}</span>
+          <span className="text-sm font-mono text-orange-700 bg-orange-50 px-2 py-0.5 rounded">{length}</span>
         </div>
         <input
           type="range" min={6} max={64} value={length}
           onChange={(e) => setLength(Number(e.target.value))}
           className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-orange-500"
         />
-        <div className="flex justify-between text-xs text-gray-400 mt-1">
+        <div className="flex justify-between text-xs text-gray-500 mt-1">
           <span>6</span><span>64</span>
         </div>
       </div>

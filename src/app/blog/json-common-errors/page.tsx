@@ -123,7 +123,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/json-formatter" className="text-orange-600 font-medium hover:underline">
+          <Link href="/json-formatter" className="text-orange-700 font-medium hover:underline">
             → 粘进去，出错行号直接标出来
           </Link>
         </div>
@@ -195,7 +195,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/json-formatter" className="text-orange-600 font-medium hover:underline">
+          <Link href="/json-formatter" className="text-orange-700 font-medium hover:underline">
             → Paste it in — the exact error line gets flagged
           </Link>
         </div>

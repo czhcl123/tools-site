@@ -38,7 +38,7 @@ export default function EmbedWordCounter() {
     <div ref={boxRef} className="w-full bg-white p-3 text-gray-800">
       <div className="mb-1.5 flex items-baseline justify-between gap-2">
         <h1 className="text-sm font-semibold text-gray-800">Word counter</h1>
-        <span className="text-[11px] text-gray-400">free · no signup</span>
+        <span className="text-[11px] text-gray-500">free · no signup</span>
       </div>
 
       <textarea
@@ -47,10 +47,10 @@ export default function EmbedWordCounter() {
         rows={3}
         placeholder="Paste or type your text…"
         aria-label="Text to count"
-        className="w-full resize-y rounded-lg border border-gray-300 bg-white p-2 text-xs leading-relaxed text-gray-800 placeholder:text-gray-400 focus:border-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-100"
+        className="w-full resize-y rounded-lg border border-gray-300 bg-white p-2 text-xs leading-relaxed text-gray-800 placeholder:text-gray-500 focus:border-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-100"
       />
 
-      <div className="mt-1 flex items-center justify-between gap-2 text-[11px] text-gray-400">
+      <div className="mt-1 flex items-center justify-between gap-2 text-[11px] text-gray-500">
         <span>{text.length.toLocaleString()} characters</span>
         <button
           type="button"
@@ -69,7 +69,7 @@ export default function EmbedWordCounter() {
         <Cell label="Read (min)" value={stats.readingTime} />
       </div>
 
-      <p className="mt-2 text-[10px] text-gray-400">
+      <p className="mt-2 text-[10px] text-gray-500">
         <a
           href="https://getpracticaltools.com/word-counter?utm_source=embed&utm_medium=widget"
           target="_blank"

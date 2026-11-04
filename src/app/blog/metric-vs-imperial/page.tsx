@@ -106,7 +106,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         </p>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/unit-converter" className="text-orange-600 font-medium hover:underline">
+          <Link href="/unit-converter" className="text-orange-700 font-medium hover:underline">
             → 快速转换公制和英制单位
           </Link>
         </div>
@@ -161,7 +161,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         </p>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/unit-converter" className="text-orange-600 font-medium hover:underline">
+          <Link href="/unit-converter" className="text-orange-700 font-medium hover:underline">
             → Convert between metric and imperial units
           </Link>
         </div>

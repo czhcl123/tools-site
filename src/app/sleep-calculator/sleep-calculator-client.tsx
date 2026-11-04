@@ -101,7 +101,7 @@ function SleepCalculatorContent({ lang: initialLang }: { lang?: Lang }) {
   return (
     <>
         <p className="text-gray-500 text-sm mb-1">{u('description')}</p>
-        <p className="text-orange-600 text-xs font-medium mb-6">{u('subtitle')}</p>
+        <p className="text-orange-700 text-xs font-medium mb-6">{u('subtitle')}</p>
 
         {/* Mode toggle */}
         <div className="bg-white rounded-xl p-2 shadow-sm border border-gray-100 mb-4 flex gap-2">
@@ -127,7 +127,7 @@ function SleepCalculatorContent({ lang: initialLang }: { lang?: Lang }) {
               type="time"
               value={time}
               onChange={(e) => setTime(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg text-lg focus:ring-2 focus:ring-orange-300 focus:border-orange-400 outline-none"
+              className="w-full px-4 py-3 border border-gray-500 rounded-lg text-lg focus:ring-2 focus:ring-orange-300 focus:border-orange-400 outline-none"
             />
           </div>
 
@@ -136,7 +136,7 @@ function SleepCalculatorContent({ lang: initialLang }: { lang?: Lang }) {
             <select
               value={age}
               onChange={(e) => setAge(e.target.value as AgeGroup)}
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg text-base focus:ring-2 focus:ring-orange-300 focus:border-orange-400 outline-none"
+              className="w-full px-4 py-3 border border-gray-500 rounded-lg text-base focus:ring-2 focus:ring-orange-300 focus:border-orange-400 outline-none"
             >
               <option value="adult">{u('ageAdult')}</option>
               <option value="teen">{u('ageTeen')}</option>
@@ -145,7 +145,7 @@ function SleepCalculatorContent({ lang: initialLang }: { lang?: Lang }) {
             </select>
           </div>
 
-          <p className="text-xs text-gray-400">{u('cycleNote')}</p>
+          <p className="text-xs text-gray-500">{u('cycleNote')}</p>
         </div>
 
         {/* Results */}
@@ -172,7 +172,7 @@ function SleepCalculatorContent({ lang: initialLang }: { lang?: Lang }) {
                   </span>
                 )}
               </div>
-              <div className="text-2xl font-bold text-orange-600">{r.label}</div>
+              <div className="text-2xl font-bold text-orange-700">{r.label}</div>
             </div>
           ))}
         </div>

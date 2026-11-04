@@ -103,7 +103,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/countdown" className="text-orange-600 font-medium hover:underline">
+          <Link href="/countdown" className="text-orange-700 font-medium hover:underline">
             → 设一个学习倒计时，现在开始第一个番茄钟
           </Link>
         </div>
@@ -155,7 +155,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/countdown" className="text-orange-600 font-medium hover:underline">
+          <Link href="/countdown" className="text-orange-700 font-medium hover:underline">
             → Set a study countdown and start your first Pomodoro now
           </Link>
         </div>

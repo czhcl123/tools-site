@@ -200,22 +200,22 @@ function InvoiceGeneratorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) 
 
   return (
     <>
-        <p className="text-sm text-gray-400 mb-6">{u('pageSubtitle', lang)}</p>
+        <p className="text-sm text-gray-500 mb-6">{u('pageSubtitle', lang)}</p>
 
         <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-4 space-y-4">
           {/* Meta */}
           <div className="grid grid-cols-3 gap-2">
             <div>
               <label className="block text-xs font-medium text-gray-600 mb-1">{u('invoiceNumber', lang)}</label>
-              <input value={number} onChange={(e) => setNumber(e.target.value)} className="w-full px-2 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" />
+              <input value={number} onChange={(e) => setNumber(e.target.value)} className="w-full px-2 py-2 text-sm border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" />
             </div>
             <div>
               <label className="block text-xs font-medium text-gray-600 mb-1">{u('date', lang)}</label>
-              <input type="date" value={date} onChange={(e) => setDate(e.target.value)} className="w-full px-2 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" />
+              <input type="date" value={date} onChange={(e) => setDate(e.target.value)} className="w-full px-2 py-2 text-sm border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" />
             </div>
             <div>
               <label className="block text-xs font-medium text-gray-600 mb-1">{u('dueDate', lang)}</label>
-              <input type="date" value={dueDate} onChange={(e) => setDueDate(e.target.value)} className="w-full px-2 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" />
+              <input type="date" value={dueDate} onChange={(e) => setDueDate(e.target.value)} className="w-full px-2 py-2 text-sm border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" />
             </div>
           </div>
 
@@ -224,17 +224,17 @@ function InvoiceGeneratorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) 
             <div>
               <h3 className="text-xs font-semibold text-gray-600 mb-2">{u('from', lang)}</h3>
               <div className="space-y-1.5">
-                <input placeholder={u('name', lang)} value={from.name} onChange={(e) => setFrom({ ...from, name: e.target.value })} className="w-full px-2 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" />
-                <input placeholder={u('email', lang)} value={from.email} onChange={(e) => setFrom({ ...from, email: e.target.value })} className="w-full px-2 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" />
-                <textarea placeholder={u('address', lang)} value={from.address} onChange={(e) => setFrom({ ...from, address: e.target.value })} rows={2} className="w-full px-2 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none" />
+                <input placeholder={u('name', lang)} value={from.name} onChange={(e) => setFrom({ ...from, name: e.target.value })} className="w-full px-2 py-2 text-sm border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" />
+                <input placeholder={u('email', lang)} value={from.email} onChange={(e) => setFrom({ ...from, email: e.target.value })} className="w-full px-2 py-2 text-sm border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" />
+                <textarea placeholder={u('address', lang)} value={from.address} onChange={(e) => setFrom({ ...from, address: e.target.value })} rows={2} className="w-full px-2 py-2 text-sm border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none" />
               </div>
             </div>
             <div>
               <h3 className="text-xs font-semibold text-gray-600 mb-2">{u('to', lang)}</h3>
               <div className="space-y-1.5">
-                <input placeholder={u('name', lang)} value={to.name} onChange={(e) => setTo({ ...to, name: e.target.value })} className="w-full px-2 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" />
-                <input placeholder={u('email', lang)} value={to.email} onChange={(e) => setTo({ ...to, email: e.target.value })} className="w-full px-2 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" />
-                <textarea placeholder={u('address', lang)} value={to.address} onChange={(e) => setTo({ ...to, address: e.target.value })} rows={2} className="w-full px-2 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none" />
+                <input placeholder={u('name', lang)} value={to.name} onChange={(e) => setTo({ ...to, name: e.target.value })} className="w-full px-2 py-2 text-sm border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" />
+                <input placeholder={u('email', lang)} value={to.email} onChange={(e) => setTo({ ...to, email: e.target.value })} className="w-full px-2 py-2 text-sm border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" />
+                <textarea placeholder={u('address', lang)} value={to.address} onChange={(e) => setTo({ ...to, address: e.target.value })} rows={2} className="w-full px-2 py-2 text-sm border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none" />
               </div>
             </div>
           </div>
@@ -245,9 +245,9 @@ function InvoiceGeneratorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) 
             <div className="space-y-1.5">
               {items.map((it, i) => (
                 <div key={i} className="grid grid-cols-12 gap-1.5">
-                  <input placeholder={u('desc', lang)} value={it.desc} onChange={(e) => setItems(items.map((x, j) => j === i ? { ...x, desc: e.target.value } : x))} className="col-span-5 px-2 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" />
-                  <input type="number" placeholder={u('qty', lang)} value={it.qty} onChange={(e) => setItems(items.map((x, j) => j === i ? { ...x, qty: Number(e.target.value) } : x))} className="col-span-2 px-2 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" min={0} />
-                  <input type="number" placeholder={u('price', lang)} value={it.price} onChange={(e) => setItems(items.map((x, j) => j === i ? { ...x, price: Number(e.target.value) } : x))} className="col-span-4 px-2 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" min={0} step="0.01" />
+                  <input placeholder={u('desc', lang)} value={it.desc} onChange={(e) => setItems(items.map((x, j) => j === i ? { ...x, desc: e.target.value } : x))} className="col-span-5 px-2 py-2 text-sm border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" />
+                  <input type="number" placeholder={u('qty', lang)} value={it.qty} onChange={(e) => setItems(items.map((x, j) => j === i ? { ...x, qty: Number(e.target.value) } : x))} className="col-span-2 px-2 py-2 text-sm border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" min={0} />
+                  <input type="number" placeholder={u('price', lang)} value={it.price} onChange={(e) => setItems(items.map((x, j) => j === i ? { ...x, price: Number(e.target.value) } : x))} className="col-span-4 px-2 py-2 text-sm border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" min={0} step="0.01" />
                   <button onClick={() => setItems(items.filter((_, j) => j !== i))} className="col-span-1 px-1 py-2 bg-red-50 hover:bg-red-100 text-red-500 rounded-lg text-xs" disabled={items.length === 1}>×</button>
                 </div>
               ))}
@@ -259,7 +259,7 @@ function InvoiceGeneratorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) 
           <div className="grid grid-cols-2 gap-3">
             <div>
               <label className="block text-xs font-medium text-gray-600 mb-1">{u('currency', lang)}</label>
-              <select value={currency} onChange={(e) => setCurrency(e.target.value)} className="w-full px-2 py-2 text-sm border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-orange-400">
+              <select value={currency} onChange={(e) => setCurrency(e.target.value)} className="w-full px-2 py-2 text-sm border border-gray-500 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-orange-400">
                 <option value="USD">USD ($)</option>
                 <option value="CNY">CNY (¥)</option>
                 <option value="EUR">EUR (€)</option>
@@ -271,7 +271,7 @@ function InvoiceGeneratorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) 
             </div>
             <div>
               <label className="block text-xs font-medium text-gray-600 mb-1">{u('taxRate', lang)}</label>
-              <input type="number" value={taxRate} onChange={(e) => setTaxRate(Number(e.target.value))} min={0} max={100} step="0.01" className="w-full px-2 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" />
+              <input type="number" value={taxRate} onChange={(e) => setTaxRate(Number(e.target.value))} min={0} max={100} step="0.01" className="w-full px-2 py-2 text-sm border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" />
             </div>
           </div>
           <div>
@@ -283,7 +283,7 @@ function InvoiceGeneratorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) 
           </div>
           <div>
             <label className="block text-xs font-medium text-gray-600 mb-1">{u('notes', lang)}</label>
-            <textarea value={notes} onChange={(e) => setNotes(e.target.value)} placeholder={u('notesPh', lang)} rows={2} className="w-full px-2 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none" />
+            <textarea value={notes} onChange={(e) => setNotes(e.target.value)} placeholder={u('notesPh', lang)} rows={2} className="w-full px-2 py-2 text-sm border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none" />
           </div>
 
           {/* Totals + actions */}
@@ -303,7 +303,7 @@ function InvoiceGeneratorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) 
         <RelatedTools lang={lang} paths={['/qr-code-generator', '/discount-calculator', '/word-counter', '/json-formatter']} />
 
         <div className="text-center">
-          <Link href="/" className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
+          <Link href="/" className="text-sm text-gray-500 hover:text-orange-500 transition-colors">
             {u('backHome', lang)}
           </Link>
         </div>

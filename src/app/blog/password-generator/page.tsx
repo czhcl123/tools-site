@@ -139,7 +139,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
       </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/password-generator" className="text-orange-600 font-medium hover:underline">
+          <Link href="/password-generator" className="text-orange-700 font-medium hover:underline">
             → 立即使用密码生成器创建安全密码
           </Link>
         </div>
@@ -227,7 +227,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
       </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/password-generator" className="text-orange-600 font-medium hover:underline">
+          <Link href="/password-generator" className="text-orange-700 font-medium hover:underline">
             → Try the Password Generator Now
           </Link>
         </div>

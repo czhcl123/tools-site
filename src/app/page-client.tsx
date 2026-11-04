@@ -133,18 +133,18 @@ function HomePageContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-10">
         <div className="max-w-3xl mx-auto px-4 py-3 flex items-center gap-3">
-          <Link href="/" className="flex-shrink-0 flex items-center gap-1.5 text-base font-bold text-orange-500 hover:text-orange-600 transition-colors">
+          <Link href="/" className="flex-shrink-0 flex items-center gap-1.5 text-base font-bold text-orange-700 hover:text-orange-800 transition-colors">
             <span className="text-xl">🧮</span>
             <span className="hidden sm:inline text-sm">{lang === 'zh' ? '实用计算器' : 'Practical Tools'}</span>
           </Link>
           <div className="relative flex-1 min-w-0">
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none select-none">🔍</span>
+            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none select-none">🔍</span>
             <input
               type="search"
               value={search}
               onChange={e => setSearch(e.target.value)}
               placeholder={t.searchPlaceholder}
-              className="w-full pl-9 pr-4 py-2.5 bg-gray-100 border border-gray-200 rounded-full text-sm shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-orange-400 focus:bg-white focus:border-orange-300 focus:shadow-md"
+              className="w-full pl-9 pr-4 py-2.5 bg-gray-100 border border-gray-500 rounded-full text-sm shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-orange-400 focus:bg-white focus:border-orange-300 focus:shadow-md"
             />
           </div>
           <Link
@@ -167,10 +167,10 @@ function HomePageContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
               <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">{t.heroTitle}</h1>
               <p className="text-sm text-gray-600 mb-4 max-w-xl mx-auto leading-relaxed">{t.heroSubtitle}</p>
               <div className="flex flex-wrap justify-center gap-2 text-xs">
-                <span className="px-3 py-1 bg-white border border-orange-200 text-orange-600 rounded-full">✓ {t.badgeFree}</span>
-                <span className="px-3 py-1 bg-white border border-orange-200 text-orange-600 rounded-full">✓ {t.badgeSignup}</span>
-                <span className="px-3 py-1 bg-white border border-orange-200 text-orange-600 rounded-full">✓ {t.badgePrivacy}</span>
-                <span className="px-3 py-1 bg-white border border-orange-200 text-orange-600 rounded-full">✓ {t.badgeBilingual}</span>
+                <span className="px-3 py-1 bg-white border border-orange-200 text-orange-700 rounded-full">✓ {t.badgeFree}</span>
+                <span className="px-3 py-1 bg-white border border-orange-200 text-orange-700 rounded-full">✓ {t.badgeSignup}</span>
+                <span className="px-3 py-1 bg-white border border-orange-200 text-orange-700 rounded-full">✓ {t.badgePrivacy}</span>
+                <span className="px-3 py-1 bg-white border border-orange-200 text-orange-700 rounded-full">✓ {t.badgeBilingual}</span>
               </div>
             </div>
           </section>
@@ -188,13 +188,13 @@ function HomePageContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
             >
               <div className="text-2xl mb-2">{tool.icon}</div>
               <div className="font-semibold text-gray-800">{lang === 'zh' ? tool.zh : tool.en}</div>
-              <div className="text-sm text-gray-500 mt-0.5">{lang === 'zh' ? tool.descZh : tool.descEn}</div>
+              <div className="text-sm text-gray-600 mt-0.5">{lang === 'zh' ? tool.descZh : tool.descEn}</div>
             </Link>
           ))}
         </div>
 
         {search && filtered.length === 0 && (
-          <p className="text-center text-gray-400 text-sm py-12">{t.emptyText}</p>
+          <p className="text-center text-gray-500 text-sm py-12">{t.emptyText}</p>
         )}
 
         {/* SEO/GEO content sections - rendered only when not searching */}
@@ -230,22 +230,22 @@ function HomePageContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
               <p className="text-sm text-gray-600 mb-3">{t.sectionAuthoritativeBody}</p>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 hover:underline">
+                  <a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" target="_blank" rel="noopener noreferrer" className="text-orange-700 hover:text-orange-700 hover:underline">
                     {t.refWHO} →
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.hko.gov.hk/en/gts/time/calendar/lunar.htm" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 hover:underline">
+                  <a href="https://www.hko.gov.hk/en/gts/time/calendar/lunar.htm" target="_blank" rel="noopener noreferrer" className="text-orange-700 hover:text-orange-700 hover:underline">
                     {t.refHKO} →
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.iso.org/standard/62021.html" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 hover:underline">
+                  <a href="https://www.iso.org/standard/62021.html" target="_blank" rel="noopener noreferrer" className="text-orange-700 hover:text-orange-700 hover:underline">
                     {t.refISO} →
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.nist.gov/pml/weights-and-measures/metric-si/si-units" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 hover:underline">
+                  <a href="https://www.nist.gov/pml/weights-and-measures/metric-si/si-units" target="_blank" rel="noopener noreferrer" className="text-orange-700 hover:text-orange-700 hover:underline">
                     {t.refNIST} →
                   </a>
                 </li>
@@ -289,7 +289,7 @@ function HomePageContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
 
         {/* Sitemap */}
         <section className="border-t border-gray-200 pt-6">
-          <h2 className="text-xs text-gray-400 uppercase tracking-wide mb-3 font-medium">{t.sitemapTitle}</h2>
+          <h2 className="text-xs text-gray-500 uppercase tracking-wide mb-3 font-medium">{t.sitemapTitle}</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-1">
             {TOOLS.map((tool) => (
               <Link

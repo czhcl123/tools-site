@@ -137,7 +137,7 @@ function UnitConverterContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
               <select
                 value={fromUnit}
                 onChange={(e) => { setFromUnit(e.target.value); setResult(null) }}
-                className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm"
+                className="w-full px-3 py-2 border border-gray-500 rounded-lg text-sm"
               >
                 {unitKeys.map((k) => (
                   <option key={k} value={k}>{units.zh[k]} / {units.en[k]}</option>
@@ -149,7 +149,7 @@ function UnitConverterContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
               <select
                 value={toUnit}
                 onChange={(e) => { setToUnit(e.target.value); setResult(null) }}
-                className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm"
+                className="w-full px-3 py-2 border border-gray-500 rounded-lg text-sm"
               >
                 {unitKeys.map((k) => (
                   <option key={k} value={k}>{units.zh[k]} / {units.en[k]}</option>
@@ -165,7 +165,7 @@ function UnitConverterContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="100"
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
+              className="w-full px-4 py-3 border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
             />
           </div>
 
@@ -181,7 +181,7 @@ function UnitConverterContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-6 text-center">
             <div className="text-sm text-gray-500 mb-1">{u('result')}</div>
             <div className="text-4xl font-bold text-orange-500">{result}</div>
-            <div className="text-sm text-gray-400 mt-1">
+            <div className="text-sm text-gray-500 mt-1">
               {units.zh[toUnit as keyof typeof units.zh]}
             </div>
           </div>

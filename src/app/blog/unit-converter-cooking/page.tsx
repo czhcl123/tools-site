@@ -109,7 +109,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
       </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/unit-converter" className="text-orange-600 font-medium hover:underline">
+          <Link href="/unit-converter" className="text-orange-700 font-medium hover:underline">
             → 用单位换算工具搞定所有烹饪测量
           </Link>
         </div>
@@ -167,7 +167,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
       </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/unit-converter" className="text-orange-600 font-medium hover:underline">
+          <Link href="/unit-converter" className="text-orange-700 font-medium hover:underline">
             → Convert Any Cooking Measurement
           </Link>
         </div>

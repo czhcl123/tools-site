@@ -45,7 +45,7 @@ const seoBodyZh = (
       <li>🟡 偏胖：24.0 – 27.9</li>
       <li>🔴 肥胖：≥ 28.0</li>
     </ul>
-    <p className="text-xs text-gray-400 mt-4">数据仅供参考，不能替代医学诊断。</p>
+    <p className="text-xs text-gray-500 mt-4">数据仅供参考，不能替代医学诊断。</p>
   </div>
 )
 

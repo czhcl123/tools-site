@@ -168,7 +168,7 @@ function DiscountCalculatorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }
 
   return (
     <>
-        <p className="text-sm text-gray-400 mb-6">{lang === 'zh' ? '输入原价和折扣，快速计算折后价' : 'Enter price and discount to calculate'}</p>
+        <p className="text-sm text-gray-500 mb-6">{lang === 'zh' ? '输入原价和折扣，快速计算折后价' : 'Enter price and discount to calculate'}</p>
 
         {/* Calculator card */}
         <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-6">
@@ -179,7 +179,7 @@ function DiscountCalculatorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }
               <select
                 value={currency}
                 onChange={e => setCurrency(e.target.value as Currency)}
-                className="w-full px-4 py-3 text-lg border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all bg-white"
+                className="w-full px-4 py-3 text-lg border border-gray-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all bg-white"
               >
                 {Object.entries(CURRENCIES).map(([code, info]) => (
                   <option key={code} value={code}>
@@ -196,7 +196,7 @@ function DiscountCalculatorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }
                 value={price}
                 onChange={e => setPrice(e.target.value)}
                 placeholder={u('pricePlaceholder', lang)}
-                className="w-full px-4 py-3 text-lg border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 text-lg border border-gray-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all"
               />
             </div>
 
@@ -211,9 +211,9 @@ function DiscountCalculatorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }
                 placeholder={u('discountPlaceholder', lang)}
                 min="1"
                 max="99"
-                className="w-full px-4 py-3 text-lg border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 text-lg border border-gray-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all"
               />
-              <p className="text-xs text-gray-400 mt-1">{u('discountHint', lang)}</p>
+              <p className="text-xs text-gray-500 mt-1">{u('discountHint', lang)}</p>
             </div>
 
             {/* Quick presets — Senior / PWD / Student / Member / Black Friday */}
@@ -238,12 +238,12 @@ function DiscountCalculatorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }
                 <button
                   type="button"
                   onClick={() => setDiscount('')}
-                  className="text-xs px-2.5 py-1 border border-gray-100 text-gray-400 rounded-full hover:bg-gray-50 transition-colors"
+                  className="text-xs px-2.5 py-1 border border-gray-100 text-gray-500 rounded-full hover:bg-gray-50 transition-colors"
                 >
                   {u('presetClear', lang)}
                 </button>
               </div>
-              <p className="text-[11px] text-gray-400 mt-1.5">{u('seniorHint', lang)}</p>
+              <p className="text-[11px] text-gray-500 mt-1.5">{u('seniorHint', lang)}</p>
             </div>
 
             {/* Error */}
@@ -255,7 +255,7 @@ function DiscountCalculatorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }
             {result && (
               <div ref={resultRef} className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-5 text-center border border-orange-200">
                 <div className="text-sm text-orange-500 mb-1">{u('result', lang)}</div>
-                <div className="text-4xl font-bold text-orange-600 mb-1">{sym}{result.final}</div>
+                <div className="text-4xl font-bold text-orange-700 mb-1">{sym}{result.final}</div>
                 <div className="text-sm text-gray-500">{u('saving', lang)} {sym}{result.saving}</div>
                 <button
                   onClick={copyResult}
@@ -289,7 +289,7 @@ function DiscountCalculatorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-sm font-semibold text-gray-600">{u('history', lang)}</h2>
             {history.length > 0 && (
-              <button onClick={() => setHistory([])} className="text-xs text-gray-400 hover:text-red-500 transition-colors">
+              <button onClick={() => setHistory([])} className="text-xs text-gray-500 hover:text-red-500 transition-colors">
                 {u('clearHistory', lang)}
               </button>
             )}
@@ -307,7 +307,7 @@ function DiscountCalculatorContent({ lang: initialLang }: { lang?: 'zh' | 'en' }
                   </div>
                   <div className="text-right">
                     <span className="text-sm font-semibold text-orange-500">{sym}{entry.final}</span>
-                    <span className="text-xs text-gray-400 ml-2">{u('saving', lang)} {sym}{entry.saving}</span>
+                    <span className="text-xs text-gray-500 ml-2">{u('saving', lang)} {sym}{entry.saving}</span>
                   </div>
                 </div>
               ))}

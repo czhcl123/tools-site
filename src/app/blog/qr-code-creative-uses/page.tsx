@@ -129,7 +129,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         </p>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/qr-code-generator" className="text-orange-600 font-medium hover:underline">
+          <Link href="/qr-code-generator" className="text-orange-700 font-medium hover:underline">
             → 免费生成你的 QR 码
           </Link>
         </div>
@@ -207,7 +207,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         </p>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/qr-code-generator" className="text-orange-600 font-medium hover:underline">
+          <Link href="/qr-code-generator" className="text-orange-700 font-medium hover:underline">
             → Generate Your QR Code for Free
           </Link>
         </div>

@@ -81,7 +81,7 @@ const seoBodyZh = (
       <li>🔒 本地处理，不上传</li>
       <li>📦 ZIP 一键打包下载</li>
     </ul>
-    <p className="text-xs text-gray-400 mt-4">所有计算在浏览器本地完成，数据不上传。</p>
+    <p className="text-xs text-gray-500 mt-4">所有计算在浏览器本地完成，数据不上传。</p>
   </div>
 )
 

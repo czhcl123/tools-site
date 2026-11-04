@@ -109,7 +109,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
       </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/word-counter" className="text-orange-600 font-medium hover:underline">
+          <Link href="/word-counter" className="text-orange-700 font-medium hover:underline">
             → 用字数统计工具精确监控你的论文
           </Link>
         </div>
@@ -167,7 +167,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
       </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/word-counter" className="text-orange-600 font-medium hover:underline">
+          <Link href="/word-counter" className="text-orange-700 font-medium hover:underline">
             → Track Your Paper's Word Count Precisely
           </Link>
         </div>

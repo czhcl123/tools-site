@@ -85,7 +85,7 @@ const cases = [
 export default function WorkPage() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-10">
-      <nav className="text-xs text-gray-400 mb-6">
+      <nav className="text-xs text-gray-500 mb-6">
         <Link href="/" className="hover:text-orange-500">
           Home
         </Link>
@@ -163,7 +163,7 @@ export default function WorkPage() {
 
       {cases.map((item) => (
         <section key={item.label} className="mb-10">
-          <p className="text-xs font-semibold tracking-widest text-gray-400 uppercase mb-2">
+          <p className="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-2">
             {item.label} · {item.site}
           </p>
           <h2 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h2>
@@ -231,7 +231,7 @@ export default function WorkPage() {
           href="https://github.com/czhcl123/tools-site"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-orange-600 underline decoration-orange-200 hover:decoration-orange-500"
+          className="text-orange-700 underline decoration-orange-200 hover:decoration-orange-500"
         >
           GitHub
         </a>
@@ -246,14 +246,14 @@ export default function WorkPage() {
         </p>
         <p className="text-sm text-gray-600">
           Email:{' '}
-          <a href="mailto:czhcl@hotmail.com" className="text-orange-600 underline">
+          <a href="mailto:czhcl@hotmail.com" className="text-orange-700 underline">
             czhcl@hotmail.com
           </a>
         </p>
         <p className="text-sm text-gray-600 mt-1">Replies within one business day.</p>
       </div>
 
-      <p className="text-xs text-gray-400 mt-8">
+      <p className="text-xs text-gray-500 mt-8">
         Last updated 2026-10-24. All figures measured on live properties on that date.
       </p>
 

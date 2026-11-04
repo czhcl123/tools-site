@@ -109,7 +109,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         </p>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/json-formatter" className="text-orange-600 font-medium hover:underline">
+          <Link href="/json-formatter" className="text-orange-700 font-medium hover:underline">
             → 格式化和验证你的 JSON
           </Link>
         </div>
@@ -167,7 +167,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         </p>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/json-formatter" className="text-orange-600 font-medium hover:underline">
+          <Link href="/json-formatter" className="text-orange-700 font-medium hover:underline">
             → Format and validate your JSON
           </Link>
         </div>

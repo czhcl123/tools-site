@@ -82,7 +82,7 @@ const seoBodyZh = (
       <li>🏷️ 7.5 折 = 原价 × 0.75</li>
       <li>🏷️ 5 折 = 原价 × 0.5（半价）</li>
     </ul>
-    <p className="text-xs text-gray-400 mt-4">所有计算在浏览器本地完成，数据不上传。</p>
+    <p className="text-xs text-gray-500 mt-4">所有计算在浏览器本地完成，数据不上传。</p>
   </div>
 )
 

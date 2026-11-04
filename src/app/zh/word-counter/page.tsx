@@ -81,7 +81,7 @@ const seoBodyZh = (
       <li>📖 句子数 + 段落数</li>
       <li>⏱️ 阅读时间估算</li>
     </ul>
-    <p className="text-xs text-gray-400 mt-4">所有数据在浏览器本地处理，不上传服务器。</p>
+    <p className="text-xs text-gray-500 mt-4">所有数据在浏览器本地处理，不上传服务器。</p>
   </div>
 )
 

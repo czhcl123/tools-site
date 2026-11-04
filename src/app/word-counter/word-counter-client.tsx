@@ -81,7 +81,7 @@ function WordCounterContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
 
   return (
     <>
-        <p className="text-sm text-gray-400 mb-6">{u('pageSubtitle', lang)}</p>
+        <p className="text-sm text-gray-500 mb-6">{u('pageSubtitle', lang)}</p>
 
         {/* Input card */}
         <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mb-4">
@@ -90,7 +90,7 @@ function WordCounterContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
             onChange={(e) => setText(e.target.value)}
             placeholder={u('placeholder', lang)}
             rows={12}
-            className="w-full px-4 py-3 text-base border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all resize-y font-mono text-sm"
+            className="w-full px-4 py-3 text-base border border-gray-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all resize-y font-mono text-sm"
           />
           <div className="flex gap-2 mt-3">
             <button
@@ -127,7 +127,7 @@ function WordCounterContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
         <RelatedTools lang={lang} paths={['/json-formatter', '/qr-code-generator', '/invoice-generator', '/discount-calculator']} />
 
         <div className="text-center">
-          <Link href="/" className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
+          <Link href="/" className="text-sm text-gray-500 hover:text-orange-500 transition-colors">
             {u('backHome', lang)}
           </Link>
         </div>

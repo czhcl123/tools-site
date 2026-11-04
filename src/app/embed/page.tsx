@@ -85,7 +85,7 @@ export default function EmbedPage() {
         </li>
       </ul>
 
-      <p className="text-xs text-gray-400 mt-8 border-t border-gray-200 pt-3">
+      <p className="text-xs text-gray-500 mt-8 border-t border-gray-200 pt-3">
         Questions or a different embed size? <a href="/about" className="underline underline-offset-2">Contact</a>.
       </p>
     </main>

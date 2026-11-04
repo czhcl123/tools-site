@@ -100,7 +100,7 @@ const seoBodyZh = (
     </ul>
     <h3 className="font-semibold text-gray-700 text-base mt-4">8 小时睡眠有几个周期?</h3>
     <p>8 小时 = 480 分钟,480 ÷ 90 ≈ 5.3——所以 8 小时里有约 <strong>5 个完整周期(7.5 小时)</strong>加 30 分钟零头。这 30 分钟要么是入睡缓冲,要么落在半个周期里被闹钟打断,这就是「睡满 8 小时还是困」的常见原因。想在周期边界醒来:实际睡眠目标设 <strong>7.5 小时(5 周期)</strong>或 9 小时(6 周期)。</p>
-    <p className="text-xs text-gray-400 mt-4">所有计算在浏览器本地完成，数据不上传。</p>
+    <p className="text-xs text-gray-500 mt-4">所有计算在浏览器本地完成，数据不上传。</p>
   </div>
 )
 

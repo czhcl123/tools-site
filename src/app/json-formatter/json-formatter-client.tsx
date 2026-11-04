@@ -126,13 +126,13 @@ function JsonFormatterContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
 
   return (
     <>
-        <p className="text-sm text-gray-400 mb-6">{u('pageSubtitle', lang)}</p>
+        <p className="text-sm text-gray-500 mb-6">{u('pageSubtitle', lang)}</p>
 
         {/* Controls */}
         <div className="flex flex-wrap items-center gap-2 mb-3">
           <div className="flex items-center gap-1.5">
             <label className="text-xs text-gray-500">{u('indent', lang)}:</label>
-            <select value={indent} onChange={(e) => setIndent(Number(e.target.value))} className="px-2 py-1.5 border border-gray-200 rounded-lg text-xs bg-white">
+            <select value={indent} onChange={(e) => setIndent(Number(e.target.value))} className="px-2 py-1.5 border border-gray-500 rounded-lg text-xs bg-white">
               <option value={2}>2</option>
               <option value={4}>4</option>
               <option value={0}>Tab</option>
@@ -154,14 +154,14 @@ function JsonFormatterContent({ lang: initialLang }: { lang?: 'zh' | 'en' }) {
         <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100 mb-3">
           <div className="flex justify-between items-center mb-2">
             <h3 className="text-sm font-semibold text-gray-600">{u('inputLabel', lang)}</h3>
-            <span className="text-xs text-gray-400">{input.length} chars</span>
+            <span className="text-xs text-gray-500">{input.length} chars</span>
           </div>
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder={u('placeholder', lang)}
             rows={12}
-            className="w-full font-mono text-xs px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
+            className="w-full font-mono text-xs px-3 py-2 border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
             spellCheck={false}
           />
         </div>

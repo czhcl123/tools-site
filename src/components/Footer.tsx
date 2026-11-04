@@ -29,35 +29,35 @@ export default function Footer({ lang = 'zh' }: FooterProps) {
     <footer className="bg-white border-t border-gray-100 mt-auto">
       <div className="max-w-3xl mx-auto px-4 py-6">
         <nav className="flex flex-wrap justify-center items-center gap-x-5 gap-y-2 mb-3 text-xs">
-          <Link href="/" className="text-gray-400 hover:text-orange-500 transition-colors">
+          <Link href="/" className="text-gray-500 hover:text-orange-500 transition-colors">
             {t.home}
           </Link>
           <span className="text-gray-200">·</span>
-          <Link href="/blog" className="text-gray-400 hover:text-orange-500 transition-colors">
+          <Link href="/blog" className="text-gray-500 hover:text-orange-500 transition-colors">
             {lang === 'zh' ? '博客' : 'Blog'}
           </Link>
           <span className="text-gray-200">·</span>
-          <Link href="/about" className="text-gray-400 hover:text-orange-500 transition-colors">
+          <Link href="/about" className="text-gray-500 hover:text-orange-500 transition-colors">
             {t.about}
           </Link>
           <span className="text-gray-200">·</span>
-          <Link href="/work" className="text-gray-400 hover:text-orange-500 transition-colors">
+          <Link href="/work" className="text-gray-500 hover:text-orange-500 transition-colors">
             {lang === 'zh' ? '案例' : 'Work'}
           </Link>
           <span className="text-gray-200">·</span>
-          <a href={`/llms.txt`} className="text-gray-400 hover:text-orange-500 transition-colors">
+          <a href={`/llms.txt`} className="text-gray-500 hover:text-orange-500 transition-colors">
             llms.txt
           </a>
           <span className="text-gray-200">·</span>
-          <a href={`/rss.xml`} className="text-gray-400 hover:text-orange-500 transition-colors">
+          <a href={`/rss.xml`} className="text-gray-500 hover:text-orange-500 transition-colors">
             RSS
           </a>
           <span className="text-gray-200">·</span>
-          <a href="https://github.com/czhcl123/tools-site" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-500 transition-colors">
+          <a href="https://github.com/czhcl123/tools-site" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-orange-500 transition-colors">
             GitHub
           </a>
         </nav>
-        <p className="text-xs text-gray-400 text-center">
+        <p className="text-xs text-gray-500 text-center">
           {`${currentYear} ${t.copyright}`}
         </p>
       </div>

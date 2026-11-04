@@ -331,7 +331,7 @@ function CountdownContent({ lang: initialLang, initial }: { lang?: 'zh' | 'en'; 
               type="date"
               value={fromDate}
               onChange={(e) => setFromDate(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
+              className="w-full px-4 py-3 border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
             />
           </div>
         )}
@@ -343,7 +343,7 @@ function CountdownContent({ lang: initialLang, initial }: { lang?: 'zh' | 'en'; 
               type="date"
               value={toDate}
               onChange={(e) => setToDate(e.target.value)}
-              className="flex-1 px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
+              className="flex-1 px-4 py-3 border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
             />
             {mode === 'until' && (
               <input
@@ -351,7 +351,7 @@ function CountdownContent({ lang: initialLang, initial }: { lang?: 'zh' | 'en'; 
                 value={targetTime}
                 onChange={(e) => setTargetTime(e.target.value)}
                 aria-label={u('timeLabel')}
-                className="w-32 px-3 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
+                className="w-32 px-3 py-3 border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg"
               />
             )}
           </div>
@@ -365,7 +365,7 @@ function CountdownContent({ lang: initialLang, initial }: { lang?: 'zh' | 'en'; 
             onChange={(e) => setEventName(e.target.value)}
             placeholder={u('eventPlaceholder')}
             maxLength={48}
-            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
+            className="w-full px-4 py-3 border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
           />
         </div>
 
@@ -378,7 +378,7 @@ function CountdownContent({ lang: initialLang, initial }: { lang?: 'zh' | 'en'; 
           />
           <span>
             {u('businessMode')}
-            <span className="block text-xs text-gray-400">{u('noteExclusive')}</span>
+            <span className="block text-xs text-gray-500">{u('noteExclusive')}</span>
           </span>
         </label>
 
@@ -423,7 +423,7 @@ function CountdownContent({ lang: initialLang, initial }: { lang?: 'zh' | 'en'; 
                 <>
                   <div className="text-6xl md:text-7xl font-bold text-orange-500 my-3 tabular-nums">{Math.abs(result.business ?? 0)}</div>
                   <div className="text-lg font-semibold text-gray-600">{u('businessDays')}</div>
-                  <div className="text-sm text-gray-400 mt-2">
+                  <div className="text-sm text-gray-500 mt-2">
                     {u('calendarDays')}: {Math.abs(result.exactDays)}
                   </div>
                 </>
@@ -431,19 +431,19 @@ function CountdownContent({ lang: initialLang, initial }: { lang?: 'zh' | 'en'; 
                 <>
                   <div className="grid grid-cols-4 gap-3 my-5">
                     <div className="bg-orange-50 rounded-lg p-3">
-                      <div className="text-3xl md:text-4xl font-bold text-orange-600 tabular-nums">{result.days}</div>
+                      <div className="text-3xl md:text-4xl font-bold text-orange-700 tabular-nums">{result.days}</div>
                       <div className="text-xs text-gray-500 mt-1">{u('days')}</div>
                     </div>
                     <div className="bg-orange-50 rounded-lg p-3">
-                      <div className="text-3xl md:text-4xl font-bold text-orange-600 tabular-nums">{pad(result.hours ?? 0)}</div>
+                      <div className="text-3xl md:text-4xl font-bold text-orange-700 tabular-nums">{pad(result.hours ?? 0)}</div>
                       <div className="text-xs text-gray-500 mt-1">{u('hours')}</div>
                     </div>
                     <div className="bg-orange-50 rounded-lg p-3">
-                      <div className="text-3xl md:text-4xl font-bold text-orange-600 tabular-nums">{pad(result.minutes ?? 0)}</div>
+                      <div className="text-3xl md:text-4xl font-bold text-orange-700 tabular-nums">{pad(result.minutes ?? 0)}</div>
                       <div className="text-xs text-gray-500 mt-1">{u('minutes')}</div>
                     </div>
                     <div className="bg-orange-50 rounded-lg p-3">
-                      <div className="text-3xl md:text-4xl font-bold text-orange-600 tabular-nums">{pad(result.seconds ?? 0)}</div>
+                      <div className="text-3xl md:text-4xl font-bold text-orange-700 tabular-nums">{pad(result.seconds ?? 0)}</div>
                       <div className="text-xs text-gray-500 mt-1">{u('seconds')}</div>
                     </div>
                   </div>
@@ -456,7 +456,7 @@ function CountdownContent({ lang: initialLang, initial }: { lang?: 'zh' | 'en'; 
                       {Math.floor(Math.abs(result.days) / 7)} {u('weeks')} {Math.abs(result.days) % 7} {u('days')}
                     </span>
                   </div>
-                  <div className="text-xs text-gray-400 mt-1">
+                  <div className="text-xs text-gray-500 mt-1">
                     {u('calendarDays')}: {Math.abs(result.exactDays)}
                   </div>
                 </>
@@ -470,7 +470,7 @@ function CountdownContent({ lang: initialLang, initial }: { lang?: 'zh' | 'en'; 
               </div>
               <div className="text-6xl md:text-7xl font-bold text-orange-500 my-3 tabular-nums">{Math.abs(result.days)}</div>
               <div className="text-lg font-semibold text-gray-600">{u('days')}</div>
-              <div className="text-xs text-gray-400 mt-1">{u('inclusive')}: {Math.abs(result.days) + 1}</div>
+              <div className="text-xs text-gray-500 mt-1">{u('inclusive')}: {Math.abs(result.days) + 1}</div>
               <div className="grid grid-cols-3 gap-3 mt-5 text-sm">
                 <div className="bg-gray-50 rounded-lg p-3">
                   <div className="font-semibold text-gray-700 tabular-nums">{Math.abs(result.months.months)}m {Math.abs(result.months.days)}d</div>
@@ -494,7 +494,7 @@ function CountdownContent({ lang: initialLang, initial }: { lang?: 'zh' | 'en'; 
         <button onClick={copyShare} className="px-3 py-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50">
           {copied ? `✓ ${u('copied')}` : `🔗 ${u('copyLink')}`}
         </button>
-        {businessOnly && <span className="text-gray-400">{u('onlyWorkdays')}</span>}
+        {businessOnly && <span className="text-gray-500">{u('onlyWorkdays')}</span>}
       </div>
     </>
   )

@@ -81,7 +81,7 @@ const seoBodyZh = (
       <li>🧾 自动税率计算</li>
       <li>🖼️ 公司 Logo 上传</li>
     </ul>
-    <p className="text-xs text-gray-400 mt-4">所有数据在浏览器本地处理，不上传服务器。</p>
+    <p className="text-xs text-gray-500 mt-4">所有数据在浏览器本地处理，不上传服务器。</p>
   </div>
 )
 

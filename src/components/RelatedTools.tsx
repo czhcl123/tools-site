@@ -27,7 +27,7 @@ export default function RelatedTools({ lang, paths }: { lang: Lang; paths: strin
   const label = lang === 'zh' ? '相关工具' : 'Related Tools'
   return (
     <div className="mt-6 pt-6 border-t border-gray-100">
-      <h3 className="text-xs text-gray-400 uppercase tracking-wide mb-3 font-medium">{label}</h3>
+      <h3 className="text-xs text-gray-500 uppercase tracking-wide mb-3 font-medium">{label}</h3>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
         {paths.map((p) => {
           const meta = TOOLS_META[p]
@@ -36,7 +36,7 @@ export default function RelatedTools({ lang, paths }: { lang: Lang; paths: strin
             <Link
               key={p}
               href={p}
-              className="block bg-gray-50 hover:bg-orange-50 border border-gray-100 hover:border-orange-200 rounded-lg p-3 text-center text-xs text-gray-600 hover:text-orange-600 transition-all active:scale-[0.98]"
+              className="block bg-gray-50 hover:bg-orange-50 border border-gray-100 hover:border-orange-200 rounded-lg p-3 text-center text-xs text-gray-600 hover:text-orange-700 transition-all active:scale-[0.98]"
             >
               <div className="text-lg mb-0.5">{meta.icon}</div>
               <div className="font-medium">{lang === 'zh' ? meta.zh : meta.en}</div>

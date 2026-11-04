@@ -121,7 +121,7 @@ const seoBodyZh = (
       <li>📊 密码强度实时检测</li>
       <li>📋 一键复制到剪贴板</li>
     </ul>
-    <p className="text-xs text-gray-400 mt-3">所有密码在浏览器本地生成，不上传服务器。</p>
+    <p className="text-xs text-gray-500 mt-3">所有密码在浏览器本地生成，不上传服务器。</p>
   </div>
 )
 
@@ -135,7 +135,7 @@ const seoBodyEn = (
       <li>📊 Real-time strength meter</li>
       <li>📋 One-click clipboard copy</li>
     </ul>
-    <p className="text-xs text-gray-400 mt-3">All passwords generated locally in your browser. Nothing uploaded.</p>
+    <p className="text-xs text-gray-500 mt-3">All passwords generated locally in your browser. Nothing uploaded.</p>
   </div>
 )
 

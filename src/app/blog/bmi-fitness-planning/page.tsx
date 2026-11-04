@@ -100,7 +100,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
       </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/bmi-calculator" className="text-orange-600 font-medium hover:underline">
+          <Link href="/bmi-calculator" className="text-orange-700 font-medium hover:underline">
             → 先用 BMI 计算器了解你的起点
           </Link>
         </div>
@@ -149,7 +149,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
       </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/bmi-calculator" className="text-orange-600 font-medium hover:underline">
+          <Link href="/bmi-calculator" className="text-orange-700 font-medium hover:underline">
             → Start with the BMI Calculator
           </Link>
         </div>

@@ -70,7 +70,7 @@ export default function ZhSleepCalculatorClient({ seoBody }: { seoBody?: React.R
 
       <main className="max-w-2xl mx-auto px-4 py-8">
         <p className="text-gray-500 text-sm mb-1">{u('description')}</p>
-        <p className="text-orange-600 text-xs font-medium mb-6">{u('subtitle')}</p>
+        <p className="text-orange-700 text-xs font-medium mb-6">{u('subtitle')}</p>
 
         <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-6">
           <div className="mb-4">
@@ -79,10 +79,10 @@ export default function ZhSleepCalculatorClient({ seoBody }: { seoBody?: React.R
               type="time"
               value={targetTime}
               onChange={(e) => setTargetTime(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg text-lg focus:ring-2 focus:ring-orange-300 focus:border-orange-400 outline-none"
+              className="w-full px-4 py-3 border border-gray-500 rounded-lg text-lg focus:ring-2 focus:ring-orange-300 focus:border-orange-400 outline-none"
             />
           </div>
-          <p className="text-xs text-gray-400">{u('cycleNote')}</p>
+          <p className="text-xs text-gray-500">{u('cycleNote')}</p>
         </div>
 
         <div className="space-y-3">
@@ -104,12 +104,12 @@ export default function ZhSleepCalculatorClient({ seoBody }: { seoBody?: React.R
                   <span className="text-xs bg-orange-500 text-white px-2 py-0.5 rounded-full">★</span>
                 )}
               </div>
-              <div className="text-2xl font-bold text-orange-600">{r.label}</div>
+              <div className="text-2xl font-bold text-orange-700">{r.label}</div>
             </div>
           ))}
         </div>
 
-        <p className="text-xs text-gray-400 mt-6 text-center">{u('sleepQuality')}</p>
+        <p className="text-xs text-gray-500 mt-6 text-center">{u('sleepQuality')}</p>
 
         <RelatedTools
           lang={lang}

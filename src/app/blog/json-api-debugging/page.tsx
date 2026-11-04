@@ -104,7 +104,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
       </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/json-formatter" className="text-orange-600 font-medium hover:underline">
+          <Link href="/json-formatter" className="text-orange-700 font-medium hover:underline">
             → 用 JSON 格式化工具调试你的 API
           </Link>
         </div>
@@ -157,7 +157,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
       </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/json-formatter" className="text-orange-600 font-medium hover:underline">
+          <Link href="/json-formatter" className="text-orange-700 font-medium hover:underline">
             → Debug Your API with JSON Formatter
           </Link>
         </div>

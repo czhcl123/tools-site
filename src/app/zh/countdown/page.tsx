@@ -89,7 +89,7 @@ const seoBodyZh = (
     </ul>
     <h3 className="font-semibold text-gray-700 text-base mt-4">2026 年圣诞节倒计时</h3>
     <p>2026 年的圣诞节是 <strong>12 月 25 日(星期五)</strong>,平安夜是 12 月 24 日。在工具里选 12 月 25 日作为目标日期,就能得到实时的「距离圣诞节还有多少天」。常见节点:12 月 1 日(还有 24 天)、黑五 11 月 27 日(购物截止)、平安夜(最后 1 天)。</p>
-    <p className="text-xs text-gray-400 mt-4">所有计算在浏览器本地完成，数据不上传。</p>
+    <p className="text-xs text-gray-500 mt-4">所有计算在浏览器本地完成，数据不上传。</p>
   </div>
 )
 

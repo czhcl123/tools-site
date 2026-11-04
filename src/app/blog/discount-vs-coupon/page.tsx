@@ -123,7 +123,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         </p>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/discount-calculator" className="text-orange-600 font-medium hover:underline">
+          <Link href="/discount-calculator" className="text-orange-700 font-medium hover:underline">
             → 用折扣计算器比较哪个更划算
           </Link>
         </div>
@@ -195,7 +195,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         </p>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/discount-calculator" className="text-orange-600 font-medium hover:underline">
+          <Link href="/discount-calculator" className="text-orange-700 font-medium hover:underline">
             → Compare deals with the Discount Calculator
           </Link>
         </div>

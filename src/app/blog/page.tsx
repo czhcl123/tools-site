@@ -101,7 +101,7 @@ export default function BlogIndex() {
             <span className="text-2xl">{p.icon}</span>
             <div>
               <div className="font-medium text-gray-800">{p.title}</div>
-              <div className="text-xs text-gray-400 mt-0.5">{p.zhTitle}</div>
+              <div className="text-xs text-gray-500 mt-0.5">{p.zhTitle}</div>
             </div>
           </Link>
         ))}

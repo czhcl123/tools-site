@@ -65,7 +65,7 @@ function AboutContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <header className="bg-white shadow-sm sticky top-0 z-10">
         <div className="max-w-3xl mx-auto px-4 py-3 flex items-center gap-3">
-          <Link href="/" className="flex-shrink-0 flex items-center gap-1.5 text-base font-bold text-orange-500 hover:text-orange-600 transition-colors">
+          <Link href="/" className="flex-shrink-0 flex items-center gap-1.5 text-base font-bold text-orange-700 hover:text-orange-800 transition-colors">
             <span className="text-xl">🧮</span>
             <span className="hidden sm:inline text-sm">{lang === 'zh' ? '实用计算器' : 'Practical Tools'}</span>
           </Link>
@@ -100,7 +100,7 @@ function AboutContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
               <div className="w-14 h-14 rounded-full bg-orange-100 flex items-center justify-center text-2xl flex-shrink-0">🧑‍💻</div>
               <div>
                 <div className="font-semibold text-gray-800">{t.teamName}</div>
-                <div className="text-xs text-orange-600 mb-1">{t.teamRole}</div>
+                <div className="text-xs text-orange-700 mb-1">{t.teamRole}</div>
                 <p className="text-xs text-gray-500 leading-relaxed">{t.teamExpertise}</p>
               </div>
             </div>
@@ -127,20 +127,20 @@ function AboutContent({ initialLang }: { initialLang?: 'zh' | 'en' }) {
             <ul className="text-sm space-y-1">
               <li>
                 <strong className="text-gray-800">{t.contactEmail}:</strong>{' '}
-                <a href="mailto:contact@getpracticaltools.com" className="text-orange-600 hover:underline">
+                <a href="mailto:contact@getpracticaltools.com" className="text-orange-700 hover:underline">
                   contact@getpracticaltools.com
                 </a>
               </li>
             </ul>
           </section>
 
-          <section className="pt-4 border-t border-gray-100 text-xs text-gray-400">
+          <section className="pt-4 border-t border-gray-100 text-xs text-gray-500">
             <p>{t.lastUpdated}: {t.lastUpdatedDate}</p>
           </section>
         </article>
 
         <div className="text-center">
-          <Link href="/" className="text-sm text-orange-600 hover:text-orange-700 hover:underline">
+          <Link href="/" className="text-sm text-orange-700 hover:text-orange-700 hover:underline">
             {t.backHome}
           </Link>
         </div>

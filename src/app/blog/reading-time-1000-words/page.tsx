@@ -102,7 +102,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/word-counter" className="text-orange-600 font-medium hover:underline">
+          <Link href="/word-counter" className="text-orange-700 font-medium hover:underline">
             → 先用字数统计工具测出文章长度，再换算阅读时间
           </Link>
         </div>
@@ -153,7 +153,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
         </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/word-counter" className="text-orange-600 font-medium hover:underline">
+          <Link href="/word-counter" className="text-orange-700 font-medium hover:underline">
             → Measure your article length first, then convert to reading time
           </Link>
         </div>

@@ -87,7 +87,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
       </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/sleep-calculator" className="text-orange-600 font-medium hover:underline">
+          <Link href="/sleep-calculator" className="text-orange-700 font-medium hover:underline">
             → 计算你的最佳睡眠时间
           </Link>
         </div>
@@ -127,7 +127,7 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
       </dl>
 
         <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
-          <Link href="/sleep-calculator" className="text-orange-600 font-medium hover:underline">
+          <Link href="/sleep-calculator" className="text-orange-700 font-medium hover:underline">
             → Calculate Your Optimal Sleep Time
           </Link>
         </div>
