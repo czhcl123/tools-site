@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import WordCounterWidget from '@/components/WordCounterWidget'
 
 const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How to use?", "acceptedAnswer": {"@type": "Answer", "text": "Paste text, see word/character/paragraph/sentence count."}}, {"@type": "Question", "name": "Chinese counting?", "acceptedAnswer": {"@type": "Answer", "text": "Characters for Chinese, words for English. Auto-detected."}}]}
 
@@ -7,13 +8,13 @@ const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity
 const articleLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Word Counter Guide: Chinese Characters",
-  "description": "How to use a word counter to count Chinese characters, English words, paragraphs, and more. Essential for essays, copywriting, and SEO.",
+  "headline": "Word Count Chinese — Free Online Counter",
+  "description": "Free word count Chinese tool: count Chinese characters and English words, plus paragraphs, sentences and reading time. Instant, accurate, no signup.",
   "image": [
     "https://getpracticaltools.com/og-image.png"
   ],
   "datePublished": "2026-08-22",
-  "dateModified": "2026-10-21",
+  "dateModified": "2026-11-10",
   "author": {
     "@type": "Organization",
     "name": "Practical Tools",
@@ -39,11 +40,11 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   const lang = sp.lang === 'zh' ? 'zh' : 'en'
   return {
     title: lang === 'zh'
-      ? '字数统计工具 — 免费在线字数统计'
-      : 'Word Counter — Free Online Word Count Tool',
+      ? '字数统计工具 — 中文字数与英文单词计数'
+      : 'Word Count Chinese — Free Online Counter',
     description: lang === 'zh'
       ? '免费统计中文字数、英文单词数、段落数和句子数。精确、快速、无需注册。适用于论文、SEO 写作、社交媒体。'
-      : 'Free online word counter: count Chinese characters, English words, paragraphs, and sentences instantly. Accurate, fast, no signup required.',
+      : 'Free word count Chinese tool: count Chinese characters and English words, plus paragraphs, sentences and reading time. Instant, accurate, no signup.',
     alternates: {
       canonical: 'https://getpracticaltools.com/blog/word-counter',
       languages: { 'en-US': '/blog/word-counter', 'x-default': '/blog/word-counter' },
@@ -187,28 +188,33 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
       />
       <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
       <h1 className="text-2xl font-bold text-gray-800 mt-4 mb-6">
-        {lang === 'zh' ? '字数统计工具指南' : 'Word Counter Guide'}
+        {lang === 'zh' ? '字数统计工具指南：中英文计数' : 'Word Count Chinese: Word Counter Guide'}
       </h1>
       <p className="text-sm text-gray-500 mb-6">
         {lang === 'zh' ? '实用计算器' : 'Practical Tools'}
         {' · '}
         {lang === 'zh' ? '发布于' : 'Published'} 2026-08-22
         {' · '}
-        {lang === 'zh' ? '更新于' : 'Updated'} 2026-10-21
+        {lang === 'zh' ? '更新于' : 'Updated'} 2026-11-10
       </p>
 
-      {/* 首屏工具入口：搜「word count chinese」的人是来找工具的，入口不能只放在文末 */}
+      {/* 首屏内嵌计数器：搜「word count chinese」的人是来找工具的，落地页必须当场能用 */}
+      <div className="mb-8">
+        <WordCounterWidget lang={lang} />
+      </div>
+
+      {/* 首屏工具入口：完整版工具页（含 FAQ / schema / 更多入口）的跳转位 */}
       <div className="mb-8 p-4 bg-orange-50 border border-orange-100 rounded-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <p className="text-sm text-gray-700">
           {lang === 'zh'
-            ? '中英文混排也能数清楚——工具就在旁边，粘贴即出结果。'
-            : 'Counts Chinese characters and English words side by side — paste your text and see the result instantly.'}
+            ? '需要更多？完整版工具还带 meta 155 字符红线提示和论文字数参考。'
+            : 'Need more? The full tool adds the 155-character meta limit check and essay word-count targets.'}
         </p>
         <Link
           href="/word-counter"
           className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-orange-500 text-white text-sm font-medium hover:bg-orange-600 whitespace-nowrap"
         >
-          {lang === 'zh' ? '打开字数统计工具 →' : 'Count Chinese characters →'}
+          {lang === 'zh' ? '打开完整版字数统计 →' : 'Open full word counter →'}
         </Link>
       </div>
 
@@ -231,6 +237,51 @@ export default async function BlogPost({ searchParams }: { searchParams: Promise
       </p>
 
       {content[lang]}
+
+      {/* 相关阅读：博客互链 + 工具回链 */}
+      <div className="mt-10 pt-8 border-t border-gray-100">
+        <h2 className="text-lg font-bold text-gray-800 mb-4">
+          {lang === 'zh' ? '相关阅读' : 'Related reading'}
+        </h2>
+        <ul className="space-y-2 text-sm">
+          <li>
+            <Link href="/blog/word-counter-academic" className="text-orange-500 hover:underline">
+              {lang === 'zh' ? '论文字数限制指南：APA、MLA 和常见申请要求' : 'Academic word limits: APA, MLA and application requirements'}
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog/word-counter-writing-tips" className="text-orange-500 hover:underline">
+              {lang === 'zh' ? '写作字数控制技巧：不同平台的目标字数' : 'Writing word count tips: target counts for every platform'}
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog/word-count-seo" className="text-orange-500 hover:underline">
+              {lang === 'zh' ? 'SEO 文章字数怎么定：目标字数与收录' : 'SEO word count: how to pick target length'}
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog/reading-time-1000-words" className="text-orange-500 hover:underline">
+              {lang === 'zh' ? '1000 字要读多久：阅读时间计算' : 'How long to read 1000 words'}
+            </Link>
+          </li>
+        </ul>
+
+        <h2 className="text-lg font-bold text-gray-800 mt-8 mb-4">
+          {lang === 'zh' ? '相关工具' : 'Related tools'}
+        </h2>
+        <ul className="space-y-2 text-sm">
+          <li>
+            <Link href="/word-counter" className="text-orange-500 hover:underline">
+              {lang === 'zh' ? '字数统计工具（含 155 字符红线提示）' : 'Word counter tool (with 155-char meta limit check)'}
+            </Link>
+          </li>
+          <li>
+            <Link href="/zh/word-counter" className="text-orange-500 hover:underline">
+              {lang === 'zh' ? '字数统计工具（中文版）' : 'Word counter (Chinese version)'}
+            </Link>
+          </li>
+        </ul>
+      </div>
     </div>
   )
 }

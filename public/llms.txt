@@ -19,10 +19,10 @@
 ## 工具（中文）
 - [在线折扣计算器_打折省钱金额计算_实用计算器](https://getpracticaltools.com/zh/discount-calculator): 输入商品原价和折扣力度（1-99折），快速计算折后价和节省金额。支持微信、电商平台各种折扣场景，免费使用。
 - [BMI 计算器 - 免费在线体重指数计算](https://getpracticaltools.com/zh/bmi-calculator): 免费在线 BMI 计算器:输入身高体重即出体重指数,支持亚洲人阈值,男女分类判断,无需注册。
-- [倒计时计算器 - 距任意日期还有几天几小时几分钟几秒](https://getpracticaltools.com/zh/countdown): 在线倒计时计算器:实时跳秒,选择目标日期+时间,显示还有几天几小时几分钟几秒。也支持距今已过去天数模式,免费无需注册。
+- [倒计时计算器 - 距任意日期还有几天几小时几分钟几秒](https://getpracticaltools.com/zh/countdown): 倒计时计算器：实时跳秒，选择目标日期+时间，显示还有几天几小时几分钟几秒。支持两个日期之间的间隔、每周剩余小时数计算、工作日倒数时间计算。免费、无需注册。
 - [农历转换器 - 公历转农历日期查询|实用计算器](https://getpracticaltools.com/zh/lunar-calendar): 免费公历农历双向转换工具:输入日期即可查询农历、生肖、干支、传统节日,覆盖 1900-2100 年,无需注册。
 - [单位换算器 - 长度/重量/温度即时互转](https://getpracticaltools.com/zh/unit-converter): 免费在线单位换算器:长度、重量、温度等 30+ 单位即时互转,无需注册,无广告。
-- [睡眠计算器 - 90 分钟周期反推最佳入睡/起床时间](https://getpracticaltools.com/zh/sleep-calculator): 免费在线睡眠计算器:输入起床时间反推最佳入睡时间(90 分钟周期),或输入入睡时间反推最佳起床时间。支持深度睡眠/REM 周期说明,无需注册。
+- [睡眠计算器 - 90 分钟周期反推最佳入睡/起床时间](https://getpracticaltools.com/zh/sleep-calculator): 睡眠计算器：输入起床时间反推最佳入睡时间（90分钟周期），或输入入睡时间反推最佳起床时间。支持每周睡眠时长计算、睡眠周期占比、理想睡眠计算与分段休息耗时。免费、无需注册。
 - [QR 码生成器 - 免费二维码无水印](https://getpracticaltools.com/zh/qr-code-generator): 免费二维码生成器，无水印，无需注册。支持 PNG/SVG 下载，自定义尺寸和颜色。本地浏览器生成，数据安全。
 - [免费发票生成器 - 一键生成PDF发票](https://getpracticaltools.com/zh/invoice-generator): 免费发票生成器:输入商家、客户和商品信息,一键生成专业 PDF 发票。支持多币种、自定义税率,无需注册。
 - [JSON 格式化 - 在线 API 调试器与验证器](https://getpracticaltools.com/zh/json-formatter): 免费 JSON 格式化与验证工具：粘贴 JSON 一键美化、压缩、验证。自定义缩进，错误精确到行列号。本地处理，数据安全。
@@ -91,9 +91,9 @@
 - [Kitchen Unit Converter: Cooking Measures](https://getpracticaltools.com/blog/unit-converter-cooking): Common cooking unit conversions: cups to ml, temperature conversions, international recipe adaptation, and altitude adjustments.
 - [Travel Unit Conversion Guide](https://getpracticaltools.com/blog/unit-converter-travel): Essential unit conversions for international travel: length, temperature, weight, speed, with quick reference tables.
 - [Word Count and SEO](https://getpracticaltools.com/blog/word-count-seo): Ideal word counts by content type: blog posts, product pages, meta descriptions. Google's stance on content length, quality vs quantity.
-- [Word Counter Guide: Chinese Characters](https://getpracticaltools.com/blog/word-counter): How to use a word counter to count Chinese characters, English words, paragraphs, and more. Essential for essays, copywriting, and SEO.
+- [Word Count Chinese — Free Online Counter](https://getpracticaltools.com/blog/word-counter): Free word count Chinese tool: count Chinese characters and English words, plus paragraphs, sentences and reading time. Instant, accurate, no signup.
 - [Academic Writing: Word Count Requirements](https://getpracticaltools.com/blog/word-counter-academic): How to meet word count requirements in academic writing, strategies to expand or condense essays, and citation counting tips.
-- [Writing Tips for Word Count](https://getpracticaltools.com/blog/word-counter-writing-tips): Word counter tool tips, word count requirements for different scenarios, and how to plan writing goals.
+- [Writing Word Count Tips — Improve Your Writing Efficiency](https://getpracticaltools.com/blog/word-counter-writing-tips): Word count writing tips: set daily goals, check paragraph balance, Chinese vs English counting, and platform word limits.
 
 ## About
 - [About Practical Tools](https://getpracticaltools.com/about): Mission, technology stack and contact information.
