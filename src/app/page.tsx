@@ -36,7 +36,7 @@ const faqSchema = {
       name: 'Do the tools support Chinese?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Every tool page is available in English (default) and Simplified Chinese. Switch language with the ?lang=en or ?lang=zh query parameter.',
+        text: 'Yes. Every tool page is available in English and Simplified Chinese. Chinese versions have a /zh/ prefix in the URL, and every Chinese page has an EN button in the header to switch back to English.',
       },
     },
     {

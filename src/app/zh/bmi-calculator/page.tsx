@@ -125,7 +125,7 @@ export default async function BmiCalculatorPage({
               🧮 实用计算器
             </a>
             <a
-              href="/bmi-calculator?lang=en"
+              href="/bmi-calculator"
               className="text-xs px-3 py-1 border border-gray-200 rounded-full hover:bg-gray-50"
             >
               EN

@@ -232,10 +232,13 @@ export const metadata = {
     images: ['https://getpracticaltools.com/og-image.png'],
   },
   alternates: {
+    // These must be real, crawlable URLs. `?lang=en` / `?lang=zh` are legacy
+    // query URLs that 301-redirect (see middleware.ts) and are now disallowed
+    // in robots.txt, so they must never be advertised as hreflang targets.
     canonical: 'https://getpracticaltools.com',
     languages: {
-      'en-US': 'https://getpracticaltools.com/?lang=en',
-      'zh-CN': 'https://getpracticaltools.com/?lang=zh',
+      'en-US': 'https://getpracticaltools.com',
+      'zh-CN': 'https://getpracticaltools.com/zh',
       'x-default': 'https://getpracticaltools.com',
     },
   },
