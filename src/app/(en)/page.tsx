@@ -1,0 +1,96 @@
+import type { Metadata } from 'next'
+import HomePageClient from '@/app/(en)/page-client'
+
+
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is Practical Tools really free?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. All 11 tools are completely free with no premium tier, no usage limits, and no signup required.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you upload my files or data?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. Tools such as HEIC to JPG and JSON Formatter process your files entirely in your browser. Your data never leaves your device.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I use these tools offline?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Once a page has loaded, the JavaScript is cached by your browser and the tool continues to work without an internet connection.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do the tools support Chinese?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Every tool page is available in English and Simplified Chinese. Chinese versions have a /zh/ prefix in the URL, and every Chinese page has an EN button in the header to switch back to English.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How accurate are the calculations?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Calculations follow published standards: WHO BMI thresholds, SI unit definitions, ISO/IEC 18004 for QR codes, and Hong Kong Observatory ephemeris for the lunar calendar.',
+      },
+    },
+  ],
+}
+
+export async function generateMetadata() {
+  
+  const lang = 'en'
+
+  const titles = {
+    zh: { default: '实用计算器 - 11 个免费在线工具,即开即用', template: '%s | 实用计算器' },
+    en: { default: 'Practical Tools - 12 Free Online Calculators & Utilities', template: '%s | Practical Tools' },
+  }
+  const descriptions = {
+    zh: '11 个免费在线工具:折扣计算、BMI、睡眠计算、倒计时、农历、单位换算、QR 码、字数统计、JSON 格式化、HEIC 转 JPG、发票生成。无需注册，即开即用。',
+    en: '12 free online calculators: discount, BMI, sleep, countdown, lunar calendar, unit converter, QR code, word counter, JSON formatter, HEIC to JPG, invoice. No signup.',
+  }
+
+  return {
+    title: { default: titles[lang].default, template: titles[lang].template },
+    description: descriptions[lang],
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }],
+      title: titles[lang].default,
+      description: descriptions[lang],
+    },
+    alternates: {
+      canonical: 'https://getpracticaltools.com',
+      languages: {
+        'zh-CN': '/zh',
+        'en-US': '/',
+        'x-default': '/',
+      },
+    },
+  }
+}
+
+export default async function HomePage() {
+  
+  const lang = 'en'
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <HomePageClient initialLang={lang} />
+    </>
+  )
+}

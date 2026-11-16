@@ -32,11 +32,14 @@ export function middleware(request: NextRequest) {
       newUrl.search = ''
       return NextResponse.redirect(newUrl, 301)
     }
-    // Blog routes handle lang via searchParams internally, skip redirect
+    // Blog posts have no Chinese variant any more (they were dropped so the
+    // 63 posts could be statically rendered). Redirect the legacy
+    // /blog/<slug>?lang=zh URLs to the English post instead of silently
+    // serving different content at the same URL.
     if (path.startsWith('/blog')) {
-      const response = NextResponse.next()
-      response.headers.set('x-page-lang', 'zh-CN')
-      return response
+      const newUrl = new URL(path, request.url)
+      newUrl.search = ''
+      return NextResponse.redirect(newUrl, 301)
     }
     const newPath = path === '/' ? '/zh' : `/zh${path}`
     const newUrl = new URL(newPath, request.url)
@@ -45,12 +48,10 @@ export function middleware(request: NextRequest) {
   }
 
   // en is default — no redirect needed (avoids Coverage auto-redirect entries)
-
-  const response = NextResponse.next()
-  // Set language header for root layout to read
-  const isZh = url.pathname.startsWith('/zh')
-  response.headers.set('x-page-lang', isZh ? 'zh-CN' : 'en')
-  return response
+  // Note: no language header is set here any more. The root layout used to
+  // read `x-page-lang` through `await headers()`, which forced every route to
+  // be dynamically rendered. Each route group now sets its own <html lang>.
+  return NextResponse.next()
 }
 
 export const config = {

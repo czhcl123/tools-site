@@ -41,7 +41,7 @@ function quoted(text) {
 }
 
 function blogMeta(slug) {
-  const file = path.join(root, 'src', 'app', 'blog', slug, 'page.tsx')
+  const file = path.join(root, 'src', 'app', '(en)', 'blog', slug, 'page.tsx')
   const src = fs.readFileSync(file, 'utf8')
   const gm = src.slice(src.indexOf('generateMetadata'))
   const t = quoted(between(gm, 'title')).filter((s) => s !== 'zh' && s !== 'en')
@@ -53,7 +53,7 @@ function blogMeta(slug) {
 }
 
 function zhMeta(slug) {
-  const file = path.join(root, 'src', 'app', 'zh', slug, 'page.tsx')
+  const file = path.join(root, 'src', 'app', '(zh)', 'zh', slug, 'page.tsx')
   if (!fs.existsSync(file)) return null
   const src = fs.readFileSync(file, 'utf8')
   const gm = src.slice(src.indexOf('generateMetadata'))
@@ -65,7 +65,7 @@ function zhMeta(slug) {
   return { title: t[0] || slug, desc: d[0] || '' }
 }
 
-const blogDir = path.join(root, 'src', 'app', 'blog')
+const blogDir = path.join(root, 'src', 'app', '(en)', 'blog')
 const blogSlugs = fs
   .readdirSync(blogDir, { withFileTypes: true })
   .filter((e) => e.isDirectory() && fs.existsSync(path.join(blogDir, e.name, 'page.tsx')))
