@@ -1,0 +1,135 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+
+const faqLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is HEIC?", "acceptedAnswer": {"@type": "Answer", "text": "iPhone default since iOS 11, half the size of JPEG."}}, {"@type": "Question", "name": "Why convert to JPG?", "acceptedAnswer": {"@type": "Answer", "text": "Compatibility with websites and apps."}}, {"@type": "Question", "name": "Quality loss?", "acceptedAnswer": {"@type": "Answer", "text": "At 95%+ quality, imperceptible."}}]}
+
+
+const articleLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "HEIC to JPG Conversion Guide",
+  "description": "What is HEIC? Why convert HEIC to JPG? Free online conversion method, quality settings, and everything you need to know.",
+  "image": [
+    "https://getpracticaltools.com/og-image.png"
+  ],
+  "datePublished": "2026-08-22",
+  "dateModified": "2026-10-21",
+  "author": {
+    "@type": "Organization",
+    "name": "Practical Tools",
+    "url": "https://getpracticaltools.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Practical Tools",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://getpracticaltools.com/favicon.svg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://getpracticaltools.com/blog/heic-to-jpg"
+  },
+  "inLanguage": "en"
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  
+  const lang = 'en'
+  return {
+    title: 'HEIC to JPG Conversion Guide',
+    description: 'What is HEIC? Why convert HEIC to JPG? Free online conversion method, quality settings, and everything you need to know.',
+    alternates: {
+      canonical: 'https://getpracticaltools.com/blog/heic-to-jpg',
+      languages: { 'en-US': '/blog/heic-to-jpg', 'x-default': '/blog/heic-to-jpg' },
+    },
+      openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }], url: 'https://getpracticaltools.com/blog/heic-to-jpg' },
+  }
+}
+
+export default async function BlogPost() {
+  
+  const lang = 'en'
+
+  const content = {
+    
+    en: (
+      <>
+        <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">What Is the HEIC Format?</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          HEIC (High Efficiency Image Container) is the photo format Apple uses since iOS 11 / macOS High Sierra. Based on HEIF, encoded with HEVC (H.265). Benefits: same quality at 50% smaller file size than JPG, supports transparency and burst shots.
+        </p>
+
+        <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">Why Convert to JPG?</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          <strong>Compatibility</strong>: many websites, social platforms, and print shops don't support HEIC. <strong>Windows</strong>: can't open HEIC by default (needs a plugin). <strong>Sharing</strong>: Android users may not be able to view HEIC files. <strong>Editing</strong>: some photo editors don't support HEIC directly.
+        </p>
+
+        <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">How to Convert Online</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          No software needed. Open an online converter, upload your HEIC file, choose output quality, click convert, download JPG. The entire process happens locally in your browser — your photos are never uploaded to a server.
+        </p>
+
+        <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">Conversion Quality Settings</h2>
+        <div className="bg-gray-50 rounded-lg p-4 mb-4 text-sm text-gray-700">
+          <p><strong>High quality (90%+)</strong>: nearly lossless, best for printing and archiving. Slightly larger files.</p>
+          <p><strong>Medium quality (70-85%)</strong>: best balance for everyday sharing. Nearly indistinguishable to the naked eye.</p>
+          <p><strong>Low quality (50-65%)</strong>: smallest files, good for web and social media posting. Compression artifacts visible when zoomed.</p>
+        </div>
+
+        <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">HEIC vs JPG vs PNG</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          <strong>HEIC</strong>: smallest files, best quality, but limited compatibility (Apple ecosystem). <strong>JPG</strong>: universal format, works everywhere, lossy compression. <strong>PNG</strong>: lossless, supports transparency, but larger files. Use JPG for daily use, PNG when you need transparency, HEIC within Apple devices.
+        </p>
+
+              <h2 className="text-xl font-bold text-gray-800 mt-8 mb-3">FAQ</h2>
+      <dl className="space-y-4 mb-6">
+        <div>
+          <dt className="font-semibold text-gray-800">What is HEIC?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">iPhone's default photo format since iOS 11, half the size of JPEG.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">Why convert to JPG?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">Many websites and apps don't support HEIC. Converting ensures compatibility.</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-gray-800">Does conversion lose quality?</dt>
+          <dd className="text-gray-700 leading-relaxed ml-4">At 95%+ quality, the difference is imperceptible.</dd>
+        </div>
+      </dl>
+
+        <div className="mt-8 p-4 bg-orange-50 rounded-xl text-center">
+          <Link href="/heic-to-jpg" className="text-orange-700 font-medium hover:underline">
+            → Convert HEIC to JPG Now
+          </Link>
+        </div>
+      </>
+    ),
+  }
+
+  return (
+    <div className="max-w-3xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
+      />
+      <Link href="/blog" className="text-orange-500 text-sm hover:underline">← Blog</Link>
+      <h1 className="text-2xl font-bold text-gray-800 mt-4 mb-6">
+        {'HEIC to JPG Converter Guide'}
+      </h1>
+      <p className="text-sm text-gray-500 mb-6">
+        {'Practical Tools'}
+        {' · '}
+        {'Published'} 2026-08-22
+        {' · '}
+        {'Updated'} 2026-10-21
+      </p>
+      {content.en}
+    </div>
+  )
+}

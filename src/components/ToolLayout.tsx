@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { Suspense } from 'react'
 import Footer from './Footer'
 
@@ -14,8 +14,7 @@ function ToolLayoutContent({
   seoBody?: React.ReactNode
   children: React.ReactNode
 }) {
-  const searchParams = useSearchParams()
-  const lang = (searchParams.get('lang') === 'zh' ? 'zh' : 'en') as 'zh' | 'en'
+  const lang = (initialLang ?? 'en') as 'zh' | 'en'
   const pathname = usePathname()
 
   return (

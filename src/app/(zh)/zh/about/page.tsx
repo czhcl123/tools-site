@@ -1,0 +1,42 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import AboutClient from '@/app/(en)/about/about-client'
+
+
+
+export async function generateMetadata() {
+  const lang = 'zh'
+
+  const titles = {
+    zh: '关于我们 - 实用计算器',
+    en: 'About Practical Tools',
+  }
+  const descriptions = {
+    zh: '了解实用计算器的使命、技术栈和联系方式。10 个完全本地处理的浏览器工具,保护您的隐私。',
+    en: 'Learn about Practical Tools: mission, technology stack, contact information, and our privacy-first approach. 10 browser-based utilities that run entirely on your device.',
+  }
+
+  return {
+    title: titles[lang],
+    description: descriptions[lang],
+    openGraph: { images: [{ url: 'https://getpracticaltools.com/og-image.png', type: 'image/png', width: 1200, height: 630, alt: 'Practical Tools - 12 free online calculators and utilities' }],
+      title: titles[lang],
+      description: descriptions[lang],
+      type: 'profile',
+      url: 'https://getpracticaltools.com/about',
+    },
+    alternates: {
+      canonical: 'https://getpracticaltools.com/zh/about',
+      languages: {
+        'en-US': '/about',
+        'zh-CN': '/zh/about',
+        'x-default': '/about',
+      },
+    },
+  }
+}
+
+export default async function AboutPage() {
+  const lang = 'zh'
+  return <AboutClient initialLang={lang} />
+}
